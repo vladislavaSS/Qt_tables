@@ -1,0 +1,212 @@
+{
+    "items": [
+        {
+            "column0": "R0",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "RESET",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_MUX [1:0]",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_EN",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_DIV [7:0]",
+                    "column1": ""
+                },
+                {
+                    "column0": "CLKoutX_DLY [3:0]",
+                    "column1": ""
+                }
+            ]
+        },
+        {
+            "column0": "R1",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "CLKoutX_MUX [1:0]",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_EN",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_DIV [7:0]",
+                    "column1": ""
+                },
+                {
+                    "column0": "CLKoutX_DLY [3:0]",
+                    "column1": ""
+                }
+            ]
+        },
+        {
+            "column0": "R2",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "CLKoutX_MUX [1:0]",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_EN",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_DIV [7:0]",
+                    "column1": ""
+                },
+                {
+                    "column0": "CLKoutX_DLY [3:0]",
+                    "column1": ""
+                }
+            ]
+        },
+        {
+            "column0": "R3",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "CLKoutX_MUX [1:0]",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_EN",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_DIV [7:0]",
+                    "column1": ""
+                },
+                {
+                    "column0": "CLKoutX_DLY [3:0]",
+                    "column1": ""
+                }
+            ]
+        },
+        {
+            "column0": "R4",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "CLKoutX_MUX [1:0]",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_EN",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_DIV [7:0]",
+                    "column1": ""
+                },
+                {
+                    "column0": "CLKoutX_DLY [3:0]",
+                    "column1": ""
+                }
+            ]
+        },
+        {
+            "column0": "R5",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "CLKoutX_MUX [1:0]",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_EN",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_DIV [7:0]",
+                    "column1": ""
+                },
+                {
+                    "column0": "CLKoutX_DLY [3:0]",
+                    "column1": ""
+                }
+            ]
+        },
+        {
+            "column0": "R6",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "CLKoutX_MUX [1:0]",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_EN",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_DIV [7:0]",
+                    "column1": ""
+                },
+                {
+                    "column0": "CLKoutX_DLY [3:0]",
+                    "column1": ""
+                }
+            ]
+        },
+        {
+            "column0": "R7",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "CLKoutX_MUX [1:0]",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_EN",
+                    "column1": 0
+                },
+                {
+                    "column0": "CLKoutX_DIV [7:0]",
+                    "column1": ""
+                },
+                {
+                    "column0": "CLKoutX_DLY [3:0]",
+                    "column1": ""
+                }
+            ]
+        },
+        {
+            "column0": "R9",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "Vboost",
+                    "column1": 0
+                }
+            ]
+        },
+        {
+            "column0": "R14",
+            "column1": " ",
+            "children": [
+                {
+                    "column0": "POWERDOWN",
+                    "column1": 0
+                },
+                {
+                    "column0": "EN_CLKout_Global",
+                    "column1": 1
+                },
+                {
+                    "column0": "CLKin_SELECT",
+                    "column1": 0
+                }
+            ]
+        }
+    ]
+}
