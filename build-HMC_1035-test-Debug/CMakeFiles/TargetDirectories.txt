@@ -1,0 +1,4 @@
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/CMakeFiles/HMC_1035.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/CMakeFiles/edit_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/CMakeFiles/rebuild_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/CMakeFiles/HMC_1035_autogen.dir

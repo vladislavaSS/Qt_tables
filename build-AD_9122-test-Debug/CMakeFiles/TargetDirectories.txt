@@ -1,0 +1,4 @@
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles/AD_9122.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles/edit_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles/rebuild_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles/AD_9122_autogen.dir

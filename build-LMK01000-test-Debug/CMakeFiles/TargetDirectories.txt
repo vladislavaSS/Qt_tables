@@ -1,4 +1,0 @@
-/home/vadislava/qtprojects/build-LMK01000-test-Debug/CMakeFiles/LMK01000.dir
-/home/vadislava/qtprojects/build-LMK01000-test-Debug/CMakeFiles/edit_cache.dir
-/home/vadislava/qtprojects/build-LMK01000-test-Debug/CMakeFiles/rebuild_cache.dir
-/home/vadislava/qtprojects/build-LMK01000-test-Debug/CMakeFiles/LMK01000_autogen.dir
