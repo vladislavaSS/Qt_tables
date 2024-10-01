@@ -77,6 +77,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h",
+			"MU",
+			"EWIEGA46WW/moc_HCM1035-widget.cpp",
+			null
+		],
+		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -135,6 +141,11 @@
 	"SETTINGS_FILE" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/CMakeFiles/HMC_1035_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/data.cpp",
 			"MU",

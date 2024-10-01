@@ -5,18 +5,20 @@
             "children": [
                 {
                     "column0": "0x00",
-                    "column1": {
-                        "checkBoxText": "SDIO",
-                        "value": 0
-                    },
-                    "column1": {
-                        "checkBoxText": "LSB_FIRST",
-                        "value": 0
-                    },
-                    "column1": {
-                        "checkBoxText": "reset",
-                        "value": 0
-                    }
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "SDIO",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "LSB_FIRST",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "reset",
+                            "value": "Unchecked"
+                        }
+                    ]
                 }
             ]
         },
@@ -25,22 +27,24 @@
             "children": [
                 {
                     "column0": "0x01",
-                    "column1": {
-                        "checkBoxText": "Power down I DAC",
-                        "value": 0
-                    },
-                    "column1": {
-                        "checkBoxText": "Power down Q DAC",
-                        "value": 0
-                    },
-                    "column1": {
-                        "checkBoxText": "Power down data receiver",
-                        "value": 0
-                    },
-                    "column1": {
-                        "checkBoxText": "Power down auxiliary ADC",
-                        "value": 1
-                    }
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Power down I DAC",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Power down Q DAC",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Power down data receiver",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Power down auxiliary ADC",
+                            "value": "Checked"
+                        }
+                    ]
                 }
             ]
         },
@@ -48,17 +52,25 @@
             "column0": "Data Format",
             "children": [
                 {
-                    "column0": "0x03"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": "",
-                    "column1": 0
+                    "column0": "0x03",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Binary data format",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Q data first",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "MSB swap",
+                            "value": "Unchecked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "Data Bus Width[1:0]",
+                        "comboBoxValue": 0
+                    }
                 }
             ]
         },
@@ -66,22 +78,33 @@
             "column0": "Interrupt Enable",
             "children": [
                 {
-                    "column0": "0x04"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
+                    "column0": "0x04",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Enable PLL lock lost",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Enable PLL locked",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Enable sync signal lost",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Enable sync signal locked",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Enable FIFO Warning 1",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Enable FIFO Warning 2",
+                            "value": "Checked"
+                        }
+                    ]
                 }
             ]
         },
@@ -90,20 +113,27 @@
             "children": [
                 {
                     "column0": "0x05",
-                    "column1": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": "",
-                    "column1": 0
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Enable AED compare pass",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Enable AED compare fail",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Enable SED compare fail",
+                            "value": "Unchecked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "Set to 0",
+                        "comboBoxValue": 0
+                    }
                 }
             ]
         },
@@ -111,34 +141,50 @@
             "column0": "Event Flag",
             "children": [
                 {
-                    "column0": "0x06"
+                    "column0": "0x06",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Enable PLL lock lost",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "Enable PLL locked",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "Enable sync signal lost",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "Enable sync signal locked",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "Enable FIFO Warning 1",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "Enable FIFO Warning 2",
+                            "value": "Undefined"
+                        }
+                    ]
                 },
                 {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": "0x07"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
+                    "column0": "0x07",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "AED compare pass",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "AED compare fail",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "SED compare fail",
+                            "value": "Undefined"
+                        }
+                    ]
                 }
             ]
         },
@@ -146,16 +192,25 @@
             "column0": "Clock Receiver Control",
             "children": [
                 {
-                    "column0": "0x08"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
+                    "column0": "0x08",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "DACCLK duty correction",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "REFCLK duty correction",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "DACCLK cross-correction",
+                            "value": "Checked"
+                        },
+                        {
+                            "checkBoxText": "REFCLK cross-correction",
+                            "value": "Checked"
+                        }
+                    ]
                 }
             ]
         },
@@ -163,37 +218,52 @@
             "column0": "PLL Control",
             "children": [
                 {
-                    "column0": "0x0A"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": "",
-                    "column1": ""
+                    "column0": "0x0A",
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "PLL enable",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "PLL manual enable",
+                            "value": "Checked"
+                        }
+                    ]
                 },
                 {
                     "column0": "0x0C",
-                    "column1": 11
-                },
-                {
-                    "column0": "",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": [],
+                    "comboBox": {
+                        "labelText": "PLL Loop Bandwidth[1:0]",
+                        "comboBoxValue": 3
+                    }
                 },
                 {
                     "column0": "0x0D",
-                    "column1": 11
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": "",
-                    "column1": 10
-                },
-                {
-                    "column0": "",
-                    "column1": 1
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "PLL manual enable",
+                            "value": "Checked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "N2[1:0]",
+                        "comboBoxValue": 3
+                    },
+                    "comboBox": {
+                        "labelText": "N0[1:0]",
+                        "comboBoxValue": 2
+                    },
+                    "comboBox": {
+                        "labelText": "N1[1:0]",
+                        "comboBoxValue": 1
+                    }
                 }
             ]
         },
@@ -201,15 +271,23 @@
             "column0": "PLL Status",
             "children": [
                 {
-                    "column0": "0x0E"
-                },
-                {
-                    "column0": "",
-                    "column1": ""
+                    "column0": "0x0E",
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "PLL locked",
+                            "value": "Undefined"
+                        }
+                    ]
                 },
                 {
                     "column0": "0x0F",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -217,21 +295,31 @@
             "column0": "Sync Control",
             "children": [
                 {
-                    "column0": "0x10"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": "",
-                    "column1": ""
+                    "column0": "0x10",
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Sync enable",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Data/FIFO rate toggle",
+                            "value": "Checked"
+                        },
+                        {
+                            "checkBoxText": "Rising edge sync",
+                            "value": "Checked"
+                        }
+                    ]
                 },
                 {
                     "column0": "0x11",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -239,14 +327,24 @@
             "column0": "Sync Status",
             "children": [
                 {
-                    "column0": "0x12"
-                },
-                {
-                    "column0": ""
+                    "column0": "0x12",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Sync lost",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "Sync locked",
+                            "value": "Undefined"
+                        }
+                    ]
                 },
                 {
                     "column0": "0x13",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -254,22 +352,33 @@
             "column0": "Data Receiver Status",
             "children": [
                 {
-                    "column0": "0x15"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
+                    "column0": "0x15",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "LVDS FRAME level high",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "LVDS FRAME level low",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "LVDS DCI level high",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "LVDS DCI level low",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "LVDS data level high",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "LVDS data level low",
+                            "value": "Undefined"
+                        }
+                    ]
                 }
             ]
         },
@@ -278,7 +387,11 @@
             "children": [
                 {
                     "column0": "0x16",
-                    "column1": 0
+                    "checkBoxes": [],
+                    "comboBox": {
+                        "labelText": "DCI Delay[1:0]",
+                        "comboBoxValue": 0
+                    }
                 }
             ]
         },
@@ -287,7 +400,10 @@
             "children": [
                 {
                     "column0": "0x17",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -295,20 +411,32 @@
             "column0": "FIFO Status",
             "children": [
                 {
-                    "column0": "0x18"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
+                    "column0": "0x18",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "FIFO Warning 1",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "FIFO Warning 2",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "FIFO soft align acknowledge",
+                            "value": "Undefined"
+                        },
+                        {
+                            "checkBoxText": "FIFO soft align request",
+                            "value": "Unchecked"
+                        }
+                    ]
                 },
                 {
                     "column0": "0x19",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -316,25 +444,37 @@
             "column0": "Datapath Control",
             "children": [
                 {
-                    "column0": "0x1B"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
+                    "column0": "0x1B",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Bypass premod",
+                            "value": "Checked"
+                        },
+                        {
+                            "checkBoxText": "Bypass sinc−1",
+                            "value": "Checked"
+                        },
+                        {
+                            "checkBoxText": "Bypass NCO",
+                            "value": "Checked"
+                        },
+                        {
+                            "checkBoxText": "NCO gain",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Bypass phase compensation and dc offset",
+                            "value": "Checked"
+                        },
+                        {
+                            "checkBoxText": "Select sideband",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Send I data to Q data",
+                            "value": "Unchecked"
+                        }
+                    ]
                 }
             ]
         },
@@ -343,10 +483,16 @@
             "children": [
                 {
                     "column0": "0x1C",
-                    "column1": 0
-                },
-                {
-                    "column0": ""
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Bypass HB1",
+                            "value": "Unchecked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "HB1[1:0]",
+                        "comboBoxValue": 0
+                    }
                 }
             ]
         },
@@ -355,10 +501,20 @@
             "children": [
                 {
                     "column0": "0x1D",
-                    "column1": 0
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Bypass HB2",
+                            "value": "Unchecked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "HB2[5:0]",
+                        "comboBoxValue": 0
+                    }
                 },
                 {
-                    "column0": ""
+                    "column0": "",
+                    "checkBoxes": []
                 }
             ]
         },
@@ -367,10 +523,16 @@
             "children": [
                 {
                     "column0": "0x1E",
-                    "column1": 0
-                },
-                {
-                    "column0": ""
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Bypass HB3",
+                            "value": "Unchecked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "HB3[5:0]",
+                        "comboBoxValue": 0
+                    }
                 }
             ]
         },
@@ -379,7 +541,10 @@
             "children": [
                 {
                     "column0": "0x1F",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -388,7 +553,10 @@
             "children": [
                 {
                     "column0": "0x30",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -397,7 +565,10 @@
             "children": [
                 {
                     "column0": "0x31",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -406,7 +577,10 @@
             "children": [
                 {
                     "column0": "0x32",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -415,7 +589,10 @@
             "children": [
                 {
                     "column0": "0x33",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -424,7 +601,10 @@
             "children": [
                 {
                     "column0": "0x34",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -433,7 +613,10 @@
             "children": [
                 {
                     "column0": "0x35",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -441,16 +624,25 @@
             "column0": "NCO FTW Update",
             "children": [
                 {
-                    "column0": "0x36"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
+                    "column0": "0x36",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "FRAME FTW acknowledge",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "FRAME FTW request",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Update FTW acknowledge",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Update FTW request",
+                            "value": "Unchecked"
+                        }
+                    ]
                 }
             ]
         },
@@ -459,7 +651,10 @@
             "children": [
                 {
                     "column0": "0x38",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -468,7 +663,10 @@
             "children": [
                 {
                     "column0": "0x39",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -477,7 +675,10 @@
             "children": [
                 {
                     "column0": "0x3A",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -486,7 +687,10 @@
             "children": [
                 {
                     "column0": "0x3B",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -495,7 +699,10 @@
             "children": [
                 {
                     "column0": "0x3C",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -504,7 +711,10 @@
             "children": [
                 {
                     "column0": "0x3D",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -513,7 +723,10 @@
             "children": [
                 {
                     "column0": "0x3E",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -522,7 +735,10 @@
             "children": [
                 {
                     "column0": "0x3F",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -531,7 +747,10 @@
             "children": [
                 {
                     "column0": "0x40",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -539,11 +758,8 @@
             "column0": "I DAC Control",
             "children": [
                 {
-                    "column0": "0x41"
-                },
-                {
-                    "column0": "",
-                    "column1": 1
+                    "column0": "0x41",
+                    "checkBoxes": []
                 }
             ]
         },
@@ -552,7 +768,10 @@
             "children": [
                 {
                     "column0": "0x42",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -560,17 +779,25 @@
             "column0": "I Aux DAC Control",
             "children": [
                 {
-                    "column0": "0x43"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": "",
-                    "column1": 0
+                    "column0": "0x43",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "I aux DAC sign",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "I aux DAC current direction",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "I aux DAC sleep",
+                            "value": "Unchecked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "I Aux DAC[9:8]",
+                        "comboBoxValue": 0
+                    }
                 }
             ]
         },
@@ -579,7 +806,10 @@
             "children": [
                 {
                     "column0": "0x44",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -587,11 +817,17 @@
             "column0": "Q DAC Control",
             "children": [
                 {
-                    "column0": "0x45"
-                },
-                {
-                    "column0": "",
-                    "column1": 0
+                    "column0": "0x45",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Q DAC sleep",
+                            "value": "Unchecked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "Q DAC FS Adj[9:8]",
+                        "comboBoxValue": 0
+                    }
                 }
             ]
         },
@@ -600,7 +836,10 @@
             "children": [
                 {
                     "column0": "0x46",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -608,17 +847,25 @@
             "column0": "Q Aux DAC Control",
             "children": [
                 {
-                    "column0": "0x47"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": "",
-                    "column1": 0
+                    "column0": "0x47",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Q aux DAC sign",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "I aux DAC current direction",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Q aux DAC sleep",
+                            "value": "Unchecked"
+                        }
+                    ],
+                    "comboBox": {
+                        "labelText": "Q Aux DAC[9:8]",
+                        "comboBoxValue": 0
+                    }
                 }
             ]
         },
@@ -627,14 +874,16 @@
             "children": [
                 {
                     "column0": "0x48",
-                    "column1": ""
-                },
-                {
-                    "column0": "",
-                    "column1": ""
-                },
-                {
-                    "column0": ""
+                    "lineEdit": {
+                        "lineEditValue": "",
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "Capacitor value",
+                            "value": "Unchecked"
+                        }
+                    ]
                 }
             ]
         },
@@ -643,7 +892,10 @@
             "children": [
                 {
                     "column0": "0x49",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -652,7 +904,10 @@
             "children": [
                 {
                     "column0": "0x4A",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -660,19 +915,29 @@
             "column0": "SED Control",
             "children": [
                 {
-                    "column0": "0x67"
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
-                },
-                {
-                    "column0": ""
+                    "column0": "0x67",
+                    "checkBoxes": [
+                        {
+                            "checkBoxText": "SED compare enable",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Sample error detected",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Autoclear enable",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Compare fail",
+                            "value": "Unchecked"
+                        },
+                        {
+                            "checkBoxText": "Compare pass",
+                            "value": "Unchecked"
+                        }
+                    ]
                 }
             ]
         },
@@ -681,7 +946,10 @@
             "children": [
                 {
                     "column0": "0x68",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -690,7 +958,10 @@
             "children": [
                 {
                     "column0": "0x69",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -699,7 +970,10 @@
             "children": [
                 {
                     "column0": "0x6A",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -708,7 +982,10 @@
             "children": [
                 {
                     "column0": "0x6B",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -717,7 +994,10 @@
             "children": [
                 {
                     "column0": "0x6C",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -726,7 +1006,10 @@
             "children": [
                 {
                     "column0": "0x6D",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -735,7 +1018,10 @@
             "children": [
                 {
                     "column0": "0x6E",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -744,7 +1030,10 @@
             "children": [
                 {
                     "column0": "0x6F",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -753,7 +1042,10 @@
             "children": [
                 {
                     "column0": "0x70",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -762,7 +1054,10 @@
             "children": [
                 {
                     "column0": "0x71",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -771,7 +1066,10 @@
             "children": [
                 {
                     "column0": "0x72",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -780,7 +1078,10 @@
             "children": [
                 {
                     "column0": "0x73",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         },
@@ -789,7 +1090,10 @@
             "children": [
                 {
                     "column0": "0x7F",
-                    "column1": ""
+                    "lineEdit": {
+                        "lineEditValue": ""
+                    },
+                    "checkBoxes": []
                 }
             ]
         }

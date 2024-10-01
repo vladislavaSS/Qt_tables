@@ -1,6 +1,5 @@
-/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/HMC_1035_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/mainwindow.h \
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/HMC_1035_autogen/EWIEGA46WW/moc_HCM1035-widget.cpp: /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/HMC_1035_autogen/moc_predefs.h \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

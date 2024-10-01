@@ -142,6 +142,30 @@ HMC_1035_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035_autogen.dir/build.make CMakeFiles/HMC_1035_autogen.dir/build
 .PHONY : HMC_1035_autogen/fast
 
+HCM1035-widget.o: HCM1035-widget.cpp.o
+.PHONY : HCM1035-widget.o
+
+# target to build an object file
+HCM1035-widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.o
+.PHONY : HCM1035-widget.cpp.o
+
+HCM1035-widget.i: HCM1035-widget.cpp.i
+.PHONY : HCM1035-widget.i
+
+# target to preprocess a source file
+HCM1035-widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.i
+.PHONY : HCM1035-widget.cpp.i
+
+HCM1035-widget.s: HCM1035-widget.cpp.s
+.PHONY : HCM1035-widget.s
+
+# target to generate assembly for a file
+HCM1035-widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.s
+.PHONY : HCM1035-widget.cpp.s
+
 HMC_1035_autogen/mocs_compilation.o: HMC_1035_autogen/mocs_compilation.cpp.o
 .PHONY : HMC_1035_autogen/mocs_compilation.o
 
@@ -248,6 +272,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... HMC_1035_autogen"
 	@echo "... HMC_1035"
+	@echo "... HCM1035-widget.o"
+	@echo "... HCM1035-widget.i"
+	@echo "... HCM1035-widget.s"
 	@echo "... HMC_1035_autogen/mocs_compilation.o"
 	@echo "... HMC_1035_autogen/mocs_compilation.i"
 	@echo "... HMC_1035_autogen/mocs_compilation.s"

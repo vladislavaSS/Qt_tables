@@ -2,20 +2,31 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "HCM1035-widget.h"
 #include <QTreeView>
 #include <QStandardItemModel>
 #include <QPushButton>
 #include <QCheckBox>
 #include <QComboBox>
+#include <fstream>
 
-extern QStringList itemNames;
-extern QStringList childName1;
-extern QStringList childName2;
-enum CheckBoxState {
-    Unchecked = 0,
-    Checked = 1,
-    Undefined = 2
-};
+#include "rapidjson/document.h"
+#include "rapidjson/error/en.h"
+#include <rapidjson/document.h>
+#include <rapidjson/writer.h>
+#include <rapidjson/reader.h>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/prettywriter.h>
+#include <QXmlStreamWriter>
+
+//extern QStringList itemNames;
+//extern QStringList childName1;
+//extern QStringList childName2;
+//enum CheckBoxState {
+//    Unchecked = 0,
+//    Checked = 1,
+//    Undefined = 2
+//};
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,36 +37,51 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    MainWindow(QWidget *parent = nullptr); /*: QMainWindow(parent) {
+            NewWidget *newWidget = new NewWidget(this);
 
-private slots:
+            setCentralWidget(newWidget);
+        }*/
 
-    void on_toggle_button_clicked();
 
-    void setEditableFlags(QStandardItem *item, bool editable);
 
-    void blockEditing(QStandardItemModel *model);
+//private slots:
 
-    QWidget* createLineEditWithSaveButton(int rowIndex, double valueLimit, double minLimit, const QString& placeholderText, const QString& errorMsg, const QString& defaultText);
+//    void on_save_button_clicked();
 
-    QCheckBox* createCheckBoxWidget(const QString &labelText, CheckBoxState state);
+//    void on_load_button_clicked();
 
-    QWidget* createComboBoxWidgetLable(const QString &labelText, const QStringList &options);
+//    void updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& childrenArray, QStandardItem* parentItem);
 
-    QWidget* LineEdit(const QString& labelText, const QString& placeholderText);
+//    void on_toggle_button_clicked();
 
-private:
+//    void setEditableFlags(QStandardItem *item, bool editable);
+
+//    void blockEditing(QStandardItemModel *model);
+
+//    QWidget* createLineEditWithSaveButton(int rowIndex, double valueLimit, double minLimit, const QString& placeholderText, const QString& errorMsg, const QString& defaultText);
+
+//    QCheckBox* createCheckBoxWidget(const QString &labelText, CheckBoxState state);
+
+//    QWidget* createComboBoxWidgetLable(const QString &labelText, const QStringList &options);
+
+//    QWidget* LineEdit(const QString& labelText, const QString& placeholderText);
+
+//private:
     Ui::MainWindow *ui;
 
-    void viewTree();
+//    void viewTree();
 
-    QTreeView *treeView;
+//    QTreeView *treeView;
 
-    QStandardItemModel *model;
+//    QStandardItemModel *model;
 
-    QPushButton *toggleButton;
+//    QPushButton *toggleButton;
 
-    bool treeExpanded;
+//    QPushButton *saveButton;
+
+//    QPushButton *loadButton;
+
+//    bool treeExpanded;
 };
 #endif // MAINWINDOW_H

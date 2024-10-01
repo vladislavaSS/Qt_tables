@@ -48,7 +48,7 @@ private slots:
 
     void on_toggle_button_clicked();
 
-//    void updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& childrenArray, QStandardItem* parentItem);
+    void updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& childrenArray, QStandardItem* parentItem);
 
     QWidget* createComboBoxWidgetLable(const QString &labelText, const QStringList &options);
 
@@ -74,6 +74,8 @@ private:
     QPushButton *toggleButton;
 
     QPushButton *saveButton;
+
+    QPushButton *loadButton;
 
     bool treeExpanded;
 
