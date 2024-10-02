@@ -1,5 +1,4 @@
-#include "mainwindow.h"
-#include "./ui_mainwindow.h"
+#include "AD9122-widget.h"
 
 #include <QStandardItemModel>
 #include <QTreeView>
@@ -15,7 +14,7 @@
 #include <QFile>
 
 
-QWidget* MainWindow::LineOfPower(int rowIndex, int valueLimit, const QString& placeholderText, const QString& errorMsg, const QString& defaultText) {
+QWidget* AD9122Widget::LineOfPower(int rowIndex, int valueLimit, const QString& placeholderText, const QString& errorMsg, const QString& defaultText) {
     QLineEdit *lineEdit = new QLineEdit();
     lineEdit->setPlaceholderText(placeholderText);
     QHBoxLayout *hLayout = new QHBoxLayout;
@@ -46,7 +45,7 @@ QWidget* MainWindow::LineOfPower(int rowIndex, int valueLimit, const QString& pl
     return widget;
 }
 
-QWidget* MainWindow::createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText) {
+QWidget* AD9122Widget::createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText) {
     QLineEdit *lineEdit = new QLineEdit();
     lineEdit->setPlaceholderText(placeholderText);
 
@@ -87,7 +86,7 @@ QWidget* MainWindow::createLineEditWithSaveButton(int rowIndex, double valueLimi
     return widget;
 }
 
-QWidget* MainWindow::createComboBoxWidgetLable(const QString &labelText, const QStringList &options) {
+QWidget* AD9122Widget::createComboBoxWidgetLable(const QString &labelText, const QStringList &options) {
 //    QWidget *widget = new QWidget();
 //    QVBoxLayout *layout = new QVBoxLayout(widget);
 
@@ -119,7 +118,7 @@ QWidget* MainWindow::createComboBoxWidgetLable(const QString &labelText, const Q
         return widget;
 }
 
-QCheckBox* MainWindow::createCheckBoxWidget(const QString &labelText, CheckBoxState state) {
+QCheckBox* AD9122Widget::createCheckBoxWidget(const QString &labelText, CheckBoxState state) {
     QCheckBox *checkBox = new QCheckBox(labelText);
 
     switch (state) {
@@ -140,7 +139,7 @@ QCheckBox* MainWindow::createCheckBoxWidget(const QString &labelText, CheckBoxSt
     return checkBox;
 }
 
-void MainWindow::setEditableFlags(QStandardItem *item, bool editable) {
+void AD9122Widget::setEditableFlags(QStandardItem *item, bool editable) {
     if (!item) return;
 
     if (editable) {
@@ -155,14 +154,14 @@ void MainWindow::setEditableFlags(QStandardItem *item, bool editable) {
     }
 }
 
-void MainWindow::blockEditing(QStandardItemModel *model) {
+void AD9122Widget::blockEditing(QStandardItemModel *model) {
     for (int row = 0; row < model->rowCount(); ++row) {
         QStandardItem *rootItem = model->item(row);
         setEditableFlags(rootItem, false);
     }
 }
 
-void MainWindow::on_toggle_button_clicked()
+void AD9122Widget::on_toggle_button_clicked()
 {
     if (treeExpanded) {
             treeView->collapseAll();
@@ -174,7 +173,7 @@ void MainWindow::on_toggle_button_clicked()
         treeExpanded = !treeExpanded;
 }
 
-void MainWindow::on_save_button_clicked()
+void AD9122Widget::on_save_button_clicked()
 {
     rapidjson::Document document;
     document.SetObject();
@@ -301,7 +300,7 @@ void MainWindow::on_save_button_clicked()
 
 }
 
-void MainWindow::updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& childrenArray, QStandardItem* parentItem) {
+void AD9122Widget::updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& childrenArray, QStandardItem* parentItem) {
     if (!childrenArray.IsArray()) {
          qDebug() << "childrenArray не является массивом";
         QMessageBox::warning(this, "Ошибка", " Неверная структура файла");
@@ -405,7 +404,7 @@ void MainWindow::updateChildWidgets(QStandardItemModel* model, const rapidjson::
 
 }
 
-void MainWindow::on_load_button_clicked()
+void AD9122Widget::on_load_button_clicked()
 {
     QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
     QString filePath = "output.json";

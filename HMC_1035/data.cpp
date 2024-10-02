@@ -1,5 +1,4 @@
 #include "HCM1035-widget.h"
-//#include "./ui_HCM1035Widget.h"
 
 #include <QStandardItemModel>
 #include <QTreeView>

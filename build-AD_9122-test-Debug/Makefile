@@ -142,6 +142,30 @@ AD_9122_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122_autogen.dir/build.make CMakeFiles/AD_9122_autogen.dir/build
 .PHONY : AD_9122_autogen/fast
 
+AD9122-widget.o: AD9122-widget.cpp.o
+.PHONY : AD9122-widget.o
+
+# target to build an object file
+AD9122-widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/AD9122-widget.cpp.o
+.PHONY : AD9122-widget.cpp.o
+
+AD9122-widget.i: AD9122-widget.cpp.i
+.PHONY : AD9122-widget.i
+
+# target to preprocess a source file
+AD9122-widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/AD9122-widget.cpp.i
+.PHONY : AD9122-widget.cpp.i
+
+AD9122-widget.s: AD9122-widget.cpp.s
+.PHONY : AD9122-widget.s
+
+# target to generate assembly for a file
+AD9122-widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/AD9122-widget.cpp.s
+.PHONY : AD9122-widget.cpp.s
+
 AD_9122_autogen/mocs_compilation.o: AD_9122_autogen/mocs_compilation.cpp.o
 .PHONY : AD_9122_autogen/mocs_compilation.o
 
@@ -248,6 +272,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AD_9122_autogen"
 	@echo "... AD_9122"
+	@echo "... AD9122-widget.o"
+	@echo "... AD9122-widget.i"
+	@echo "... AD9122-widget.s"
 	@echo "... AD_9122_autogen/mocs_compilation.o"
 	@echo "... AD_9122_autogen/mocs_compilation.i"
 	@echo "... AD_9122_autogen/mocs_compilation.s"

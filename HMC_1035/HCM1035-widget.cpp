@@ -1,17 +1,12 @@
 #include "HCM1035-widget.h"
 
-#include <QStandardItemModel>
-#include <QTreeView>
-#include <QDebug>
 #include <QVBoxLayout>
 
 HCM1035Widget::HCM1035Widget(QWidget *parent)
     : QWidget{parent}, treeView(new QTreeView(this)), model(new QStandardItemModel(this)), treeExpanded(false)
 {
-
     viewTree();
     treeView -> setColumnWidth(0, 250);
-    setMaximumSize(900,900);
 }
 
 
@@ -1007,9 +1002,7 @@ void HCM1035Widget::viewTree() {
     connect(loadButton, &QPushButton::clicked, this, &HCM1035Widget::on_load_button_clicked);
 
     setLayout(layout);
-//    QWidget *centralWidget = new QWidget(this);
-//    centralWidget->setLayout(layout);
-//    setCentralWidget(centralWidget);
+
 
 
 

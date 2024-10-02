@@ -20,6 +20,8 @@ set(PROJECT_SOURCES
         data.cpp
         mainwindow.h
         mainwindow.ui
+        AD9122-widget.cpp
+        AD9122-widget.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

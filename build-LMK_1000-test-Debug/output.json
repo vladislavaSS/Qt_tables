@@ -32,7 +32,7 @@
             "children": [
                 {
                     "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 0
+                    "column1": 2
                 },
                 {
                     "column0": "CLKoutX_EN",

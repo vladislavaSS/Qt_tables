@@ -381,10 +381,6 @@ CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.o: \
   /usr/include/rapidjson/prettywriter.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \

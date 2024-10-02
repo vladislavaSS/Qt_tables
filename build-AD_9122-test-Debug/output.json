@@ -8,15 +8,15 @@
                     "checkBoxes": [
                         {
                             "checkBoxText": "SDIO",
-                            "value": "Unchecked"
+                            "value": "Checked"
                         },
                         {
                             "checkBoxText": "LSB_FIRST",
-                            "value": "Unchecked"
+                            "value": "Checked"
                         },
                         {
                             "checkBoxText": "reset",
-                            "value": "Unchecked"
+                            "value": "Checked"
                         }
                     ]
                 }
@@ -30,15 +30,15 @@
                     "checkBoxes": [
                         {
                             "checkBoxText": "Power down I DAC",
-                            "value": "Unchecked"
+                            "value": "Checked"
                         },
                         {
                             "checkBoxText": "Power down Q DAC",
-                            "value": "Unchecked"
+                            "value": "Checked"
                         },
                         {
                             "checkBoxText": "Power down data receiver",
-                            "value": "Unchecked"
+                            "value": "Checked"
                         },
                         {
                             "checkBoxText": "Power down auxiliary ADC",
@@ -102,7 +102,7 @@
                         },
                         {
                             "checkBoxText": "Enable FIFO Warning 2",
-                            "value": "Checked"
+                            "value": "Unchecked"
                         }
                     ]
                 }

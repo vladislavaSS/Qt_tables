@@ -19,6 +19,8 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        LMK1000-widget.cpp
+        LMK1000-widget.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

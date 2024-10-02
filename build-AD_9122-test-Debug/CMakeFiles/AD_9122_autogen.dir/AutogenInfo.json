@@ -77,6 +77,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/AD9122-widget.h",
+			"MU",
+			"EWIEGA46WW/moc_AD9122-widget.cpp",
+			null
+		],
+		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -135,6 +141,11 @@
 	"SETTINGS_FILE" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles/AD_9122_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/AD9122-widget.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/data.cpp",
 			"MU",

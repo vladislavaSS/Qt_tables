@@ -142,6 +142,30 @@ LMK_1000_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000_autogen.dir/build.make CMakeFiles/LMK_1000_autogen.dir/build
 .PHONY : LMK_1000_autogen/fast
 
+LMK1000-widget.o: LMK1000-widget.cpp.o
+.PHONY : LMK1000-widget.o
+
+# target to build an object file
+LMK1000-widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.o
+.PHONY : LMK1000-widget.cpp.o
+
+LMK1000-widget.i: LMK1000-widget.cpp.i
+.PHONY : LMK1000-widget.i
+
+# target to preprocess a source file
+LMK1000-widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.i
+.PHONY : LMK1000-widget.cpp.i
+
+LMK1000-widget.s: LMK1000-widget.cpp.s
+.PHONY : LMK1000-widget.s
+
+# target to generate assembly for a file
+LMK1000-widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.s
+.PHONY : LMK1000-widget.cpp.s
+
 LMK_1000_autogen/mocs_compilation.o: LMK_1000_autogen/mocs_compilation.cpp.o
 .PHONY : LMK_1000_autogen/mocs_compilation.o
 
@@ -224,6 +248,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... LMK_1000_autogen"
 	@echo "... LMK_1000"
+	@echo "... LMK1000-widget.o"
+	@echo "... LMK1000-widget.i"
+	@echo "... LMK1000-widget.s"
 	@echo "... LMK_1000_autogen/mocs_compilation.o"
 	@echo "... LMK_1000_autogen/mocs_compilation.i"
 	@echo "... LMK_1000_autogen/mocs_compilation.s"
