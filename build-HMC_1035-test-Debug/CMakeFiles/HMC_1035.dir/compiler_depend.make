@@ -3,8 +3,8 @@
 
 CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.cpp \
   /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -116,6 +116,7 @@ CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.o: /home/vadislava/qtprojects/qt_git/
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
@@ -312,8 +313,6 @@ CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.o: /home/vadislava/qtprojects/qt_git/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView \
@@ -345,27 +344,6 @@ CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.o: /home/vadislava/qtprojects/qt_git/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/bits/basic_ios.h \
-  /usr/include/c++/11/bits/locale_facets.h \
-  /usr/include/c++/11/cwctype \
-  /usr/include/wctype.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
-  /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/rapidjson/document.h \
   /usr/include/rapidjson/reader.h \
   /usr/include/rapidjson/allocators.h \
@@ -392,14 +370,11 @@ CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.o: /home/vadislava/qtprojects/qt_git/
   /usr/include/rapidjson/rapidjson.h \
   /usr/include/rapidjson/internal/strfunc.h \
   /usr/include/rapidjson/stream.h \
-  /usr/include/rapidjson/error/en.h \
   /usr/include/rapidjson/writer.h \
   /usr/include/rapidjson/internal/dtoa.h \
   /usr/include/rapidjson/internal/itoa.h \
   /usr/include/rapidjson/stringbuffer.h \
   /usr/include/rapidjson/prettywriter.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
@@ -540,8 +515,8 @@ CMakeFiles/HMC_1035.dir/HMC_1035_autogen/mocs_compilation.cpp.o: HMC_1035_autoge
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/backward/auto_ptr.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -585,6 +560,7 @@ CMakeFiles/HMC_1035.dir/HMC_1035_autogen/mocs_compilation.cpp.o: HMC_1035_autoge
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
@@ -718,23 +694,19 @@ CMakeFiles/HMC_1035.dir/HMC_1035_autogen/mocs_compilation.cpp.o: HMC_1035_autoge
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QStandardItemModel \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qstandarditemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/c++/11/variant \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
@@ -746,26 +718,13 @@ CMakeFiles/HMC_1035.dir/HMC_1035_autogen/mocs_compilation.cpp.o: HMC_1035_autoge
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/bits/basic_ios.h \
-  /usr/include/c++/11/bits/locale_facets.h \
-  /usr/include/c++/11/cwctype \
-  /usr/include/wctype.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
-  /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/QStandardItemModel \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qstandarditemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
   /usr/include/rapidjson/document.h \
   /usr/include/rapidjson/reader.h \
   /usr/include/rapidjson/allocators.h \
@@ -792,22 +751,19 @@ CMakeFiles/HMC_1035.dir/HMC_1035_autogen/mocs_compilation.cpp.o: HMC_1035_autoge
   /usr/include/rapidjson/rapidjson.h \
   /usr/include/rapidjson/internal/strfunc.h \
   /usr/include/rapidjson/stream.h \
-  /usr/include/rapidjson/error/en.h \
   /usr/include/rapidjson/writer.h \
   /usr/include/rapidjson/internal/dtoa.h \
   /usr/include/rapidjson/internal/itoa.h \
   /usr/include/rapidjson/stringbuffer.h \
   /usr/include/rapidjson/prettywriter.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
   HMC_1035_autogen/EWIEGA46WW/moc_mainwindow.cpp \
   /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/mainwindow.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h
 
 CMakeFiles/HMC_1035.dir/data.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/data.cpp \
   /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -919,6 +875,7 @@ CMakeFiles/HMC_1035.dir/data.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
@@ -1115,8 +1072,6 @@ CMakeFiles/HMC_1035.dir/data.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView \
@@ -1148,27 +1103,6 @@ CMakeFiles/HMC_1035.dir/data.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/bits/basic_ios.h \
-  /usr/include/c++/11/bits/locale_facets.h \
-  /usr/include/c++/11/cwctype \
-  /usr/include/wctype.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
-  /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/rapidjson/document.h \
   /usr/include/rapidjson/reader.h \
   /usr/include/rapidjson/allocators.h \
@@ -1195,14 +1129,11 @@ CMakeFiles/HMC_1035.dir/data.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/rapidjson/rapidjson.h \
   /usr/include/rapidjson/internal/strfunc.h \
   /usr/include/rapidjson/stream.h \
-  /usr/include/rapidjson/error/en.h \
   /usr/include/rapidjson/writer.h \
   /usr/include/rapidjson/internal/dtoa.h \
   /usr/include/rapidjson/internal/itoa.h \
   /usr/include/rapidjson/stringbuffer.h \
   /usr/include/rapidjson/prettywriter.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
@@ -1223,6 +1154,8 @@ CMakeFiles/HMC_1035.dir/data.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QInputDialog \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qinputdialog.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -1238,7 +1171,26 @@ CMakeFiles/HMC_1035.dir/data.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/locale_facets.h \
+  /usr/include/c++/11/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+  /usr/include/c++/11/bits/locale_facets.tcc \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc
 
 CMakeFiles/HMC_1035.dir/main.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/main.cpp \
   /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/mainwindow.h \
@@ -1555,7 +1507,6 @@ CMakeFiles/HMC_1035.dir/main.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
@@ -1585,27 +1536,6 @@ CMakeFiles/HMC_1035.dir/main.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/bits/basic_ios.h \
-  /usr/include/c++/11/bits/locale_facets.h \
-  /usr/include/c++/11/cwctype \
-  /usr/include/wctype.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
-  /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/rapidjson/document.h \
   /usr/include/rapidjson/reader.h \
   /usr/include/rapidjson/allocators.h \
@@ -1632,14 +1562,11 @@ CMakeFiles/HMC_1035.dir/main.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/
   /usr/include/rapidjson/rapidjson.h \
   /usr/include/rapidjson/internal/strfunc.h \
   /usr/include/rapidjson/stream.h \
-  /usr/include/rapidjson/error/en.h \
   /usr/include/rapidjson/writer.h \
   /usr/include/rapidjson/internal/dtoa.h \
   /usr/include/rapidjson/internal/itoa.h \
   /usr/include/rapidjson/stringbuffer.h \
   /usr/include/rapidjson/prettywriter.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -1963,7 +1890,6 @@ CMakeFiles/HMC_1035.dir/mainwindow.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_t
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
@@ -1993,27 +1919,6 @@ CMakeFiles/HMC_1035.dir/mainwindow.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_t
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/bits/basic_ios.h \
-  /usr/include/c++/11/bits/locale_facets.h \
-  /usr/include/c++/11/cwctype \
-  /usr/include/wctype.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
-  /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/rapidjson/document.h \
   /usr/include/rapidjson/reader.h \
   /usr/include/rapidjson/allocators.h \
@@ -2040,14 +1945,11 @@ CMakeFiles/HMC_1035.dir/mainwindow.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_t
   /usr/include/rapidjson/rapidjson.h \
   /usr/include/rapidjson/internal/strfunc.h \
   /usr/include/rapidjson/stream.h \
-  /usr/include/rapidjson/error/en.h \
   /usr/include/rapidjson/writer.h \
   /usr/include/rapidjson/internal/dtoa.h \
   /usr/include/rapidjson/internal/itoa.h \
   /usr/include/rapidjson/stringbuffer.h \
   /usr/include/rapidjson/prettywriter.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
   HMC_1035_autogen/include/ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
@@ -2063,7 +1965,8 @@ CMakeFiles/HMC_1035.dir/mainwindow.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_t
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h:
@@ -2075,6 +1978,30 @@ CMakeFiles/HMC_1035.dir/mainwindow.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_t
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h:
+
+/usr/include/c++/11/bits/fstream.tcc:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
+
+/usr/include/c++/11/bits/istream.tcc:
+
+/usr/include/c++/11/bits/ostream.tcc:
+
+/usr/include/c++/11/ostream:
+
+/usr/include/c++/11/bits/codecvt.h:
+
+/usr/include/c++/11/bits/basic_ios.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/c++/11/cwctype:
+
+/usr/include/c++/11/fstream:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h:
 
@@ -2093,6 +2020,10 @@ CMakeFiles/HMC_1035.dir/mainwindow.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_t
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qinputdialog.h:
 
@@ -2124,8 +2055,6 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h:
-
 /usr/include/rapidjson/stringbuffer.h:
 
 /usr/include/rapidjson/internal/itoa.h:
@@ -2140,6 +2069,12 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/rapidjson/internal/swap.h:
 
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit:
+
+/usr/include/rapidjson/memorystream.h:
+
 /usr/include/rapidjson/encodings.h:
 
 /usr/include/c++/11/cassert:
@@ -2151,40 +2086,6 @@ HMC_1035_autogen/mocs_compilation.cpp:
 /usr/include/rapidjson/allocators.h:
 
 /usr/include/rapidjson/document.h:
-
-/usr/include/c++/11/bits/fstream.tcc:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit:
-
-/usr/include/rapidjson/memorystream.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
-
-/usr/include/c++/11/bits/istream.tcc:
-
-/usr/include/c++/11/bits/ostream.tcc:
-
-/usr/include/c++/11/ostream:
-
-/usr/include/c++/11/bits/codecvt.h:
-
-/usr/include/c++/11/bits/basic_ios.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/c++/11/cwctype:
-
-/usr/include/c++/11/fstream:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qstandarditemmodel.h:
 
@@ -2233,8 +2134,6 @@ HMC_1035_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h:
 
@@ -2298,10 +2197,6 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h:
-
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/ctime:
@@ -2322,11 +2217,9 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h:
 
-/usr/include/strings.h:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/c++/11/numeric:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h:
 
 /usr/include/c++/11/ratio:
 
@@ -2386,6 +2279,12 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/strings.h:
+
+/usr/include/c++/11/numeric:
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
@@ -2396,14 +2295,6 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/11/bits/allocated_ptr.h:
 
-/usr/include/c++/11/algorithm:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h:
-
-/usr/include/c++/11/backward/binders.h:
-
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
@@ -2413,6 +2304,22 @@ HMC_1035_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h:
+
+/usr/include/c++/11/bits/charconv.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QInputDialog:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/c++/11/bits/atomic_base.h:
 
@@ -2433,6 +2340,14 @@ HMC_1035_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget:
+
+/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/main.cpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h:
 
@@ -2456,17 +2371,9 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter:
-
 /usr/include/c++/11/bits/stl_pair.h:
 
 /usr/include/c++/11/ext/atomicity.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/rapidjson/encodedstream.h:
 
@@ -2478,9 +2385,9 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:
 
@@ -2522,6 +2429,74 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.cpp:
 
+/usr/include/c++/11/chrono:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h:
+
+/usr/include/c++/11/debug/assertions.h:
+
+/usr/include/c++/11/bits/basic_ios.h:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
+
+/usr/include/wchar.h:
+
+/usr/include/c++/11/bits/cxxabi_init_exception.h:
+
+/usr/include/rapidjson/internal/strtod.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/c++/11/algorithm:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h:
+
+/usr/include/c++/11/backward/binders.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
+
+/usr/include/c++/11/bits/predefined_ops.h:
+
+/usr/include/c++/11/new:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/c++/11/bits/stl_iterator.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:
+
 /usr/include/c++/11/clocale:
 
 /usr/include/alloca.h:
@@ -2531,8 +2506,6 @@ HMC_1035_autogen/mocs_compilation.cpp:
 /usr/include/c++/11/limits:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
 
@@ -2566,33 +2539,7 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/11/bits/stl_algo.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h:
-
-/usr/include/c++/11/bits/charconv.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QInputDialog:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h:
-
-/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/main.cpp:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget:
-
-/usr/include/c++/11/stdexcept:
 
 /usr/include/c++/11/atomic:
 
@@ -2600,41 +2547,13 @@ HMC_1035_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/11/bits/exception_defines.h:
 
-/usr/include/c++/11/chrono:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h:
-
-/usr/include/c++/11/debug/assertions.h:
-
-/usr/include/c++/11/bits/basic_ios.h:
-
-/usr/include/c++/11/bits/uniform_int_dist.h:
-
-/usr/include/wchar.h:
-
-/usr/include/c++/11/bits/cxxabi_init_exception.h:
-
-/usr/include/rapidjson/internal/strtod.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/usr/include/rapidjson/prettywriter.h:
-
 /usr/include/c++/11/istream:
+
+/usr/include/rapidjson/prettywriter.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h:
 
@@ -2654,16 +2573,6 @@ HMC_1035_autogen/include/ui_mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/c++/11/bits/stl_iterator.h:
-
-/usr/include/c++/11/new:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/c++/11/cwchar:
@@ -2671,6 +2580,10 @@ HMC_1035_autogen/include/ui_mainwindow.h:
 /usr/include/features-time64.h:
 
 /usr/include/c++/11/debug/debug.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h:
 
 /usr/include/c++/11/bits/erase_if.h:
 
@@ -2697,18 +2610,6 @@ HMC_1035_autogen/include/ui_mainwindow.h:
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/11/bits/concept_check.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/lib/llvm-14/lib/clang/14.0.0/include/__stddef_max_align_t.h:
-
-/usr/include/c++/11/bits/predefined_ops.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
@@ -2882,10 +2783,6 @@ HMC_1035_autogen/include/ui_mainwindow.h:
 
 /usr/include/c++/11/iterator:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h:
-
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
 /usr/include/c++/11/bits/ios_base.h:
@@ -2907,6 +2804,8 @@ HMC_1035_autogen/include/ui_mainwindow.h:
 /usr/include/c++/11/utility:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
+
+/usr/include/c++/11/stdexcept:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication:
 
@@ -2951,8 +2850,6 @@ HMC_1035_autogen/include/ui_mainwindow.h:
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/c++/11/bits/stl_list.h:
-
-/usr/include/rapidjson/error/en.h:
 
 /usr/include/c++/11/bits/list.tcc:
 

@@ -2,12 +2,8 @@
 
 #include <QStandardItemModel>
 #include <QTreeView>
-#include <QDebug>
 #include <QVBoxLayout>
 #include <QLineEdit>
-#include <QComboBox>
-#include <QCheckBox>
-#include <QMessageBox>
 
 AD9122Widget::AD9122Widget(QWidget *parent)
     : QWidget{parent}, treeView(new QTreeView(this)), model(new QStandardItemModel(this)), treeExpanded(false)
@@ -23,7 +19,7 @@ void AD9122Widget::viewTree() {
     QStandardItemModel *model = new QStandardItemModel();
 
     model->setColumnCount(2);
-    model->setHorizontalHeaderLabels({"Register (address - hex)", "Bits"});
+    model->setHorizontalHeaderLabels({"Register (address - hex)", "Bits (7-0)"});
 
     treeView->setModel(model);
 
@@ -60,13 +56,13 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("SDIO", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("SDIO", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("LSB_FIRST", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("LSB_FIRST", Unchecked, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox = createCheckBoxWidget("reset", Unchecked);
+                QCheckBox *checkBox = createCheckBoxWidget("reset", Unchecked, 5);
                 layout->addWidget(checkBox);
 
                 treeView->setIndexWidget(index1, container);
@@ -79,16 +75,16 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Power down I DAC", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Power down I DAC", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Power down Q DAC", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Power down Q DAC", Unchecked, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Power down data receiver", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Power down data receiver", Unchecked, 5);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("Power down auxiliary ADC", Checked);
+                QCheckBox *checkBox4 = createCheckBoxWidget("Power down auxiliary ADC", Checked, 4);
                 layout->addWidget(checkBox4);
 
                 treeView->setIndexWidget(index1, container);
@@ -101,19 +97,19 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Binary data format", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Binary data format", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Q data first", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Q data first", Unchecked, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("MSB swap", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("MSB swap", Unchecked, 5);
                 layout->addWidget(checkBox3);
 
-                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("Data Bus Width[1:0]", {"0",
-                                                                                             "1",
-                                                                                             "2",
-                                                                                             "3"});
+                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("Data Bus Width[1:0]", {"00",
+                                                                                             "01",
+                                                                                             "10",
+                                                                                             "11"}, 1);
                 layout->addWidget(comboBoxWidget4);
 
                 treeView->setIndexWidget(index1, container);
@@ -126,22 +122,22 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Enable PLL lock lost", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Enable PLL lock lost", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Enable PLL locked", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Enable PLL locked", Unchecked, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Enable sync signal lost", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Enable sync signal lost", Unchecked, 5);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("Enable sync signal locked", Unchecked);
+                QCheckBox *checkBox4 = createCheckBoxWidget("Enable sync signal locked", Unchecked, 4);
                 layout->addWidget(checkBox4);
 
-                QCheckBox *checkBox5 = createCheckBoxWidget("Enable FIFO Warning 1", Unchecked);
+                QCheckBox *checkBox5 = createCheckBoxWidget("Enable FIFO Warning 1", Unchecked, 1);
                 layout->addWidget(checkBox5);
 
-                QCheckBox *checkBox6 = createCheckBoxWidget("Enable FIFO Warning 2", Unchecked);
+                QCheckBox *checkBox6 = createCheckBoxWidget("Enable FIFO Warning 2", Unchecked, 0);
                 layout->addWidget(checkBox6);
 
                 treeView->setIndexWidget(index1, container);
@@ -157,27 +153,28 @@ void AD9122Widget::viewTree() {
                 QWidget *widget = createLineEditWithSaveButton(parentItem->rowCount()-1, 7, 1,
                     "Interrupt Enable (0-7)...",
                     "Interrupt Enable must be 0-7",
-                    "0");
+                    "0", 8);
                 layout->addWidget(widget);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Enable AED compare pass", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Enable AED compare pass", Unchecked, 3);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Enable AED compare fail", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Enable AED compare fail", Unchecked, 2);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("Enable SED compare fail", Unchecked);
+                QCheckBox *checkBox4 = createCheckBoxWidget("Enable SED compare fail", Unchecked, 1);
                 layout->addWidget(checkBox4);
 
-                QWidget *comboBoxWidget5 = createComboBoxWidgetLable("Set to 0", {"0",
-                                                                                  "1",
-                                                                                  "2",
-                                                                                  "3"});
+                QWidget *comboBoxWidget5 = createComboBoxWidgetLable("Set to 0", {"00",
+                                                                                  "01",
+                                                                                  "10",
+                                                                                  "11"}, 8);
                 layout->addWidget(comboBoxWidget5);
 
                 treeView->setIndexWidget(index1, container);
 
                 break;
+
             }
             case 5:
             {
@@ -185,22 +182,22 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-2, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Enable PLL lock lost", Undefined);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Enable PLL lock lost", Undefined, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Enable PLL locked", Undefined);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Enable PLL locked", Undefined, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Enable sync signal lost", Undefined);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Enable sync signal lost", Undefined, 5);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("Enable sync signal locked", Undefined);
+                QCheckBox *checkBox4 = createCheckBoxWidget("Enable sync signal locked", Undefined, 4);
                 layout->addWidget(checkBox4);
 
-                QCheckBox *checkBox5 = createCheckBoxWidget("Enable FIFO Warning 1", Undefined);
+                QCheckBox *checkBox5 = createCheckBoxWidget("Enable FIFO Warning 1", Undefined, 1);
                 layout->addWidget(checkBox5);
 
-                QCheckBox *checkBox6 = createCheckBoxWidget("Enable FIFO Warning 2", Undefined);
+                QCheckBox *checkBox6 = createCheckBoxWidget("Enable FIFO Warning 2", Undefined, 0);
                 layout->addWidget(checkBox6);
 
                 treeView->setIndexWidget(index1, container);
@@ -209,13 +206,13 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout2 = new QVBoxLayout(container2);
                 QModelIndex index2 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox11 = createCheckBoxWidget("AED compare pass", Undefined);
+                QCheckBox *checkBox11 = createCheckBoxWidget("AED compare pass", Undefined, 4);
                 layout2->addWidget(checkBox11);
 
-                QCheckBox *checkBox12 = createCheckBoxWidget("AED compare fail", Undefined);
+                QCheckBox *checkBox12 = createCheckBoxWidget("AED compare fail", Undefined, 3);
                 layout2->addWidget(checkBox12);
 
-                QCheckBox *checkBox13 = createCheckBoxWidget("SED compare fail", Undefined);
+                QCheckBox *checkBox13 = createCheckBoxWidget("SED compare fail", Undefined, 2);
                 layout2->addWidget(checkBox13);
 
                 treeView->setIndexWidget(index2, container2);
@@ -228,19 +225,19 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("DACCLK duty correction", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("DACCLK duty correction", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
                 QModelIndex index2 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
-                QCheckBox *checkBox2 = createCheckBoxWidget("REFCLK duty correction", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("REFCLK duty correction", Unchecked, 6);
                 layout->addWidget(checkBox2);
 
                 QModelIndex index3 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
-                QCheckBox *checkBox3 = createCheckBoxWidget("DACCLK cross-correction", Checked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("DACCLK cross-correction", Checked, 5);
                 layout->addWidget(checkBox3);
 
                 QModelIndex index4 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
-                QCheckBox *checkBox4 = createCheckBoxWidget("REFCLK cross-correction", Checked);
+                QCheckBox *checkBox4 = createCheckBoxWidget("REFCLK cross-correction", Checked, 4);
                 layout->addWidget(checkBox4);
 
                 treeView->setIndexWidget(index1, container);
@@ -253,16 +250,16 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-3, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("PLL enable", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("PLL enable", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("PLL manual enable", Checked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("PLL manual enable", Checked, 6);
                 layout->addWidget(checkBox2);
 
                 QWidget *widget = createLineEditWithSaveButton(parentItem->rowCount()-1, 63, 1,
                     "Manual VCO Band[5:0] (0-63)...",
                     "Manual VCO Band[5:0] must be 0-63",
-                    "0");
+                    "0", 5);
                 layout->addWidget(widget);
 
                 treeView->setIndexWidget(index1, container);
@@ -271,17 +268,17 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout2 = new QVBoxLayout(container2);
                 QModelIndex index2 = model->index(parentItem->rowCount()-2, 1, parentItem->index());
 
-                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("PLL Loop Bandwidth[1:0]", {"3 - narrowest bandwidth",
-                                                                                                 "2",
-                                                                                                 "1",
-                                                                                                 "0 - widest bandwidth"});
+                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("PLL Loop Bandwidth[1:0]", {"11 - narrowest bandwidth",
+                                                                                                 "10",
+                                                                                                 "01",
+                                                                                                 "00 - widest bandwidth"}, 7);
                 layout2->addWidget(comboBoxWidget4);
 
                 QModelIndex index5 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
                 QWidget *widget5 = createLineEditWithSaveButton(parentItem->rowCount()-1, 31, 1,
                     "PLL Charge Pump Current[4:0](0-31)...",
                     "PLL Charge Pump Current[4:0] must be 0-31",
-                    "17");
+                    "17", 5);
                 layout2->addWidget(widget5);
 
                 treeView->setIndexWidget(index2, container2);
@@ -290,25 +287,25 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout3 = new QVBoxLayout(container3);
                 QModelIndex index3 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QWidget *comboBoxWidget1 =  createComboBoxWidgetLable("N2[1:0]", {"3 - fDACCLK/fPC_CLK = 16",
-                                                                                  "2 - fDACCLK/fPC_CLK = 8",
-                                                                                  "1 - fDACCLK/fPC_CLK = 4",
-                                                                                  "0 - fDACCLK/fPC_CLK = 2"});
+                QWidget *comboBoxWidget1 =  createComboBoxWidgetLable("N2[1:0]", {"11 - fDACCLK/fPC_CLK = 16",
+                                                                                  "10 - fDACCLK/fPC_CLK = 8",
+                                                                                  "01 - fDACCLK/fPC_CLK = 4",
+                                                                                  "00 - fDACCLK/fPC_CLK = 2"}, 7);
                 layout3->addWidget(comboBoxWidget1);
 
-                QCheckBox *checkBox7 = createCheckBoxWidget("PLL manual enable", Checked);
+                QCheckBox *checkBox7 = createCheckBoxWidget("PLL manual enable", Checked, 4);
                 layout3->addWidget(checkBox7);
 
-                QWidget *comboBoxWidget8 =  createComboBoxWidgetLable("N0[1:0]", {"2 - fVCO/fDACCLK = 4",
-                                                                                  "0 - fVCO/fDACCLK = 1",
-                                                                                  "1 - fVCO/fDACCLK = 2",
-                                                                                  "3 - fVCO/fDACCLK = 4"});
+                QWidget *comboBoxWidget8 =  createComboBoxWidgetLable("N0[1:0]", {"10 - fVCO/fDACCLK = 4",
+                                                                                  "00 - fVCO/fDACCLK = 1",
+                                                                                  "01 - fVCO/fDACCLK = 2",
+                                                                                  "11 - fVCO/fDACCLK = 4"}, 3);
                 layout3->addWidget(comboBoxWidget8);
 
-                QWidget *comboBoxWidget9 =  createComboBoxWidgetLable("N1[1:0]", {"1 - fVCO/fDACCLK = 4",
-                                                                                  "0 - fVCO/fDACCLK = 2",
-                                                                                  "2 - fVCO/fDACCLK = 8",
-                                                                                  "3 - fVCO/fDACCLK = 16"});
+                QWidget *comboBoxWidget9 =  createComboBoxWidgetLable("N1[1:0]", {"01 - fVCO/fDACCLK = 4",
+                                                                                  "00 - fVCO/fDACCLK = 2",
+                                                                                  "10 - fVCO/fDACCLK = 8",
+                                                                                  "11 - fVCO/fDACCLK = 16"}, 1);
                 layout3->addWidget(comboBoxWidget9);
 
                 treeView->setIndexWidget(index3, container3);
@@ -321,13 +318,13 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-2, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("PLL locked", Undefined);
+                QCheckBox *checkBox1 = createCheckBoxWidget("PLL locked", Undefined, 7);
                 layout->addWidget(checkBox1);
 
                 QWidget *widget2 = createLineEditWithSaveButton(parentItem->rowCount()-1, 15, 1,
                     "VCO Control Voltage (0-15)...",
                     "VCO Control Voltage must be 0-15",
-                    " ");
+                    " ", 3);
                 layout->addWidget(widget2);
 
                 treeView->setIndexWidget(index1, container);
@@ -339,7 +336,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget3 = createLineEditWithSaveButton(parentItem->rowCount()-1, 63, 1,
                     "VCO Band Readback (0-63)...",
                     "VCO Band Readback 0-63",
-                    " ");
+                    " ", 5);
                 layout2->addWidget(widget3);
 
                 treeView->setIndexWidget(index2, container2);
@@ -352,21 +349,19 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-2, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Sync enable", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Sync enable", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Data/FIFO rate toggle", Checked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Data/FIFO rate toggle", Checked, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Rising edge sync", Checked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Rising edge sync", Checked, 3);
                 layout->addWidget(checkBox3);
 
-                QString defaultText = "0";
-                int valueLimit = 128;
-                QString errorMsg = "Sync Averaging must be power of 2 (0-128)";
-                QString placeholderText = "Sync Averaging 0-128";
-                QModelIndex index4 = model->index(parentItem->rowCount()-2, 1, parentItem->index());
-                QWidget *widget4 = LineOfPower(parentItem->rowCount()-1, valueLimit, placeholderText, errorMsg, defaultText);
+                QWidget *widget4 = createLineEditWithSaveButton(parentItem->rowCount()-2, 128, 1,
+                    "Sync Averaging 0-128...",
+                    "Sync Averaging must be power of 2 (0-128)",
+                    "0", 2);
                 layout->addWidget(widget4);
 
                 treeView->setIndexWidget(index1, container);
@@ -379,7 +374,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget5 = createLineEditWithSaveButton(parentItem->rowCount()-1, 63, 1,
                     "Sync Phase Request (0-63 DACCLK cycles)...",
                     "Sync Phase Request must be 0-63 DACCLK cycles",
-                    "0");
+                    "0", 5);
                 layout2->addWidget(widget5);
 
                 treeView->setIndexWidget(index2, container2);
@@ -392,10 +387,10 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-2, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Sync lost", Undefined);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Sync lost", Undefined, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Sync locked", Undefined);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Sync locked", Undefined, 6);
                 layout->addWidget(checkBox2);
 
                 treeView->setIndexWidget(index1, container);
@@ -407,7 +402,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget3 = createLineEditWithSaveButton(parentItem->rowCount()-1, 63.75, 0.25,
                     "Sync Phase Request (0-63.75)...",
                     "Sync Phase Request must be 0-63.75",
-                    "");
+                    "", 7);
                 layout2->addWidget(widget3);
 
                 treeView->setIndexWidget(index2, container2);
@@ -420,22 +415,22 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("LVDS FRAME level high", Undefined);
+                QCheckBox *checkBox1 = createCheckBoxWidget("LVDS FRAME level high", Undefined, 5);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("LVDS FRAME level low", Undefined);
+                QCheckBox *checkBox2 = createCheckBoxWidget("LVDS FRAME level low", Undefined, 4);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("LVDS DCI level high", Undefined);
+                QCheckBox *checkBox3 = createCheckBoxWidget("LVDS DCI level high", Undefined, 3);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("LVDS DCI level low", Undefined);
+                QCheckBox *checkBox4 = createCheckBoxWidget("LVDS DCI level low", Undefined, 2);
                 layout->addWidget(checkBox4);
 
-                QCheckBox *checkBox5 = createCheckBoxWidget("LVDS data level high", Undefined);
+                QCheckBox *checkBox5 = createCheckBoxWidget("LVDS data level high", Undefined, 1);
                 layout->addWidget(checkBox5);
 
-                QCheckBox *checkBox6 = createCheckBoxWidget("LVDS data level low", Undefined);
+                QCheckBox *checkBox6 = createCheckBoxWidget("LVDS data level low", Undefined, 0);
                 layout->addWidget(checkBox6);
 
                 treeView->setIndexWidget(index1, container);
@@ -448,10 +443,10 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QWidget *comboBoxWidget1 = createComboBoxWidgetLable("DCI Delay[1:0]", {"0 - 350 ps",
-                                                                                        "1 - 590 ps",
-                                                                                        "2 - 800 ps",
-                                                                                        "3 - 925 ps"});
+                QWidget *comboBoxWidget1 = createComboBoxWidgetLable("DCI Delay[1:0]", {"00 - 350 ps",
+                                                                                        "01 - 590 ps",
+                                                                                        "10 - 800 ps",
+                                                                                        "11 - 925 ps"}, 1);
                 layout->addWidget(comboBoxWidget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -468,7 +463,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 7, 1,
                     "FIFO Phase Offset (0-7)...",
                     "FIFO Phase Offset must be 0-7",
-                    "4");
+                    "4", 2);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -483,16 +478,16 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-2, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("FIFO Warning 1", Undefined);
+                QCheckBox *checkBox1 = createCheckBoxWidget("FIFO Warning 1", Undefined, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("FIFO Warning 2", Undefined);
+                QCheckBox *checkBox2 = createCheckBoxWidget("FIFO Warning 2", Undefined, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("FIFO soft align acknowledge", Undefined);
+                QCheckBox *checkBox3 = createCheckBoxWidget("FIFO soft align acknowledge", Undefined, 2);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("FIFO soft align request", Unchecked);
+                QCheckBox *checkBox4 = createCheckBoxWidget("FIFO soft align request", Unchecked, 1);
                 layout->addWidget(checkBox4);
 
                 treeView->setIndexWidget(index1, container);
@@ -504,7 +499,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget5 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "FIFO Level (0-255)...",
                     "FIFO Level must be 0-255",
-                    "");
+                    "", 7);
                 layout2->addWidget(widget5);
 
                 treeView->setIndexWidget(index2, container2);
@@ -517,25 +512,25 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Bypass premod", Checked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Bypass premod", Checked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Bypass sinc−1", Checked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Bypass sinc−1", Checked, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Bypass NCO", Checked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Bypass NCO", Checked, 5);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("NCO gain", Unchecked);
+                QCheckBox *checkBox4 = createCheckBoxWidget("NCO gain", Unchecked, 3);
                 layout->addWidget(checkBox4);
 
-                QCheckBox *checkBox5 = createCheckBoxWidget("Bypass phase compensation and dc offset", Checked);
+                QCheckBox *checkBox5 = createCheckBoxWidget("Bypass phase compensation and dc offset", Checked, 2);
                 layout->addWidget(checkBox5);
 
-                QCheckBox *checkBox6 = createCheckBoxWidget("Select sideband", Unchecked);
+                QCheckBox *checkBox6 = createCheckBoxWidget("Select sideband", Unchecked, 1);
                 layout->addWidget(checkBox6);
 
-                QCheckBox *checkBox7 = createCheckBoxWidget("Send I data to Q data", Unchecked);
+                QCheckBox *checkBox7 = createCheckBoxWidget("Send I data to Q data", Unchecked, 0);
                 layout->addWidget(checkBox7);
 
                 treeView->setIndexWidget(index1, container);
@@ -548,13 +543,13 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QWidget *comboBoxWidget1 = createComboBoxWidgetLable("HB1[1:0]", {"0 - input signal not modulated",
-                                                                                  "1 - input signal not modulated",
-                                                                                  "2 - input signal modulated by fIN1",
-                                                                                  "3 - input signal modulated by fIN1"});
+                QWidget *comboBoxWidget1 = createComboBoxWidgetLable("HB1[1:0]", {"00 - input signal not modulated",
+                                                                                  "01 - input signal not modulated",
+                                                                                  "10 - input signal modulated by fIN1",
+                                                                                  "11 - input signal modulated by fIN1"}, 2);
                 layout->addWidget(comboBoxWidget1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Bypass HB1", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Bypass HB1", Unchecked, 0);
                 layout->addWidget(checkBox2);
 
                 treeView->setIndexWidget(index1, container);
@@ -574,12 +569,12 @@ void AD9122Widget::viewTree() {
                                                                                   "36 - input signal modulated by fIN2",
                                                                                   "45 - input signal modulated by fIN2",
                                                                                   "54 - input signal modulated by fIN2",
-                                                                                  "63 - input signal modulated by fIN2"});
+                                                                                  "63 - input signal modulated by fIN2"}, 6);
                 layout->addWidget(comboBoxWidget1);
 
                 parentItem->appendRow(new QStandardItem);
                 QModelIndex index2 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
-                QCheckBox *checkBox2 = createCheckBoxWidget("Bypass HB2", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Bypass HB2", Unchecked, 0);
                 layout->addWidget(checkBox2);
 
                 treeView->setIndexWidget(index1, container);
@@ -601,10 +596,10 @@ void AD9122Widget::viewTree() {
                                                                                   "36 - input signal modulated by fIN3",
                                                                                   "45 - input signal modulated by fIN3",
                                                                                   "54 - input signal modulated by fIN3",
-                                                                                  "63 - input signal modulated by fIN3"});
+                                                                                  "63 - input signal modulated by fIN3"}, 6);
                 layout->addWidget(comboBoxWidget1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Bypass HB3", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Bypass HB3", Unchecked, 0);
                 layout->addWidget(checkBox2);
 
                 treeView->setIndexWidget(index1, container);
@@ -620,7 +615,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Chip ID (0-255)...",
                     "Chip ID must be 0-255",
-                    "8");
+                    "8", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -636,7 +631,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "FTW [7:0] (0-255)...",
                     "FTW [7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -652,7 +647,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "FTW [15:8] (0-255)...",
                     "FTW [15:8] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -668,7 +663,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "FTW [23:16] (0-255)...",
                     "FTW [23:16] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -685,7 +680,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "FTW [31:24] (0-255)...",
                     "FTW [31:24] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -702,7 +697,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "NCO Phase Offset [7:0] (0-255)...",
                     "NCO Phase Offset [7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -718,7 +713,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "NCO Phase Offset[15:8] (0-255)...",
                     "NCO Phase Offset[15:8] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -731,16 +726,16 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("FRAME FTW acknowledge", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("FRAME FTW acknowledge", Unchecked, 5);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("FRAME FTW request", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("FRAME FTW request", Unchecked, 4);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Update FTW acknowledge", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Update FTW acknowledge", Unchecked, 1);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("Update FTW request", Unchecked);
+                QCheckBox *checkBox4 = createCheckBoxWidget("Update FTW request", Unchecked, 0);
                 layout->addWidget(checkBox4);
 
                 treeView->setIndexWidget(index1, container);
@@ -756,7 +751,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "I Phase Adj[7:0] (0-255)...",
                     "I Phase Adj[7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -772,7 +767,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 3, 1,
                     "I Phase Adj[9:8] (0-3)...",
                     "I Phase Adj[9:8] must be 0-3",
-                    "0");
+                    "0", 1);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -788,7 +783,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Q Phase Adj[7:0] (0-255)...",
                     "Q Phase Adj[7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -804,7 +799,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 3, 1,
                     "I Phase Adj[9:8] (0-3)...",
                     "I Phase Adj[9:8] must be 0-3",
-                    "0");
+                    "0", 1);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -820,7 +815,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "I DAC Offset[7:0] (0-255)...",
                     "I DAC Offset[7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -836,7 +831,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "I DAC Offset[15:8] (0-255)...",
                     "I DAC Offset[15:8] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -852,7 +847,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Q DAC Offset[7:0] (0-255)...",
                     "Q DAC Offset[7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -868,7 +863,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Q DAC Offset[15:8] (0-255)...",
                     "Q DAC Offset[15:8] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -884,7 +879,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "I DAC FS Adj[7:0] (0-255)...",
                     "I DAC FS Adj[7:0] must be 0-255",
-                    "249");
+                    "249", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -897,13 +892,13 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-2, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("I DAC sleep", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("I DAC sleep", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QWidget *comboBoxWidget2 = createComboBoxWidgetLable("I Aux DAC[9:8]", {"1",
-                                                                                        "0",
-                                                                                        "2",
-                                                                                        "3"});
+                QWidget *comboBoxWidget2 = createComboBoxWidgetLable("I Aux DAC[9:8]", {"01",
+                                                                                        "00",
+                                                                                        "10",
+                                                                                        "11"}, 1);
                 layout->addWidget(comboBoxWidget2);
 
                 treeView->setIndexWidget(index1, container);
@@ -919,7 +914,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "I Aux DAC (0-255)...",
                     "I Aux DAC must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -932,19 +927,19 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("I aux DAC sign", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("I aux DAC sign", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("I aux DAC current direction", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("I aux DAC current direction", Unchecked, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("I aux DAC sleep", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("I aux DAC sleep", Unchecked, 5);
                 layout->addWidget(checkBox3);
 
-                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("I Aux DAC[9:8]", {"0",
-                                                                                        "1",
-                                                                                        "2",
-                                                                                        "3"});
+                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("I Aux DAC[9:8]", {"00",
+                                                                                        "01",
+                                                                                        "10",
+                                                                                        "11"}, 1);
                 layout->addWidget(comboBoxWidget4);
 
                 treeView->setIndexWidget(index1, container);
@@ -961,7 +956,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Q DAC FS Adj[7:0] (0-255)...",
                     "Q DAC FS Adj[7:0] must be 0-255",
-                    "249");
+                    "249", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -974,13 +969,13 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Q DAC sleep", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Q DAC sleep", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
                 QWidget *comboBoxWidget4 = createComboBoxWidgetLable("Q DAC FS Adj[9:8]", {"0",
                                                                                            "1",
                                                                                            "2",
-                                                                                           "3"});
+                                                                                           "3"}, 1);
                 layout->addWidget(comboBoxWidget4);
 
                 treeView->setIndexWidget(index1, container);
@@ -996,7 +991,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Q Aux DAC[7:0](0-255)...",
                     "Q Aux DAC[7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1009,19 +1004,19 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("Q aux DAC sign", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("Q aux DAC sign", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("I aux DAC current direction", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("I aux DAC current direction", Unchecked, 6);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Q aux DAC sleep", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Q aux DAC sleep", Unchecked, 5);
                 layout->addWidget(checkBox3);
 
-                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("Q Aux DAC[9:8]", {"0",
-                                                                                        "1",
-                                                                                        "2",
-                                                                                        "3"});
+                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("Q Aux DAC[9:8]", {"00",
+                                                                                        "01",
+                                                                                        "10",
+                                                                                        "11"}, 1);
                 layout->addWidget(comboBoxWidget4);
 
                 treeView->setIndexWidget(index1, container);
@@ -1037,16 +1032,16 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 7, 1,
                     "FS Current[2:0] (0-7)...",
                     "FS Current[2:0] must be 0-7",
-                    "0");
+                    "0", 6);
                 layout->addWidget(widget1);
 
                 QWidget *widget2 = createLineEditWithSaveButton(parentItem->rowCount()-1, 7, 1,
                     "Reference Current[2:0] (0-7)...",
                     "Reference Current[2:0] must be 0-7",
-                    "1");
+                    "1", 3);
                 layout->addWidget(widget2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Capacitor value", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Capacitor value", Unchecked, 0);
                 layout->addWidget(checkBox3);
 
                 treeView->setIndexWidget(index1, container);
@@ -1062,7 +1057,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Die Temp[7:0] (0-255)...",
                     "Die Temp[7:0] must be 0-255",
-                    "");
+                    "", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1078,7 +1073,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Die Temp[15:8] (0-255)...",
                     "Die Temp[15:8] must be 0-255",
-                    "");
+                    "", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1091,19 +1086,19 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(parentItem->rowCount()-1, 1, parentItem->index());
 
-                QCheckBox *checkBox1 = createCheckBoxWidget("SED compare enable", Unchecked);
+                QCheckBox *checkBox1 = createCheckBoxWidget("SED compare enable", Unchecked, 7);
                 layout->addWidget(checkBox1);
 
-                QCheckBox *checkBox2 = createCheckBoxWidget("Sample error detected", Unchecked);
+                QCheckBox *checkBox2 = createCheckBoxWidget("Sample error detected", Unchecked, 5);
                 layout->addWidget(checkBox2);
 
-                QCheckBox *checkBox3 = createCheckBoxWidget("Autoclear enable", Unchecked);
+                QCheckBox *checkBox3 = createCheckBoxWidget("Autoclear enable", Unchecked, 3);
                 layout->addWidget(checkBox3);
 
-                QCheckBox *checkBox4 = createCheckBoxWidget("Compare fail", Unchecked);
+                QCheckBox *checkBox4 = createCheckBoxWidget("Compare fail", Unchecked, 1);
                 layout->addWidget(checkBox4);
 
-                QCheckBox *checkBox5 = createCheckBoxWidget("Compare pass", Unchecked);
+                QCheckBox *checkBox5 = createCheckBoxWidget("Compare pass", Unchecked, 0);
                 layout->addWidget(checkBox5);
 
                 treeView->setIndexWidget(index1, container);
@@ -1119,7 +1114,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Compare Value I0[7:0] (0-255)...",
                     "Compare Value I0[7:0] must be 0-255",
-                    "182");
+                    "182", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1135,7 +1130,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Compare Value I0[15:8] (0-255)...",
                     "Compare Value I0[15:8] must be 0-255",
-                    "122");
+                    "122", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1151,7 +1146,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Compare Value Q0[7:0] (0-255)...",
                     "Compare Value Q0[7:0] must be 0-255",
-                    "65");
+                    "65", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1167,7 +1162,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Compare Value Q0[15:8] (0-255)...",
                     "Compare Value Q0[15:8] must be 0-255",
-                    "234");
+                    "234", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1183,7 +1178,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Compare Value I1[7:0] (0-255)...",
                     "Compare Value I1[7:0] must be 0-255",
-                    "22");
+                    "22", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1199,7 +1194,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Compare Value I1[15:8] (0-255)...",
                     "Compare Value I1[15:8] must be 0-255",
-                    "26");
+                    "26", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1215,7 +1210,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Compare Value Q1[7:0] (0-255)...",
                     "Compare Value Q1[7:0] must be 0-255",
-                    "198");
+                    "198", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1231,7 +1226,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Compare Value Q1[15:8] (0-255)...",
                     "Compare Value Q1[15:8] must be 0-255",
-                    "170");
+                    "170", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1247,7 +1242,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Errors Detected I_BITS[7:0] (0-255)...",
                     "Errors Detected I_BITS[7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1264,7 +1259,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Errors Detected I_BITS[15:8] (0-255)...",
                     "Errors Detected I_BITS[15:8] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1280,7 +1275,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Errors Detected Q_BITS[7:0] (0-255)...",
                     "Errors Detected Q_BITS[7:0] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1296,7 +1291,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Errors Detected Q_BITS[15:8] (0-255)...",
                     "Errors Detected Q_BITS[15:8] must be 0-255",
-                    "0");
+                    "0", 7);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1312,7 +1307,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(parentItem->rowCount()-1, 255, 1,
                     "Revision[3:0] (0-255)...",
                     "Revision[3:0] must be 0-255",
-                    "15");
+                    "15", 5);
                 layout->addWidget(widget1);
 
                 treeView->setIndexWidget(index1, container);
@@ -1341,9 +1336,26 @@ void AD9122Widget::viewTree() {
     buttons->setLayout(layout_buttons);
     layout->addWidget(buttons);
 
+    QWidget *buttons2 = new QWidget();
+    QHBoxLayout *layout_buttons2 = new QHBoxLayout(buttons);
+
+    save_elem = new QPushButton("Save element", buttons);
+    layout_buttons2->addWidget(save_elem);
+
+    load_elem = new QPushButton("Download element", buttons);
+    layout_buttons2->addWidget(load_elem);
+
+    buttons2->setLayout(layout_buttons2);
+    layout->addWidget(buttons2);
+
+//    QLineEdit *temp = new QLineEdit();
+
     connect(toggleButton, &QPushButton::clicked, this, &AD9122Widget::on_toggle_button_clicked);
     connect(saveButton, &QPushButton::clicked, this, &AD9122Widget::on_save_button_clicked);
-    connect(loadButton, &QPushButton::clicked, this, &AD9122Widget::on_load_button_clicked);
+    connect(treeView, &QTreeView::clicked, this, &AD9122Widget::onParentItemClicked);
+    connect(loadButton, &QPushButton::clicked, this, &AD9122Widget::load_all);
+    connect(load_elem, &QPushButton::clicked, this, &AD9122Widget::load_element);
+//    connect(temp, &QLineEdit::textEdited /*textChanged*/);
 
     setLayout(layout);
 

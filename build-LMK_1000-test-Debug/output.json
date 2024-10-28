@@ -1,210 +1,200 @@
 {
-    "items": [
+    "Registers": [
         {
-            "column0": "R0",
-            "column1": " ",
-            "children": [
+            "Name": "R0",
+            "Data": [
                 {
-                    "column0": "RESET",
-                    "column1": 0
+                    "Text": "RESET",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 0
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "2"
                 },
                 {
-                    "column0": "CLKoutX_EN",
-                    "column1": 0
+                    "Text": "CLKoutX_EN",
+                    "Value": "1"
                 },
                 {
-                    "column0": "CLKoutX_DIV [7:0]",
-                    "column1": ""
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": "80.00"
                 },
                 {
-                    "column0": "CLKoutX_DLY [3:0]",
-                    "column1": ""
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": "150.00"
                 }
             ]
         },
         {
-            "column0": "R1",
-            "column1": " ",
-            "children": [
+            "Name": "R1",
+            "Data": [
                 {
-                    "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 2
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "3"
                 },
                 {
-                    "column0": "CLKoutX_EN",
-                    "column1": 0
+                    "Text": "CLKoutX_EN",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_DIV [7:0]",
-                    "column1": ""
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": "150.00"
                 },
                 {
-                    "column0": "CLKoutX_DLY [3:0]",
-                    "column1": ""
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": "300.00"
                 }
             ]
         },
         {
-            "column0": "R2",
-            "column1": " ",
-            "children": [
+            "Name": "R2",
+            "Data": [
                 {
-                    "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 0
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "2"
                 },
                 {
-                    "column0": "CLKoutX_EN",
-                    "column1": 0
+                    "Text": "CLKoutX_EN",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_DIV [7:0]",
-                    "column1": ""
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": "40.00"
                 },
                 {
-                    "column0": "CLKoutX_DLY [3:0]",
-                    "column1": ""
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": "600.00"
                 }
             ]
         },
         {
-            "column0": "R3",
-            "column1": " ",
-            "children": [
+            "Name": "R3",
+            "Data": [
                 {
-                    "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 0
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_EN",
-                    "column1": 0
+                    "Text": "CLKoutX_EN",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_DIV [7:0]",
-                    "column1": ""
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": ""
                 },
                 {
-                    "column0": "CLKoutX_DLY [3:0]",
-                    "column1": ""
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": ""
                 }
             ]
         },
         {
-            "column0": "R4",
-            "column1": " ",
-            "children": [
+            "Name": "R4",
+            "Data": [
                 {
-                    "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 0
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_EN",
-                    "column1": 0
+                    "Text": "CLKoutX_EN",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_DIV [7:0]",
-                    "column1": ""
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": ""
                 },
                 {
-                    "column0": "CLKoutX_DLY [3:0]",
-                    "column1": ""
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": ""
                 }
             ]
         },
         {
-            "column0": "R5",
-            "column1": " ",
-            "children": [
+            "Name": "R5",
+            "Data": [
                 {
-                    "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 0
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_EN",
-                    "column1": 0
+                    "Text": "CLKoutX_EN",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_DIV [7:0]",
-                    "column1": ""
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": ""
                 },
                 {
-                    "column0": "CLKoutX_DLY [3:0]",
-                    "column1": ""
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": ""
                 }
             ]
         },
         {
-            "column0": "R6",
-            "column1": " ",
-            "children": [
+            "Name": "R6",
+            "Data": [
                 {
-                    "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 0
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_EN",
-                    "column1": 0
+                    "Text": "CLKoutX_EN",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_DIV [7:0]",
-                    "column1": ""
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": ""
                 },
                 {
-                    "column0": "CLKoutX_DLY [3:0]",
-                    "column1": ""
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": ""
                 }
             ]
         },
         {
-            "column0": "R7",
-            "column1": " ",
-            "children": [
+            "Name": "R7",
+            "Data": [
                 {
-                    "column0": "CLKoutX_MUX [1:0]",
-                    "column1": 0
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_EN",
-                    "column1": 0
+                    "Text": "CLKoutX_EN",
+                    "Value": "0"
                 },
                 {
-                    "column0": "CLKoutX_DIV [7:0]",
-                    "column1": ""
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": "152"
                 },
                 {
-                    "column0": "CLKoutX_DLY [3:0]",
-                    "column1": ""
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": "163"
                 }
             ]
         },
         {
-            "column0": "R9",
-            "column1": " ",
-            "children": [
+            "Name": "R9",
+            "Data": [
                 {
-                    "column0": "Vboost",
-                    "column1": 0
+                    "Text": "Vboost",
+                    "Value": "1"
                 }
             ]
         },
         {
-            "column0": "R14",
-            "column1": " ",
-            "children": [
+            "Name": "R14",
+            "Data": [
                 {
-                    "column0": "POWERDOWN",
-                    "column1": 0
+                    "Text": "POWERDOWN",
+                    "Value": "1"
                 },
                 {
-                    "column0": "EN_CLKout_Global",
-                    "column1": 1
+                    "Text": "EN_CLKout_Global",
+                    "Value": "1"
                 },
                 {
-                    "column0": "CLKin_SELECT",
-                    "column1": 0
+                    "Text": "CLKin_SELECT",
+                    "Value": "1"
                 }
             ]
         }

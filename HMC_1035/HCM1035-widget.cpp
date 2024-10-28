@@ -980,6 +980,8 @@ void HCM1035Widget::viewTree() {
 
     if (model) blockEditing(model);
 
+    HCMflag = 1;
+
     layout->addWidget(treeView);
 
     toggleButton = new QPushButton("Expand All");
@@ -997,9 +999,23 @@ void HCM1035Widget::viewTree() {
     buttons->setLayout(layout_buttons);
     layout->addWidget(buttons);
 
+    QWidget *buttons2 = new QWidget();
+    QHBoxLayout *layout_buttons2 = new QHBoxLayout(buttons);
+
+    save_elem = new QPushButton("Save element", buttons);
+    layout_buttons2->addWidget(save_elem);
+
+    load_elem = new QPushButton("Download element", buttons);
+    layout_buttons2->addWidget(load_elem);
+
+    buttons2->setLayout(layout_buttons2);
+    layout->addWidget(buttons2);
+
     connect(toggleButton, &QPushButton::clicked, this, &HCM1035Widget::on_toggle_button_clicked);
     connect(saveButton, &QPushButton::clicked, this, &HCM1035Widget::on_save_button_clicked);
-    connect(loadButton, &QPushButton::clicked, this, &HCM1035Widget::on_load_button_clicked);
+    connect(treeView, &QTreeView::clicked, this, &HCM1035Widget::onParentItemClicked);
+    connect(loadButton, &QPushButton::clicked, this, &HCM1035Widget::load_all);
+    connect(load_elem, &QPushButton::clicked, this, &HCM1035Widget::load_element);
 
     setLayout(layout);
 

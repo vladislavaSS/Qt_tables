@@ -1,845 +1,713 @@
 {
-    "items": [
+    "Registers": [
         {
-            "column0": "PLL",
-            "children": [
+            "Name": "PLL",
+            "Data": [
                 {
-                    "column0": "00h ID Register",
-                    "subChildren": [
-                        {}
-                    ]
+                    "Name": "00h ID Register",
+                    "Data": []
                 },
                 {
-                    "column0": "00h Open Mode Read Address/RST Strobe Register",
-                    "subChildren": [
+                    "Name": "00h Open Mode Read Address/RST Strobe Register",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Read Address [4:0]...",
-                                    "lineEditValue": "5.00"
-                                },
-                                {
-                                    "lineEditText": "Not Defined [23:6]...",
-                                    "lineEditValue": "2.00"
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "Soft Reset",
-                                    "value": "Checked"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "column0": "01h RST Register",
-                    "subChildren": [
-                        {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "column0": "02h REFDIV Register",
-                    "subChildren": [
-                        {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "rdiv [13:0] (29-1389561)...",
-                                    "lineEditValue": ""
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "column0": "03h Frequency Register - Integer Part",
-                    "subChildren": [
-                        {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "intg [18:0] (365-524244)...",
-                                    "lineEditValue": ""
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "column0": "04h Frequency Register - Fractional Part",
-                    "subChildren": [
-                        {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "frac [23:0] (13-16777215)...",
-                                    "lineEditValue": "6.00"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "column0": "05h VCO SPI Register",
-                    "subChildren": [
-                        {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "VCO Subsystem_ID [2:0] (0-0)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "VCO Subsystem register address [6:3] (0-0)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "VCO Subsystem data [15:7] (0-0)...",
-                                    "lineEditValue": ""
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "column0": "06h SD CFG Register",
-                    "subChildren": [
-                        {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "frac_bypass",
-                                    "value": "Unchecked"
-                                },
-                                {
-                                    "checkBoxText": "SD Enable",
-                                    "value": "Checked"
-                                }
-                            ],
-                            "comboBox": [
-                                {
-                                    "comboBoxText": "seed [1:0]",
-                                    "comboBoxValue": "00"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "column0": "07h Lock Detect Register",
-                    "subChildren": [
-                        {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "Enable Internal Lock Detect",
-                                    "value": "Checked"
-                                },
-                                {
-                                    "checkBoxText": "Lock Detect Window type",
-                                    "value": "Checked"
-                                }
-                            ],
-                            "comboBox": [
-                                {
-                                    "comboBoxText": "lkd_wincnt_max [2:0]",
-                                    "comboBoxValue": "default:"
-                                },
-                                {
-                                    "comboBoxText": "LD Digital Window duration [9:7]",
-                                    "comboBoxValue": "2:"
-                                },
-                                {
-                                    "comboBoxText": "LD Digital Timer Frequency Control [11:10]",
-                                    "comboBoxValue": "00"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "column0": "08h Analog EN Register",
-                    "subChildren": [
-                        {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Prescaler Clock enable",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "VCO Buffer and Prescaler Bias Enable",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "gpo_pad_en",
-                                    "value": "Checked"
-                                }
-                            ]
+                            "Text": "Read Address [4:0]...",
+                            "Value": ""
                         },
-                        {},
-                        {}
-                    ]
-                },
-                {
-                    "column0": "09h Charge Pump Register",
-                    "subChildren": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "CP DN Gain (0-2540 µA)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "CP UP Gain (0-2540 µA)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Offset Magnitude (0-635 µA)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "Offset UP enable",
-                                    "value": "Unchecked"
-                                },
-                                {
-                                    "checkBoxText": "Offset DN enable",
-                                    "value": "Checked"
-                                }
-                            ]
+                            "Text": "Not Defined [23:6]...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Soft Reset",
+                            "Value": "None"
                         }
                     ]
                 },
                 {
-                    "column0": "0Ah VCO AutoCal Configuration Register",
-                    "subChildren": [
+                    "Name": "01h RST Register",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Bypass VCO Tuning",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "No VSPI Trigger",
-                                    "value": "Unchecked"
-                                }
-                            ],
-                            "comboBox": [
-                                {
-                                    "comboBoxText": "Vtune Resolution",
-                                    "comboBoxValue": "5:"
-                                },
-                                {
-                                    "comboBoxText": "FSM/VSPI Clock Select",
-                                    "comboBoxValue": "1:"
-                                }
-                            ]
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "0Bh PD Register",
-                    "subChildren": [
+                    "Name": "02h REFDIV Register",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "PD_del_sel (0-273)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "PD_up_en (0-16)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "PD_dn_en (0-16)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reservedl",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved",
-                                    "lineEditValue": ""
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "Force CP UP",
-                                    "value": "Unchecked"
-                                },
-                                {
-                                    "checkBoxText": "Force CP DN",
-                                    "value": "Unchecked"
-                                }
-                            ],
-                            "comboBox": [
-                                {
-                                    "comboBoxText": "CSP Mode",
-                                    "comboBoxValue": "0"
-                                }
-                            ]
+                            "Text": "rdiv [13:0] (29-1389561)...",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "0Ch Exact Frequency Mode Register",
-                    "subChildren": [
+                    "Name": "03h Frequency Register - Integer Part",
+                    "Data": [
                         {
-                            "comboBox": [
-                                {
-                                    "comboBoxText": "CSP Mode",
-                                    "comboBoxValue": "0"
-                                }
-                            ]
+                            "Text": "intg [18:0] (365-524244)...",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "0Fh GPO_LD/SDO Register",
-                    "subChildren": [
+                    "Name": "04h Frequency Register - Fractional Part",
+                    "Data": [
                         {
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "GPO Test Data",
-                                    "value": "Unchecked"
-                                }
-                            ],
-                            "comboBox": [
-                                {
-                                    "comboBoxText": "gpo_select",
-                                    "comboBoxValue": "26"
-                                }
-                            ]
+                            "Text": "frac [23:0] (13-16777215)...",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "10h VCO Tune Register",
-                    "subChildren": [
+                    "Name": "05h VCO SPI Register",
+                    "Data": [
                         {
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "Prevent Automux SDO",
-                                    "value": "Unchecked"
-                                },
-                                {
-                                    "checkBoxText": "LDO Driver Always On",
-                                    "value": "Unchecked"
-                                },
-                                {
-                                    "checkBoxText": "Disable PFET",
-                                    "value": "Unchecked"
-                                },
-                                {
-                                    "checkBoxText": "Disable NFET",
-                                    "value": "Unchecked"
-                                }
-                            ]
+                            "Text": "VCO Subsystem_ID [2:0] (0-0)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "VCO Subsystem register address [6:3] (0-0)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "VCO Subsystem data [15:7] (0-0)...",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "11h SAR Register",
-                    "subChildren": [
-                        {}
+                    "Name": "06h SD CFG Register",
+                    "Data": [
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "frac_bypass",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "SD Enable",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "seed [1:0]",
+                            "Value": "00"
+                        }
                     ]
                 },
                 {
-                    "column0": "12h GPO2 Register",
-                    "subChildren": [
-                        {}
+                    "Name": "07h Lock Detect Register",
+                    "Data": [
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Enable Internal Lock Detect",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "Lock Detect Window type",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "lkd_wincnt_max [2:0]",
+                            "Value": "default:"
+                        },
+                        {
+                            "Text": "LD Digital Window duration [9:7]",
+                            "Value": "2:"
+                        },
+                        {
+                            "Text": "LD Digital Timer Frequency Control [11:10]",
+                            "Value": "00"
+                        }
                     ]
                 },
                 {
-                    "column0": "13h BIST Register",
-                    "subChildren": [
-                        {}
+                    "Name": "08h Analog EN Register",
+                    "Data": [
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Prescaler Clock enable",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "VCO Buffer and Prescaler Bias Enable",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "gpo_pad_en",
+                            "Value": "True"
+                        }
                     ]
+                },
+                {
+                    "Name": "09h Charge Pump Register",
+                    "Data": [
+                        {
+                            "Text": "CP DN Gain (0-2540 µA)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "CP UP Gain (0-2540 µA)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Offset Magnitude (0-635 µA)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Offset UP enable",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "Offset DN enable",
+                            "Value": "True"
+                        }
+                    ]
+                },
+                {
+                    "Name": "0Ah VCO AutoCal Configuration Register",
+                    "Data": [
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Bypass VCO Tuning",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "No VSPI Trigger",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "Vtune Resolution",
+                            "Value": "5:"
+                        },
+                        {
+                            "Text": "FSM/VSPI Clock Select",
+                            "Value": "1:"
+                        }
+                    ]
+                },
+                {
+                    "Name": "0Bh PD Register",
+                    "Data": [
+                        {
+                            "Text": "PD_del_sel (0-273)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "PD_up_en (0-16)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "PD_dn_en (0-16)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reservedl",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Force CP UP",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "Force CP DN",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "CSP Mode",
+                            "Value": "0"
+                        }
+                    ]
+                },
+                {
+                    "Name": "0Ch Exact Frequency Mode Register",
+                    "Data": [
+                        {
+                            "Text": "CSP Mode",
+                            "Value": "0"
+                        }
+                    ]
+                },
+                {
+                    "Name": "0Fh GPO_LD/SDO Register",
+                    "Data": [
+                        {
+                            "Text": "GPO Test Data",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "gpo_select",
+                            "Value": "26"
+                        }
+                    ]
+                },
+                {
+                    "Name": "10h VCO Tune Register",
+                    "Data": [
+                        {
+                            "Text": "Prevent Automux SDO",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "LDO Driver Always On",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "Disable PFET",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "Disable NFET",
+                            "Value": "False"
+                        }
+                    ]
+                },
+                {
+                    "Name": "11h SAR Register",
+                    "Data": []
+                },
+                {
+                    "Name": "12h GPO2 Register",
+                    "Data": []
+                },
+                {
+                    "Name": "13h BIST Register",
+                    "Data": []
                 }
             ]
         },
         {
-            "column0": "VCO Subsystem",
-            "children": [
+            "Name": "VCO Subsystem",
+            "Data": [
                 {
-                    "column0": "00h Tuning",
-                    "subChildren": [
+                    "Name": "00h Tuning",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Cal [0] (0-16)",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "CAPS [8:1] (0 - max frequency, 22 - min frequency.)",
-                                    "lineEditValue": ""
-                                }
-                            ]
+                            "Text": "Cal [0] (0-16)",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "CAPS [8:1] (0 - max frequency, 22 - min frequency.)",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "01h Enables",
-                    "subChildren": [
+                    "Name": "01h Enables",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "RF Divide ratio [5:0] (0 - >62) ...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved [7:6] ...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Don’t Care [8] (0-16) ...",
-                                    "lineEditValue": ""
-                                }
-                            ]
+                            "Text": "RF Divide ratio [5:0] (0 - >62) ...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved [7:6] ...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Don’t Care [8] (0-16) ...",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "02h Biases",
-                    "subChildren": [
+                    "Name": "02h Biases",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "Master Enable VCO Subsystem [0]",
-                                    "value": "Checked"
-                                },
-                                {
-                                    "checkBoxText": "VCO Enable [1]",
-                                    "value": "Checked"
-                                },
-                                {
-                                    "checkBoxText": "PLL Buffer Enable [2]",
-                                    "value": "Checked"
-                                },
-                                {
-                                    "checkBoxText": "IO Master Enable [3]",
-                                    "value": "Checked"
-                                },
-                                {
-                                    "checkBoxText": "Spare [4]",
-                                    "value": "Checked"
-                                },
-                                {
-                                    "checkBoxText": "Output Stage Enable [5]",
-                                    "value": "Checked"
-                                },
-                                {
-                                    "checkBoxText": "don’t care [8]",
-                                    "value": "Checked"
-                                }
-                            ]
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Master Enable VCO Subsystem [0]",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "VCO Enable [1]",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "PLL Buffer Enable [2]",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "IO Master Enable [3]",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "Spare [4]",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "Output Stage Enable [5]",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "don’t care [8]",
+                            "Value": "True"
                         }
                     ]
                 },
                 {
-                    "column0": "03h Config",
-                    "subChildren": [
+                    "Name": "03h Config",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                }
-                            ],
-                            "checkBoxes": [
-                                {
-                                    "checkBoxText": "RF_P output enable [2]",
-                                    "value": "Unchecked"
-                                },
-                                {
-                                    "checkBoxText": "RF_N output enable [3]",
-                                    "value": "Unchecked"
-                                },
-                                {
-                                    "checkBoxText": "Internal Termination Enable [4]",
-                                    "value": "Checked"
-                                },
-                                {
-                                    "checkBoxText": "Increase Internal Output Resistance [5]",
-                                    "value": "Unchecked"
-                                }
-                            ],
-                            "comboBox": [
-                                {
-                                    "comboBoxText": "Power- Performance Priroirty",
-                                    "comboBoxValue": "01"
-                                },
-                                {
-                                    "comboBoxText": "Mute Mode [8:7]",
-                                    "comboBoxValue": "01"
-                                }
-                            ]
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "RF_P output enable [2]",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "RF_N output enable [3]",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "Internal Termination Enable [4]",
+                            "Value": "True"
+                        },
+                        {
+                            "Text": "Increase Internal Output Resistance [5]",
+                            "Value": "False"
+                        },
+                        {
+                            "Text": "Power- Performance Priroirty",
+                            "Value": "01"
+                        },
+                        {
+                            "Text": "Mute Mode [8:7]",
+                            "Value": "01"
                         }
                     ]
                 },
                 {
-                    "column0": "04h Cal/Bias",
-                    "subChildren": [
+                    "Name": "04h Cal/Bias",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved [0] ...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved [1] ...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved [2] ...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved [4:3] ...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved [6:5] ...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved [8:7] ...",
-                                    "lineEditValue": ""
-                                }
-                            ]
+                            "Text": "Reserved [0] ...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved [1] ...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved [2] ...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved [4:3] ...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved [6:5] ...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved [8:7] ...",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "05h CF_Cal",
-                    "subChildren": [
+                    "Name": "05h CF_Cal",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                }
-                            ]
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "06h MSB Cal",
-                    "subChildren": [
+                    "Name": "06h MSB Cal",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                }
-                            ]
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
                         }
                     ]
                 },
                 {
-                    "column0": "07h MSB Cal",
-                    "subChildren": [
+                    "Name": "07h MSB Cal",
+                    "Data": [
                         {
-                            "lineEdit": [
-                                {
-                                    "lineEditText": "Output Stage Gain Control (0-15)...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                },
-                                {
-                                    "lineEditText": "Reserved...",
-                                    "lineEditValue": ""
-                                }
-                            ]
+                            "Text": "Output Stage Gain Control (0-15)...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
+                        },
+                        {
+                            "Text": "Reserved...",
+                            "Value": ""
                         }
                     ]
                 }

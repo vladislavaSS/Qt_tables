@@ -1,20 +1,14 @@
 #ifndef AD9122WIDGET_H
 #define AD9122WIDGET_H
 
-#include <QWidget>
 #include <QMainWindow>
 #include <QTreeView>
 #include <QStandardItemModel>
 #include <QPushButton>
 #include <QCheckBox>
-#include <QComboBox>
-#include <fstream>
-#include <QApplication>
-#include <QDebug>
-#include <QPushButton>
 
 #include "rapidjson/document.h"
-#include "rapidjson/error/en.h"
+//#include "rapidjson/error/en.h"
 #include <rapidjson/document.h>
 #include <rapidjson/writer.h>
 #include <rapidjson/reader.h>
@@ -37,27 +31,44 @@ public:
     explicit AD9122Widget(QWidget *parent = nullptr);
 
 private slots:
+
+    QWidget* createComboBoxWidgetLable(const QString &labelText, const QStringList &options, int bitNumber);
+
+    QWidget* createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText, int bitNumber);
+
+    QWidget* LineOfPower(int rowIndex, int valueLimit, const QString& placeholderText, const QString& errorMsg, const QString& defaultText);
+
+    QWidget* LineEdit(const QString& labelText, const QString& placeholderText);
+
+    QCheckBox* createCheckBoxWidget(const QString &labelText, CheckBoxState state, int bitNumber);
+
     void on_save_button_clicked();
 
-    void on_load_button_clicked();
+    void load(const QString& filePath);
+
+    void load_all();
+
+    void load_element();
 
     void on_toggle_button_clicked();
 
-    void updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& childrenArray, QStandardItem* parentItem);
+    void saveItem(QStandardItem *selectedParentItem);
 
-    QWidget* createComboBoxWidgetLable(const QString &labelText, const QStringList &options);
+    void hasChildren(QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Value &jsonItem, QStandardItemModel* model, QTreeView* treeView, bool HCMflag);
 
-    QCheckBox* createCheckBoxWidget(const QString &labelText, CheckBoxState state);
+    void onParentItemClicked(const QModelIndex& index);
 
-    QWidget* createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText);
+    void updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& dataArray, QStandardItem* parentItem);
 
-    QWidget* LineOfPower(int rowIndex, int valueLimit, const QString& placeholderText, const QString& errorMsg, const QString& defaultText);
+    void onItemChanged(QStandardItem* item);
 
     void setEditableFlags(QStandardItem *item, bool editable);
 
     void blockEditing(QStandardItemModel *model);
 
 private:
+
+    bool HCMflag = 0;
 
     void viewTree();
 
@@ -70,6 +81,10 @@ private:
     QPushButton *saveButton;
 
     QPushButton *loadButton;
+
+    QPushButton *save_elem;
+
+    QPushButton *load_elem;
 
     bool treeExpanded;
 

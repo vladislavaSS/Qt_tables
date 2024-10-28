@@ -1,0 +1,25 @@
+{
+    "Registers": [
+        {
+            "children": [
+                {
+                    "Name": "00h Open Mode Read Address/RST Strobe Register",
+                    "Data": [
+                        {
+                            "Text": "Read Address [4:0]...",
+                            "Value": "190"
+                        },
+                        {
+                            "Text": "Not Defined [23:6]...",
+                            "Value": "55"
+                        },
+                        {
+                            "Text": "Soft Reset",
+                            "Value": "True"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

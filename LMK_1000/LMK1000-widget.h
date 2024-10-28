@@ -1,32 +1,18 @@
 #ifndef LMK1000WIDGET_H
 #define LMK1000WIDGET_H
 
-#include <QWidget>
 #include <QMainWindow>
-#include <QApplication>
-#include <QDebug>
 #include <QPushButton>
 #include <QTreeView>
 #include <QStandardItemModel>
-#include <QComboBox>
 
 #include "rapidjson/document.h"
-#include "rapidjson/error/en.h"
+//#include "rapidjson/error/en.h"
 #include <rapidjson/document.h>
 #include <rapidjson/writer.h>
 #include <rapidjson/reader.h>
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/prettywriter.h>
-#include <QXmlStreamWriter>
-
-using namespace rapidjson;
-
-struct WidgetPointers {
-    QComboBox* comboBox;
-    QLineEdit* lineEdit;
-
-    WidgetPointers() : comboBox(nullptr), lineEdit(nullptr) {}
-};
 
 class LMK1000Widget : public QWidget
 {
@@ -35,25 +21,36 @@ public:
     explicit LMK1000Widget(QWidget *parent = nullptr);
 
 private slots:
-    void on_save_button_clicked();
-
-    void on_load_button_clicked();
 
     QWidget* createLineEditWithSaveButton(int valueLimit, int modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText);
 
-    void setupWidgets(QStandardItem *itm, int rowIndex, QModelIndex lineEditIndex);
+    void on_save_button_clicked();
+
+    void load(const QString& filePath);
+
+    void load_all();
+
+    void load_element();
 
     void on_toggle_button_clicked();
+
+    void saveItem(QStandardItem *selectedParentItem);
+
+    void hasChildren(QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Value &jsonItem, QStandardItemModel* model, QTreeView* treeView, bool HCMflag);
+
+    void onParentItemClicked(const QModelIndex& index);
+
+    void setupWidgets(QStandardItem *itm, int rowIndex, QModelIndex lineEditIndex);
 
     void setEditableFlags(QStandardItem *item, bool editable);
 
     void blockEditing(QStandardItemModel *model);
 
-    void updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& childrenArray, QStandardItem* parentItem);
-
-    void onClicked(QLineEdit* lineEdit, int valueLimit, int modulo, const QString& errorMsg, const QString& defaultText);
+    void updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& dataArray, QStandardItem* parentItem);
 
 private:
+
+    bool HCMflag = 0;
 
     void viewTree();
 
@@ -61,15 +58,15 @@ private:
 
     QStandardItemModel *model;
 
-    QComboBox *comboBox;
-
-    QString selectedValueFromCase1;
-
     QPushButton *toggleButton;
 
     QPushButton *saveButton;
 
     QPushButton *loadButton;
+
+    QPushButton *save_elem;
+
+    QPushButton *load_elem;
 
     bool treeExpanded;
 

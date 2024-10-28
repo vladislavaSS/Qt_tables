@@ -325,6 +325,7 @@
  mmc:Q_OBJECT
  mdp:/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/mainwindow.h
  mdp:/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/AD_9122_autogen/moc_predefs.h
+ mdp:/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/AD9122-widget.h
  mdp:/usr/include/asm-generic/errno-base.h
  mdp:/usr/include/asm-generic/errno.h
  mdp:/usr/include/assert.h
@@ -348,7 +349,6 @@
  mdp:/usr/include/c++/11/bits/c++0x_warning.h
  mdp:/usr/include/c++/11/bits/char_traits.h
  mdp:/usr/include/c++/11/bits/charconv.h
- mdp:/usr/include/c++/11/bits/codecvt.h
  mdp:/usr/include/c++/11/bits/concept_check.h
  mdp:/usr/include/c++/11/bits/cpp_type_traits.h
  mdp:/usr/include/c++/11/bits/cxxabi_forced.h
@@ -357,13 +357,11 @@
  mdp:/usr/include/c++/11/bits/exception.h
  mdp:/usr/include/c++/11/bits/exception_defines.h
  mdp:/usr/include/c++/11/bits/exception_ptr.h
- mdp:/usr/include/c++/11/bits/fstream.tcc
  mdp:/usr/include/c++/11/bits/functexcept.h
  mdp:/usr/include/c++/11/bits/functional_hash.h
  mdp:/usr/include/c++/11/bits/hash_bytes.h
  mdp:/usr/include/c++/11/bits/invoke.h
  mdp:/usr/include/c++/11/bits/ios_base.h
- mdp:/usr/include/c++/11/bits/istream.tcc
  mdp:/usr/include/c++/11/bits/iterator_concepts.h
  mdp:/usr/include/c++/11/bits/list.tcc
  mdp:/usr/include/c++/11/bits/locale_classes.h
@@ -434,7 +432,6 @@
  mdp:/usr/include/c++/11/concepts
  mdp:/usr/include/c++/11/cstddef
  mdp:/usr/include/c++/11/cstdint
- mdp:/usr/include/c++/11/cstdio
  mdp:/usr/include/c++/11/cstdlib
  mdp:/usr/include/c++/11/cstring
  mdp:/usr/include/c++/11/cwchar
@@ -450,12 +447,10 @@
  mdp:/usr/include/c++/11/ext/numeric_traits.h
  mdp:/usr/include/c++/11/ext/string_conversions.h
  mdp:/usr/include/c++/11/ext/type_traits.h
- mdp:/usr/include/c++/11/fstream
  mdp:/usr/include/c++/11/functional
  mdp:/usr/include/c++/11/initializer_list
  mdp:/usr/include/c++/11/ios
  mdp:/usr/include/c++/11/iosfwd
- mdp:/usr/include/c++/11/istream
  mdp:/usr/include/c++/11/iterator
  mdp:/usr/include/c++/11/limits
  mdp:/usr/include/c++/11/list
@@ -491,7 +486,6 @@
  mdp:/usr/include/rapidjson/document.h
  mdp:/usr/include/rapidjson/encodedstream.h
  mdp:/usr/include/rapidjson/encodings.h
- mdp:/usr/include/rapidjson/error/en.h
  mdp:/usr/include/rapidjson/error/error.h
  mdp:/usr/include/rapidjson/internal/biginteger.h
  mdp:/usr/include/rapidjson/internal/diyfp.h
@@ -513,7 +507,6 @@
  mdp:/usr/include/rapidjson/writer.h
  mdp:/usr/include/sched.h
  mdp:/usr/include/stdc-predef.h
- mdp:/usr/include/stdio.h
  mdp:/usr/include/string.h
  mdp:/usr/include/strings.h
  mdp:/usr/include/syscall.h
@@ -544,7 +537,6 @@
  mdp:/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  mdp:/usr/include/x86_64-linux-gnu/bits/sched.h
  mdp:/usr/include/x86_64-linux-gnu/bits/setjmp.h
- mdp:/usr/include/x86_64-linux-gnu/bits/stdio_lim.h
  mdp:/usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  mdp:/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  mdp:/usr/include/x86_64-linux-gnu/bits/syscall.h
@@ -556,18 +548,14 @@
  mdp:/usr/include/x86_64-linux-gnu/bits/types.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/FILE.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/__FILE.h
- mdp:/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h
- mdp:/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/clock_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h
- mdp:/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/error_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/locale_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h
- mdp:/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
@@ -583,10 +571,8 @@
  mdp:/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  mdp:/usr/include/x86_64-linux-gnu/bits/wordsize.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h
- mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
- mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h
@@ -596,7 +582,6 @@
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h
  mdp:/usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  mdp:/usr/include/x86_64-linux-gnu/gnu/stubs.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
@@ -610,12 +595,7 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
@@ -659,7 +639,6 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
@@ -673,10 +652,8 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
@@ -693,9 +670,7 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView
@@ -705,9 +680,7 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
@@ -760,7 +733,6 @@
  mdp:/usr/include/c++/11/bits/c++0x_warning.h
  mdp:/usr/include/c++/11/bits/char_traits.h
  mdp:/usr/include/c++/11/bits/charconv.h
- mdp:/usr/include/c++/11/bits/codecvt.h
  mdp:/usr/include/c++/11/bits/concept_check.h
  mdp:/usr/include/c++/11/bits/cpp_type_traits.h
  mdp:/usr/include/c++/11/bits/cxxabi_forced.h
@@ -769,13 +741,11 @@
  mdp:/usr/include/c++/11/bits/exception.h
  mdp:/usr/include/c++/11/bits/exception_defines.h
  mdp:/usr/include/c++/11/bits/exception_ptr.h
- mdp:/usr/include/c++/11/bits/fstream.tcc
  mdp:/usr/include/c++/11/bits/functexcept.h
  mdp:/usr/include/c++/11/bits/functional_hash.h
  mdp:/usr/include/c++/11/bits/hash_bytes.h
  mdp:/usr/include/c++/11/bits/invoke.h
  mdp:/usr/include/c++/11/bits/ios_base.h
- mdp:/usr/include/c++/11/bits/istream.tcc
  mdp:/usr/include/c++/11/bits/iterator_concepts.h
  mdp:/usr/include/c++/11/bits/list.tcc
  mdp:/usr/include/c++/11/bits/locale_classes.h
@@ -846,7 +816,6 @@
  mdp:/usr/include/c++/11/concepts
  mdp:/usr/include/c++/11/cstddef
  mdp:/usr/include/c++/11/cstdint
- mdp:/usr/include/c++/11/cstdio
  mdp:/usr/include/c++/11/cstdlib
  mdp:/usr/include/c++/11/cstring
  mdp:/usr/include/c++/11/cwchar
@@ -862,12 +831,10 @@
  mdp:/usr/include/c++/11/ext/numeric_traits.h
  mdp:/usr/include/c++/11/ext/string_conversions.h
  mdp:/usr/include/c++/11/ext/type_traits.h
- mdp:/usr/include/c++/11/fstream
  mdp:/usr/include/c++/11/functional
  mdp:/usr/include/c++/11/initializer_list
  mdp:/usr/include/c++/11/ios
  mdp:/usr/include/c++/11/iosfwd
- mdp:/usr/include/c++/11/istream
  mdp:/usr/include/c++/11/iterator
  mdp:/usr/include/c++/11/limits
  mdp:/usr/include/c++/11/list
@@ -903,7 +870,6 @@
  mdp:/usr/include/rapidjson/document.h
  mdp:/usr/include/rapidjson/encodedstream.h
  mdp:/usr/include/rapidjson/encodings.h
- mdp:/usr/include/rapidjson/error/en.h
  mdp:/usr/include/rapidjson/error/error.h
  mdp:/usr/include/rapidjson/internal/biginteger.h
  mdp:/usr/include/rapidjson/internal/diyfp.h
@@ -925,7 +891,6 @@
  mdp:/usr/include/rapidjson/writer.h
  mdp:/usr/include/sched.h
  mdp:/usr/include/stdc-predef.h
- mdp:/usr/include/stdio.h
  mdp:/usr/include/string.h
  mdp:/usr/include/strings.h
  mdp:/usr/include/syscall.h
@@ -956,7 +921,6 @@
  mdp:/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  mdp:/usr/include/x86_64-linux-gnu/bits/sched.h
  mdp:/usr/include/x86_64-linux-gnu/bits/setjmp.h
- mdp:/usr/include/x86_64-linux-gnu/bits/stdio_lim.h
  mdp:/usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  mdp:/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  mdp:/usr/include/x86_64-linux-gnu/bits/syscall.h
@@ -968,18 +932,14 @@
  mdp:/usr/include/x86_64-linux-gnu/bits/types.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/FILE.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/__FILE.h
- mdp:/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h
- mdp:/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/clock_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h
- mdp:/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/error_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/locale_t.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h
- mdp:/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  mdp:/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h
@@ -995,10 +955,8 @@
  mdp:/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  mdp:/usr/include/x86_64-linux-gnu/bits/wordsize.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h
- mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
- mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h
@@ -1008,7 +966,6 @@
  mdp:/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h
  mdp:/usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  mdp:/usr/include/x86_64-linux-gnu/gnu/stubs.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
@@ -1022,12 +979,7 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
@@ -1071,7 +1023,6 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
@@ -1085,10 +1036,8 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
@@ -1105,22 +1054,17 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h
- mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h

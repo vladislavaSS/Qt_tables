@@ -1,1101 +1,257 @@
 {
-    "items": [
+    "Registers": [
         {
-            "column0": "Comm",
-            "children": [
-                {
-                    "column0": "0x00",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "SDIO",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "LSB_FIRST",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "reset",
-                            "value": "Checked"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x00",
+            "Data": "000"
         },
         {
-            "column0": "Power Control",
-            "children": [
-                {
-                    "column0": "0x01",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Power down I DAC",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "Power down Q DAC",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "Power down data receiver",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "Power down auxiliary ADC",
-                            "value": "Checked"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x01",
+            "Data": "1101"
         },
         {
-            "column0": "Data Format",
-            "children": [
-                {
-                    "column0": "0x03",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Binary data format",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Q data first",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "MSB swap",
-                            "value": "Unchecked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "Data Bus Width[1:0]",
-                        "comboBoxValue": 0
-                    }
-                }
-            ]
+            "Addr": "0x03",
+            "Data": "00000"
         },
         {
-            "column0": "Interrupt Enable",
-            "children": [
-                {
-                    "column0": "0x04",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Enable PLL lock lost",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Enable PLL locked",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Enable sync signal lost",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Enable sync signal locked",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Enable FIFO Warning 1",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Enable FIFO Warning 2",
-                            "value": "Unchecked"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x04",
+            "Data": "000000"
         },
         {
-            "column0": "Interrupt Enable",
-            "children": [
-                {
-                    "column0": "0x05",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Enable AED compare pass",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Enable AED compare fail",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Enable SED compare fail",
-                            "value": "Unchecked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "Set to 0",
-                        "comboBoxValue": 0
-                    }
-                }
-            ]
+            "Addr": "0x05",
+            "Data": "00000"
         },
         {
-            "column0": "Event Flag",
-            "children": [
-                {
-                    "column0": "0x06",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Enable PLL lock lost",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "Enable PLL locked",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "Enable sync signal lost",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "Enable sync signal locked",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "Enable FIFO Warning 1",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "Enable FIFO Warning 2",
-                            "value": "Undefined"
-                        }
-                    ]
-                },
-                {
-                    "column0": "0x07",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "AED compare pass",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "AED compare fail",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "SED compare fail",
-                            "value": "Undefined"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x06",
+            "Addr": "0x07",
+            "Data": "??????",
+            "Data": "???"
         },
         {
-            "column0": "Clock Receiver Control",
-            "children": [
-                {
-                    "column0": "0x08",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "DACCLK duty correction",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "REFCLK duty correction",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "DACCLK cross-correction",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "REFCLK cross-correction",
-                            "value": "Checked"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x08",
+            "Data": "0011"
         },
         {
-            "column0": "PLL Control",
-            "children": [
-                {
-                    "column0": "0x0A",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "PLL enable",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "PLL manual enable",
-                            "value": "Checked"
-                        }
-                    ]
-                },
-                {
-                    "column0": "0x0C",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": [],
-                    "comboBox": {
-                        "labelText": "PLL Loop Bandwidth[1:0]",
-                        "comboBoxValue": 3
-                    }
-                },
-                {
-                    "column0": "0x0D",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "PLL manual enable",
-                            "value": "Checked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "N2[1:0]",
-                        "comboBoxValue": 3
-                    },
-                    "comboBox": {
-                        "labelText": "N0[1:0]",
-                        "comboBoxValue": 2
-                    },
-                    "comboBox": {
-                        "labelText": "N1[1:0]",
-                        "comboBoxValue": 1
-                    }
-                }
-            ]
+            "Addr": "0x0A",
+            "Addr": "0x0C",
+            "Addr": "0x0D",
+            "Data": "01",
+            "Data": "11",
+            "Data": "1111001"
         },
         {
-            "column0": "PLL Status",
-            "children": [
-                {
-                    "column0": "0x0E",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "PLL locked",
-                            "value": "Undefined"
-                        }
-                    ]
-                },
-                {
-                    "column0": "0x0F",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x0E",
+            "Addr": "0x0F",
+            "Data": "?",
+            "Data": ""
         },
         {
-            "column0": "Sync Control",
-            "children": [
-                {
-                    "column0": "0x10",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Sync enable",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Data/FIFO rate toggle",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "Rising edge sync",
-                            "value": "Checked"
-                        }
-                    ]
-                },
-                {
-                    "column0": "0x11",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x10",
+            "Addr": "0x11",
+            "Data": "011",
+            "Data": ""
         },
         {
-            "column0": "Sync Status",
-            "children": [
-                {
-                    "column0": "0x12",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Sync lost",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "Sync locked",
-                            "value": "Undefined"
-                        }
-                    ]
-                },
-                {
-                    "column0": "0x13",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x12",
+            "Addr": "0x13",
+            "Data": "??",
+            "Data": ""
         },
         {
-            "column0": "Data Receiver Status",
-            "children": [
-                {
-                    "column0": "0x15",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "LVDS FRAME level high",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "LVDS FRAME level low",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "LVDS DCI level high",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "LVDS DCI level low",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "LVDS data level high",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "LVDS data level low",
-                            "value": "Undefined"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x15",
+            "Data": "??????"
         },
         {
-            "column0": "DCI Delay",
-            "children": [
-                {
-                    "column0": "0x16",
-                    "checkBoxes": [],
-                    "comboBox": {
-                        "labelText": "DCI Delay[1:0]",
-                        "comboBoxValue": 0
-                    }
-                }
-            ]
+            "Addr": "0x16",
+            "Data": "00"
         },
         {
-            "column0": "FIFO Control",
-            "children": [
-                {
-                    "column0": "0x17",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x17",
+            "Data": ""
         },
         {
-            "column0": "FIFO Status",
-            "children": [
-                {
-                    "column0": "0x18",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "FIFO Warning 1",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "FIFO Warning 2",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "FIFO soft align acknowledge",
-                            "value": "Undefined"
-                        },
-                        {
-                            "checkBoxText": "FIFO soft align request",
-                            "value": "Unchecked"
-                        }
-                    ]
-                },
-                {
-                    "column0": "0x19",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x18",
+            "Addr": "0x19",
+            "Data": "???0",
+            "Data": ""
         },
         {
-            "column0": "Datapath Control",
-            "children": [
-                {
-                    "column0": "0x1B",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Bypass premod",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "Bypass sinc−1",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "Bypass NCO",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "NCO gain",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Bypass phase compensation and dc offset",
-                            "value": "Checked"
-                        },
-                        {
-                            "checkBoxText": "Select sideband",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Send I data to Q data",
-                            "value": "Unchecked"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x1B",
+            "Data": "1110100"
         },
         {
-            "column0": "HB1 Control",
-            "children": [
-                {
-                    "column0": "0x1C",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Bypass HB1",
-                            "value": "Unchecked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "HB1[1:0]",
-                        "comboBoxValue": 0
-                    }
-                }
-            ]
+            "Addr": "0x1C",
+            "Data": "000"
         },
         {
-            "column0": "HB2 Control",
-            "children": [
-                {
-                    "column0": "0x1D",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Bypass HB2",
-                            "value": "Unchecked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "HB2[5:0]",
-                        "comboBoxValue": 0
-                    }
-                },
-                {
-                    "column0": "",
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x1D",
+            "Data": "00"
         },
         {
-            "column0": "HB3 Control",
-            "children": [
-                {
-                    "column0": "0x1E",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Bypass HB3",
-                            "value": "Unchecked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "HB3[5:0]",
-                        "comboBoxValue": 0
-                    }
-                }
-            ]
+            "Addr": "0x1E",
+            "Data": "00"
         },
         {
-            "column0": "Chip ID",
-            "children": [
-                {
-                    "column0": "0x1F",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x1F",
+            "Data": ""
         },
         {
-            "column0": "FTW LSB",
-            "children": [
-                {
-                    "column0": "0x30",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x30",
+            "Data": ""
         },
         {
-            "column0": "FTW",
-            "children": [
-                {
-                    "column0": "0x31",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x31",
+            "Data": ""
         },
         {
-            "column0": "FTW",
-            "children": [
-                {
-                    "column0": "0x32",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x32",
+            "Data": ""
         },
         {
-            "column0": "FTW MSB",
-            "children": [
-                {
-                    "column0": "0x33",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x33",
+            "Data": ""
         },
         {
-            "column0": "NCO Phase Offset LSB",
-            "children": [
-                {
-                    "column0": "0x34",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x34",
+            "Data": ""
         },
         {
-            "column0": "NCO Phase Offset MSB",
-            "children": [
-                {
-                    "column0": "0x35",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x35",
+            "Data": ""
         },
         {
-            "column0": "NCO FTW Update",
-            "children": [
-                {
-                    "column0": "0x36",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "FRAME FTW acknowledge",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "FRAME FTW request",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Update FTW acknowledge",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Update FTW request",
-                            "value": "Unchecked"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x36",
+            "Data": "0000"
         },
         {
-            "column0": "I Phase Adj LSB",
-            "children": [
-                {
-                    "column0": "0x38",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x38",
+            "Data": ""
         },
         {
-            "column0": "I Phase Adj MSB",
-            "children": [
-                {
-                    "column0": "0x39",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x39",
+            "Data": ""
         },
         {
-            "column0": "Q Phase Adj LSB",
-            "children": [
-                {
-                    "column0": "0x3A",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x3A",
+            "Data": ""
         },
         {
-            "column0": "Q Phase Adj MSB",
-            "children": [
-                {
-                    "column0": "0x3B",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x3B",
+            "Data": ""
         },
         {
-            "column0": "I DAC Offset LSB",
-            "children": [
-                {
-                    "column0": "0x3C",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x3C",
+            "Data": ""
         },
         {
-            "column0": "I DAC Offset MSB",
-            "children": [
-                {
-                    "column0": "0x3D",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x3D",
+            "Data": ""
         },
         {
-            "column0": "Q DAC Offset LSB",
-            "children": [
-                {
-                    "column0": "0x3E",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x3E",
+            "Data": ""
         },
         {
-            "column0": "Q DAC Offset MSB",
-            "children": [
-                {
-                    "column0": "0x3F",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x3F",
+            "Data": ""
         },
         {
-            "column0": "I DAC FS Adjust",
-            "children": [
-                {
-                    "column0": "0x40",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x40",
+            "Data": ""
         },
         {
-            "column0": "I DAC Control",
-            "children": [
-                {
-                    "column0": "0x41",
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x41"
         },
         {
-            "column0": "I Aux DAC Data",
-            "children": [
-                {
-                    "column0": "0x42",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x42",
+            "Data": ""
         },
         {
-            "column0": "I Aux DAC Control",
-            "children": [
-                {
-                    "column0": "0x43",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "I aux DAC sign",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "I aux DAC current direction",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "I aux DAC sleep",
-                            "value": "Unchecked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "I Aux DAC[9:8]",
-                        "comboBoxValue": 0
-                    }
-                }
-            ]
+            "Addr": "0x43",
+            "Data": "00000"
         },
         {
-            "column0": "Q DAC FS Adjust",
-            "children": [
-                {
-                    "column0": "0x44",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x44",
+            "Data": ""
         },
         {
-            "column0": "Q DAC Control",
-            "children": [
-                {
-                    "column0": "0x45",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Q DAC sleep",
-                            "value": "Unchecked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "Q DAC FS Adj[9:8]",
-                        "comboBoxValue": 0
-                    }
-                }
-            ]
+            "Addr": "0x45",
+            "Data": "00"
         },
         {
-            "column0": "Q Aux DAC Data",
-            "children": [
-                {
-                    "column0": "0x46",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x46",
+            "Data": ""
         },
         {
-            "column0": "Q Aux DAC Control",
-            "children": [
-                {
-                    "column0": "0x47",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Q aux DAC sign",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "I aux DAC current direction",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Q aux DAC sleep",
-                            "value": "Unchecked"
-                        }
-                    ],
-                    "comboBox": {
-                        "labelText": "Q Aux DAC[9:8]",
-                        "comboBoxValue": 0
-                    }
-                }
-            ]
+            "Addr": "0x47",
+            "Data": "00000"
         },
         {
-            "column0": "Die Temp Range Control",
-            "children": [
-                {
-                    "column0": "0x48",
-                    "lineEdit": {
-                        "lineEditValue": "",
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "Capacitor value",
-                            "value": "Unchecked"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x48",
+            "Data": "0"
         },
         {
-            "column0": "Die Temp LSB",
-            "children": [
-                {
-                    "column0": "0x49",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x49",
+            "Data": ""
         },
         {
-            "column0": "Die Temp MSB",
-            "children": [
-                {
-                    "column0": "0x4A",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x4A",
+            "Data": ""
         },
         {
-            "column0": "SED Control",
-            "children": [
-                {
-                    "column0": "0x67",
-                    "checkBoxes": [
-                        {
-                            "checkBoxText": "SED compare enable",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Sample error detected",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Autoclear enable",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Compare fail",
-                            "value": "Unchecked"
-                        },
-                        {
-                            "checkBoxText": "Compare pass",
-                            "value": "Unchecked"
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x67",
+            "Data": "00000"
         },
         {
-            "column0": "Compare I0 LSBs",
-            "children": [
-                {
-                    "column0": "0x68",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x68",
+            "Data": ""
         },
         {
-            "column0": "Compare I0 MSBs",
-            "children": [
-                {
-                    "column0": "0x69",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x69",
+            "Data": ""
         },
         {
-            "column0": "Compare Q0 LSBs",
-            "children": [
-                {
-                    "column0": "0x6A",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x6A",
+            "Data": ""
         },
         {
-            "column0": "Compare Q0 MSBs",
-            "children": [
-                {
-                    "column0": "0x6B",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x6B",
+            "Data": ""
         },
         {
-            "column0": "Compare I1 LSBs",
-            "children": [
-                {
-                    "column0": "0x6C",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x6C",
+            "Data": ""
         },
         {
-            "column0": "Compare I1 MSBs",
-            "children": [
-                {
-                    "column0": "0x6D",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x6D",
+            "Data": ""
         },
         {
-            "column0": "Compare Q1 LSBs",
-            "children": [
-                {
-                    "column0": "0x6E",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x6E",
+            "Data": ""
         },
         {
-            "column0": "Compare Q1 MSBs",
-            "children": [
-                {
-                    "column0": "0x6F",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x6F",
+            "Data": ""
         },
         {
-            "column0": "SED I LSBs",
-            "children": [
-                {
-                    "column0": "0x70",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x70",
+            "Data": ""
         },
         {
-            "column0": "SED I MSBs",
-            "children": [
-                {
-                    "column0": "0x71",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x71",
+            "Data": ""
         },
         {
-            "column0": "SED Q LSBs",
-            "children": [
-                {
-                    "column0": "0x72",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x72",
+            "Data": ""
         },
         {
-            "column0": "SED Q MSBs",
-            "children": [
-                {
-                    "column0": "0x73",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x73",
+            "Data": ""
         },
         {
-            "column0": "Revision",
-            "children": [
-                {
-                    "column0": "0x7F",
-                    "lineEdit": {
-                        "lineEditValue": ""
-                    },
-                    "checkBoxes": []
-                }
-            ]
+            "Addr": "0x7F",
+            "Data": "255.00"
         }
     ]
 }

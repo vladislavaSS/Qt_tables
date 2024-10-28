@@ -1,0 +1,25 @@
+{
+    "Registers": [
+        {
+            "Name": "R7",
+            "Data": [
+                {
+                    "Text": "CLKoutX_MUX[1:0]",
+                    "Value": "2"
+                },
+                {
+                    "Text": "CLKoutX_EN",
+                    "Value": "1"
+                },
+                {
+                    "Text": "Clock Output Dividers (0-510)...",
+                    "Value": "344.00"
+                },
+                {
+                    "Text": "Clock Output Delays (0-2250)...",
+                    "Value": "600.00"
+                }
+            ]
+        }
+    ]
+}

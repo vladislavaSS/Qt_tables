@@ -12,6 +12,8 @@
 #include <cmath>
 #include <QLabel>
 #include <QFile>
+#include <fstream>
+
 
 extern QStringList itemNames;
 extern QStringList regNames;
@@ -24,6 +26,7 @@ QWidget* HCM1035Widget::createComboBoxWidgetLable(const QString &labelText, cons
     layout->addWidget(label);
 
     QComboBox *comboBox = new QComboBox();
+    QVariant propertyValue = comboBox->setProperty("ComboBoxName", labelText);
     comboBox->addItems(options);
     layout->addWidget(comboBox);
 
@@ -103,195 +106,297 @@ QWidget* HCM1035Widget::createLineEditWithSaveButton(int rowIndex, double valueL
     return widget;
 }
 
-void HCM1035Widget::on_save_button_clicked()
-{
+void HCM1035Widget::onParentItemClicked(const QModelIndex& index) {
+
+    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
+    QStandardItem* item = model->itemFromIndex(index);
+    if (item != nullptr) {
+        disconnect(save_elem, &QPushButton::clicked, this, nullptr);
+        connect(save_elem, &QPushButton::clicked, this, [this, item]() {
+            saveItem(item);
+        });
+    }
+
+}
+
+void HCM1035Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Value &jsonItem, QStandardItemModel* model, QTreeView* treeView, bool HCMflag) {
+
+    rapidjson::Value dataArray(rapidjson::kArrayType);
+
+    for (int j = 0; j < selectedItem->rowCount(); j++) {
+        QStandardItem* child = selectedItem->child(j);
+
+        if (child) {
+            rapidjson::Value combinedArray(rapidjson::kArrayType);
+
+            QModelIndex index = model->index(j, 1, selectedItem->index());
+            QWidget* widget = treeView->indexWidget(index);
+
+            if (widget && index.isValid()) {
+
+                QList<QLineEdit*> lineEdits = widget->findChildren<QLineEdit*>();
+                if (!lineEdits.isEmpty()) {
+                    for (QLineEdit* lineEdit : lineEdits) {
+                        if (lineEdit) {
+                            rapidjson::Value lineEditObj(rapidjson::kObjectType);
+                            QVariant propertyValue = lineEdit->property("lineEditName");
+                            if (propertyValue.isValid()) lineEditObj.AddMember("Text", rapidjson::Value(propertyValue.toString().toStdString().c_str(), allocator), allocator);
+                            lineEditObj.AddMember("Value", rapidjson::Value(lineEdit->text().toStdString().c_str(), allocator), allocator);
+                            combinedArray.PushBack(lineEditObj, allocator);
+                        }
+                    }
+                }
+
+                QList<QCheckBox*> checkBoxes = widget->findChildren<QCheckBox*>();
+                for (QCheckBox* checkBox : checkBoxes) {
+                    if (checkBox) {
+                        rapidjson::Value checkBoxObj(rapidjson::kObjectType);
+                        checkBoxObj.AddMember("Text", rapidjson::Value(checkBox->text().toStdString().c_str(), allocator), allocator);
+                        std::string checkBoxValue;
+                        if (checkBox->checkState() == Qt::PartiallyChecked)
+                            checkBoxValue = "None";
+                        else if (checkBox->isChecked())
+                            checkBoxValue = "True";
+                        else checkBoxValue = "False";
+                        checkBoxObj.AddMember("Value", rapidjson::Value(checkBoxValue.c_str(), allocator), allocator);
+                        combinedArray.PushBack(checkBoxObj, allocator);
+                    }
+                }
+
+                QList<QComboBox*> comboBoxes = widget->findChildren<QComboBox*>();
+                if (!comboBoxes.isEmpty()) {
+                    for (QComboBox* comboBox : comboBoxes) {
+                        if (comboBox) {
+                            QString comboBoxText = comboBox->currentText();
+                            QStringList parts = comboBoxText.split(" ");
+                            QString numericPart = parts.isEmpty() ? QString() : parts[0];
+
+                            QWidget *parentWidget = comboBox->parentWidget();
+                            QLabel *label = parentWidget ? parentWidget->findChild<QLabel*>() : nullptr;
+                            QString labelText = label ? label->text() : QString();
+                            QVariant propertyValue = comboBox->property("ComboBoxName");
+                            if (labelText.isEmpty() && propertyValue.isValid()) labelText = propertyValue.toString();
+
+                            rapidjson::Value comboBoxObj(rapidjson::kObjectType);
+                            comboBoxObj.AddMember("Text", rapidjson::Value(labelText.toStdString().c_str(), allocator), allocator);
+                            comboBoxObj.AddMember("Value", rapidjson::Value(numericPart.toStdString().c_str(), allocator), allocator);
+                            combinedArray.PushBack(comboBoxObj, allocator);
+                        }
+                    }
+
+                }
+                for (rapidjson::Value& item : combinedArray.GetArray()) {
+                    dataArray.PushBack(item, allocator);
+                }
+
+            }
+        }
+    }
+    jsonItem.AddMember("Data", dataArray, allocator);
+
+
+//    rapidjson::Value children(rapidjson::kArrayType);
+
+//    for (int j = 0; j < selectedItem->rowCount(); j++) {
+//        QStandardItem* child = selectedItem->child(j);
+
+//        if (child) {
+
+//            rapidjson::Value jsonChild(rapidjson::kObjectType);
+//            QModelIndex index = model->index(j, 1, selectedItem->index());
+//            QWidget* widget = treeView->indexWidget(index);
+
+//            if (widget && index.isValid()) {
+
+//                rapidjson::Value lineEditsArray(rapidjson::kArrayType);
+//                QList<QLineEdit*> lineEdits = widget->findChildren<QLineEdit*>();
+//                if (!lineEdits.isEmpty()) {
+//                    for (QLineEdit* lineEdit : lineEdits) {
+//                        if (lineEdit) {
+//                            rapidjson::Value lineEditObj(rapidjson::kObjectType);
+//                            QVariant propertyValue = lineEdit->property("lineEditName");
+//                            if (propertyValue.isValid()) lineEditObj.AddMember("le_Text", rapidjson::Value(propertyValue.toString().toStdString().c_str(), allocator), allocator);
+//                            lineEditObj.AddMember("le_Value", rapidjson::Value(lineEdit->text().toStdString().c_str(), allocator), allocator);
+//                            lineEditsArray.PushBack(lineEditObj, allocator);
+//                        }
+//                    }
+
+//                    if (lineEditsArray.Size() > 0) {
+//                        jsonChild.AddMember("le", lineEditsArray, allocator);
+//                    }
+//                }
+
+//                rapidjson::Value checkBoxesArray(rapidjson::kArrayType);
+//                QList<QCheckBox*> checkBoxes = widget->findChildren<QCheckBox*>();
+//                for (QCheckBox* checkBox : checkBoxes) {
+//                    if (checkBox) {
+//                        rapidjson::Value checkBoxObj(rapidjson::kObjectType);
+//                        checkBoxObj.AddMember("chb_Text", rapidjson::Value(checkBox->text().toStdString().c_str(), allocator), allocator);
+//                        std::string checkBoxValue;
+//                        if (checkBox->checkState() == Qt::PartiallyChecked)
+//                            checkBoxValue = "Undefined";
+//                        else if (checkBox->isChecked())
+//                            checkBoxValue = "Checked";
+//                        else checkBoxValue = "Unchecked";
+
+//                        checkBoxObj.AddMember("chb_value", rapidjson::Value(checkBoxValue.c_str(), allocator), allocator);
+//                        checkBoxesArray.PushBack(checkBoxObj, allocator);
+//                    } else {
+//                        qDebug() << "Found nullptr in checkBoxes.";
+//                    }
+//                }
+//                if (checkBoxesArray.Size() > 0) jsonChild.AddMember("chb", checkBoxesArray, allocator);
+
+//                rapidjson::Value comboBoxesArray(rapidjson::kArrayType);
+//                QList<QComboBox*> comboBoxes = widget->findChildren<QComboBox*>();
+//                if (!comboBoxes.isEmpty()) {
+//                    for (QComboBox* comboBox : comboBoxes) {
+//                        if (comboBox) {
+//                            QString comboBoxText = comboBox->currentText();
+//                            QStringList parts = comboBoxText.split(" ");
+//                            QString numericPart = parts.isEmpty() ? QString() : parts[0];
+
+//                            QWidget *parentWidget = comboBox->parentWidget();
+//                            QLabel *label = parentWidget ? parentWidget->findChild<QLabel*>() : nullptr;
+//                            QString labelText = label ? label->text() : QString();
+
+//                            rapidjson::Value comboBoxObj(rapidjson::kObjectType);
+//                            comboBoxObj.AddMember("cb_Text", rapidjson::Value(labelText.toStdString().c_str(), allocator), allocator);
+//                            comboBoxObj.AddMember("cb_Value", rapidjson::Value(numericPart.toStdString().c_str(), allocator), allocator);
+//                            comboBoxesArray.PushBack(comboBoxObj, allocator);
+//                        }
+//                    } if (comboBoxesArray.Size() > 0)  jsonChild.AddMember("cb", comboBoxesArray, allocator);
+//                }
+//                children.PushBack(jsonChild, allocator);
+//            }
+//        }
+//    }
+//    if (HCMflag) jsonItem.AddMember("subChildren", children, allocator);
+//    else jsonItem.AddMember("children", children, allocator);
+
+
+}
+
+void HCM1035Widget::saveItem(QStandardItem *selectedItem) {
+
+    if (selectedItem->parent() != nullptr) {
+        if (selectedItem->parent()->text() == "PLL" || selectedItem->parent()->text() == "VCO Subsystem") HCMflag = 1;
+        else {
+            QMessageBox::warning(this, "Ошибка", "Выберете регистр");
+            return;
+        }
+    } else if (selectedItem->text() == "PLL" || selectedItem->text() == "VCO Subsystem") {
+        QMessageBox::warning(this, "Ошибка", "Выберете регистр");
+        return;
+    } else selectedItem = selectedItem;
+
+
     rapidjson::Document document;
     document.SetObject();
     rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
 
     QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
 
+    rapidjson::Value items(rapidjson::kArrayType);
+    rapidjson::Value jsonParent(rapidjson::kObjectType);
+
+//    if (HCMflag) {
+//        QString selparent = selectedItem->parent()->text();
+//        jsonParent.AddMember(
+//            rapidjson::Value(("column" + QString::number(0)).toStdString().c_str(), allocator),
+//            rapidjson::Value(selparent.toStdString().c_str(), allocator),
+//            allocator);
+//    }
+
+    rapidjson::Value children(rapidjson::kArrayType);
+
+    rapidjson::Value jsonItem(rapidjson::kObjectType);
+    QString itemData = selectedItem->text();
+
+    jsonItem.AddMember(
+        rapidjson::Value("Name", allocator),
+        rapidjson::Value(itemData.toStdString().c_str(), allocator),
+        allocator);
+
+    if (selectedItem->hasChildren()) hasChildren(selectedItem, allocator, jsonItem, model, treeView, HCMflag);
+
+    if (HCMflag) {
+        children.PushBack(jsonItem, allocator);
+
+        jsonParent.AddMember("children", children, allocator);
+        items.PushBack(jsonParent, allocator);
+    } else items.PushBack(jsonItem, allocator);
+
+    document.AddMember("Registers", items, allocator);
+    rapidjson::StringBuffer buffer;
+    rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
+    document.Accept(writer);
+
+    QString filePath = "save_element.json";
+    std::ofstream file(filePath.toStdString());
+
+    if (file.is_open()) {
+        file << buffer.GetString();
+        file.close();
+        QMessageBox::information(this, "Успех", "Файл успешно сохранен: " + filePath);
+    } else {
+        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для записи!");
+    }
+
+}
+
+void HCM1035Widget::on_save_button_clicked()
+{
+    rapidjson::Document document;
+    document.SetObject();
+    rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
+    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
     QStandardItem* rootItem = model->invisibleRootItem();
     rapidjson::Value items(rapidjson::kArrayType);
 
     for (int i = 0; i < rootItem->rowCount(); ++i) {
         QStandardItem* item = rootItem->child(i);
+        if (item->text() == "PLL" || item->text() == "VCO Subsystem") HCMflag = 1;
         if (!item) continue;
-
         rapidjson::Value jsonItem(rapidjson::kObjectType);
 
-        for (int col = 0; col < rootItem->columnCount(); ++col) {
+        for (int col = 0; col < model->columnCount(); ++col) {
             if (model->item(i, col)) {
                 QString itemData = model->item(i, col)->text();
-
                 jsonItem.AddMember(
-                    rapidjson::Value(("column" + QString::number(col)).toStdString().c_str(), allocator),
+                    rapidjson::Value("Name", allocator),
                     rapidjson::Value(itemData.toStdString().c_str(), allocator),
                     allocator);
             }
         }
+        if (item->hasChildren())  {
+            if (HCMflag) {
+                rapidjson::Value children(rapidjson::kArrayType);
+                for (int j = 0; j < item->rowCount(); j++) {
+                    QStandardItem* child = item->child(j);
 
-        if (item->hasChildren()) {
+                    if (child) {
+                        rapidjson::Value jsonChild(rapidjson::kObjectType);
+                        QString childData = child->text();
+                        jsonChild.AddMember(
+                            rapidjson::Value("Name", allocator),
+                            rapidjson::Value(childData.toStdString().c_str(), allocator),
+                            allocator
+                        );
 
-        rapidjson::Value children(rapidjson::kArrayType);
-        for (int j = 0; j < item->rowCount(); j++) {
-            QStandardItem* child = item->child(j);
-
-            if (child) {
-                rapidjson::Value jsonChild(rapidjson::kObjectType);
-                QString childData = child->text();
-                jsonChild.AddMember(
-                    rapidjson::Value(("column" + QString::number(0)).toStdString().c_str(), allocator),
-                    rapidjson::Value(childData.toStdString().c_str(), allocator),
-                    allocator
-                );
-
-                if (child->hasChildren()) {
-
-                    rapidjson::Value subChildren(rapidjson::kArrayType);
-                    for (int k = 0; k < child->rowCount(); k++) {
-                        QStandardItem* subChild = child->child(k);
-
-                        if (subChild) {
-                            rapidjson::Value jsonSubChild(rapidjson::kObjectType);
-                            QModelIndex index = model->index(k, 1, child->index());
-                            QWidget* widget = treeView->indexWidget(index);
-
-                            //код рабочий - сохраняет все элементы, но не по прорядку, сохраняет в порядке проверки, но нет проблем с загрузкой
-
-                            if (widget && index.isValid()) {
-
-                                rapidjson::Value lineEditsArray(rapidjson::kArrayType);
-                                QList<QLineEdit*> lineEdits = widget->findChildren<QLineEdit*>();
-                                if (!lineEdits.isEmpty()) {
-                                    for (QLineEdit* lineEdit : lineEdits) {
-                                        if (lineEdit) {
-                                            rapidjson::Value lineEditObj(rapidjson::kObjectType);
-                                            QVariant propertyValue = lineEdit->property("lineEditName");
-                                            if (propertyValue.isValid()) lineEditObj.AddMember("lineEditText", rapidjson::Value(propertyValue.toString().toStdString().c_str(), allocator), allocator);
-                                            lineEditObj.AddMember("lineEditValue", rapidjson::Value(lineEdit->text().toStdString().c_str(), allocator), allocator);
-                                            lineEditsArray.PushBack(lineEditObj, allocator);
-                                        }
-                                    }
-
-                                    if (lineEditsArray.Size() > 0) {
-                                        jsonSubChild.AddMember("lineEdit", lineEditsArray, allocator);
-                                    }
-                                }
-                            }
-
-                            rapidjson::Value checkBoxesArray(rapidjson::kArrayType);
-                            QList<QCheckBox*> checkBoxes = widget->findChildren<QCheckBox*>();
-                            for (QCheckBox* checkBox : checkBoxes) {
-                                if (checkBox) {
-                                    rapidjson::Value checkBoxObj(rapidjson::kObjectType);
-                                    checkBoxObj.AddMember("checkBoxText", rapidjson::Value(checkBox->text().toStdString().c_str(), allocator), allocator);
-
-                                    std::string checkBoxValue;
-                                    if (checkBox->checkState() == Qt::PartiallyChecked)
-                                        checkBoxValue = "Undefined";
-                                    else if (checkBox->isChecked())
-                                        checkBoxValue = "Checked";
-                                    else
-                                        checkBoxValue = "Unchecked";
-
-                                    checkBoxObj.AddMember("value", rapidjson::Value(checkBoxValue.c_str(), allocator), allocator);
-                                    checkBoxesArray.PushBack(checkBoxObj, allocator);
-                                } else {
-                                    qDebug() << "Found nullptr in checkBoxes.";
-                                }
-                            }
-                            if (checkBoxesArray.Size() > 0) jsonSubChild.AddMember("checkBoxes", checkBoxesArray, allocator);
-
-                            rapidjson::Value comboBoxesArray(rapidjson::kArrayType);
-                            QList<QComboBox*> comboBoxes = widget->findChildren<QComboBox*>();
-                            if (!comboBoxes.isEmpty()) {
-                                for (QComboBox* comboBox : comboBoxes) {
-                                    if (comboBox) {
-                                        QString comboBoxText = comboBox->currentText();
-                                        QStringList parts = comboBoxText.split(" ");
-                                        QString numericPart = parts.isEmpty() ? QString() : parts[0];
-
-                                        QWidget *parentWidget = comboBox->parentWidget();
-                                        QLabel *label = parentWidget ? parentWidget->findChild<QLabel*>() : nullptr;
-                                        QString labelText = label ? label->text() : QString();
-
-                                        rapidjson::Value comboBoxObj(rapidjson::kObjectType);
-                                        comboBoxObj.AddMember("comboBoxText", rapidjson::Value(labelText.toStdString().c_str(), allocator), allocator);
-                                        comboBoxObj.AddMember("comboBoxValue", rapidjson::Value(numericPart.toStdString().c_str(), allocator), allocator);
-                                        comboBoxesArray.PushBack(comboBoxObj, allocator);
-                                    }
-                                } if (comboBoxesArray.Size() > 0)  jsonSubChild.AddMember("comboBox", comboBoxesArray, allocator);
-                            }
-
-
-
-
-
-                            // рабочий код - сохраняет в json файл все правильно, все объекты находятся внутри массива widgets, но присутствуют проблемы с загрузкой из за этого
-
-//                            if (widget && index.isValid()) {
-//                                rapidjson::Value widgetsArray(rapidjson::kArrayType);
-
-//                                QList<QWidget*> allWidgets = widget->findChildren<QWidget*>();
-//                                for (QWidget* w : allWidgets) {
-
-//                                    if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(w)) {
-//                                        rapidjson::Value lineEditObj(rapidjson::kObjectType);
-//                                        lineEditObj.AddMember("lineEditValue",
-//                                            rapidjson::Value(lineEdit->text().toStdString().c_str(), allocator), allocator);
-//                                        widgetsArray.PushBack(lineEditObj, allocator);
-//                                    }
-
-//                                    else if (QCheckBox* checkBox = qobject_cast<QCheckBox*>(w)) {
-//                                        rapidjson::Value checkBoxObj(rapidjson::kObjectType);
-//                                        checkBoxObj.AddMember("checkBoxText", rapidjson::Value(checkBox->text().toStdString().c_str(), allocator), allocator);
-//                                        std::string checkBoxValue;
-//                                        if (checkBox->checkState() == Qt::PartiallyChecked)
-//                                            checkBoxValue = "Undefined";
-//                                        else if (checkBox->isChecked())
-//                                            checkBoxValue = "Checked";
-//                                        else checkBoxValue = "Unchecked";
-
-//                                        checkBoxObj.AddMember("value", rapidjson::Value(checkBoxValue.c_str(), allocator), allocator);
-//                                        widgetsArray.PushBack(checkBoxObj, allocator);
-//                                    }
-
-//                                    else if (QComboBox* comboBox = qobject_cast<QComboBox*>(w)) {
-//                                        QString comboBoxText = comboBox->currentText();
-//                                        QStringList parts = comboBoxText.split(" ");
-//                                        QString numericPart = parts.isEmpty() ? QString() : parts[0];
-//                                        QWidget* parentWidget = comboBox->parentWidget();
-//                                        QLabel* label = parentWidget ? parentWidget->findChild<QLabel*>() : nullptr;
-//                                        QString labelText = label ? label->text() : QString();
-
-//                                        rapidjson::Value comboBoxObj(rapidjson::kObjectType);
-//                                        comboBoxObj.AddMember("labelText",
-//                                            rapidjson::Value(labelText.toStdString().c_str(), allocator), allocator);
-//                                        comboBoxObj.AddMember("comboBoxValue",
-//                                            rapidjson::Value(numericPart.toStdString().c_str(), allocator), allocator);
-//                                        widgetsArray.PushBack(comboBoxObj, allocator);
-//                                    }
-//                                }
-
-//                                if (widgetsArray.Size() > 0) {
-//                                    jsonSubChild.AddMember("widgets", widgetsArray, allocator);
-//                                }
-//                            }
-                            subChildren.PushBack(jsonSubChild, allocator);
-                        }
-                    }
-                    jsonChild.AddMember("subChildren", subChildren, allocator);
+                        if (child->hasChildren()) {
+                            hasChildren(child, allocator, jsonChild, model, treeView, HCMflag);
+                            children.PushBack(jsonChild, allocator);
+                         }
+                     }
                 }
-             children.PushBack(jsonChild, allocator);
-            }
+                jsonItem.AddMember("Data", children, allocator);
+            } else hasChildren(item, allocator, jsonItem, model, treeView, HCMflag);
         }
-        jsonItem.AddMember("children", children, allocator);
-    }
     items.PushBack(jsonItem, allocator);
     }
 
-    document.AddMember("items", items, allocator);
+    document.AddMember("Registers", items, allocator);
     rapidjson::StringBuffer buffer;
     rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
     document.Accept(writer);
@@ -307,234 +412,294 @@ void HCM1035Widget::on_save_button_clicked()
         QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для записи!");
     }
 
+
+
+//    rapidjson::Document document;
+//    document.SetObject();
+//    rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
+//    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
+//    QStandardItem* rootItem = model->invisibleRootItem();
+//    rapidjson::Value items(rapidjson::kArrayType);
+
+//    for (int i = 0; i < rootItem->rowCount(); ++i) {
+//        QStandardItem* item = rootItem->child(i);
+//        qDebug() << item->text();
+//        if (item->text() == "PLL" || item->text() == "VCO Subsystem") HCMflag = 1;
+//        if (!item) continue;
+//        rapidjson::Value jsonItem(rapidjson::kObjectType);
+
+//        for (int col = 0; col < model->columnCount(); ++col) {
+//            if (model->item(i, col)) {
+//                QString itemData = model->item(i, col)->text();
+//                jsonItem.AddMember(
+//                    rapidjson::Value(("column" + QString::number(col)).toStdString().c_str(), allocator),
+//                    rapidjson::Value(itemData.toStdString().c_str(), allocator),
+//                    allocator);
+//            }
+//        }
+//        if (item->hasChildren())  {
+//            if (HCMflag) {
+//                rapidjson::Value children(rapidjson::kArrayType);
+//                for (int j = 0; j < item->rowCount(); j++) {
+//                    QStandardItem* child = item->child(j);
+
+//                    if (child) {
+//                        rapidjson::Value jsonChild(rapidjson::kObjectType);
+//                        QString childData = child->text();
+//                        jsonChild.AddMember(
+//                            rapidjson::Value(("column" + QString::number(0)).toStdString().c_str(), allocator),
+//                            rapidjson::Value(childData.toStdString().c_str(), allocator),
+//                            allocator
+//                        );
+
+//                        if (child->hasChildren()) {
+//                            hasChildren(child, allocator, jsonChild, model, treeView, HCMflag);
+//                            children.PushBack(jsonChild, allocator);
+//                         }
+//                     }
+//                }
+//                jsonItem.AddMember("children", children, allocator);
+//            } else hasChildren(item, allocator, jsonItem, model, treeView, HCMflag);
+//        }
+//    items.PushBack(jsonItem, allocator);
+//    }
+
+//    document.AddMember("Registers", items, allocator);
+//    rapidjson::StringBuffer buffer;
+//    rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
+//    document.Accept(writer);
+
+//    QString filePath = "output.json";
+//    std::ofstream file(filePath.toStdString());
+
+//    if (file.is_open()) {
+//        file << buffer.GetString();
+//        file.close();
+//        QMessageBox::information(this, "Успех", "Файл успешно сохранен: " + filePath);
+//    } else {
+//        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для записи!");
+//    }
+
 }
 
-void HCM1035Widget::updateChildWidgets(QStandardItemModel* model, const rapidjson::Value&  subChildrenArray, QStandardItem* parentItem) {
-    if (!subChildrenArray.IsArray()) {
-         qDebug() << "subchildrenArray не является массивом";
-        QMessageBox::warning(this, "Ошибка", " Неверная структура файла");
+void HCM1035Widget::updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& dataArray, QStandardItem* parentItem) {
+    if (!dataArray.IsArray()) {
+        qDebug() << "dataArray не является массивом";
+        QMessageBox::warning(this, "Ошибка", "Неверная структура файла");
         return;
     }
 
-    for (rapidjson::SizeType i = 0; i < subChildrenArray.Size(); ++i) {
-        const rapidjson::Value& subChild = subChildrenArray[i];
+    if (dataArray.Empty()) return;
 
-        if (!subChild.IsObject()) {
-            continue;
-        }
+    for (int j = 0; j < dataArray.Size(); j++) {
 
-        QModelIndex index = model->index(i, 1, parentItem->index());
-        QWidget* containerWidget = treeView->indexWidget(index);
+        for (int i = 0; i < dataArray.Size(); ++i) {
+            const rapidjson::Value& subChild = dataArray[i];
+            if (!subChild.IsObject()) {
+                qDebug() << "subChild не является объектом";
+                continue;
+            }
 
-        if (!containerWidget) {
-            continue;
-        }
 
-        QList<QLineEdit*> lineEdits = containerWidget->findChildren<QLineEdit*>();
-        QList<QCheckBox*> checkBoxes = containerWidget->findChildren<QCheckBox*>();
+            if (subChild.HasMember("Text") && subChild.HasMember("Value")) {
+                QString text = QString::fromStdString(subChild["Text"].GetString());
+                QString value = QString::fromStdString(subChild["Value"].GetString());
 
-        if (subChild.HasMember("lineEdit") && subChild["lineEdit"].IsArray()) {
-            const rapidjson::Value& lineEditsArray = subChild["lineEdit"];
-            for (size_t i = 0; i < lineEditsArray.Size(); ++i) {
-                const rapidjson::Value& lineEditObj = lineEditsArray[i];
-                if (lineEditObj.IsObject() && lineEditObj.HasMember("lineEditText") && lineEditObj.HasMember("lineEditValue")) {
-                    QString lineEditText = QString::fromStdString(lineEditObj["lineEditText"].GetString());
-                    QString lineEditValue = QString::fromStdString(lineEditObj["lineEditValue"].GetString());
+                QModelIndex index = model->index(j, 1, parentItem->index());
+                QWidget* widget = treeView->indexWidget(index);
+
+                QList<QLineEdit*> lineEdits = widget->findChildren<QLineEdit*>();
+                if (!lineEdits.isEmpty()) {
                     for (QLineEdit* lineEdit : lineEdits) {
-                        if (lineEdit && lineEdit->property("lineEditName") == lineEditText) {
-                            lineEdit->setText(lineEditValue);
-                            qDebug() << "Set line edit text to:" << lineEditValue;
-                            break;
-                        }
+                        if (lineEdit && lineEdit->property("lineEditName") == text) {
+                            lineEdit->setText(value);
+                        } else continue;
                     }
                 }
-            }
-        }
 
-        if (subChild.HasMember("checkBoxes") && subChild["checkBoxes"].IsArray()) {
-            const rapidjson::Value& checkBoxesArray = subChild["checkBoxes"];
-            for (rapidjson::SizeType j = 0; j < checkBoxesArray.Size(); ++j) {
-                const rapidjson::Value& checkBoxObj = checkBoxesArray[j];
-                if (checkBoxObj.HasMember("checkBoxText")) {
-                    QString checkBoxText = QString::fromStdString(checkBoxObj["checkBoxText"].GetString());
-                    QString checkBoxValue = QString::fromStdString(checkBoxObj.HasMember("value") ? checkBoxObj["value"].GetString() : "Unchecked");
+                QList<QCheckBox*> checkBoxes = widget->findChildren<QCheckBox*>();
+                for (QCheckBox* checkBox : checkBoxes) {
+                    if (checkBox && checkBox->property("checkBoxName") == text) {
+                        if (value == "True") {
+                            qDebug() << "setChecked(true)" << value;
+                            checkBox->setChecked(true);
+                        } else if (value == "False") {
+                            checkBox->setChecked(false);
+                            qDebug() << "setChecked(false)" << value;
+                        } else if (value == "None") {
+                            checkBox->setCheckState(Qt::PartiallyChecked);
+                            qDebug() << "setCheckState(Qt::PartiallyChecked)" << value;
+                        }
+                    } else continue;
+                }
 
-                    bool checkBoxFound = false;
 
-                    for (QCheckBox* checkBox : checkBoxes) {
-                        if (checkBox->text() == checkBoxText) {
-                            checkBoxFound = true;
-                            if (checkBoxValue == "Checked") {
-                                checkBox->setChecked(true);
-                            } else if (checkBoxValue == "Unchecked") {
-                                checkBox->setChecked(false);
-                            } else if (checkBoxValue == "Undefined") {
-                                checkBox->setCheckState(Qt::PartiallyChecked);
+                QList<QComboBox*> comboBoxes = widget->findChildren<QComboBox*>();
+                if (!comboBoxes.isEmpty()) {
+                    for (QComboBox* comboBox : comboBoxes) {
+                        if (comboBox && comboBox->property("ComboBoxName") == text) {
+                            bool valueFound = false;
+                            for (int i = 0; i < comboBox->count(); ++i) {
+                                QString existingText = comboBox->itemText(i);
+                                QString textBeforeSpace = existingText.split(" ").first();
+                                if (textBeforeSpace == value) {
+                                    valueFound = true;
+                                    comboBox->setCurrentText(existingText);
+                                    break;
+                                }
                             }
-                            qDebug() << "Set checkbox" << checkBoxText << "to" << checkBoxValue;
+                            if (!valueFound) {
+                                comboBox->addItem(value);
+                                comboBox->setCurrentText(value);
+                            }
                             break;
-                        }
+                        } else continue;
                     }
-
-                    if (!checkBoxFound) {
-                        qDebug() << "Checkbox with text" << checkBoxText << "not found.";
-                    }
-                } else {
-                    QMessageBox::warning(this, "Ошибка", "Неверные значения в файле");
                 }
             }
         }
+    }
 
 
+//    if (dataArray.Size() != parentItem->rowCount()) {
+//        QMessageBox::warning(this, "Ошибка", "Не удалось считать файл - таблицы не совпадают!");
+//        return;
+//    }
 
+//    for (int j = 0; j < parentItem->rowCount(); j++) {
+//        QStandardItem* child = parentItem->child(j);
 
+//        if (child) {
+//            rapidjson::Value combinedArray(rapidjson::kArrayType);
 
+//            const rapidjson::Value& subChild = dataArray[j];
+//            if (!subChild.IsObject()) {
+//                qDebug() << "subChild не является объектом";
+//                continue;
+//            }
 
-        //работает (не совсем) при сохранении с массивом Виджеты
-
-//        if (subChild.HasMember("widgets") && subChild["widgets"].IsArray()) {
-//            const rapidjson::Value& widgetsArray = subChild["widgets"];
-
-//            for (rapidjson::SizeType j = 0; j < widgetsArray.Size(); ++j) {
-//                const rapidjson::Value& widget = widgetsArray[j];
-
-//                qDebug() << "in for of widget array";
+//            if (subChild.HasMember("Text") && subChild.HasMember("Value")) {
+//                QString text = QString::fromStdString(subChild["Text"].GetString());
+//                QString value = QString::fromStdString(subChild["Value"].GetString());
 
 //                QModelIndex index = model->index(j, 1, parentItem->index());
-//                QWidget* containerWidget = treeView->indexWidget(index);
-//                if (!containerWidget) {
-//                    continue;
-//                }
+//                QWidget* widget = treeView->indexWidget(index);
 
-//                if (subChild.HasMember("widgets") && subChild["widgets"].IsArray()) {
-//                    const rapidjson::Value& widgetsArray = subChild["widgets"];
+//                if (widget && index.isValid()) {
 
-//                    QList<QLineEdit*> lineEdits = containerWidget->findChildren<QLineEdit*>();
-//                    QList<QCheckBox*> checkBoxes = containerWidget->findChildren<QCheckBox*>();
-
-//                    for (rapidjson::SizeType j = 0; j < widgetsArray.Size(); ++j) {
-//                        const rapidjson::Value& widget = widgetsArray[j];
-
-//                        if (widget.HasMember("lineEditValue")) {
-//                            QString lineEditValue = QString::fromStdString(widget["lineEditValue"].GetString());
-
-//                            if (j < lineEdits.size()) {
-//                                lineEdits[j]->setText(lineEditValue);
-//                                qDebug() << "Set line edit text to:" << lineEditValue;
+//                    QList<QLineEdit*> lineEdits = widget->findChildren<QLineEdit*>();
+//                    if (!lineEdits.isEmpty()) {
+//                        for (QLineEdit* lineEdit : lineEdits) {
+//                            if (lineEdit && lineEdit->property("lineEditName") == text) {
+//                                lineEdit->setText(value);
 //                            } else {
-//                                qDebug() << "No line edit found for index:" << j;
-//                            }
-//                        }
-
-//                        if (widget.HasMember("checkBoxText")) {
-//                            QString checkBoxText = QString::fromStdString(widget["checkBoxText"].GetString());
-//                            QString checkBoxValue = QString::fromStdString(widget.HasMember("value") ? widget["value"].GetString() : "Unchecked");
-
-//                            for (QCheckBox* checkBox : checkBoxes) {
-//                                if (checkBox->text() == checkBoxText) {
-//                                    if (checkBoxValue == "Checked") {
-//                                        checkBox->setChecked(true);
-//                                    } else if (checkBoxValue == "Unchecked") {
-//                                        checkBox->setChecked(false);
-//                                    } else if (checkBoxValue == "Undefined") {
-//                                        checkBox->setCheckState(Qt::PartiallyChecked);
-//                                    }
-//                                    qDebug() << "Set checkbox" << checkBoxText << "to" << checkBoxValue;
-//                                    break;
-//                                } else {
-//                                    QMessageBox::warning(this, "Ошибка", " Неверные значения в файле");
-//                                    break;
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-
-
-
-
-
-
-                    // часть где идет проверка для лайнэдита и чекбокса - экспериментальный код
-
-//                    for (rapidjson::SizeType j = 0; j < widgetsArray.Size(); ++j) {
-//                        const rapidjson::Value& widget = widgetsArray[j];
-//                        qDebug() << "in for of widget array index:" << j;
-
-//                        QModelIndex index = model->index(j, 1, parentItem->index());
-//                        QWidget* containerWidget = treeView->indexWidget(index);
-//                        if (!containerWidget) {
-//                            qDebug() << "containerWidget is null for index:" << index;
-//                            continue;
-//                        }
-
-//                        if (widget.HasMember("lineEditValue")) {
-//                            qDebug() << "found lineedit at index:" << j;
-//                            QString lineEditValue = QString::fromStdString(widget["lineEditValue"].GetString());
-//                            QList<QLineEdit*> lineEdits = containerWidget->findChildren<QLineEdit*>();
-//                            qDebug() << "Found" << lineEdits.size() << "line edits";
-
-//                            for (QLineEdit* lineEdit : lineEdits) {
-//                                lineEdit->setText(lineEditValue);
-//                                qDebug() << "Set line edit text to:" << lineEditValue;
+//                                QMessageBox::warning(this, "Ошибка", "Неверная структура файла - невозможно заполнить элемент " + text);
 //                                break;
 //                            }
 //                        }
-//                        qDebug() << "out of lineedit";
+//                    }
 
-//                        if (widget.HasMember("checkBoxText")) {
-//                            qDebug() << "found checkbox at index:" << j;
-//                            QString checkBoxText = QString::fromStdString(widget["checkBoxText"].GetString());
-//                            QString checkBoxValue = QString::fromStdString(widget.HasMember("value") ? widget["value"].GetString() : "Unchecked");
-//                            QList<QCheckBox*> checkBoxes = containerWidget->findChildren<QCheckBox*>();
-//                            qDebug() << "Found" << checkBoxes.size() << "check boxes";
+//                    QList<QCheckBox*> checkBoxes = widget->findChildren<QCheckBox*>();
+//                    for (QCheckBox* checkBox : checkBoxes) {
+//                        if (checkBox) {
+//                            if (value == "True") {
+//                                checkBox->setChecked(true);
+//                            } else if (value == "False") {
+//                                checkBox->setChecked(false);
+//                            } else if (value == "None") {
+//                                checkBox->setCheckState(Qt::PartiallyChecked);
+//                            }
+//                            break;
+//                        }
+//                    }
 
-//                            for (QCheckBox* checkBox : checkBoxes) {
-//                                if (checkBox->text() == checkBoxText) {
-//                                    if (checkBoxValue == "Checked") {
-//                                        checkBox->setChecked(true);
-//                                    } else if (checkBoxValue == "Unchecked") {
-//                                        checkBox->setChecked(false);
-//                                    } else if (checkBoxValue == "Undefined") {
-//                                        checkBox->setCheckState(Qt::PartiallyChecked);
+//                    QList<QComboBox*> comboBoxes = widget->findChildren<QComboBox*>();
+//                    if (!comboBoxes.isEmpty()) {
+//                        for (QComboBox* comboBox : comboBoxes) {
+//                            if (comboBox && comboBox->property("ComboBoxName") == text) {
+//                                bool valueFound = false;
+//                                for (int i = 0; i < comboBox->count(); ++i) {
+//                                    QString existingText = comboBox->itemText(i);
+//                                    QString textBeforeSpace = existingText.split(" ").first();
+//                                    if (textBeforeSpace == value) {
+//                                        valueFound = true;
+//                                        comboBox->setCurrentText(existingText);
+//                                        break;
 //                                    }
-//                                    qDebug() << "Set checkbox" << checkBoxText << "to" << checkBoxValue;
 //                                }
+//                                if (!valueFound) {
+//                                    comboBox->addItem(value);
+//                                    comboBox->setCurrentText(value);
+//                                }
+//                                break;
+//                            } else {
+//                                QMessageBox::warning(this, "Ошибка", "Неверная структура файла - невозможно заполнить элемент " + text);
+//                                break;
 //                            }
 //                        }
-//                        qDebug() << "out of checkbox";
 //                    }
 //                }
+//            }
+//        }
+//    }
 
 
 
 
 
+//    if (!subChildrenArray.IsArray()) {
+//         qDebug() << "subchildrenArray не является массивом";
+//        QMessageBox::warning(this, "Ошибка", " Неверная структура файла");
+//        return;
+//    }
 
+//    for (rapidjson::SizeType i = 0; i < subChildrenArray.Size(); ++i) {
+//        const rapidjson::Value& subChild = subChildrenArray[i];
+//        if (!subChild.IsObject()) {
+//            continue;
+//        }
 
+//        QModelIndex index = model->index(i, 1, parentItem->index());
+//        QWidget* containerWidget = treeView->indexWidget(index);
 
+//        if (!containerWidget) {
+//            continue;
+//        }
 
-                    // часть где идет проверка для всех элементов - основной код (не работает для всех элементов, но логика рабочая)
+//        QList<QLineEdit*> lineEdits = containerWidget->findChildren<QLineEdit*>();
+//        QList<QCheckBox*> checkBoxes = containerWidget->findChildren<QCheckBox*>();
+//        QList<QComboBox*> comboBoxes = containerWidget->findChildren<QComboBox*>();
 
-
-//                if (widget.HasMember("lineEditValue")) { qDebug() << "found lineedit";
-
-//                    QString lineEditValue = QString::fromStdString(widget["lineEditValue"].GetString());
-//                    QList<QLineEdit*> lineEdits = containerWidget->findChildren<QLineEdit*>();
+//        if (subChild.HasMember("le") && subChild["le"].IsArray()) {
+//            const rapidjson::Value& lineEditsArray = subChild["le"];
+//            for (size_t i = 0; i < lineEditsArray.Size(); ++i) {
+//                const rapidjson::Value& lineEditObj = lineEditsArray[i];
+//                if (lineEditObj.IsObject() && lineEditObj.HasMember("le_Text") && lineEditObj.HasMember("le_Value")) {
+//                    QString lineEditText = QString::fromStdString(lineEditObj["le_Text"].GetString());
+//                    QString lineEditValue = QString::fromStdString(lineEditObj["le_Value"].GetString());
 //                    for (QLineEdit* lineEdit : lineEdits) {
-//                        lineEdit->setText(lineEditValue);
-//                        break;
+//                        if (lineEdit && lineEdit->property("lineEditName") == lineEditText) {
+//                            lineEdit->setText(lineEditValue);
+//                            break;
+//                        }
 //                    }
-//                } qDebug() << "out of lineedit";
+//                }
+//            }
+//        }
 
-//                if (widget.HasMember("checkBoxText")) {  qDebug() << "found checkbox";
+//        if (subChild.HasMember("chb") && subChild["chb"].IsArray()) {
+//            const rapidjson::Value& checkBoxesArray = subChild["chb"];
+//            for (rapidjson::SizeType j = 0; j < checkBoxesArray.Size(); ++j) {
+//                const rapidjson::Value& checkBoxObj = checkBoxesArray[j];
+//                if (checkBoxObj.HasMember("chb_Text")) {
+//                    QString checkBoxText = QString::fromStdString(checkBoxObj["chb_Text"].GetString());
+//                    QString checkBoxValue = QString::fromStdString(checkBoxObj.HasMember("chb_value") ? checkBoxObj["chb_value"].GetString() : "Unchecked");
 
-//                    QString checkBoxText = QString::fromStdString(widget["checkBoxText"].GetString());
-//                    QString checkBoxValue = QString::fromStdString(widget.HasMember("value") ? widget["value"].GetString() : "Unchecked");
+//                    bool checkBoxFound = false;
 
-//                    QList<QCheckBox*> checkBoxes = containerWidget->findChildren<QCheckBox*>();
 //                    for (QCheckBox* checkBox : checkBoxes) {
 //                        if (checkBox->text() == checkBoxText) {
+//                            checkBoxFound = true;
 //                            if (checkBoxValue == "Checked") {
 //                                checkBox->setChecked(true);
 //                            } else if (checkBoxValue == "Unchecked") {
@@ -542,62 +707,73 @@ void HCM1035Widget::updateChildWidgets(QStandardItemModel* model, const rapidjso
 //                            } else if (checkBoxValue == "Undefined") {
 //                                checkBox->setCheckState(Qt::PartiallyChecked);
 //                            }
+//                            break;
 //                        }
-//                    } break;
-//                } qDebug() << "out of checkbox";
+//                    }
 
+//                    if (!checkBoxFound) {
+//                        qDebug() << "Checkbox with text" << checkBoxText << "not found.";
+//                    }
+//                } else {
+//                    QMessageBox::warning(this, "Ошибка", "Неверные значения в файле");
+//                }
+//            }
+//        }
 
-//                if (widget.HasMember("labelText") && widget.HasMember("comboBoxValue")) {  qDebug() << "found combobox";
+//        if (subChild.HasMember("cb") && subChild["cb"].IsArray()) {
 
-//                    QString labelText = QString::fromStdString(widget["labelText"].GetString());
-//                    QString comboBoxValue = QString::fromStdString(widget["comboBoxValue"].GetString());
+//            const rapidjson::Value& comboBoxesArray = subChild["cb"];
+//            for (rapidjson::SizeType k = 0; k < comboBoxesArray.Size(); ++k) {
+//                const rapidjson::Value& comboBoxObj = comboBoxesArray[k];
+//                if (comboBoxObj.HasMember("cb_Text")) {
+//                    QString labelText = QString::fromStdString(comboBoxObj["cb_Text"].GetString());
+//                    QString comboBoxValue = QString::fromStdString(comboBoxObj["cb_Value"].GetString());
 
-//                    QList<QComboBox*> comboBoxes = containerWidget->findChildren<QComboBox*>();
 //                    for (QComboBox* comboBox : comboBoxes) {
 //                        QWidget* parentWidget = comboBox->parentWidget();
 //                        QLabel* associatedLabel = parentWidget ? parentWidget->findChild<QLabel*>() : nullptr;
 //                        QString currentLabelText = associatedLabel ? associatedLabel->text() : QString();
-
 //                        if (currentLabelText == labelText) {
-//                            bool valueFound = false;
 
+//                            bool valueFound = false;
 //                            for (int i = 0; i < comboBox->count(); ++i) {
 //                                QString existingText = comboBox->itemText(i);
 //                                QString textBeforeSpace = existingText.split(" ").first();
-
 //                                if (textBeforeSpace == comboBoxValue) {
 //                                    valueFound = true;
 //                                    comboBox->setCurrentText(existingText);
 //                                    break;
 //                                }
 //                            }
-
 //                            if (!valueFound) {
 //                                comboBox->addItem(comboBoxValue);
 //                                comboBox->setCurrentText(comboBoxValue);
 //                            }
-
 //                            break;
 //                        }
 //                    }
-//                }  qDebug() << "out of combobox";
-//            }
-
+//                }
 
 
 //        }
-    }
 
+//}
 
-
-
+//}
 
 }
 
-void HCM1035Widget::on_load_button_clicked()
+void HCM1035Widget::load_all() {
+    load("output.json");
+}
+
+void HCM1035Widget:: load_element() {
+    load("save_element.json");
+}
+
+void HCM1035Widget::load(const QString& filePath)
 {
     QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
-    QString filePath = "output.json";
 
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -614,81 +790,160 @@ void HCM1035Widget::on_load_button_clicked()
     if (jsonDoc.HasParseError()) {
         QMessageBox::warning(this, "Ошибка", "Не удалось прочитать файл");
         qDebug() << "JSON parse error at offset:" << jsonDoc.GetErrorOffset();
-        qDebug() << "Error description:" << rapidjson::GetParseError_En(jsonDoc.GetParseError());
         return;
     }
 
     if (!jsonDoc.IsObject()) {
-         qDebug() << "Корневой элемент не является объектом.";
-        QMessageBox::warning(this, "Ошибка", " Неверная структура файла");
+        qWarning() << "Корневой элемент не является объектом.";
         return;
     }
 
-    if (!jsonDoc.HasMember("items") || !jsonDoc["items"].IsArray()) {
-        QMessageBox::warning(this, "Ошибка", "Неверная структура файла");
-         qDebug() << "'items' не найден или не является массивом.";
+    if (!jsonDoc.HasMember("Registers") || !jsonDoc["Registers"].IsArray()) {
+        qWarning() << "'Registers' не найден или не является массивом.";
         return;
     }
 
-    const rapidjson::Value& itemsArray = jsonDoc["items"];
+    const rapidjson::Value& jsonArray = jsonDoc["Registers"];
 
-    for (rapidjson::SizeType i = 0; i < itemsArray.Size(); ++i) {
-        const rapidjson::Value& item = itemsArray[i];
+    if (jsonArray.Size() != model->rowCount()) {
+        QMessageBox::warning(this, "Ошибка", "Не удалось считать файл - таблицы не совпадают!");
+        return;
+    }
 
-        if (!item.IsObject()) {
+    for (rapidjson::SizeType i = 0; i < jsonArray.Size(); ++i) {
+        const rapidjson::Value& value = jsonArray[i];
+
+        if (!value.IsObject()) {
             continue;
         }
 
-        QString parentIdentifier = QString::fromStdString(item["column0"].GetString());
-        QStandardItem* parentItem = nullptr;
+        QString readItem = QString::fromStdString(value["Name"].GetString());
+        QStandardItem* Item = nullptr;
 
-        for (int j = 0; j < model->rowCount(); j++) {
-            if (model->item(i)->text() == parentIdentifier) {
-                parentItem = model->item(i);
+        for (int j = 0; j < model->rowCount(); ++j) {
+            if (model->item(j)->text() == readItem) {
+                Item = model->item(j);
                 break;
-            } else { QMessageBox::warning(this, "Ошибка", "Неверная структура файла - таблицы не совпадают!"); qDebug() << "parentItem" <<  parentIdentifier;}
+            }
         }
 
-        if (!parentItem) {
-            qDebug() << "Родительский элемент" << parentIdentifier << "не найден.";
-            QMessageBox::warning(this, "Ошибка", "Неверная структура файла - таблицы не совпадают!");
+        if (!Item) {
+            QMessageBox::warning(this, "Ошибка", "Не удалось считать файл - таблицы не совпадают!");
             break;
         }
 
-        if (item.HasMember("children") && item["children"].IsArray()) {
-            const rapidjson::Value& childrenArray = item["children"];
+        if (value.HasMember("Data") && value["Data"].IsArray()) {
+            const rapidjson::Value& dataArray = value["Data"];
+//            updateChildWidgets(model, dataArray, Item);
 
-            for (rapidjson::SizeType k = 0; k < childrenArray.Size(); k++) {
-                const rapidjson::Value& jsonChild = childrenArray[k];
-                QString childIdentifier = QString::fromStdString(jsonChild["column0"].GetString());
-                bool foundMatchingChild = false;
+            if (HCMflag && (Item->text() == "PLL" || Item->text() == "VCO Subsystem")) {
+                for (rapidjson::SizeType k = 0; k < dataArray.Size(); ++k) {
+                    const rapidjson::Value& childValue = dataArray[k];
+                    QStandardItem* Item_sec = nullptr;
+                    Item_sec = Item->child(k);
+//                    qDebug() << Item_sec->text();
 
-                QStandardItem *currentChildItem = nullptr;
-                for (int j = 0; j < parentItem->rowCount(); j++) {
-                    if (parentItem->child(j)->text() == childIdentifier) {
-                        foundMatchingChild = true;
-                        currentChildItem = parentItem->child(j);
-                        break;
+                    if (childValue.IsObject() && childValue.HasMember("Data") && childValue["Data"].IsArray()) {
+                        const rapidjson::Value& grandChildArray = childValue["Data"];
+                        updateChildWidgets(model, grandChildArray, Item_sec);
                     }
                 }
-
-                if (!foundMatchingChild) {
-                    QMessageBox::warning(this, "Ошибка", "Неверная структура файла - таблицы не совпадают!");
-                    qDebug() << "foundMatchingChild";
-                    break;
-                }
-
-                if (jsonChild.HasMember("subChildren") && jsonChild["subChildren"].IsArray()) {
-                    const rapidjson::Value& subChildrenArray = jsonChild["subChildren"];
-                    updateChildWidgets(model, subChildrenArray, currentChildItem);
-                } else QMessageBox::warning(this, "Ошибка", "Неверная структура файла - not children");
+            } else if (!HCMflag) updateChildWidgets(model, dataArray, Item);
+              else {
+                QMessageBox::warning(this, "Ошибка", "Не удалось считать файл - таблицы не совпадают!");
+                break;
             }
-        } else QMessageBox::warning(this, "Ошибка", "Неверная структура файла - not subChildren");
+        }
+
     }
 
 
 
 
+//    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
+
+//    QFile file(filePath);
+//    if (!file.open(QIODevice::ReadOnly)) {
+//        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для чтения!");
+//        return;
+//    }
+
+//    QByteArray jsonData = file.readAll();
+//    file.close();
+
+//    rapidjson::Document jsonDoc;
+//    jsonDoc.Parse(jsonData.constData());
+
+//    if (jsonDoc.HasParseError()) {
+//        QMessageBox::warning(this, "Ошибка", "Не удалось прочитать файл");
+//        qDebug() << "JSON parse error at offset:" << jsonDoc.GetErrorOffset();
+//        return;
+//    }
+
+//    if (!jsonDoc.IsObject()) {
+//        qWarning() << "Корневой элемент не является объектом.";
+//        return;
+//    }
+
+//    if (!jsonDoc.HasMember("Registers") || !jsonDoc["Registers"].IsArray()) {
+//        qWarning() << "'Registers' не найден или не является массивом.";
+//        return;
+//    }
+
+//    const rapidjson::Value& jsonArray = jsonDoc["Registers"];
+
+//    for (rapidjson::SizeType i = 0; i < jsonArray.Size(); ++i) {
+//        const rapidjson::Value& value = jsonArray[i];
+
+//        if (!value.IsObject()) {
+//            continue;
+//        }
+
+//        QString parentIdentifier = QString::fromStdString(value["column0"].GetString());
+//        QStandardItem* parentItem = nullptr;
+
+//        for (int j = 0; j < model->rowCount(); ++j) {
+//            if (model->item(j)->text() == parentIdentifier) {
+//                parentItem = model->item(j);
+//                break;
+//            }
+//        }
+
+//        if (!parentItem) {
+//            qWarning() << "Родительский элемент" << parentIdentifier << "не найден.";
+//            QMessageBox::warning(this, "Ошибка", "Не удалось считать файл - таблицы не совпадают!");
+//            break;
+//        }
+
+//        if (value.HasMember("children") && value["children"].IsArray()) {
+//            const rapidjson::Value& childrenArray = value["children"];
+//            updateChildWidgets(model, childrenArray, parentItem);
+
+//            for (rapidjson::SizeType k = 0; k < childrenArray.Size(); ++k) {
+//                const rapidjson::Value& jsonChild = childrenArray[k];
+//                QString childIdentifier = QString::fromStdString(jsonChild["column0"].GetString());
+//                bool foundMatchingChild = false;
+
+//                QStandardItem *currentChildItem = nullptr;
+//                for (int j = 0; j < parentItem->rowCount(); ++j) {
+//                    if (parentItem->child(j)->text() == childIdentifier) {
+//                        foundMatchingChild = true;
+//                        currentChildItem = parentItem->child(j);
+//                        break;
+//                    }
+//                }
+
+//                if (!foundMatchingChild) {
+//                    qWarning() << "Ошибка: Дочерний элемент с идентификатором" << childIdentifier << "не соответствует ни одному дочернему элементу родителя" << parentItem->text();
+//                }
+
+//                if (jsonChild.HasMember("subChildren") && jsonChild["subChildren"].IsArray()) {
+//                    const rapidjson::Value& subChildrenArray = jsonChild["subChildren"];
+//                    updateChildWidgets(model, subChildrenArray, currentChildItem);
+//                }
+//            }
+//        }
+//    }
 
 }
 
