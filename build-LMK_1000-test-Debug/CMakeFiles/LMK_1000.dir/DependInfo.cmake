@@ -10,8 +10,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/LMK1000-widget.cpp" "CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.o" "gcc" "CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/LMK_1000_autogen/mocs_compilation.cpp" "CMakeFiles/LMK_1000.dir/LMK_1000_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/LMK_1000.dir/LMK_1000_autogen/mocs_compilation.cpp.o.d"
+  "/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/buttons.cpp" "CMakeFiles/LMK_1000.dir/buttons.cpp.o" "gcc" "CMakeFiles/LMK_1000.dir/buttons.cpp.o.d"
+  "/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/create.cpp" "CMakeFiles/LMK_1000.dir/create.cpp.o" "gcc" "CMakeFiles/LMK_1000.dir/create.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/main.cpp" "CMakeFiles/LMK_1000.dir/main.cpp.o" "gcc" "CMakeFiles/LMK_1000.dir/main.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/mainwindow.cpp" "CMakeFiles/LMK_1000.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/LMK_1000.dir/mainwindow.cpp.o.d"
+  "/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/transform.cpp" "CMakeFiles/LMK_1000.dir/transform.cpp.o" "gcc" "CMakeFiles/LMK_1000.dir/transform.cpp.o.d"
   )
 
 # Targets to which this target links.

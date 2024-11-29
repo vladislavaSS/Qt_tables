@@ -20,8 +20,10 @@ set(PROJECT_SOURCES
         data.cpp
         mainwindow.h
         mainwindow.ui
-        HCM1035-widget.cpp
-        HCM1035-widget.h
+        HMC1035-widget.cpp
+        HMC1035-widget.h
+        create.cpp
+        buttons.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

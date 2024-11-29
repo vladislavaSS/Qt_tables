@@ -125,12 +125,57 @@ CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.s"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/LMK1000-widget.cpp -o CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.s
 
+CMakeFiles/LMK_1000.dir/transform.cpp.o: CMakeFiles/LMK_1000.dir/flags.make
+CMakeFiles/LMK_1000.dir/transform.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/transform.cpp
+CMakeFiles/LMK_1000.dir/transform.cpp.o: CMakeFiles/LMK_1000.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LMK_1000.dir/transform.cpp.o"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LMK_1000.dir/transform.cpp.o -MF CMakeFiles/LMK_1000.dir/transform.cpp.o.d -o CMakeFiles/LMK_1000.dir/transform.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/transform.cpp
+
+CMakeFiles/LMK_1000.dir/transform.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LMK_1000.dir/transform.cpp.i"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/transform.cpp > CMakeFiles/LMK_1000.dir/transform.cpp.i
+
+CMakeFiles/LMK_1000.dir/transform.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LMK_1000.dir/transform.cpp.s"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/transform.cpp -o CMakeFiles/LMK_1000.dir/transform.cpp.s
+
+CMakeFiles/LMK_1000.dir/buttons.cpp.o: CMakeFiles/LMK_1000.dir/flags.make
+CMakeFiles/LMK_1000.dir/buttons.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/buttons.cpp
+CMakeFiles/LMK_1000.dir/buttons.cpp.o: CMakeFiles/LMK_1000.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LMK_1000.dir/buttons.cpp.o"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LMK_1000.dir/buttons.cpp.o -MF CMakeFiles/LMK_1000.dir/buttons.cpp.o.d -o CMakeFiles/LMK_1000.dir/buttons.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/buttons.cpp
+
+CMakeFiles/LMK_1000.dir/buttons.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LMK_1000.dir/buttons.cpp.i"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/buttons.cpp > CMakeFiles/LMK_1000.dir/buttons.cpp.i
+
+CMakeFiles/LMK_1000.dir/buttons.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LMK_1000.dir/buttons.cpp.s"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/buttons.cpp -o CMakeFiles/LMK_1000.dir/buttons.cpp.s
+
+CMakeFiles/LMK_1000.dir/create.cpp.o: CMakeFiles/LMK_1000.dir/flags.make
+CMakeFiles/LMK_1000.dir/create.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/create.cpp
+CMakeFiles/LMK_1000.dir/create.cpp.o: CMakeFiles/LMK_1000.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LMK_1000.dir/create.cpp.o"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LMK_1000.dir/create.cpp.o -MF CMakeFiles/LMK_1000.dir/create.cpp.o.d -o CMakeFiles/LMK_1000.dir/create.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/create.cpp
+
+CMakeFiles/LMK_1000.dir/create.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LMK_1000.dir/create.cpp.i"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/create.cpp > CMakeFiles/LMK_1000.dir/create.cpp.i
+
+CMakeFiles/LMK_1000.dir/create.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LMK_1000.dir/create.cpp.s"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/create.cpp -o CMakeFiles/LMK_1000.dir/create.cpp.s
+
 # Object files for target LMK_1000
 LMK_1000_OBJECTS = \
 "CMakeFiles/LMK_1000.dir/LMK_1000_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/LMK_1000.dir/main.cpp.o" \
 "CMakeFiles/LMK_1000.dir/mainwindow.cpp.o" \
-"CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.o"
+"CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.o" \
+"CMakeFiles/LMK_1000.dir/transform.cpp.o" \
+"CMakeFiles/LMK_1000.dir/buttons.cpp.o" \
+"CMakeFiles/LMK_1000.dir/create.cpp.o"
 
 # External object files for target LMK_1000
 LMK_1000_EXTERNAL_OBJECTS =
@@ -139,12 +184,15 @@ LMK_1000: CMakeFiles/LMK_1000.dir/LMK_1000_autogen/mocs_compilation.cpp.o
 LMK_1000: CMakeFiles/LMK_1000.dir/main.cpp.o
 LMK_1000: CMakeFiles/LMK_1000.dir/mainwindow.cpp.o
 LMK_1000: CMakeFiles/LMK_1000.dir/LMK1000-widget.cpp.o
+LMK_1000: CMakeFiles/LMK_1000.dir/transform.cpp.o
+LMK_1000: CMakeFiles/LMK_1000.dir/buttons.cpp.o
+LMK_1000: CMakeFiles/LMK_1000.dir/create.cpp.o
 LMK_1000: CMakeFiles/LMK_1000.dir/build.make
 LMK_1000: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 LMK_1000: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
 LMK_1000: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 LMK_1000: CMakeFiles/LMK_1000.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable LMK_1000"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable LMK_1000"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LMK_1000.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

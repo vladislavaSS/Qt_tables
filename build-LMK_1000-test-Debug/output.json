@@ -1,202 +1,44 @@
 {
     "Registers": [
         {
-            "Name": "R0",
-            "Data": [
-                {
-                    "Text": "RESET",
-                    "Value": "0"
-                },
-                {
-                    "Text": "CLKoutX_MUX[1:0]",
-                    "Value": "2"
-                },
-                {
-                    "Text": "CLKoutX_EN",
-                    "Value": "1"
-                },
-                {
-                    "Text": "Clock Output Dividers (0-510)...",
-                    "Value": "80.00"
-                },
-                {
-                    "Text": "Clock Output Delays (0-2250)...",
-                    "Value": "150.00"
-                }
-            ]
+            "Addr": "0x0",
+            "Data": "0x100"
         },
         {
-            "Name": "R1",
-            "Data": [
-                {
-                    "Text": "CLKoutX_MUX[1:0]",
-                    "Value": "3"
-                },
-                {
-                    "Text": "CLKoutX_EN",
-                    "Value": "0"
-                },
-                {
-                    "Text": "Clock Output Dividers (0-510)...",
-                    "Value": "150.00"
-                },
-                {
-                    "Text": "Clock Output Delays (0-2250)...",
-                    "Value": "300.00"
-                }
-            ]
+            "Addr": "0x1",
+            "Data": "0x101"
         },
         {
-            "Name": "R2",
-            "Data": [
-                {
-                    "Text": "CLKoutX_MUX[1:0]",
-                    "Value": "2"
-                },
-                {
-                    "Text": "CLKoutX_EN",
-                    "Value": "0"
-                },
-                {
-                    "Text": "Clock Output Dividers (0-510)...",
-                    "Value": "40.00"
-                },
-                {
-                    "Text": "Clock Output Delays (0-2250)...",
-                    "Value": "600.00"
-                }
-            ]
+            "Addr": "0x2",
+            "Data": "0x102"
         },
         {
-            "Name": "R3",
-            "Data": [
-                {
-                    "Text": "CLKoutX_MUX[1:0]",
-                    "Value": "0"
-                },
-                {
-                    "Text": "CLKoutX_EN",
-                    "Value": "0"
-                },
-                {
-                    "Text": "Clock Output Dividers (0-510)...",
-                    "Value": ""
-                },
-                {
-                    "Text": "Clock Output Delays (0-2250)...",
-                    "Value": ""
-                }
-            ]
+            "Addr": "0x3",
+            "Data": "0x103"
         },
         {
-            "Name": "R4",
-            "Data": [
-                {
-                    "Text": "CLKoutX_MUX[1:0]",
-                    "Value": "0"
-                },
-                {
-                    "Text": "CLKoutX_EN",
-                    "Value": "0"
-                },
-                {
-                    "Text": "Clock Output Dividers (0-510)...",
-                    "Value": ""
-                },
-                {
-                    "Text": "Clock Output Delays (0-2250)...",
-                    "Value": ""
-                }
-            ]
+            "Addr": "0x4",
+            "Data": "0x104"
         },
         {
-            "Name": "R5",
-            "Data": [
-                {
-                    "Text": "CLKoutX_MUX[1:0]",
-                    "Value": "0"
-                },
-                {
-                    "Text": "CLKoutX_EN",
-                    "Value": "0"
-                },
-                {
-                    "Text": "Clock Output Dividers (0-510)...",
-                    "Value": ""
-                },
-                {
-                    "Text": "Clock Output Delays (0-2250)...",
-                    "Value": ""
-                }
-            ]
+            "Addr": "0x5",
+            "Data": "0x105"
         },
         {
-            "Name": "R6",
-            "Data": [
-                {
-                    "Text": "CLKoutX_MUX[1:0]",
-                    "Value": "0"
-                },
-                {
-                    "Text": "CLKoutX_EN",
-                    "Value": "0"
-                },
-                {
-                    "Text": "Clock Output Dividers (0-510)...",
-                    "Value": ""
-                },
-                {
-                    "Text": "Clock Output Delays (0-2250)...",
-                    "Value": ""
-                }
-            ]
+            "Addr": "0x6",
+            "Data": "0x106"
         },
         {
-            "Name": "R7",
-            "Data": [
-                {
-                    "Text": "CLKoutX_MUX[1:0]",
-                    "Value": "0"
-                },
-                {
-                    "Text": "CLKoutX_EN",
-                    "Value": "0"
-                },
-                {
-                    "Text": "Clock Output Dividers (0-510)...",
-                    "Value": "152"
-                },
-                {
-                    "Text": "Clock Output Delays (0-2250)...",
-                    "Value": "163"
-                }
-            ]
+            "Addr": "0x7",
+            "Data": "0x107"
         },
         {
-            "Name": "R9",
-            "Data": [
-                {
-                    "Text": "Vboost",
-                    "Value": "1"
-                }
-            ]
+            "Addr": "0x9",
+            "Data": "0x22A09"
         },
         {
-            "Name": "R14",
-            "Data": [
-                {
-                    "Text": "POWERDOWN",
-                    "Value": "1"
-                },
-                {
-                    "Text": "EN_CLKout_Global",
-                    "Value": "1"
-                },
-                {
-                    "Text": "CLKin_SELECT",
-                    "Value": "1"
-                }
-            ]
+            "Addr": "0x14",
+            "Data": "0x4800000E"
         }
     ]
 }

@@ -190,6 +190,54 @@ LMK_1000_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/LMK_1000_autogen/mocs_compilation.cpp.s
 .PHONY : LMK_1000_autogen/mocs_compilation.cpp.s
 
+buttons.o: buttons.cpp.o
+.PHONY : buttons.o
+
+# target to build an object file
+buttons.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/buttons.cpp.o
+.PHONY : buttons.cpp.o
+
+buttons.i: buttons.cpp.i
+.PHONY : buttons.i
+
+# target to preprocess a source file
+buttons.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/buttons.cpp.i
+.PHONY : buttons.cpp.i
+
+buttons.s: buttons.cpp.s
+.PHONY : buttons.s
+
+# target to generate assembly for a file
+buttons.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/buttons.cpp.s
+.PHONY : buttons.cpp.s
+
+create.o: create.cpp.o
+.PHONY : create.o
+
+# target to build an object file
+create.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/create.cpp.o
+.PHONY : create.cpp.o
+
+create.i: create.cpp.i
+.PHONY : create.i
+
+# target to preprocess a source file
+create.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/create.cpp.i
+.PHONY : create.cpp.i
+
+create.s: create.cpp.s
+.PHONY : create.s
+
+# target to generate assembly for a file
+create.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/create.cpp.s
+.PHONY : create.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -238,6 +286,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+transform.o: transform.cpp.o
+.PHONY : transform.o
+
+# target to build an object file
+transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/transform.cpp.o
+.PHONY : transform.cpp.o
+
+transform.i: transform.cpp.i
+.PHONY : transform.i
+
+# target to preprocess a source file
+transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/transform.cpp.i
+.PHONY : transform.cpp.i
+
+transform.s: transform.cpp.s
+.PHONY : transform.s
+
+# target to generate assembly for a file
+transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LMK_1000.dir/build.make CMakeFiles/LMK_1000.dir/transform.cpp.s
+.PHONY : transform.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -254,12 +326,21 @@ help:
 	@echo "... LMK_1000_autogen/mocs_compilation.o"
 	@echo "... LMK_1000_autogen/mocs_compilation.i"
 	@echo "... LMK_1000_autogen/mocs_compilation.s"
+	@echo "... buttons.o"
+	@echo "... buttons.i"
+	@echo "... buttons.s"
+	@echo "... create.o"
+	@echo "... create.i"
+	@echo "... create.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... transform.o"
+	@echo "... transform.i"
+	@echo "... transform.s"
 .PHONY : help
 
 

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "HMC_1035"
+			"path" : "LMK_1000"
 		}
 	],
 	"backtrace" : 1,
@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 44,
+				"line" : 46,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 50,
+				"line" : 52,
 				"parent" : 0
 			}
 		]
@@ -70,14 +70,14 @@
 			"includes" : 
 			[
 				{
-					"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug"
+					"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug"
 				},
 				{
-					"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035"
+					"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000"
 				},
 				{
 					"backtrace" : 0,
-					"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/HMC_1035_autogen/include"
+					"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/LMK_1000_autogen/include"
 				},
 				{
 					"backtrace" : 2,
@@ -119,8 +119,10 @@
 				0,
 				1,
 				2,
-				3,
-				6
+				5,
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -128,10 +130,10 @@
 	[
 		{
 			"backtrace" : 0,
-			"id" : "HMC_1035_autogen::@6890427a1f51a3e7e1df"
+			"id" : "LMK_1000_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "HMC_1035::@6890427a1f51a3e7e1df",
+	"id" : "LMK_1000::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -160,8 +162,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "HMC_1035",
-	"nameOnDisk" : "HMC_1035",
+	"name" : "LMK_1000",
+	"nameOnDisk" : "LMK_1000",
 	"paths" : 
 	{
 		"build" : ".",
@@ -176,24 +178,26 @@
 				0,
 				1,
 				2,
-				3,
-				6
+				5,
+				7,
+				8,
+				9
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				4,
-				7,
-				8
+				3,
+				6,
+				10
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				5
+				4
 			]
 		}
 	],
@@ -203,7 +207,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/HMC_1035_autogen/mocs_compilation.cpp",
+			"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/LMK_1000_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -220,12 +224,6 @@
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "data.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
 			"path" : "mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
@@ -237,18 +235,36 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "HCM1035-widget.cpp",
+			"path" : "LMK1000-widget.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "HCM1035-widget.h",
+			"path" : "LMK1000-widget.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "transform.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "buttons.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "create.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-HMC_1035-test-Debug/HMC_1035_autogen/include/ui_mainwindow.h",
+			"path" : "/home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/LMK_1000_autogen/include/ui_mainwindow.h",
 			"sourceGroupIndex" : 1
 		}
 	],

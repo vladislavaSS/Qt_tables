@@ -22,6 +22,8 @@ set(PROJECT_SOURCES
         mainwindow.ui
         AD9122-widget.cpp
         AD9122-widget.h
+        сreate.cpp
+        buttons.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

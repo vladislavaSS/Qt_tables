@@ -6,7 +6,7 @@
 
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)/*, treeView(new QTreeView(this)), model(new QStandardItemModel(this)), treeExpanded(false)*/
+    : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);

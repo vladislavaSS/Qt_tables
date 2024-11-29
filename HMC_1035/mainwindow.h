@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "HCM1035-widget.h"
+#include "HMC1035-widget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

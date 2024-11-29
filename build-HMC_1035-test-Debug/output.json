@@ -1,717 +1,108 @@
 {
     "Registers": [
         {
-            "Name": "PLL",
-            "Data": [
-                {
-                    "Name": "00h ID Register",
-                    "Data": []
-                },
-                {
-                    "Name": "00h Open Mode Read Address/RST Strobe Register",
-                    "Data": [
-                        {
-                            "Text": "Read Address [4:0]...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Not Defined [23:6]...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Soft Reset",
-                            "Value": "None"
-                        }
-                    ]
-                },
-                {
-                    "Name": "01h RST Register",
-                    "Data": [
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "02h REFDIV Register",
-                    "Data": [
-                        {
-                            "Text": "rdiv [13:0] (29-1389561)...",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "03h Frequency Register - Integer Part",
-                    "Data": [
-                        {
-                            "Text": "intg [18:0] (365-524244)...",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "04h Frequency Register - Fractional Part",
-                    "Data": [
-                        {
-                            "Text": "frac [23:0] (13-16777215)...",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "05h VCO SPI Register",
-                    "Data": [
-                        {
-                            "Text": "VCO Subsystem_ID [2:0] (0-0)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "VCO Subsystem register address [6:3] (0-0)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "VCO Subsystem data [15:7] (0-0)...",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "06h SD CFG Register",
-                    "Data": [
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "frac_bypass",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "SD Enable",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "seed [1:0]",
-                            "Value": "00"
-                        }
-                    ]
-                },
-                {
-                    "Name": "07h Lock Detect Register",
-                    "Data": [
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Enable Internal Lock Detect",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "Lock Detect Window type",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "lkd_wincnt_max [2:0]",
-                            "Value": "default:"
-                        },
-                        {
-                            "Text": "LD Digital Window duration [9:7]",
-                            "Value": "2:"
-                        },
-                        {
-                            "Text": "LD Digital Timer Frequency Control [11:10]",
-                            "Value": "00"
-                        }
-                    ]
-                },
-                {
-                    "Name": "08h Analog EN Register",
-                    "Data": [
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Prescaler Clock enable",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "VCO Buffer and Prescaler Bias Enable",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "gpo_pad_en",
-                            "Value": "True"
-                        }
-                    ]
-                },
-                {
-                    "Name": "09h Charge Pump Register",
-                    "Data": [
-                        {
-                            "Text": "CP DN Gain (0-2540 µA)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "CP UP Gain (0-2540 µA)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Offset Magnitude (0-635 µA)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Offset UP enable",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "Offset DN enable",
-                            "Value": "True"
-                        }
-                    ]
-                },
-                {
-                    "Name": "0Ah VCO AutoCal Configuration Register",
-                    "Data": [
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Bypass VCO Tuning",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "No VSPI Trigger",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "Vtune Resolution",
-                            "Value": "5:"
-                        },
-                        {
-                            "Text": "FSM/VSPI Clock Select",
-                            "Value": "1:"
-                        }
-                    ]
-                },
-                {
-                    "Name": "0Bh PD Register",
-                    "Data": [
-                        {
-                            "Text": "PD_del_sel (0-273)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "PD_up_en (0-16)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "PD_dn_en (0-16)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reservedl",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Force CP UP",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "Force CP DN",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "CSP Mode",
-                            "Value": "0"
-                        }
-                    ]
-                },
-                {
-                    "Name": "0Ch Exact Frequency Mode Register",
-                    "Data": [
-                        {
-                            "Text": "CSP Mode",
-                            "Value": "0"
-                        }
-                    ]
-                },
-                {
-                    "Name": "0Fh GPO_LD/SDO Register",
-                    "Data": [
-                        {
-                            "Text": "GPO Test Data",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "gpo_select",
-                            "Value": "26"
-                        }
-                    ]
-                },
-                {
-                    "Name": "10h VCO Tune Register",
-                    "Data": [
-                        {
-                            "Text": "Prevent Automux SDO",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "LDO Driver Always On",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "Disable PFET",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "Disable NFET",
-                            "Value": "False"
-                        }
-                    ]
-                },
-                {
-                    "Name": "11h SAR Register",
-                    "Data": []
-                },
-                {
-                    "Name": "12h GPO2 Register",
-                    "Data": []
-                },
-                {
-                    "Name": "13h BIST Register",
-                    "Data": []
-                }
-            ]
+            "Addr": "0x00",
+            "Data": "0xA71A5"
         },
         {
-            "Name": "VCO Subsystem",
-            "Data": [
-                {
-                    "Name": "00h Tuning",
-                    "Data": [
-                        {
-                            "Text": "Cal [0] (0-16)",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "CAPS [8:1] (0 - max frequency, 22 - min frequency.)",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "01h Enables",
-                    "Data": [
-                        {
-                            "Text": "RF Divide ratio [5:0] (0 - >62) ...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved [7:6] ...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Don’t Care [8] (0-16) ...",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "02h Biases",
-                    "Data": [
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Master Enable VCO Subsystem [0]",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "VCO Enable [1]",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "PLL Buffer Enable [2]",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "IO Master Enable [3]",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "Spare [4]",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "Output Stage Enable [5]",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "don’t care [8]",
-                            "Value": "True"
-                        }
-                    ]
-                },
-                {
-                    "Name": "03h Config",
-                    "Data": [
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "RF_P output enable [2]",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "RF_N output enable [3]",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "Internal Termination Enable [4]",
-                            "Value": "True"
-                        },
-                        {
-                            "Text": "Increase Internal Output Resistance [5]",
-                            "Value": "False"
-                        },
-                        {
-                            "Text": "Power- Performance Priroirty",
-                            "Value": "01"
-                        },
-                        {
-                            "Text": "Mute Mode [8:7]",
-                            "Value": "01"
-                        }
-                    ]
-                },
-                {
-                    "Name": "04h Cal/Bias",
-                    "Data": [
-                        {
-                            "Text": "Reserved [0] ...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved [1] ...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved [2] ...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved [4:3] ...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved [6:5] ...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved [8:7] ...",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "05h CF_Cal",
-                    "Data": [
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "06h MSB Cal",
-                    "Data": [
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        }
-                    ]
-                },
-                {
-                    "Name": "07h MSB Cal",
-                    "Data": [
-                        {
-                            "Text": "Output Stage Gain Control (0-15)...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        },
-                        {
-                            "Text": "Reserved...",
-                            "Value": ""
-                        }
-                    ]
-                }
-            ]
+            "Addr": "0x00",
+            "Data": "N/A"
+        },
+        {
+            "Addr": "0x01",
+            "Data": "0x2"
+        },
+        {
+            "Addr": "0x02",
+            "Data": "0x1"
+        },
+        {
+            "Addr": "0x03",
+            "Data": "0x19"
+        },
+        {
+            "Addr": "0x04",
+            "Data": "0x0"
+        },
+        {
+            "Addr": "0x05",
+            "Data": "0x0"
+        },
+        {
+            "Addr": "0x07",
+            "Data": "0x200B4A"
+        },
+        {
+            "Addr": "0x08",
+            "Data": "0x14D"
+        },
+        {
+            "Addr": "0x09",
+            "Data": "0xC1BEFF"
+        },
+        {
+            "Addr": "0x0A",
+            "Data": "0x403264"
+        },
+        {
+            "Addr": "0x0B",
+            "Data": "0x2205"
+        },
+        {
+            "Addr": "0x0C",
+            "Data": "0xF8061"
+        },
+        {
+            "Addr": "0x0F",
+            "Data": "0x0"
+        },
+        {
+            "Addr": "0x10",
+            "Data": "0x1"
+        },
+        {
+            "Addr": "0x11",
+            "Data": "0x20"
+        },
+        {
+            "Addr": "0x12",
+            "Data": "0x7FFFF"
+        },
+        {
+            "Addr": "0x13",
+            "Data": "0x0"
+        },
+        {
+            "Addr": "0x00",
+            "Data": "0x20"
+        },
+        {
+            "Addr": "0x01",
+            "Data": "0x1FF"
+        },
+        {
+            "Addr": "0x02",
+            "Data": "0x101"
+        },
+        {
+            "Addr": "0x03",
+            "Data": "0x92"
+        },
+        {
+            "Addr": "0x04",
+            "Data": "0xC9"
+        },
+        {
+            "Addr": "0x05",
+            "Data": "0xAA"
+        },
+        {
+            "Addr": "0x06",
+            "Data": "0xFF"
+        },
+        {
+            "Addr": "0x07",
+            "Data": "0xF1"
         }
     ]
 }

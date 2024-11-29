@@ -10,9 +10,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/AD9122-widget.cpp" "CMakeFiles/AD_9122.dir/AD9122-widget.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/AD9122-widget.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/AD_9122_autogen/mocs_compilation.cpp" "CMakeFiles/AD_9122.dir/AD_9122_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/AD_9122_autogen/mocs_compilation.cpp.o.d"
+  "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/buttons.cpp" "CMakeFiles/AD_9122.dir/buttons.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/buttons.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/data.cpp" "CMakeFiles/AD_9122.dir/data.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/data.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/main.cpp" "CMakeFiles/AD_9122.dir/main.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/main.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/mainwindow.cpp" "CMakeFiles/AD_9122.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/mainwindow.cpp.o.d"
+  "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/сreate.cpp" "CMakeFiles/AD_9122.dir/сreate.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/сreate.cpp.o.d"
   )
 
 # Targets to which this target links.

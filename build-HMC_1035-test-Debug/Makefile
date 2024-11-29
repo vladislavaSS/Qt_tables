@@ -142,29 +142,29 @@ HMC_1035_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035_autogen.dir/build.make CMakeFiles/HMC_1035_autogen.dir/build
 .PHONY : HMC_1035_autogen/fast
 
-HCM1035-widget.o: HCM1035-widget.cpp.o
-.PHONY : HCM1035-widget.o
+HMC1035-widget.o: HMC1035-widget.cpp.o
+.PHONY : HMC1035-widget.o
 
 # target to build an object file
-HCM1035-widget.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.o
-.PHONY : HCM1035-widget.cpp.o
+HMC1035-widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HMC1035-widget.cpp.o
+.PHONY : HMC1035-widget.cpp.o
 
-HCM1035-widget.i: HCM1035-widget.cpp.i
-.PHONY : HCM1035-widget.i
+HMC1035-widget.i: HMC1035-widget.cpp.i
+.PHONY : HMC1035-widget.i
 
 # target to preprocess a source file
-HCM1035-widget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.i
-.PHONY : HCM1035-widget.cpp.i
+HMC1035-widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HMC1035-widget.cpp.i
+.PHONY : HMC1035-widget.cpp.i
 
-HCM1035-widget.s: HCM1035-widget.cpp.s
-.PHONY : HCM1035-widget.s
+HMC1035-widget.s: HMC1035-widget.cpp.s
+.PHONY : HMC1035-widget.s
 
 # target to generate assembly for a file
-HCM1035-widget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HCM1035-widget.cpp.s
-.PHONY : HCM1035-widget.cpp.s
+HMC1035-widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HMC1035-widget.cpp.s
+.PHONY : HMC1035-widget.cpp.s
 
 HMC_1035_autogen/mocs_compilation.o: HMC_1035_autogen/mocs_compilation.cpp.o
 .PHONY : HMC_1035_autogen/mocs_compilation.o
@@ -189,6 +189,54 @@ HMC_1035_autogen/mocs_compilation.s: HMC_1035_autogen/mocs_compilation.cpp.s
 HMC_1035_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/HMC_1035_autogen/mocs_compilation.cpp.s
 .PHONY : HMC_1035_autogen/mocs_compilation.cpp.s
+
+buttons.o: buttons.cpp.o
+.PHONY : buttons.o
+
+# target to build an object file
+buttons.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/buttons.cpp.o
+.PHONY : buttons.cpp.o
+
+buttons.i: buttons.cpp.i
+.PHONY : buttons.i
+
+# target to preprocess a source file
+buttons.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/buttons.cpp.i
+.PHONY : buttons.cpp.i
+
+buttons.s: buttons.cpp.s
+.PHONY : buttons.s
+
+# target to generate assembly for a file
+buttons.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/buttons.cpp.s
+.PHONY : buttons.cpp.s
+
+create.o: create.cpp.o
+.PHONY : create.o
+
+# target to build an object file
+create.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/create.cpp.o
+.PHONY : create.cpp.o
+
+create.i: create.cpp.i
+.PHONY : create.i
+
+# target to preprocess a source file
+create.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/create.cpp.i
+.PHONY : create.cpp.i
+
+create.s: create.cpp.s
+.PHONY : create.s
+
+# target to generate assembly for a file
+create.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HMC_1035.dir/build.make CMakeFiles/HMC_1035.dir/create.cpp.s
+.PHONY : create.cpp.s
 
 data.o: data.cpp.o
 .PHONY : data.o
@@ -272,12 +320,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... HMC_1035_autogen"
 	@echo "... HMC_1035"
-	@echo "... HCM1035-widget.o"
-	@echo "... HCM1035-widget.i"
-	@echo "... HCM1035-widget.s"
+	@echo "... HMC1035-widget.o"
+	@echo "... HMC1035-widget.i"
+	@echo "... HMC1035-widget.s"
 	@echo "... HMC_1035_autogen/mocs_compilation.o"
 	@echo "... HMC_1035_autogen/mocs_compilation.i"
 	@echo "... HMC_1035_autogen/mocs_compilation.s"
+	@echo "... buttons.o"
+	@echo "... buttons.i"
+	@echo "... buttons.s"
+	@echo "... create.o"
+	@echo "... create.i"
+	@echo "... create.s"
 	@echo "... data.o"
 	@echo "... data.i"
 	@echo "... data.s"

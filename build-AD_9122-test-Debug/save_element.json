@@ -1,13 +1,8 @@
 {
     "Registers": [
         {
-            "Name": "Interrupt Enable",
-            "Data": [
-                {
-                    "Text": "test",
-                    "Value": "None"
-                }
-            ]
+            "Addr": "0x00",
+            "Data": "0x40"
         }
     ]
 }

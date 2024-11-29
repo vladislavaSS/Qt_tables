@@ -77,9 +77,9 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.h",
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HMC1035-widget.h",
 			"MU",
-			"EWIEGA46WW/moc_HCM1035-widget.cpp",
+			"EWIEGA46WW/moc_HMC1035-widget.cpp",
 			null
 		],
 		[
@@ -142,7 +142,17 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HCM1035-widget.cpp",
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HMC1035-widget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/buttons.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/create.cpp",
 			"MU",
 			null
 		],

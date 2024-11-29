@@ -1,5 +1,5 @@
 ﻿#include "mainwindow.h"
-#include "HCM1035-widget.h"
+#include "HMC1035-widget.h"
 #include "./ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -7,6 +7,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    HCM1035Widget *hcmwidget = new HCM1035Widget(this);
-    setCentralWidget(hcmwidget);
+    HMC1035Widget *HMCwidget = new HMC1035Widget(this);
+    setCentralWidget(HMCwidget);
 }

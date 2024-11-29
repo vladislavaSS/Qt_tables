@@ -190,6 +190,30 @@ AD_9122_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/AD_9122_autogen/mocs_compilation.cpp.s
 .PHONY : AD_9122_autogen/mocs_compilation.cpp.s
 
+buttons.o: buttons.cpp.o
+.PHONY : buttons.o
+
+# target to build an object file
+buttons.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/buttons.cpp.o
+.PHONY : buttons.cpp.o
+
+buttons.i: buttons.cpp.i
+.PHONY : buttons.i
+
+# target to preprocess a source file
+buttons.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/buttons.cpp.i
+.PHONY : buttons.cpp.i
+
+buttons.s: buttons.cpp.s
+.PHONY : buttons.s
+
+# target to generate assembly for a file
+buttons.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/buttons.cpp.s
+.PHONY : buttons.cpp.s
+
 data.o: data.cpp.o
 .PHONY : data.o
 
@@ -262,6 +286,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+сreate.o: сreate.cpp.o
+.PHONY : сreate.o
+
+# target to build an object file
+сreate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/сreate.cpp.o
+.PHONY : сreate.cpp.o
+
+сreate.i: сreate.cpp.i
+.PHONY : сreate.i
+
+# target to preprocess a source file
+сreate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/сreate.cpp.i
+.PHONY : сreate.cpp.i
+
+сreate.s: сreate.cpp.s
+.PHONY : сreate.s
+
+# target to generate assembly for a file
+сreate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/сreate.cpp.s
+.PHONY : сreate.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -278,6 +326,9 @@ help:
 	@echo "... AD_9122_autogen/mocs_compilation.o"
 	@echo "... AD_9122_autogen/mocs_compilation.i"
 	@echo "... AD_9122_autogen/mocs_compilation.s"
+	@echo "... buttons.o"
+	@echo "... buttons.i"
+	@echo "... buttons.s"
 	@echo "... data.o"
 	@echo "... data.i"
 	@echo "... data.s"
@@ -287,6 +338,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... сreate.o"
+	@echo "... сreate.i"
+	@echo "... сreate.s"
 .PHONY : help
 
 

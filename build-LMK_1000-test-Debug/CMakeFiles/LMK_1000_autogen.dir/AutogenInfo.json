@@ -147,12 +147,27 @@
 			null
 		],
 		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/buttons.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/create.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/main.cpp",
 			"MU",
 			null
 		],
 		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/transform.cpp",
 			"MU",
 			null
 		]

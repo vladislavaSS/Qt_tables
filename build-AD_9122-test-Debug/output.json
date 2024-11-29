@@ -2,256 +2,271 @@
     "Registers": [
         {
             "Addr": "0x00",
-            "Data": "000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x01",
-            "Data": "1101"
+            "Data": "0x10"
         },
         {
             "Addr": "0x03",
-            "Data": "00000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x04",
-            "Data": "000000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x05",
-            "Data": "00000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x06",
+            "Data": "N/A"
+        },
+        {
             "Addr": "0x07",
-            "Data": "??????",
-            "Data": "???"
+            "Data": "N/A"
         },
         {
             "Addr": "0x08",
-            "Data": "0011"
+            "Data": "0x3F"
         },
         {
             "Addr": "0x0A",
+            "Data": "0x40"
+        },
+        {
             "Addr": "0x0C",
+            "Data": "0xD1"
+        },
+        {
             "Addr": "0x0D",
-            "Data": "01",
-            "Data": "11",
-            "Data": "1111001"
+            "Data": "0xD9"
         },
         {
             "Addr": "0x0E",
+            "Data": "N/A"
+        },
+        {
             "Addr": "0x0F",
-            "Data": "?",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x10",
+            "Data": "0x48"
+        },
+        {
             "Addr": "0x11",
-            "Data": "011",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x12",
+            "Data": "N/A"
+        },
+        {
             "Addr": "0x13",
-            "Data": "??",
-            "Data": ""
+            "Data": "N/A"
         },
         {
             "Addr": "0x15",
-            "Data": "??????"
+            "Data": "N/A"
         },
         {
             "Addr": "0x16",
-            "Data": "00"
+            "Data": "0x0"
         },
         {
             "Addr": "0x17",
-            "Data": ""
+            "Data": "0x4"
         },
         {
             "Addr": "0x18",
+            "Data": "N/A"
+        },
+        {
             "Addr": "0x19",
-            "Data": "???0",
-            "Data": ""
+            "Data": "N/A"
         },
         {
             "Addr": "0x1B",
-            "Data": "1110100"
+            "Data": "0xE4"
         },
         {
             "Addr": "0x1C",
-            "Data": "000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x1D",
-            "Data": "00"
+            "Data": "0x0"
         },
         {
             "Addr": "0x1E",
-            "Data": "00"
+            "Data": "0x0"
         },
         {
             "Addr": "0x1F",
-            "Data": ""
+            "Data": "0x8"
         },
         {
             "Addr": "0x30",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x31",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x32",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x33",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x34",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x35",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x36",
-            "Data": "0000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x38",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x39",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x3A",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x3B",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x3C",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x3D",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x3E",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x3F",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x40",
-            "Data": ""
+            "Data": "0xF9"
         },
         {
-            "Addr": "0x41"
+            "Addr": "0x41",
+            "Data": "0x1"
         },
         {
             "Addr": "0x42",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x43",
-            "Data": "00000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x44",
-            "Data": ""
+            "Data": "0xF9"
         },
         {
             "Addr": "0x45",
-            "Data": "00"
+            "Data": "0x0"
         },
         {
             "Addr": "0x46",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x47",
-            "Data": "00000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x48",
-            "Data": "0"
+            "Data": "0x2"
         },
         {
             "Addr": "0x49",
-            "Data": ""
+            "Data": "N/A"
         },
         {
             "Addr": "0x4A",
-            "Data": ""
+            "Data": "N/A"
         },
         {
             "Addr": "0x67",
-            "Data": "00000"
+            "Data": "0x0"
         },
         {
             "Addr": "0x68",
-            "Data": ""
+            "Data": "0xB6"
         },
         {
             "Addr": "0x69",
-            "Data": ""
+            "Data": "0x7A"
         },
         {
             "Addr": "0x6A",
-            "Data": ""
+            "Data": "0x45"
         },
         {
             "Addr": "0x6B",
-            "Data": ""
+            "Data": "0xEA"
         },
         {
             "Addr": "0x6C",
-            "Data": ""
+            "Data": "0x16"
         },
         {
             "Addr": "0x6D",
-            "Data": ""
+            "Data": "0x1A"
         },
         {
             "Addr": "0x6E",
-            "Data": ""
+            "Data": "0xC6"
         },
         {
             "Addr": "0x6F",
-            "Data": ""
+            "Data": "0xAA"
         },
         {
             "Addr": "0x70",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x71",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x72",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x73",
-            "Data": ""
+            "Data": "0x0"
         },
         {
             "Addr": "0x7F",
-            "Data": "255.00"
+            "Data": "0x0"
         }
     ]
 }

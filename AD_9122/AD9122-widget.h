@@ -6,6 +6,15 @@
 #include <QStandardItemModel>
 #include <QPushButton>
 #include <QCheckBox>
+#include <QVBoxLayout>
+#include <QLineEdit>
+#include <QDebug>
+#include <QMessageBox>
+#include <QComboBox>
+#include <cmath>
+#include <QLabel>
+#include <QFile>
+#include <fstream>
 
 #include "rapidjson/document.h"
 //#include "rapidjson/error/en.h"
@@ -30,17 +39,33 @@ class AD9122Widget : public QWidget
 public:
     explicit AD9122Widget(QWidget *parent = nullptr);
 
+    bool HCMflag = 0;
+
+    bool LMKflag = 0;
+
 private slots:
 
-    QWidget* createComboBoxWidgetLable(const QString &labelText, const QStringList &options, int bitNumber);
+    QWidget* createComboBoxWidgetLable(const QString &labelText, const QStringList &options, int bitNumber, int bitWidth);
 
-    QWidget* createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText, int bitNumber);
+    QWidget* createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText, int bitNumber, int bitWidth);
 
     QWidget* LineOfPower(int rowIndex, int valueLimit, const QString& placeholderText, const QString& errorMsg, const QString& defaultText);
 
     QWidget* LineEdit(const QString& labelText, const QString& placeholderText);
 
-    QCheckBox* createCheckBoxWidget(const QString &labelText, CheckBoxState state, int bitNumber);
+    QCheckBox* createCheckBoxWidget(const QString &labelText, CheckBoxState state, int bitNumber, int bitWidth);
+
+    QString bin2hex(const QString& binaryStr);
+
+    QString hex2Json(QString& Result, QString& text, int bitNumber, int bitCount);
+
+    QString dec2bin(const QString& decimalStr, int bitWidth);
+
+    QString hex2bin(QString &hexString);
+
+    QString bin2dec(const QString& binaryString);
+
+    bool isBinary(const QString &numericPart);
 
     void on_save_button_clicked();
 
@@ -54,11 +79,11 @@ private slots:
 
     void saveItem(QStandardItem *selectedParentItem);
 
-    void hasChildren(QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Value &jsonItem, QStandardItemModel* model, QTreeView* treeView, bool HCMflag);
+    void hasChildren(QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Value &jsonArray, QStandardItemModel* model, QTreeView* treeView);
 
     void onParentItemClicked(const QModelIndex& index);
 
-    void updateChildWidgets(QStandardItemModel* model, const rapidjson::Value& dataArray, QStandardItem* parentItem);
+    void updateChildWidgets(QStandardItemModel* model, QString dataString, QStandardItem* parentItem, QString readItem);
 
     void onItemChanged(QStandardItem* item);
 
@@ -68,7 +93,9 @@ private slots:
 
 private:
 
-    bool HCMflag = 0;
+    bool ADflag = 1;
+
+    int bitCount = 8;
 
     void viewTree();
 
