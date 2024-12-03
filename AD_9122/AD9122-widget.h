@@ -37,11 +37,8 @@ class AD9122Widget : public QWidget
 {
     Q_OBJECT
 public:
+
     explicit AD9122Widget(QWidget *parent = nullptr);
-
-    bool HCMflag = 0;
-
-    bool LMKflag = 0;
 
 private slots:
 
@@ -61,7 +58,7 @@ private slots:
 
     QString dec2bin(const QString& decimalStr, int bitWidth);
 
-    QString hex2bin(QString &hexString);
+    QString hex2bin(QString &hexString/*, int binNumber*/) ;
 
     QString bin2dec(const QString& binaryString);
 
@@ -93,12 +90,6 @@ private slots:
 
 private:
 
-    bool ADflag = 1;
-
-    int bitCount = 8;
-
-    void viewTree();
-
     QTreeView *treeView;
 
     QStandardItemModel *model;
@@ -114,6 +105,16 @@ private:
     QPushButton *load_elem;
 
     bool treeExpanded;
+
+    bool HCMflag = 0;
+
+    bool LMKflag = 0;
+
+    bool ADflag = 1;
+
+    int bitCount = 8;
+
+    void viewTree();
 
 };
 

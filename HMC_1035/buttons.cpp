@@ -14,7 +14,7 @@ void HMC1035Widget::onParentItemClicked(const QModelIndex& index) {
 }
 
 void HMC1035Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Value &jsonArray, QStandardItemModel* model, QTreeView* treeView) {
-
+if (HMCflag) bitCount = 24;
     QString Result;
     bool reg_flag = false;
 
@@ -88,7 +88,7 @@ void HMC1035Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                         QStringList parts = comboBoxText.split(" ");
                         QString numericPart = parts.isEmpty() ? QString() : parts[0];
                         if (numericPart.size() > 2 || !(isBinary(numericPart))) numericPart = dec2bin(numericPart, comboBox->property("bitWidth").toInt());
-                        if (!LMKflag) Result = hex2Json(Result, numericPart, comboBox->property("bitNumber").toInt(), bitCount);
+                        if (!LMKflag) Result = hex2Json(Result, numericPart, bitNumber, bitCount);
                         else {
                             if (reg_flag && (comboBox->property("ComboBoxName") == "Vboost" || comboBox->property("ComboBoxName") == "CLKin_SELECT"))
                                 Result = QString(bitCount - bitNumber - 2, '0') + '1' + numericPart;
@@ -98,13 +98,7 @@ void HMC1035Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                     }
                 }
 
-                if (ADflag) {
-
-                    if (Result.size() < bitCount && !Result.isEmpty()) {
-                        if (reg_flag) Result += QString(bitCount - Result.size(), '1');
-                        if (countWid == 1) Result = QString(bitCount - Result.size(), '0') + Result;
-                        else Result += QString(bitCount - Result.size(), '0');
-                    } if (Result.isEmpty()) Result = "N/A";
+                if (ADflag || HMCflag) {
 
                     for (QChar ch : Result) {
                         if (ch == "?") {
@@ -112,6 +106,17 @@ void HMC1035Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                             break;
                         }
                     }
+
+                    if (Result.size() < bitCount && !Result.isEmpty() && Result != "N/A") {
+                        if (reg_flag) Result += QString(bitCount - Result.size(), '1');
+                        if (countWid == 1) Result = QString(bitCount - Result.size(), '0') + Result;
+                        else {
+                            if (ADflag) Result += QString(bitCount - Result.size(), '0');
+                            if (HMCflag) Result = QString(bitCount - Result.size(), '0') + Result;
+                        }
+
+                    } if (Result.isEmpty()) Result = "N/A";
+
                     if (!bin2hex(Result).isEmpty()) Result = "0x" + bin2hex(Result);
 
                 }
@@ -134,6 +139,7 @@ void HMC1035Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                         rapidjson::Value(child->text().toStdString().c_str(), allocator),
                         allocator
                     );
+
 
                     resultValue.AddMember(
                         rapidjson::Value("Data", allocator),
@@ -283,6 +289,7 @@ void HMC1035Widget::updateChildWidgets(QStandardItemModel* model, QString dataSt
              if (item_sec && item_sec->text() == readItem) {
 
                  QString binaryData = hex2bin(dataString);
+                 qDebug() << item_sec->text() << binaryData;
 
                  QModelIndex index = model->index(i, 1, item->index());
                  QWidget* widget = treeView->indexWidget(index);
@@ -313,6 +320,8 @@ void HMC1035Widget::updateChildWidgets(QStandardItemModel* model, QString dataSt
 
                                 int bitNumber = checkBox->property("bitNumber").toInt();
                                 QString data = binaryData.mid(bitCount - bitNumber - 1, 1);
+
+                                qDebug() << data << checkBox->property("checkBoxName").toString();
 
                                 if (data == "1") {
                                     checkBox->setChecked(true);

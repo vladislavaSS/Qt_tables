@@ -1,6 +1,6 @@
-CMakeFiles/HMC_1035.dir/transform.cpp.o: \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/transform.cpp \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/HMC1035-widget.h \
+CMakeFiles/AD_9122.dir/transform.cpp.o: \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/transform.cpp \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/AD9122-widget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -329,10 +329,6 @@ CMakeFiles/HMC_1035.dir/transform.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
@@ -344,11 +340,13 @@ CMakeFiles/HMC_1035.dir/transform.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QInputDialog \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qinputdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/cmath \
@@ -411,4 +409,6 @@ CMakeFiles/HMC_1035.dir/transform.cpp.o: \
   /usr/include/rapidjson/writer.h /usr/include/rapidjson/internal/dtoa.h \
   /usr/include/rapidjson/internal/itoa.h \
   /usr/include/rapidjson/stringbuffer.h \
-  /usr/include/rapidjson/prettywriter.h
+  /usr/include/rapidjson/prettywriter.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h

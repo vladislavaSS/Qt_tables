@@ -1,6 +1,6 @@
-#include "HMC1035-widget.h"
+#include "AD9122-widget.h"
 
-QString HMC1035Widget::bin2hex(const QString& binaryStr) {
+QString AD9122Widget::bin2hex(const QString& binaryStr) {
 
     for (QChar c : binaryStr) if (c != '0' && c != '1') return QString();
 
@@ -12,22 +12,22 @@ QString HMC1035Widget::bin2hex(const QString& binaryStr) {
     return hexStr;
 }
 
-QString HMC1035Widget::hex2Json(QString& Result, QString& text, int bitNumber, int bitCount) {
+QString AD9122Widget::hex2Json(QString& Result, QString& text, int bitNumber, int bitCount) {
 
+    if (text.isEmpty()) return "N/A";
     int contrl_summ = bitNumber + Result.size();
     if (bitNumber > bitCount - 1) Result = "";
     else if (bitNumber < bitCount - 1) {
-        if (Result.isEmpty()) Result = Result + QString(bitCount - 1 - bitNumber, '0') + text;
+        if (Result.isEmpty()) Result += QString(bitCount - 1 - bitNumber, '0') + text;
         else if (!Result.isEmpty() && contrl_summ < bitCount) Result += QString(bitCount - 1 - contrl_summ, '0') + text;
         else Result += text;
     } else Result += text;
 
     return Result;
 
-
 }
 
-QString HMC1035Widget::dec2bin(const QString& decimalStr, int bitWidth) {
+QString AD9122Widget::dec2bin(const QString& decimalStr, int bitWidth) {
 
     bool ok;
     int decimalValue = decimalStr.toInt(&ok);
@@ -47,7 +47,7 @@ QString HMC1035Widget::dec2bin(const QString& decimalStr, int bitWidth) {
     return binaryStr;
 }
 
-QString HMC1035Widget::hex2bin(QString &hexString) {
+QString AD9122Widget::hex2bin(QString &hexString/*, int binNumber*/) {
 
     bool ok;
 
@@ -57,12 +57,15 @@ QString HMC1035Widget::hex2bin(QString &hexString) {
     if (!ok) return QString();
 
     QString binaryString = QString::number(value, 2);
+//    qDebug() << hexString << value << binaryString;
+
+//    binaryString = QString(bitCount/* - binNumber*/, '0') + binaryString /*+ QString(bitCount - binaryString.size())*/;
 
     return binaryString.rightJustified(bitCount, '0');
 
 }
 
-QString HMC1035Widget::bin2dec(const QString& binaryString) {
+QString AD9122Widget::bin2dec(const QString& binaryString) {
     bool ok;
     int decimalValue = binaryString.toLongLong(&ok, 2);
 
@@ -73,10 +76,9 @@ QString HMC1035Widget::bin2dec(const QString& binaryString) {
     return QString::number(decimalValue);
 }
 
-bool HMC1035Widget::isBinary(const QString &numericPart) {
+bool AD9122Widget::isBinary(const QString &numericPart) {
     QString filtered = numericPart;
     filtered.remove('0');
     filtered.remove('1');
     return filtered.isEmpty();
 }
-

@@ -1,39 +1,39 @@
 {
     "Registers": [
         {
-            "Addr": "0x0",
+            "Addr": "0x00",
             "Data": "0x100"
         },
         {
-            "Addr": "0x1",
+            "Addr": "0x01",
             "Data": "0x101"
         },
         {
-            "Addr": "0x2",
+            "Addr": "0x02",
             "Data": "0x102"
         },
         {
-            "Addr": "0x3",
+            "Addr": "0x03",
             "Data": "0x103"
         },
         {
-            "Addr": "0x4",
+            "Addr": "0x04",
             "Data": "0x104"
         },
         {
-            "Addr": "0x5",
+            "Addr": "0x05",
             "Data": "0x105"
         },
         {
-            "Addr": "0x6",
+            "Addr": "0x06",
             "Data": "0x106"
         },
         {
-            "Addr": "0x7",
+            "Addr": "0x07",
             "Data": "0x107"
         },
         {
-            "Addr": "0x9",
+            "Addr": "0x09",
             "Data": "0x22A09"
         },
         {

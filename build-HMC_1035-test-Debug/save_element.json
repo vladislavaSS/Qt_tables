@@ -1,80 +1,36 @@
 {
     "Registers": [
         {
-            "Addr": "00h ID Register",
-            "Data": "N/A"
-        },
-        {
-            "Addr": "00h Open Mode Read Address/RST Strobe Register",
-            "Data": "N/A"
-        },
-        {
-            "Addr": "01h RST Register",
-            "Data": "0x2"
-        },
-        {
-            "Addr": "02h REFDIV Register",
-            "Data": "0x1"
-        },
-        {
-            "Addr": "03h Frequency Register - Integer Part",
-            "Data": "0x19"
-        },
-        {
-            "Addr": "04h Frequency Register - Fractional Part",
-            "Data": "0x0"
-        },
-        {
-            "Addr": "05h VCO SPI Register",
-            "Data": "0x0"
-        },
-        {
-            "Addr": "06h SD CFG Register",
-            "Data": "0x200B4A"
-        },
-        {
-            "Addr": "07h Lock Detect Register",
-            "Data": "0x14D"
-        },
-        {
-            "Addr": "08h Analog EN Register",
-            "Data": "0xC1BEFF"
-        },
-        {
-            "Addr": "09h Charge Pump Register",
-            "Data": "0x403264"
-        },
-        {
-            "Addr": "0Ah VCO AutoCal Configuration Register",
-            "Data": "0x2005"
-        },
-        {
-            "Addr": "0Bh PD Register",
-            "Data": "0xF8061"
-        },
-        {
-            "Addr": "0Ch Exact Frequency Mode Register",
-            "Data": "0x0"
-        },
-        {
-            "Addr": "0Fh GPO_LD/SDO Register",
-            "Data": "0x1"
-        },
-        {
-            "Addr": "10h VCO Tune Register",
+            "Addr": "0x00",
             "Data": "0x20"
         },
         {
-            "Addr": "11h SAR Register",
-            "Data": "N/A"
+            "Addr": "0x01",
+            "Data": "0x1FF"
         },
         {
-            "Addr": "12h GPO2 Register",
-            "Data": "N/A"
+            "Addr": "0x02",
+            "Data": "0x101"
         },
         {
-            "Addr": "13h BIST Register",
-            "Data": "N/A"
+            "Addr": "0x03",
+            "Data": "0x92"
+        },
+        {
+            "Addr": "0x04",
+            "Data": "0xC9"
+        },
+        {
+            "Addr": "0x05",
+            "Data": "0xAA"
+        },
+        {
+            "Addr": "0x06",
+            "Data": "0xFF"
+        },
+        {
+            "Addr": "0x07",
+            "Data": "0xF1"
         }
     ]
 }

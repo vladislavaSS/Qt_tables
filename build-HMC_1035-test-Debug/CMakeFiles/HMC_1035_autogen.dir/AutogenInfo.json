@@ -170,6 +170,11 @@
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/mainwindow.cpp",
 			"MU",
 			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/transform.cpp",
+			"MU",
+			null
 		]
 	],
 	"UIC_OPTIONS" : [],

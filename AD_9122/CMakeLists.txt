@@ -24,6 +24,7 @@ set(PROJECT_SOURCES
         AD9122-widget.h
         сreate.cpp
         buttons.cpp
+        transform.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -17,7 +17,7 @@ void LMK1000Widget::viewTree()
     model->setColumnCount(2);
     model->setHorizontalHeaderLabels({"Register", "Bit Value"});
 
-    QStandardItem *itm0    = new QStandardItem("R0");
+    QStandardItem *itm0    = new QStandardItem("0x00");
     QStandardItem *child01 = new QStandardItem("RESET");
     QStandardItem *child02 = new QStandardItem("CLKoutX_MUX [1:0]");
     QStandardItem *child03 = new QStandardItem("CLKoutX_EN");
@@ -30,7 +30,7 @@ void LMK1000Widget::viewTree()
     itm0->appendRow(QList<QStandardItem*>() << child04 << new QStandardItem());
     itm0->appendRow(QList<QStandardItem*>() << child05 << new QStandardItem());
 
-    QStandardItem *itm1    = new QStandardItem("R1");
+    QStandardItem *itm1    = new QStandardItem("0x01");
     QStandardItem *child12 = new QStandardItem("CLKoutX_MUX [1:0]");
     QStandardItem *child13 = new QStandardItem("CLKoutX_EN");
     QStandardItem *child14 = new QStandardItem("CLKoutX_DIV [7:0]");
@@ -41,7 +41,7 @@ void LMK1000Widget::viewTree()
     itm1->appendRow(QList<QStandardItem*>() << child14 << new QStandardItem());
     itm1->appendRow(QList<QStandardItem*>() << child15 << new QStandardItem());
 
-    QStandardItem *itm2    = new QStandardItem("R2");
+    QStandardItem *itm2    = new QStandardItem("0x02");
     QStandardItem *child22 = new QStandardItem("CLKoutX_MUX [1:0]");
     QStandardItem *child23 = new QStandardItem("CLKoutX_EN");
     QStandardItem *child24 = new QStandardItem("CLKoutX_DIV [7:0]");
@@ -52,7 +52,7 @@ void LMK1000Widget::viewTree()
     itm2->appendRow(QList<QStandardItem*>() << child24 << new QStandardItem());
     itm2->appendRow(QList<QStandardItem*>() << child25 << new QStandardItem());
 
-    QStandardItem *itm3    = new QStandardItem("R3");
+    QStandardItem *itm3    = new QStandardItem("0x03");
     QStandardItem *child32 = new QStandardItem("CLKoutX_MUX [1:0]");
     QStandardItem *child33 = new QStandardItem("CLKoutX_EN");
     QStandardItem *child34 = new QStandardItem("CLKoutX_DIV [7:0]");
@@ -63,7 +63,7 @@ void LMK1000Widget::viewTree()
     itm3->appendRow(QList<QStandardItem*>() << child34 << new QStandardItem());
     itm3->appendRow(QList<QStandardItem*>() << child35 << new QStandardItem());
 
-    QStandardItem *itm4    = new QStandardItem("R4");
+    QStandardItem *itm4    = new QStandardItem("0x04");
     QStandardItem *child42 = new QStandardItem("CLKoutX_MUX [1:0]");
     QStandardItem *child43 = new QStandardItem("CLKoutX_EN");
     QStandardItem *child44 = new QStandardItem("CLKoutX_DIV [7:0]");
@@ -74,7 +74,7 @@ void LMK1000Widget::viewTree()
     itm4->appendRow(QList<QStandardItem*>() << child44 << new QStandardItem());
     itm4->appendRow(QList<QStandardItem*>() << child45 << new QStandardItem());
 
-    QStandardItem *itm5    = new QStandardItem("R5");
+    QStandardItem *itm5    = new QStandardItem("0x05");
     QStandardItem *child52 = new QStandardItem("CLKoutX_MUX [1:0]");
     QStandardItem *child53 = new QStandardItem("CLKoutX_EN");
     QStandardItem *child54 = new QStandardItem("CLKoutX_DIV [7:0]");
@@ -85,7 +85,7 @@ void LMK1000Widget::viewTree()
     itm5->appendRow(QList<QStandardItem*>() << child54 << new QStandardItem());
     itm5->appendRow(QList<QStandardItem*>() << child55 << new QStandardItem());
 
-    QStandardItem *itm6    = new QStandardItem("R6");
+    QStandardItem *itm6    = new QStandardItem("0x06");
     QStandardItem *child62 = new QStandardItem("CLKoutX_MUX [1:0]");
     QStandardItem *child63 = new QStandardItem("CLKoutX_EN");
     QStandardItem *child64 = new QStandardItem("CLKoutX_DIV [7:0]");
@@ -96,7 +96,7 @@ void LMK1000Widget::viewTree()
     itm6->appendRow(QList<QStandardItem*>() << child64 << new QStandardItem());
     itm6->appendRow(QList<QStandardItem*>() << child65 << new QStandardItem());
 
-    QStandardItem *itm7    = new QStandardItem("R7");
+    QStandardItem *itm7    = new QStandardItem("0x07");
     QStandardItem *child72 = new QStandardItem("CLKoutX_MUX [1:0]");
     QStandardItem *child73 = new QStandardItem("CLKoutX_EN");
     QStandardItem *child74 = new QStandardItem("CLKoutX_DIV [7:0]");
@@ -107,12 +107,12 @@ void LMK1000Widget::viewTree()
     itm7->appendRow(QList<QStandardItem*>() << child74 << new QStandardItem());
     itm7->appendRow(QList<QStandardItem*>() << child75 << new QStandardItem());
 
-    QStandardItem *itm9   = new QStandardItem("R9");
+    QStandardItem *itm9   = new QStandardItem("0x09");
     QStandardItem *child9 = new QStandardItem("Vboost");
 
     itm9->appendRow(QList<QStandardItem*>() << child9 << new QStandardItem());
 
-    QStandardItem *itm14    = new QStandardItem("R14");
+    QStandardItem *itm14    = new QStandardItem("0x14");
     QStandardItem *child142 = new QStandardItem("CLKin_SELECT");
     QStandardItem *child143 = new QStandardItem("EN_CLKout_Global");
     QStandardItem *child144 = new QStandardItem("POWERDOWN");

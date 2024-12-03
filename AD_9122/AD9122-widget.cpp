@@ -145,17 +145,17 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(item->rowCount()-1, 1, item->index());
 
-                QWidget *widget = createLineEditWithSaveButton(item->rowCount()-1, 7, 1,
-                    "Interrupt Enable (0-7)...",
-                    "Interrupt Enable must be 0-7",
-                    "0", 8, 0);
-                layout->addWidget(widget);
+//                QWidget *widget = createLineEditWithSaveButton(item->rowCount()-1, 7, 1,
+//                    "Interrupt Enable (0-7)...",
+//                    "Interrupt Enable must be 0-7",
+//                    "0", 8, 0);
+//                layout->addWidget(widget);
 
-                QWidget *comboBoxWidget5 = createComboBoxWidgetLable("Set to 0", {"00",
-                                                                                  "01",
-                                                                                  "10",
-                                                                                  "11"}, 8, 0);
-                layout->addWidget(comboBoxWidget5);
+//                QWidget *comboBoxWidget5 = createComboBoxWidgetLable("Set to 0", {"00",
+//                                                                                  "01",
+//                                                                                  "10",
+//                                                                                  "11"}, 8, 0);
+//                layout->addWidget(comboBoxWidget5);
 
                 QCheckBox *checkBox2 = createCheckBoxWidget("Enable AED compare pass", Unchecked, 3, 1);
                 layout->addWidget(checkBox2);
@@ -319,7 +319,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget2 = createLineEditWithSaveButton(item->rowCount()-1, 15, 1,
                     "VCO Control Voltage (0-15)...",
                     "VCO Control Voltage must be 0-15",
-                    " ", 3, 4);
+                    "?", 3, 4);
                 layout->addWidget(widget2);
 
                 treeView->setIndexWidget(index1, container);
@@ -331,7 +331,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget3 = createLineEditWithSaveButton(item->rowCount()-1, 63, 1,
                     "VCO Band Readback (0-63)...",
                     "VCO Band Readback 0-63",
-                    "", 5, 6);
+                    "?", 5, 6);
                 layout2->addWidget(widget3);
 
                 treeView->setIndexWidget(index2, container2);
@@ -604,7 +604,7 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(item->rowCount()-1, 1, item->index());
 
-/*       */               QWidget *widget1 = createLineEditWithSaveButton(item->rowCount()-1, 0, 1,
+                QWidget *widget1 = createLineEditWithSaveButton(item->rowCount()-1, 0, 1,
                     "Chip ID...",
                     "Chip ID must be 0-0",
                     "8", 3, 8);
@@ -964,8 +964,8 @@ void AD9122Widget::viewTree() {
                 QCheckBox *checkBox1 = createCheckBoxWidget("Q DAC sleep", Unchecked, 7, 1);
                 layout->addWidget(checkBox1);
 
-                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("Q DAC FS Adj[9:8]", {"00",
-                                                                                           "01",
+                QWidget *comboBoxWidget4 = createComboBoxWidgetLable("Q DAC FS Adj[9:8]", {"01",
+                                                                                           "00",
                                                                                            "10",
                                                                                            "11"}, 1, 2);
                 layout->addWidget(comboBoxWidget4);
@@ -1024,13 +1024,13 @@ void AD9122Widget::viewTree() {
                 QWidget *widget1 = createLineEditWithSaveButton(item->rowCount()-1, 7, 1,
                     "FS Current[2:0] (0-7)...",
                     "FS Current[2:0] must be 0-7",
-                    "0", 5, 3);
+                    "0", 6, 3);
                 layout->addWidget(widget1);
 
                 QWidget *widget2 = createLineEditWithSaveButton(item->rowCount()-1, 7, 1,
                     "Reference Current[2:0] (0-7)...",
                     "Reference Current[2:0] must be 0-7",
-                    "1", 1, 3);
+                    "1", 3, 3);
                 layout->addWidget(widget2);
 
                 QCheckBox *checkBox3 = createCheckBoxWidget("Capacitor value", Unchecked, 0, 1);

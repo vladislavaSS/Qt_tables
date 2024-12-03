@@ -35,6 +35,22 @@ public:
 
     bool ADflag = 0;
 
+    QTreeView *treeView;
+
+    QStandardItemModel *model;
+
+    QPushButton *toggleButton;
+
+    QPushButton *saveButton;
+
+    QPushButton *loadButton;
+
+    QPushButton *save_elem;
+
+    QPushButton *load_elem;
+
+    bool treeExpanded;
+
 private slots:
 
     QWidget* createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText, int bitNumber, int bitWidth);
@@ -82,22 +98,6 @@ private:
     int bitCount = 32;
 
     void viewTree();
-
-    QTreeView *treeView;
-
-    QStandardItemModel *model;
-
-    QPushButton *toggleButton;
-
-    QPushButton *saveButton;
-
-    QPushButton *loadButton;
-
-    QPushButton *save_elem;
-
-    QPushButton *load_elem;
-
-    bool treeExpanded;
 
 };
 

@@ -1195,3 +1195,5 @@
 /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/buttons.cpp
 /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/AD9122-widget.cpp
 /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/сreate.cpp
+/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/tree_elem.h
+/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/transform.cpp

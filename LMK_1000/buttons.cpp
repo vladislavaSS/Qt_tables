@@ -22,7 +22,7 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
     if (LMKflag) Result = "";
 
 
-    if (selectedItem->text() == "Clock Receiver Control" || selectedItem->text() == "CLKin_SELECT" || selectedItem->text() == "R9" || selectedItem->text() == "R14")
+    if (selectedItem->text() == "Clock Receiver Control" || selectedItem->text() == "CLKin_SELECT" || selectedItem->text() == "0x09" || selectedItem->text() == "0x14")
         reg_flag = true;
 
     int bitNumber = 0;
@@ -95,17 +95,10 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                                 Result = QString(bitCount - bitNumber - 2, '0') + '1' + numericPart;
                             else Result = hex2Json(Result, numericPart, bitNumber, bitCount);
                         }
-
                     }
                 }
 
-                if (ADflag) {
-
-                    if (Result.size() < bitCount && !Result.isEmpty()) {
-                        if (reg_flag) Result += QString(bitCount - Result.size(), '1');
-                        if (countWid == 1) Result = QString(bitCount - Result.size(), '0') + Result;
-                        else Result += QString(bitCount - Result.size(), '0');
-                    } if (Result.isEmpty()) Result = "N/A";
+                if (ADflag || HCMflag) {
 
                     for (QChar ch : Result) {
                         if (ch == "?") {
@@ -113,11 +106,18 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                             break;
                         }
                     }
+
+                    if (Result.size() < bitCount && !Result.isEmpty() && Result != "N/A") {
+                        if (reg_flag) Result += QString(bitCount - Result.size(), '1');
+                        if (countWid == 1) Result = QString(bitCount - Result.size(), '0') + Result;
+                        else if (ADflag) Result += QString(bitCount - Result.size(), '0');
+
+                    } if (Result.isEmpty()) Result = "N/A";
+
                     if (!bin2hex(Result).isEmpty()) Result = "0x" + bin2hex(Result);
 
-                }
-                else if (LMKflag && reg_flag) {
-                    QString last = dec2bin(selectedItem->text().remove('R'), 4);
+                } else if (LMKflag && reg_flag) {
+                    QString last = dec2bin(selectedItem->text().remove("0x"), 4);
                     if (child->text() == "Vboost") {
                         Result += "001010100000" + last;
                         Result = "0x" + bin2hex(Result);
@@ -144,12 +144,11 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                     jsonArray.PushBack(resultValue, allocator);
 
                 }
-                if (LMKflag && (selectedItem->text() == "R9" || (selectedItem->text() == "R14" && j == 2))) {
+                if (LMKflag && (selectedItem->text() == "0x09" || (selectedItem->text() == "0x14" && j == 2))) {
 
-                    QString addr = "0x" + selectedItem->text().remove('R');
                     resultValue.AddMember(
                         rapidjson::Value("Addr", allocator),
-                        rapidjson::Value(addr.toStdString().c_str(), allocator),
+                        rapidjson::Value(selectedItem->text().toStdString().c_str(), allocator),
                         allocator
                     );
 
@@ -166,11 +165,11 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
     }
     if (LMKflag && !reg_flag) {
 
-        QString last = dec2bin(selectedItem->text().remove('R'), 4);
+        QString last = dec2bin(selectedItem->text().remove("0x0"), 4);
         if (last.size() < 4) last = QString(4 - last.size(), '0') + last;
         Result = Result + last;
         Result = "0x" + bin2hex(Result);
-        QString addr = "0x" + selectedItem->text().remove('R');
+        QString addr = selectedItem->text().remove('R');
 
         rapidjson::Value finalResult(rapidjson::kObjectType);
         finalResult.AddMember(

@@ -41,11 +41,25 @@ class HMC1035Widget : public QWidget
 public:
     explicit HMC1035Widget(QWidget *parent = nullptr);
 
-    void viewTree();
-
     bool ADflag = 0;
 
     bool LMKflag = 0;
+
+    QTreeView *treeView;
+
+    QStandardItemModel *model;
+
+    QPushButton *toggleButton;
+
+    QPushButton *saveButton;
+
+    QPushButton *loadButton;
+
+    QPushButton *save_elem;
+
+    QPushButton *load_elem;
+
+    bool treeExpanded;
 
 private slots:
 
@@ -97,21 +111,7 @@ private:
 
     int bitCount = 24;
 
-    QTreeView *treeView;
-
-    QStandardItemModel *model;
-
-    QPushButton *toggleButton;
-
-    QPushButton *saveButton;
-
-    QPushButton *loadButton;
-
-    QPushButton *save_elem;
-
-    QPushButton *load_elem;
-
-    bool treeExpanded;
+    void viewTree();
 
 signals:
 

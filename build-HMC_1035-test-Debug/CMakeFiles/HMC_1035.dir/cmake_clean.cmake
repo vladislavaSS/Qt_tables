@@ -16,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/HMC_1035.dir/main.cpp.o.d"
   "CMakeFiles/HMC_1035.dir/mainwindow.cpp.o"
   "CMakeFiles/HMC_1035.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/HMC_1035.dir/transform.cpp.o"
+  "CMakeFiles/HMC_1035.dir/transform.cpp.o.d"
   "HMC_1035"
   "HMC_1035.pdb"
 )

@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/data.cpp" "CMakeFiles/HMC_1035.dir/data.cpp.o" "gcc" "CMakeFiles/HMC_1035.dir/data.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/main.cpp" "CMakeFiles/HMC_1035.dir/main.cpp.o" "gcc" "CMakeFiles/HMC_1035.dir/main.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/mainwindow.cpp" "CMakeFiles/HMC_1035.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/HMC_1035.dir/mainwindow.cpp.o.d"
+  "/home/vadislava/qtprojects/qt_git/Qt_tables/HMC_1035/transform.cpp" "CMakeFiles/HMC_1035.dir/transform.cpp.o" "gcc" "CMakeFiles/HMC_1035.dir/transform.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -24,6 +24,7 @@ set(PROJECT_SOURCES
         HMC1035-widget.h
         create.cpp
         buttons.cpp
+        transform.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

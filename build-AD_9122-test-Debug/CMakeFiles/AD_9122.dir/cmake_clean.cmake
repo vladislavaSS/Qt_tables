@@ -16,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AD_9122.dir/main.cpp.o.d"
   "CMakeFiles/AD_9122.dir/mainwindow.cpp.o"
   "CMakeFiles/AD_9122.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/AD_9122.dir/transform.cpp.o"
+  "CMakeFiles/AD_9122.dir/transform.cpp.o.d"
   "CMakeFiles/AD_9122.dir/сreate.cpp.o"
   "CMakeFiles/AD_9122.dir/сreate.cpp.o.d"
 )

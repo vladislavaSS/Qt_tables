@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/data.cpp" "CMakeFiles/AD_9122.dir/data.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/data.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/main.cpp" "CMakeFiles/AD_9122.dir/main.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/main.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/mainwindow.cpp" "CMakeFiles/AD_9122.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/mainwindow.cpp.o.d"
+  "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/transform.cpp" "CMakeFiles/AD_9122.dir/transform.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/transform.cpp.o.d"
   "/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/сreate.cpp" "CMakeFiles/AD_9122.dir/сreate.cpp.o" "gcc" "CMakeFiles/AD_9122.dir/сreate.cpp.o.d"
   )
 
