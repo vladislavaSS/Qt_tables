@@ -2,7 +2,7 @@
     "Registers": [
         {
             "Addr": "0x00",
-            "Data": "0x40"
+            "Data": "0x60"
         }
     ]
 }

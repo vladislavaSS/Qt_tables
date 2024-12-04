@@ -145,18 +145,6 @@ void AD9122Widget::viewTree() {
                 QVBoxLayout *layout = new QVBoxLayout(container);
                 QModelIndex index1 = model->index(item->rowCount()-1, 1, item->index());
 
-//                QWidget *widget = createLineEditWithSaveButton(item->rowCount()-1, 7, 1,
-//                    "Interrupt Enable (0-7)...",
-//                    "Interrupt Enable must be 0-7",
-//                    "0", 8, 0);
-//                layout->addWidget(widget);
-
-//                QWidget *comboBoxWidget5 = createComboBoxWidgetLable("Set to 0", {"00",
-//                                                                                  "01",
-//                                                                                  "10",
-//                                                                                  "11"}, 8, 0);
-//                layout->addWidget(comboBoxWidget5);
-
                 QCheckBox *checkBox2 = createCheckBoxWidget("Enable AED compare pass", Unchecked, 3, 1);
                 layout->addWidget(checkBox2);
 

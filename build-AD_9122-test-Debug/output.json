@@ -2,15 +2,15 @@
     "Registers": [
         {
             "Addr": "0x00",
-            "Data": "0x0"
+            "Data": "0x40"
         },
         {
             "Addr": "0x01",
-            "Data": "0x10"
+            "Data": "0xB0"
         },
         {
             "Addr": "0x03",
-            "Data": "0x0"
+            "Data": "0x22"
         },
         {
             "Addr": "0x04",
@@ -34,11 +34,11 @@
         },
         {
             "Addr": "0x0A",
-            "Data": "0x40"
+            "Data": "0x4F"
         },
         {
             "Addr": "0x0C",
-            "Data": "0xD1"
+            "Data": "0xDF"
         },
         {
             "Addr": "0x0D",

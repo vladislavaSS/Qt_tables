@@ -1,44 +1,8 @@
 {
     "Registers": [
         {
-            "Addr": "R0",
-            "Data": "0x100"
-        },
-        {
-            "Addr": "R1",
-            "Data": "0x101"
-        },
-        {
-            "Addr": "R2",
-            "Data": "0x102"
-        },
-        {
-            "Addr": "R3",
-            "Data": "0x103"
-        },
-        {
-            "Addr": "R4",
-            "Data": "0x104"
-        },
-        {
-            "Addr": "R5",
-            "Data": "0x105"
-        },
-        {
-            "Addr": "R6",
-            "Data": "0x106"
-        },
-        {
-            "Addr": "R7",
-            "Data": "0x107"
-        },
-        {
-            "Addr": "R9",
-            "Data": "0x22A09"
-        },
-        {
-            "Addr": "R14",
-            "Data": "0x4800000E"
+            "Addr": "0x14",
+            "Data": "0x6C00000E"
         }
     ]
 }

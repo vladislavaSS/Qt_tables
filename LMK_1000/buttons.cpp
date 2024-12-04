@@ -98,7 +98,7 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                     }
                 }
 
-                if (ADflag || HCMflag) {
+                if (ADflag) {
 
                     for (QChar ch : Result) {
                         if (ch == "?") {

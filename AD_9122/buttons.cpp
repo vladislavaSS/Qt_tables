@@ -109,7 +109,7 @@ void AD9122Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Document
                     }
                 }
 
-                if (ADflag || HCMflag) {
+                if (ADflag) {
 
                     for (QChar ch : Result) {
                         if (ch == "?") {
