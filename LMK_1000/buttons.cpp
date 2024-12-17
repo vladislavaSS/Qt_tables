@@ -1,20 +1,49 @@
 #include "LMK1000-widget.h"
 
+void LMK1000Widget::on_toggle_button_clicked()
+{
+    if (treeExpanded) {
+            treeView->collapseAll();
+            toggleButton->setText("Expand All");
+        } else {
+            treeView->expandAll();
+            toggleButton->setText("Collapse All");
+        }
+        treeExpanded = !treeExpanded;
+}
+
 void LMK1000Widget::onParentItemClicked(const QModelIndex& index) {
 
     QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
     QStandardItem* item = model->itemFromIndex(index);
-
     if (item != nullptr) {
         disconnect(save_elem, &QPushButton::clicked, this, nullptr);
         connect(save_elem, &QPushButton::clicked, this, [this, item]() {
-            saveItem(item);
+            rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buf);
+
+            saveItem(item, writer);
+
+            if (buf.GetSize() != 0) {
+
+                QString filePath = "save_element.json";
+                std::ofstream file(filePath.toStdString());
+                if (file.is_open()) {
+                    file << buf.GetString();
+                    file.close();
+                    QMessageBox::information(this, "Успех", "Файл успешно сохранен: " + filePath);
+                } else {
+                    QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для записи!");
+                }
+
+                buf.Clear();
+            }
+
         });
     }
 
 }
 
-void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Value &jsonArray, QStandardItemModel* model, QTreeView* treeView) {
+void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Document &document, QStandardItemModel* model, QTreeView* treeView) {
 
     QString Result;
     bool reg_flag = false;
@@ -141,7 +170,7 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                         rapidjson::Value(Result.toStdString().c_str(), allocator),
                         allocator
                     );
-                    jsonArray.PushBack(resultValue, allocator);
+                    document.PushBack(resultValue, allocator);
 
                 }
                 if (LMKflag && (selectedItem->text() == "0x09" || (selectedItem->text() == "0x14" && j == 2))) {
@@ -157,7 +186,8 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
                         rapidjson::Value(Result.toStdString().c_str(), allocator),
                         allocator
                     );
-                    jsonArray.PushBack(resultValue, allocator);
+
+                    document.PushBack(resultValue, allocator);
 
                 }
             }
@@ -183,12 +213,12 @@ void LMK1000Widget::hasChildren (QStandardItem *selectedItem, rapidjson::Documen
             allocator
         );
 
-        jsonArray.PushBack(finalResult, allocator);
+        document.PushBack(finalResult, allocator);
     }
 
 }
 
-void LMK1000Widget::saveItem(QStandardItem *selectedItem) {
+void LMK1000Widget::saveItem(QStandardItem *selectedItem, rapidjson::PrettyWriter<rapidjson::StringBuffer> &wr) {
 
     if (selectedItem->parent() != nullptr) {
         if (selectedItem->parent()->text() == "PLL" || selectedItem->parent()->text() == "VCO Subsystem") HCMflag = 1;
@@ -196,69 +226,52 @@ void LMK1000Widget::saveItem(QStandardItem *selectedItem) {
             QMessageBox::warning(this, "Ошибка", "Выберете регистр");
             return;
         }
-    } else if (selectedItem->text() == "PLL" || selectedItem->text() == "VCO Subsystem") {
+    } else if (selectedItem->text() == "PLL" || selectedItem->text() == "VCO Subsystem" || selectedItem->text() == "") {
         QMessageBox::warning(this, "Ошибка", "Выберете регистр");
         return;
-    } else selectedItem = selectedItem;
-
+    }
 
     rapidjson::Document document;
-    document.SetObject();
+    document.SetArray();
     rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
 
     QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
 
-    rapidjson::Value jsonArray(rapidjson::kArrayType);
+    if (HCMflag) hasChildren(selectedItem->parent(), allocator, document, model, treeView);
+    else hasChildren(selectedItem, allocator, document, model, treeView);
 
-    if (HCMflag) hasChildren(selectedItem->parent(), allocator, jsonArray, model, treeView);
-    else hasChildren(selectedItem, allocator, jsonArray, model, treeView);
-
-    document.AddMember("Registers", jsonArray, allocator);
-
-    rapidjson::StringBuffer buffer;
-    rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
-    document.Accept(writer);
-
-    QString filePath = "save_element.json";
-    std::ofstream file(filePath.toStdString());
-
-    if (file.is_open()) {
-        file << buffer.GetString();
-        file.close();
-        QMessageBox::information(this, "Успех", "Файл успешно сохранен: " + filePath);
-    } else {
-        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для записи!");
-    }
+    if (!document.Empty()) document.Accept(wr);
 
 }
 
-void LMK1000Widget::on_save_button_clicked() {
+void LMK1000Widget::on_save_button_clicked(rapidjson::PrettyWriter<rapidjson::StringBuffer> &wr) {
 
     rapidjson::Document document;
-    document.SetObject();
+    document.SetArray();
     rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
+
     QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
     QStandardItem* rootItem = model->invisibleRootItem();
-
-    rapidjson::Value jsonArray(rapidjson::kArrayType);
 
     for (int i = 0; i < rootItem->rowCount(); ++i) {
         QStandardItem* item = rootItem->child(i);
 
         if (!item) continue;
-
-        if (item->child(0)) hasChildren(item, allocator, jsonArray, model, treeView);
+        if (item->child(0)) hasChildren(item, allocator, document, model, treeView);
     }
 
-    document.AddMember("Registers", jsonArray, allocator);
+    document.Accept(wr);
+}
+
+void LMK1000Widget::saveData() {
 
     rapidjson::StringBuffer buffer;
     rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
-    document.Accept(writer);
+
+    on_save_button_clicked(writer);
 
     QString filePath = "output.json";
     std::ofstream file(filePath.toStdString());
-
     if (file.is_open()) {
         file << buffer.GetString();
         file.close();
@@ -267,7 +280,7 @@ void LMK1000Widget::on_save_button_clicked() {
         QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для записи!");
     }
 
-
+    buffer.Clear();
 }
 
 void LMK1000Widget::updateChildWidgets(QStandardItemModel* model, QString dataString, QStandardItem* item, QString readItem) {
@@ -287,11 +300,11 @@ void LMK1000Widget::updateChildWidgets(QStandardItemModel* model, QString dataSt
                  QModelIndex index = model->index(i, 1, item->index());
                  QWidget* widget = treeView->indexWidget(index);
 
-                if (widget && index.isValid()) {
+                 if (widget && index.isValid()) {
 
                     for (QWidget* child : widget->findChildren<QWidget*>()) {
 
-                        if (!binaryData.isEmpty()) {
+                        if (!binaryData.isEmpty() && binaryData != "N/A") {
 
                             if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(child)) {
 
@@ -341,8 +354,28 @@ void LMK1000Widget::updateChildWidgets(QStandardItemModel* model, QString dataSt
                                 if (!valueFound) {
                                     comboBox->addItem(value);
                                     comboBox->setCurrentText(value);
+
+                                }
+
+                            }
+
+                        } else if (binaryData == "N/A") {
+
+                            if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(child)) {
+                                lineEdit->setText(lineEdit->property("default").toString());
+
+                            } else if (QCheckBox* checkBox = qobject_cast<QCheckBox*>(child)) {
+                                QString property = checkBox->property("default").toString();
+                                if (property == "1") checkBox->setChecked(1);
+                                else if (property == "0") checkBox->setChecked(0);
+                                else if (property == "2") {
+                                    checkBox->setCheckState(Qt::PartiallyChecked);
+                                    checkBox->setTristate(true);
                                 }
                             }
+                            else if (QComboBox* comboBox = qobject_cast<QComboBox*>(child))
+                                comboBox->setCurrentText(comboBox->property("default").toString());
+
                         } else continue;
                     }
                 }
@@ -350,21 +383,13 @@ void LMK1000Widget::updateChildWidgets(QStandardItemModel* model, QString dataSt
         }
     }
 
+
 }
 
 void LMK1000Widget::load_all() {
-    load("output.json");
-}
 
-void LMK1000Widget:: load_element() {
-    load("save_element.json");
-}
+    QFile file("output.json");
 
-void LMK1000Widget::load(const QString& filePath)
-{
-    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
-
-    QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly)) {
         QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для чтения!");
         return;
@@ -382,54 +407,70 @@ void LMK1000Widget::load(const QString& filePath)
         return;
     }
 
-    if (!jsonDoc.IsObject()) {
-        qWarning() << "Корневой элемент не является объектом.";
+    const rapidjson::Value& jsonArray = jsonDoc;
+
+    load(jsonArray);
+
+}
+
+void LMK1000Widget:: load_element() {
+
+    QFile file("save_element.json");
+
+    if (!file.open(QIODevice::ReadOnly)) {
+        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для чтения!");
         return;
     }
 
-    if (!jsonDoc.HasMember("Registers") || !jsonDoc["Registers"].IsArray()) {
-        qWarning() << "'Registers' не найден или не является массивом.";
+    QByteArray jsonData = file.readAll();
+    file.close();
+
+    rapidjson::Document jsonDoc;
+    jsonDoc.Parse(jsonData.constData());
+
+    if (jsonDoc.HasParseError()) {
+        QMessageBox::warning(this, "Ошибка", "Не удалось прочитать файл");
+        qDebug() << "JSON parse error at offset:" << jsonDoc.GetErrorOffset();
         return;
     }
 
-    const rapidjson::Value& jsonArray = jsonDoc["Registers"];
+    const rapidjson::Value& jsonArray = jsonDoc;
 
-        QStandardItem* Item = nullptr;
-        QString readItem = "";
-        QString dataString = "";
+    load(jsonArray);
+}
 
-        for (int i = 0; i < model->rowCount(); ++i) {
-            QStandardItem* item = model->item(i);
-            if (item && item->hasChildren()) {
-                QStringList addresses;
-                QStringList dataStrings;
+void LMK1000Widget::load(const rapidjson::Value& jsonArray)
+{
+    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView -> model());
 
-                for (const auto& value : jsonArray.GetArray()) {
-                    if (value.HasMember("Addr") && value["Addr"].IsString()) {
-                        addresses.append(QString::fromStdString(value["Addr"].GetString()));
-                    }
+    QStandardItem* Item = nullptr;
+    QString readItem = "";
+    QString data = "";
 
-                    if (value.HasMember("Data") && value["Data"].IsString()) {
-                        dataStrings.append(QString::fromStdString(value["Data"].GetString()));
-                    }
+    for (int i = 0; i < model->rowCount(); ++i) {
+        QStandardItem* item = model->item(i);
+        if (item && item->hasChildren()) {
+            QStringList addresses;
+            QStringList datalist;
+
+            for (const auto& value : jsonArray.GetArray()) {
+                if (value.HasMember("Addr") && value["Addr"].IsString()) {
+                    addresses.append(QString::fromStdString(value["Addr"].GetString()));
                 }
 
-                for (int index = 0; index < qMin(addresses.size(), dataStrings.size()); ++index) {
-                    if ((item->text() == addresses[index] && LMKflag) || !LMKflag) updateChildWidgets(model, dataStrings[index], item, addresses[index]);
+                if (value.HasMember("Data") && value["Data"].IsString()) {
+                    datalist.append(QString::fromStdString(value["Data"].GetString()));
                 }
             }
+
+            for (int index = 0; index < qMin(addresses.size(), datalist.size()); ++index) {
+                if ((item->text() == addresses[index] && LMKflag) || !LMKflag) updateChildWidgets(model, datalist[index], item, addresses[index]);
+            }
         }
+    }
+
 
 }
 
-void LMK1000Widget::on_toggle_button_clicked()
-{
-    if (treeExpanded) {
-            treeView->collapseAll();
-            toggleButton->setText("Expand All");
-        } else {
-            treeView->expandAll();
-            toggleButton->setText("Collapse All");
-        }
-        treeExpanded = !treeExpanded;
-}
+//dac::logger->P7_INFO(dac::module, TM("Не удалось прочитать файл"));
+

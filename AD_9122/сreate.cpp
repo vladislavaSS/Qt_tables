@@ -1,11 +1,11 @@
 #include "AD9122-widget.h"
+//void AD9122Widget::onItemChanged(QStandardItem* changedItem) {
 
-void AD9122Widget::onItemChanged(QStandardItem* changedItem) {
+//    if (!changedItem) return;
+//    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView->model());
+//    if (!model) return;
 
-    if (!changedItem) return;
-    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(treeView->model());
-    if (!model) return;
-}
+//}
 
 QWidget* AD9122Widget::LineOfPower(int rowIndex, int valueLimit, const QString& placeholderText, const QString& errorMsg, const QString& defaultText) {
     QLineEdit *lineEdit = new QLineEdit();
@@ -102,22 +102,22 @@ QWidget* AD9122Widget::createLineEditWithSaveButton(int rowIndex, double valueLi
 QWidget* AD9122Widget::createComboBoxWidgetLable(const QString &labelText, const QStringList &options, int bitNumber, int bitWidth) {
 
     QWidget *widget = new QWidget();
-        QVBoxLayout *layout = new QVBoxLayout(widget);
+    QVBoxLayout *layout = new QVBoxLayout(widget);
 
-        QLabel *label = new QLabel(labelText);
-        layout->addWidget(label);
+    QLabel *label = new QLabel(labelText);
+    layout->addWidget(label);
 
-        QComboBox *comboBox = new QComboBox();
-        comboBox->setProperty("ComboBoxName", labelText);
-        comboBox->setProperty("bitNumber", bitNumber);
-        comboBox->setProperty("bitWidth", bitWidth);
-        comboBox->setProperty("default", options);
-        comboBox->addItems(options);
-        layout->addWidget(comboBox);
+    QComboBox *comboBox = new QComboBox();
+    comboBox->setProperty("ComboBoxName", labelText);
+    comboBox->setProperty("bitNumber", bitNumber);
+    comboBox->setProperty("bitWidth", bitWidth);
+    comboBox->setProperty("default", options);
+    comboBox->addItems(options);
+    layout->addWidget(comboBox);
 
-        widget->setLayout(layout);
+    widget->setLayout(layout);
 
-        return widget;
+    return widget;
 }
 
 QCheckBox* AD9122Widget::createCheckBoxWidget(const QString &labelText, CheckBoxState state, int bitNumber, int bitWidth) {

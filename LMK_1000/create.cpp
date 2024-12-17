@@ -1,73 +1,5 @@
 #include "LMK1000-widget.h"
 
-void LMK1000Widget::setEditableFlags(QStandardItem *item, bool editable) {
-    if (!item) return;
-
-    if (editable) {
-        item->setFlags(item->flags() | Qt::ItemIsEditable);
-    } else {
-        item->setFlags(item->flags() & ~Qt::ItemIsEditable);
-    }
-
-    for (int row = 0; row < item->rowCount(); ++row) {
-        QStandardItem *childItem = item->child(row);
-        setEditableFlags(childItem, editable);
-    }
-}
-
-void LMK1000Widget::blockEditing(QStandardItemModel *model) {
-    for (int row = 0; row < model->rowCount(); ++row) {
-        QStandardItem *rootItem = model->item(row);
-        setEditableFlags(rootItem, false);
-    }
-}
-
-QWidget* LMK1000Widget::createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText, int bitNumber, int bitWidth) {
-
-    QLineEdit *lineEdit = new QLineEdit();
-    lineEdit->setPlaceholderText(placeholderText);
-    lineEdit->setProperty("lineEditName", placeholderText);
-    lineEdit->setProperty("bitNumber", bitNumber);
-    lineEdit->setProperty("bitWidth", bitWidth);
-    lineEdit->setProperty("default", defaultText);
-
-    QHBoxLayout *hLayout = new QHBoxLayout;
-    QPushButton *saveButton = new QPushButton("Сохранить");
-
-    connect(saveButton, &QPushButton::clicked, [this, lineEdit, valueLimit, modulo, errorMsg, defaultText]() {
-        QString inputValue = lineEdit->text();
-        bool ok;
-        int doubleValue = inputValue.toInt(&ok);
-
-        if (ok && doubleValue >= 0 && doubleValue <= valueLimit) {
-            if (modulo != 0) {
-                if (fmod(doubleValue, modulo) == 0) {
-                    QString processedValue = QString::number(doubleValue);
-                    lineEdit->setText(processedValue);
-                    lineEdit->setStyleSheet("color: green;");
-                } else {
-                    QMessageBox::warning(this, "Ошибка", "Введенное значение должно быть в пределах 0-" + QString::number(valueLimit) + "." + " и делиться на " + QString::number(modulo));
-                    lineEdit->setText(defaultText);
-                }
-            } else {
-                QMessageBox::warning(this, "Ошибка", "Недопустимый модуль: деление на ноль.");
-                lineEdit->setText(defaultText);
-            }
-        } else {
-                QMessageBox::warning(this, "Ошибка", "Введенное значение должно быть в пределах 0-" + QString::number(valueLimit) + ".");
-                lineEdit->setText(defaultText);
-        }
-    });
-
-    hLayout->addWidget(lineEdit);
-    hLayout->addWidget(saveButton);
-
-    QWidget *widget = new QWidget();
-    widget->setLayout(hLayout);
-
-    return widget;
-}
-
 void LMK1000Widget::setupWidgets(QStandardItem *itm, int rowIndex, QModelIndex lineEditIndex) {
 
     if (rowIndex == 2) {
@@ -140,3 +72,89 @@ void LMK1000Widget::setupWidgets(QStandardItem *itm, int rowIndex, QModelIndex l
            return;
        }
 }
+
+QWidget* LMK1000Widget::createLineEditWithSaveButton(int rowIndex, double valueLimit, double modulo, const QString& placeholderText, const QString& errorMsg, const QString& defaultText, int bitNumber, int bitWidth) {
+    QLineEdit *lineEdit = new QLineEdit();
+    lineEdit->setPlaceholderText(placeholderText);
+    lineEdit->setProperty("lineEditName", placeholderText);
+    lineEdit->setProperty("bitNumber", bitNumber);
+    lineEdit->setProperty("bitWidth", bitWidth);
+    lineEdit->setProperty("default", defaultText);
+
+    QHBoxLayout *hLayout = new QHBoxLayout;
+    QPushButton *saveButton = new QPushButton("Сохранить");
+
+    connect(saveButton, &QPushButton::clicked, [this, lineEdit, valueLimit, modulo, errorMsg, defaultText]() {
+        QString inputValue = lineEdit->text();
+        bool ok;
+        int doubleValue = inputValue.toInt(&ok);
+
+        if (ok && doubleValue >= 0 && doubleValue <= valueLimit) {
+            if (modulo != 0) {
+                if (fmod(doubleValue, modulo) == 0) {
+                    QString processedValue = QString::number(doubleValue);
+                    lineEdit->setText(processedValue);
+                    lineEdit->setStyleSheet("color: green;");
+                } else {
+                    QMessageBox::warning(this, "Ошибка", "Введенное значение должно быть в пределах 0-" + QString::number(valueLimit) + "." + " и делиться на " + QString::number(modulo));
+                    lineEdit->setText(defaultText);
+                }
+            } else {
+                QMessageBox::warning(this, "Ошибка", "Недопустимый модуль: деление на ноль.");
+                lineEdit->setText(defaultText);
+            }
+        } else {
+                QMessageBox::warning(this, "Ошибка", "Введенное значение должно быть в пределах 0-" + QString::number(valueLimit) + ".");
+                lineEdit->setText(defaultText);
+        }
+    });
+
+    hLayout->addWidget(lineEdit);
+    hLayout->addWidget(saveButton);
+
+    QWidget *widget = new QWidget();
+    widget->setLayout(hLayout);
+
+    return widget;
+}
+
+void LMK1000Widget::setEditableFlags(QStandardItem *item, bool editable) {
+    if (!item) return;
+
+    if (editable) {
+        item->setFlags(item->flags() | Qt::ItemIsEditable);
+    } else {
+        item->setFlags(item->flags() & ~Qt::ItemIsEditable);
+    }
+
+    for (int row = 0; row < item->rowCount(); ++row) {
+        QStandardItem *childItem = item->child(row);
+        setEditableFlags(childItem, editable);
+    }
+}
+
+void LMK1000Widget::blockEditing(QStandardItemModel *model) {
+    for (int row = 0; row < model->rowCount(); ++row) {
+        QStandardItem *rootItem = model->item(row);
+        setEditableFlags(rootItem, false);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -47,9 +47,11 @@ QString AD9122Widget::dec2bin(const QString& decimalStr, int bitWidth) {
     return binaryStr;
 }
 
-QString AD9122Widget::hex2bin(QString &hexString/*, int binNumber*/) {
+QString AD9122Widget::hex2bin(QString &hexString) {
 
     bool ok;
+
+    if (hexString == "N/A") return hexString;
 
     hexString = hexString.remove("0x").toUpper();
     int value = hexString.toInt(&ok, 16);
@@ -57,9 +59,6 @@ QString AD9122Widget::hex2bin(QString &hexString/*, int binNumber*/) {
     if (!ok) return QString();
 
     QString binaryString = QString::number(value, 2);
-//    qDebug() << hexString << value << binaryString;
-
-//    binaryString = QString(bitCount/* - binNumber*/, '0') + binaryString /*+ QString(bitCount - binaryString.size())*/;
 
     return binaryString.rightJustified(bitCount, '0');
 

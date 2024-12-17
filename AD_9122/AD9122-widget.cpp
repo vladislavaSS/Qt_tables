@@ -3,20 +3,19 @@
 AD9122Widget::AD9122Widget(QWidget *parent)
     : QWidget{parent}, treeView(new QTreeView(this)), model(new QStandardItemModel(this)), treeExpanded(false)
 {
+    layout = new QVBoxLayout(this);
+    setLayout(layout);
     viewTree();
-    treeView -> setColumnWidth(0, 200);
-
+    treeView->setColumnWidth(0, 200);
 }
 
 void AD9122Widget::viewTree() {
-    QVBoxLayout *layout = new QVBoxLayout();
-
-    QStandardItemModel *model = new QStandardItemModel();
 
     model->setColumnCount(2);
     model->setHorizontalHeaderLabels({"Register (address - hex)", "Bits (7-0)"});
 
     treeView->setModel(model);
+    layout->addWidget(treeView);
 
     int regIndex = 0;
 
@@ -307,7 +306,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget2 = createLineEditWithSaveButton(item->rowCount()-1, 15, 1,
                     "VCO Control Voltage (0-15)...",
                     "VCO Control Voltage must be 0-15",
-                    "?", 3, 4);
+                    "", 3, 4);
                 layout->addWidget(widget2);
 
                 treeView->setIndexWidget(index1, container);
@@ -319,7 +318,7 @@ void AD9122Widget::viewTree() {
                 QWidget *widget3 = createLineEditWithSaveButton(item->rowCount()-1, 63, 1,
                     "VCO Band Readback (0-63)...",
                     "VCO Band Readback 0-63",
-                    "?", 5, 6);
+                    "", 5, 6);
                 layout2->addWidget(widget3);
 
                 treeView->setIndexWidget(index2, container2);
@@ -1317,19 +1316,18 @@ void AD9122Widget::viewTree() {
     layout->addWidget(buttons);
 
     QWidget *buttons2 = new QWidget();
-    QHBoxLayout *layout_buttons2 = new QHBoxLayout(buttons);
 
     save_elem = new QPushButton("Save element", buttons);
-    layout_buttons2->addWidget(save_elem);
+    layout_buttons->addWidget(save_elem);
 
     load_elem = new QPushButton("Download element", buttons);
-    layout_buttons2->addWidget(load_elem);
+    layout_buttons->addWidget(load_elem);
 
-    buttons2->setLayout(layout_buttons2);
+    buttons2->setLayout(layout_buttons);
     layout->addWidget(buttons2);
 
     connect(toggleButton, &QPushButton::clicked, this, &AD9122Widget::on_toggle_button_clicked);
-    connect(saveButton, &QPushButton::clicked, this, &AD9122Widget::on_save_button_clicked);
+    connect(saveButton, &QPushButton::clicked, this, &AD9122Widget::saveData);
     connect(treeView, &QTreeView::clicked, this, &AD9122Widget::onParentItemClicked);
     connect(loadButton, &QPushButton::clicked, this, &AD9122Widget::load_all);
     connect(load_elem, &QPushButton::clicked, this, &AD9122Widget::load_element);

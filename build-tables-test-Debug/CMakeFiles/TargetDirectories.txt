@@ -1,0 +1,4 @@
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/CMakeFiles/tables.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/CMakeFiles/edit_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/CMakeFiles/rebuild_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/CMakeFiles/tables_autogen.dir

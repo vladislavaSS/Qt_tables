@@ -3,8 +3,6 @@
 #include "AD9122-widget.h"
 
 
-
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)

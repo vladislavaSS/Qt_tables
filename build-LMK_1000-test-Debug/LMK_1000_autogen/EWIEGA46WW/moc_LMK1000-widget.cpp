@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_LMK1000Widget_t {
-    QByteArrayData data[60];
-    char stringdata0[707];
+    QByteArrayData data[67];
+    char stringdata0[831];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,81 +33,92 @@ struct qt_meta_stringdata_LMK1000Widget_t {
 static const qt_meta_stringdata_LMK1000Widget_t qt_meta_stringdata_LMK1000Widget = {
     {
 QT_MOC_LITERAL(0, 0, 13), // "LMK1000Widget"
-QT_MOC_LITERAL(1, 14, 28), // "createLineEditWithSaveButton"
-QT_MOC_LITERAL(2, 43, 8), // "QWidget*"
-QT_MOC_LITERAL(3, 52, 0), // ""
-QT_MOC_LITERAL(4, 53, 8), // "rowIndex"
-QT_MOC_LITERAL(5, 62, 10), // "valueLimit"
-QT_MOC_LITERAL(6, 73, 6), // "modulo"
-QT_MOC_LITERAL(7, 80, 15), // "placeholderText"
-QT_MOC_LITERAL(8, 96, 8), // "errorMsg"
-QT_MOC_LITERAL(9, 105, 11), // "defaultText"
-QT_MOC_LITERAL(10, 117, 9), // "bitNumber"
-QT_MOC_LITERAL(11, 127, 8), // "bitWidth"
-QT_MOC_LITERAL(12, 136, 7), // "bin2hex"
-QT_MOC_LITERAL(13, 144, 9), // "binaryStr"
-QT_MOC_LITERAL(14, 154, 8), // "hex2Json"
-QT_MOC_LITERAL(15, 163, 8), // "QString&"
-QT_MOC_LITERAL(16, 172, 6), // "Result"
-QT_MOC_LITERAL(17, 179, 4), // "text"
-QT_MOC_LITERAL(18, 184, 8), // "bitCount"
-QT_MOC_LITERAL(19, 193, 7), // "dec2bin"
-QT_MOC_LITERAL(20, 201, 10), // "decimalStr"
-QT_MOC_LITERAL(21, 212, 7), // "hex2bin"
-QT_MOC_LITERAL(22, 220, 9), // "hexString"
-QT_MOC_LITERAL(23, 230, 7), // "bin2dec"
-QT_MOC_LITERAL(24, 238, 12), // "binaryString"
-QT_MOC_LITERAL(25, 251, 8), // "isBinary"
-QT_MOC_LITERAL(26, 260, 11), // "numericPart"
-QT_MOC_LITERAL(27, 272, 12), // "setupWidgets"
-QT_MOC_LITERAL(28, 285, 14), // "QStandardItem*"
-QT_MOC_LITERAL(29, 300, 3), // "itm"
-QT_MOC_LITERAL(30, 304, 11), // "QModelIndex"
-QT_MOC_LITERAL(31, 316, 13), // "lineEditIndex"
-QT_MOC_LITERAL(32, 330, 22), // "on_save_button_clicked"
-QT_MOC_LITERAL(33, 353, 4), // "load"
-QT_MOC_LITERAL(34, 358, 8), // "filePath"
-QT_MOC_LITERAL(35, 367, 8), // "load_all"
-QT_MOC_LITERAL(36, 376, 12), // "load_element"
-QT_MOC_LITERAL(37, 389, 24), // "on_toggle_button_clicked"
-QT_MOC_LITERAL(38, 414, 8), // "saveItem"
-QT_MOC_LITERAL(39, 423, 18), // "selectedParentItem"
-QT_MOC_LITERAL(40, 442, 11), // "hasChildren"
-QT_MOC_LITERAL(41, 454, 12), // "selectedItem"
-QT_MOC_LITERAL(42, 467, 35), // "rapidjson::Document::Allocato..."
-QT_MOC_LITERAL(43, 503, 9), // "allocator"
-QT_MOC_LITERAL(44, 513, 17), // "rapidjson::Value&"
-QT_MOC_LITERAL(45, 531, 9), // "jsonArray"
-QT_MOC_LITERAL(46, 541, 19), // "QStandardItemModel*"
-QT_MOC_LITERAL(47, 561, 5), // "model"
-QT_MOC_LITERAL(48, 567, 10), // "QTreeView*"
-QT_MOC_LITERAL(49, 578, 8), // "treeView"
-QT_MOC_LITERAL(50, 587, 19), // "onParentItemClicked"
-QT_MOC_LITERAL(51, 607, 5), // "index"
-QT_MOC_LITERAL(52, 613, 18), // "updateChildWidgets"
-QT_MOC_LITERAL(53, 632, 10), // "dataString"
-QT_MOC_LITERAL(54, 643, 10), // "parentItem"
-QT_MOC_LITERAL(55, 654, 8), // "readItem"
-QT_MOC_LITERAL(56, 663, 16), // "setEditableFlags"
-QT_MOC_LITERAL(57, 680, 4), // "item"
-QT_MOC_LITERAL(58, 685, 8), // "editable"
-QT_MOC_LITERAL(59, 694, 12) // "blockEditing"
+QT_MOC_LITERAL(1, 14, 13), // "needSendState"
+QT_MOC_LITERAL(2, 28, 0), // ""
+QT_MOC_LITERAL(3, 29, 24), // "rapidjson::StringBuffer&"
+QT_MOC_LITERAL(4, 54, 2), // "sb"
+QT_MOC_LITERAL(5, 57, 28), // "createLineEditWithSaveButton"
+QT_MOC_LITERAL(6, 86, 8), // "QWidget*"
+QT_MOC_LITERAL(7, 95, 8), // "rowIndex"
+QT_MOC_LITERAL(8, 104, 10), // "valueLimit"
+QT_MOC_LITERAL(9, 115, 6), // "modulo"
+QT_MOC_LITERAL(10, 122, 15), // "placeholderText"
+QT_MOC_LITERAL(11, 138, 8), // "errorMsg"
+QT_MOC_LITERAL(12, 147, 11), // "defaultText"
+QT_MOC_LITERAL(13, 159, 9), // "bitNumber"
+QT_MOC_LITERAL(14, 169, 8), // "bitWidth"
+QT_MOC_LITERAL(15, 178, 7), // "bin2hex"
+QT_MOC_LITERAL(16, 186, 9), // "binaryStr"
+QT_MOC_LITERAL(17, 196, 8), // "hex2Json"
+QT_MOC_LITERAL(18, 205, 8), // "QString&"
+QT_MOC_LITERAL(19, 214, 6), // "Result"
+QT_MOC_LITERAL(20, 221, 4), // "text"
+QT_MOC_LITERAL(21, 226, 8), // "bitCount"
+QT_MOC_LITERAL(22, 235, 7), // "dec2bin"
+QT_MOC_LITERAL(23, 243, 10), // "decimalStr"
+QT_MOC_LITERAL(24, 254, 7), // "hex2bin"
+QT_MOC_LITERAL(25, 262, 9), // "hexString"
+QT_MOC_LITERAL(26, 272, 7), // "bin2dec"
+QT_MOC_LITERAL(27, 280, 12), // "binaryString"
+QT_MOC_LITERAL(28, 293, 8), // "isBinary"
+QT_MOC_LITERAL(29, 302, 11), // "numericPart"
+QT_MOC_LITERAL(30, 314, 12), // "setupWidgets"
+QT_MOC_LITERAL(31, 327, 14), // "QStandardItem*"
+QT_MOC_LITERAL(32, 342, 3), // "itm"
+QT_MOC_LITERAL(33, 346, 11), // "QModelIndex"
+QT_MOC_LITERAL(34, 358, 13), // "lineEditIndex"
+QT_MOC_LITERAL(35, 372, 22), // "on_save_button_clicked"
+QT_MOC_LITERAL(36, 395, 49), // "rapidjson::PrettyWriter<rapid..."
+QT_MOC_LITERAL(37, 445, 2), // "wr"
+QT_MOC_LITERAL(38, 448, 8), // "saveData"
+QT_MOC_LITERAL(39, 457, 4), // "load"
+QT_MOC_LITERAL(40, 462, 16), // "rapidjson::Value"
+QT_MOC_LITERAL(41, 479, 9), // "jsonArray"
+QT_MOC_LITERAL(42, 489, 8), // "load_all"
+QT_MOC_LITERAL(43, 498, 12), // "load_element"
+QT_MOC_LITERAL(44, 511, 24), // "on_toggle_button_clicked"
+QT_MOC_LITERAL(45, 536, 8), // "saveItem"
+QT_MOC_LITERAL(46, 545, 18), // "selectedParentItem"
+QT_MOC_LITERAL(47, 564, 11), // "hasChildren"
+QT_MOC_LITERAL(48, 576, 12), // "selectedItem"
+QT_MOC_LITERAL(49, 589, 35), // "rapidjson::Document::Allocato..."
+QT_MOC_LITERAL(50, 625, 9), // "allocator"
+QT_MOC_LITERAL(51, 635, 20), // "rapidjson::Document&"
+QT_MOC_LITERAL(52, 656, 8), // "document"
+QT_MOC_LITERAL(53, 665, 19), // "QStandardItemModel*"
+QT_MOC_LITERAL(54, 685, 5), // "model"
+QT_MOC_LITERAL(55, 691, 10), // "QTreeView*"
+QT_MOC_LITERAL(56, 702, 8), // "treeView"
+QT_MOC_LITERAL(57, 711, 19), // "onParentItemClicked"
+QT_MOC_LITERAL(58, 731, 5), // "index"
+QT_MOC_LITERAL(59, 737, 18), // "updateChildWidgets"
+QT_MOC_LITERAL(60, 756, 10), // "dataString"
+QT_MOC_LITERAL(61, 767, 10), // "parentItem"
+QT_MOC_LITERAL(62, 778, 8), // "readItem"
+QT_MOC_LITERAL(63, 787, 16), // "setEditableFlags"
+QT_MOC_LITERAL(64, 804, 4), // "item"
+QT_MOC_LITERAL(65, 809, 8), // "editable"
+QT_MOC_LITERAL(66, 818, 12) // "blockEditing"
 
     },
-    "LMK1000Widget\0createLineEditWithSaveButton\0"
-    "QWidget*\0\0rowIndex\0valueLimit\0modulo\0"
-    "placeholderText\0errorMsg\0defaultText\0"
-    "bitNumber\0bitWidth\0bin2hex\0binaryStr\0"
-    "hex2Json\0QString&\0Result\0text\0bitCount\0"
-    "dec2bin\0decimalStr\0hex2bin\0hexString\0"
-    "bin2dec\0binaryString\0isBinary\0numericPart\0"
-    "setupWidgets\0QStandardItem*\0itm\0"
-    "QModelIndex\0lineEditIndex\0"
-    "on_save_button_clicked\0load\0filePath\0"
-    "load_all\0load_element\0on_toggle_button_clicked\0"
-    "saveItem\0selectedParentItem\0hasChildren\0"
+    "LMK1000Widget\0needSendState\0\0"
+    "rapidjson::StringBuffer&\0sb\0"
+    "createLineEditWithSaveButton\0QWidget*\0"
+    "rowIndex\0valueLimit\0modulo\0placeholderText\0"
+    "errorMsg\0defaultText\0bitNumber\0bitWidth\0"
+    "bin2hex\0binaryStr\0hex2Json\0QString&\0"
+    "Result\0text\0bitCount\0dec2bin\0decimalStr\0"
+    "hex2bin\0hexString\0bin2dec\0binaryString\0"
+    "isBinary\0numericPart\0setupWidgets\0"
+    "QStandardItem*\0itm\0QModelIndex\0"
+    "lineEditIndex\0on_save_button_clicked\0"
+    "rapidjson::PrettyWriter<rapidjson::StringBuffer>&\0"
+    "wr\0saveData\0load\0rapidjson::Value\0"
+    "jsonArray\0load_all\0load_element\0"
+    "on_toggle_button_clicked\0saveItem\0"
+    "selectedParentItem\0hasChildren\0"
     "selectedItem\0rapidjson::Document::AllocatorType&\0"
-    "allocator\0rapidjson::Value&\0jsonArray\0"
+    "allocator\0rapidjson::Document&\0document\0"
     "QStandardItemModel*\0model\0QTreeView*\0"
     "treeView\0onParentItemClicked\0index\0"
     "updateChildWidgets\0dataString\0parentItem\0"
@@ -122,54 +133,62 @@ static const uint qt_meta_data_LMK1000Widget[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      19,   14, // methods
+      21,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags
+       1,    1,  119,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       1,    8,  109,    3, 0x08 /* Private */,
-      12,    1,  126,    3, 0x08 /* Private */,
-      14,    4,  129,    3, 0x08 /* Private */,
-      19,    2,  138,    3, 0x08 /* Private */,
-      21,    1,  143,    3, 0x08 /* Private */,
-      23,    1,  146,    3, 0x08 /* Private */,
-      25,    1,  149,    3, 0x08 /* Private */,
-      27,    3,  152,    3, 0x08 /* Private */,
-      32,    0,  159,    3, 0x08 /* Private */,
-      33,    1,  160,    3, 0x08 /* Private */,
-      35,    0,  163,    3, 0x08 /* Private */,
-      36,    0,  164,    3, 0x08 /* Private */,
-      37,    0,  165,    3, 0x08 /* Private */,
-      38,    1,  166,    3, 0x08 /* Private */,
-      40,    5,  169,    3, 0x08 /* Private */,
-      50,    1,  180,    3, 0x08 /* Private */,
-      52,    4,  183,    3, 0x08 /* Private */,
-      56,    2,  192,    3, 0x08 /* Private */,
-      59,    1,  197,    3, 0x08 /* Private */,
+       5,    8,  122,    2, 0x08 /* Private */,
+      15,    1,  139,    2, 0x08 /* Private */,
+      17,    4,  142,    2, 0x08 /* Private */,
+      22,    2,  151,    2, 0x08 /* Private */,
+      24,    1,  156,    2, 0x08 /* Private */,
+      26,    1,  159,    2, 0x08 /* Private */,
+      28,    1,  162,    2, 0x08 /* Private */,
+      30,    3,  165,    2, 0x08 /* Private */,
+      35,    1,  172,    2, 0x08 /* Private */,
+      38,    0,  175,    2, 0x08 /* Private */,
+      39,    1,  176,    2, 0x08 /* Private */,
+      42,    0,  179,    2, 0x08 /* Private */,
+      43,    0,  180,    2, 0x08 /* Private */,
+      44,    0,  181,    2, 0x08 /* Private */,
+      45,    2,  182,    2, 0x08 /* Private */,
+      47,    5,  187,    2, 0x08 /* Private */,
+      57,    1,  198,    2, 0x08 /* Private */,
+      59,    4,  201,    2, 0x08 /* Private */,
+      63,    2,  210,    2, 0x08 /* Private */,
+      66,    1,  215,    2, 0x08 /* Private */,
+
+ // signals: parameters
+    QMetaType::Void, 0x80000000 | 3,    4,
 
  // slots: parameters
-    0x80000000 | 2, QMetaType::Int, QMetaType::Double, QMetaType::Double, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Int,    4,    5,    6,    7,    8,    9,   10,   11,
-    QMetaType::QString, QMetaType::QString,   13,
-    QMetaType::QString, 0x80000000 | 15, 0x80000000 | 15, QMetaType::Int, QMetaType::Int,   16,   17,   10,   18,
-    QMetaType::QString, QMetaType::QString, QMetaType::Int,   20,   11,
-    QMetaType::QString, 0x80000000 | 15,   22,
-    QMetaType::QString, QMetaType::QString,   24,
-    QMetaType::Bool, QMetaType::QString,   26,
-    QMetaType::Void, 0x80000000 | 28, QMetaType::Int, 0x80000000 | 30,   29,    4,   31,
+    0x80000000 | 6, QMetaType::Int, QMetaType::Double, QMetaType::Double, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Int,    7,    8,    9,   10,   11,   12,   13,   14,
+    QMetaType::QString, QMetaType::QString,   16,
+    QMetaType::QString, 0x80000000 | 18, 0x80000000 | 18, QMetaType::Int, QMetaType::Int,   19,   20,   13,   21,
+    QMetaType::QString, QMetaType::QString, QMetaType::Int,   23,   14,
+    QMetaType::QString, 0x80000000 | 18,   25,
+    QMetaType::QString, QMetaType::QString,   27,
+    QMetaType::Bool, QMetaType::QString,   29,
+    QMetaType::Void, 0x80000000 | 31, QMetaType::Int, 0x80000000 | 33,   32,    7,   34,
+    QMetaType::Void, 0x80000000 | 36,   37,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   34,
+    QMetaType::Void, 0x80000000 | 40,   41,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 28,   39,
-    QMetaType::Void, 0x80000000 | 28, 0x80000000 | 42, 0x80000000 | 44, 0x80000000 | 46, 0x80000000 | 48,   41,   43,   45,   47,   49,
-    QMetaType::Void, 0x80000000 | 30,   51,
-    QMetaType::Void, 0x80000000 | 46, QMetaType::QString, 0x80000000 | 28, QMetaType::QString,   47,   53,   54,   55,
-    QMetaType::Void, 0x80000000 | 28, QMetaType::Bool,   57,   58,
-    QMetaType::Void, 0x80000000 | 46,   47,
+    QMetaType::Void, 0x80000000 | 31, 0x80000000 | 36,   46,   37,
+    QMetaType::Void, 0x80000000 | 31, 0x80000000 | 49, 0x80000000 | 51, 0x80000000 | 53, 0x80000000 | 55,   48,   50,   52,   54,   56,
+    QMetaType::Void, 0x80000000 | 33,   58,
+    QMetaType::Void, 0x80000000 | 53, QMetaType::QString, 0x80000000 | 31, QMetaType::QString,   54,   60,   61,   62,
+    QMetaType::Void, 0x80000000 | 31, QMetaType::Bool,   64,   65,
+    QMetaType::Void, 0x80000000 | 53,   54,
 
        0        // eod
 };
@@ -180,51 +199,46 @@ void LMK1000Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         auto *_t = static_cast<LMK1000Widget *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: { QWidget* _r = _t->createLineEditWithSaveButton((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5])),(*reinterpret_cast< const QString(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7])),(*reinterpret_cast< int(*)>(_a[8])));
+        case 0: _t->needSendState((*reinterpret_cast< rapidjson::StringBuffer(*)>(_a[1]))); break;
+        case 1: { QWidget* _r = _t->createLineEditWithSaveButton((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5])),(*reinterpret_cast< const QString(*)>(_a[6])),(*reinterpret_cast< int(*)>(_a[7])),(*reinterpret_cast< int(*)>(_a[8])));
             if (_a[0]) *reinterpret_cast< QWidget**>(_a[0]) = std::move(_r); }  break;
-        case 1: { QString _r = _t->bin2hex((*reinterpret_cast< const QString(*)>(_a[1])));
+        case 2: { QString _r = _t->bin2hex((*reinterpret_cast< const QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 2: { QString _r = _t->hex2Json((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])));
+        case 3: { QString _r = _t->hex2Json((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 3: { QString _r = _t->dec2bin((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
+        case 4: { QString _r = _t->dec2bin((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 4: { QString _r = _t->hex2bin((*reinterpret_cast< QString(*)>(_a[1])));
+        case 5: { QString _r = _t->hex2bin((*reinterpret_cast< QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 5: { QString _r = _t->bin2dec((*reinterpret_cast< const QString(*)>(_a[1])));
+        case 6: { QString _r = _t->bin2dec((*reinterpret_cast< const QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 6: { bool _r = _t->isBinary((*reinterpret_cast< const QString(*)>(_a[1])));
+        case 7: { bool _r = _t->isBinary((*reinterpret_cast< const QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 7: _t->setupWidgets((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QModelIndex(*)>(_a[3]))); break;
-        case 8: _t->on_save_button_clicked(); break;
-        case 9: _t->load((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 10: _t->load_all(); break;
-        case 11: _t->load_element(); break;
-        case 12: _t->on_toggle_button_clicked(); break;
-        case 13: _t->saveItem((*reinterpret_cast< QStandardItem*(*)>(_a[1]))); break;
-        case 14: _t->hasChildren((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< rapidjson::Document::AllocatorType(*)>(_a[2])),(*reinterpret_cast< rapidjson::Value(*)>(_a[3])),(*reinterpret_cast< QStandardItemModel*(*)>(_a[4])),(*reinterpret_cast< QTreeView*(*)>(_a[5]))); break;
-        case 15: _t->onParentItemClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
-        case 16: _t->updateChildWidgets((*reinterpret_cast< QStandardItemModel*(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< QStandardItem*(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4]))); break;
-        case 17: _t->setEditableFlags((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
-        case 18: _t->blockEditing((*reinterpret_cast< QStandardItemModel*(*)>(_a[1]))); break;
+        case 8: _t->setupWidgets((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QModelIndex(*)>(_a[3]))); break;
+        case 9: _t->on_save_button_clicked((*reinterpret_cast< rapidjson::PrettyWriter<rapidjson::StringBuffer>(*)>(_a[1]))); break;
+        case 10: _t->saveData(); break;
+        case 11: _t->load((*reinterpret_cast< const rapidjson::Value(*)>(_a[1]))); break;
+        case 12: _t->load_all(); break;
+        case 13: _t->load_element(); break;
+        case 14: _t->on_toggle_button_clicked(); break;
+        case 15: _t->saveItem((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< rapidjson::PrettyWriter<rapidjson::StringBuffer>(*)>(_a[2]))); break;
+        case 16: _t->hasChildren((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< rapidjson::Document::AllocatorType(*)>(_a[2])),(*reinterpret_cast< rapidjson::Document(*)>(_a[3])),(*reinterpret_cast< QStandardItemModel*(*)>(_a[4])),(*reinterpret_cast< QTreeView*(*)>(_a[5]))); break;
+        case 17: _t->onParentItemClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 18: _t->updateChildWidgets((*reinterpret_cast< QStandardItemModel*(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< QStandardItem*(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4]))); break;
+        case 19: _t->setEditableFlags((*reinterpret_cast< QStandardItem*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+        case 20: _t->blockEditing((*reinterpret_cast< QStandardItemModel*(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 14:
+        case 16:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 3:
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QStandardItemModel* >(); break;
             case 4:
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QTreeView* >(); break;
-            }
-            break;
-        case 16:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QStandardItemModel* >(); break;
             }
             break;
         case 18:
@@ -234,6 +248,22 @@ void LMK1000Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QStandardItemModel* >(); break;
             }
             break;
+        case 20:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+            case 0:
+                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QStandardItemModel* >(); break;
+            }
+            break;
+        }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            using _t = void (LMK1000Widget::*)(rapidjson::StringBuffer & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&LMK1000Widget::needSendState)) {
+                *result = 0;
+                return;
+            }
         }
     }
 }
@@ -267,15 +297,22 @@ int LMK1000Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 19)
+        if (_id < 21)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 19;
+        _id -= 21;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 19)
+        if (_id < 21)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 19;
+        _id -= 21;
     }
     return _id;
+}
+
+// SIGNAL 0
+void LMK1000Widget::needSendState(rapidjson::StringBuffer & _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

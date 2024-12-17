@@ -14,6 +14,7 @@ QString LMK1000Widget::bin2hex(const QString& binaryStr) {
 
 QString LMK1000Widget::hex2Json(QString& Result, QString& text, int bitNumber, int bitCount) {
 
+    if (text.isEmpty()) return "N/A";
     int contrl_summ = bitNumber + Result.size();
     if (bitNumber > bitCount - 1) Result = "";
     else if (bitNumber < bitCount - 1) {
@@ -23,6 +24,7 @@ QString LMK1000Widget::hex2Json(QString& Result, QString& text, int bitNumber, i
     } else Result += text;
 
     return Result;
+
 }
 
 QString LMK1000Widget::dec2bin(const QString& decimalStr, int bitWidth) {
@@ -48,10 +50,8 @@ QString LMK1000Widget::dec2bin(const QString& decimalStr, int bitWidth) {
 QString LMK1000Widget::hex2bin(QString &hexString) {
 
     bool ok;
-    int bitCount;
-    if (ADflag) bitCount = 8;
-    else if (LMKflag) bitCount = 32;
-    else if (HCMflag) bitCount = 0;
+
+    if (hexString == "N/A") return hexString;
 
     hexString = hexString.remove("0x").toUpper();
     int value = hexString.toInt(&ok, 16);
@@ -81,5 +81,3 @@ bool LMK1000Widget::isBinary(const QString &numericPart) {
     filtered.remove('1');
     return filtered.isEmpty();
 }
-
-

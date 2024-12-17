@@ -58,15 +58,17 @@ private slots:
 
     QString dec2bin(const QString& decimalStr, int bitWidth);
 
-    QString hex2bin(QString &hexString/*, int binNumber*/) ;
+    QString hex2bin(QString &hexString);
 
     QString bin2dec(const QString& binaryString);
 
     bool isBinary(const QString &numericPart);
 
-    void on_save_button_clicked();
+    void on_save_button_clicked(rapidjson::PrettyWriter<rapidjson::StringBuffer> &wr);
 
-    void load(const QString& filePath);
+    void saveData();
+
+    void load(const rapidjson::Value& jsonArray);
 
     void load_all();
 
@@ -74,21 +76,27 @@ private slots:
 
     void on_toggle_button_clicked();
 
-    void saveItem(QStandardItem *selectedParentItem);
+    void saveItem(QStandardItem *selectedParentItem, rapidjson::PrettyWriter<rapidjson::StringBuffer> &wr);
 
-    void hasChildren(QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Value &jsonArray, QStandardItemModel* model, QTreeView* treeView);
+    void hasChildren(QStandardItem *selectedItem, rapidjson::Document::AllocatorType &allocator, rapidjson::Document &document, QStandardItemModel* model, QTreeView* treeView);
 
     void onParentItemClicked(const QModelIndex& index);
 
     void updateChildWidgets(QStandardItemModel* model, QString dataString, QStandardItem* parentItem, QString readItem);
 
-    void onItemChanged(QStandardItem* item);
+//    void onItemChanged(QStandardItem* item);
 
     void setEditableFlags(QStandardItem *item, bool editable);
 
     void blockEditing(QStandardItemModel *model);
 
+signals:
+
+    void needSendState(rapidjson::StringBuffer& sb);
+
 private:
+
+    rapidjson::StringBuffer buf;
 
     QTreeView *treeView;
 
@@ -113,6 +121,8 @@ private:
     bool ADflag = 1;
 
     int bitCount = 8;
+
+    QVBoxLayout *layout;
 
     void viewTree();
 

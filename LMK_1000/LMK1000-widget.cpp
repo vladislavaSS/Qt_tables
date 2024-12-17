@@ -3,17 +3,14 @@
 LMK1000Widget::LMK1000Widget(QWidget *parent)
     : QWidget{parent}, treeView(new QTreeView(this)), model(new QStandardItemModel(this)), treeExpanded(false)
 {
+    layout = new QVBoxLayout(this);
+    setLayout(layout);
     viewTree();
-    treeView -> setColumnWidth(0, 200);
-
+    treeView->setColumnWidth(0, 200);
 }
 
 void LMK1000Widget::viewTree()
 {
-    QVBoxLayout *layout = new QVBoxLayout();
-
-    QStandardItemModel *model = new QStandardItemModel();
-
     model->setColumnCount(2);
     model->setHorizontalHeaderLabels({"Register", "Bit Value"});
 
@@ -285,19 +282,19 @@ void LMK1000Widget::viewTree()
     layout->addWidget(buttons);
 
     QWidget *buttons2 = new QWidget();
-    QHBoxLayout *layout_buttons2 = new QHBoxLayout(buttons);
+//    QHBoxLayout *layout_buttons2 = new QHBoxLayout(buttons);
 
     save_elem = new QPushButton("Save element", buttons);
-    layout_buttons2->addWidget(save_elem);
+    layout_buttons->addWidget(save_elem);
 
     load_elem = new QPushButton("Download element", buttons);
-    layout_buttons2->addWidget(load_elem);
+    layout_buttons->addWidget(load_elem);
 
-    buttons2->setLayout(layout_buttons2);
+    buttons2->setLayout(layout_buttons);
     layout->addWidget(buttons2);
 
     connect(toggleButton, &QPushButton::clicked, this, &LMK1000Widget::on_toggle_button_clicked);
-    connect(saveButton, &QPushButton::clicked, this, &LMK1000Widget::on_save_button_clicked);
+    connect(saveButton, &QPushButton::clicked, this, &LMK1000Widget::saveData);
     connect(treeView, &QTreeView::clicked, this, &LMK1000Widget::onParentItemClicked);
     connect(loadButton, &QPushButton::clicked, this, &LMK1000Widget::load_all);
     connect(load_elem, &QPushButton::clicked, this, &LMK1000Widget::load_element);
