@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/acu_status.dir/acu_status_autogen/mocs_compilation.cpp.o CMakeFiles/acu_status.dir/main.cpp.o CMakeFiles/acu_status.dir/mainwindow.cpp.o CMakeFiles/acu_status.dir/asuwidget.cpp.o -o acu_status  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3 

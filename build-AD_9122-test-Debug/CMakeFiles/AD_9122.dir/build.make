@@ -139,47 +139,47 @@ CMakeFiles/AD_9122.dir/AD9122-widget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AD_9122.dir/AD9122-widget.cpp.s"
 	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/AD9122-widget.cpp -o CMakeFiles/AD_9122.dir/AD9122-widget.cpp.s
 
-CMakeFiles/AD_9122.dir/сreate.cpp.o: CMakeFiles/AD_9122.dir/flags.make
-CMakeFiles/AD_9122.dir/сreate.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/сreate.cpp
-CMakeFiles/AD_9122.dir/сreate.cpp.o: CMakeFiles/AD_9122.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AD_9122.dir/сreate.cpp.o"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AD_9122.dir/сreate.cpp.o -MF CMakeFiles/AD_9122.dir/сreate.cpp.o.d -o CMakeFiles/AD_9122.dir/сreate.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/сreate.cpp
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o: CMakeFiles/AD_9122.dir/flags.make
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o: CMakeFiles/AD_9122.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o -MF CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o.d -o CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp
 
-CMakeFiles/AD_9122.dir/сreate.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AD_9122.dir/сreate.cpp.i"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/сreate.cpp > CMakeFiles/AD_9122.dir/сreate.cpp.i
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp > CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i
 
-CMakeFiles/AD_9122.dir/сreate.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AD_9122.dir/сreate.cpp.s"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/сreate.cpp -o CMakeFiles/AD_9122.dir/сreate.cpp.s
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp -o CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s
 
-CMakeFiles/AD_9122.dir/buttons.cpp.o: CMakeFiles/AD_9122.dir/flags.make
-CMakeFiles/AD_9122.dir/buttons.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/buttons.cpp
-CMakeFiles/AD_9122.dir/buttons.cpp.o: CMakeFiles/AD_9122.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AD_9122.dir/buttons.cpp.o"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AD_9122.dir/buttons.cpp.o -MF CMakeFiles/AD_9122.dir/buttons.cpp.o.d -o CMakeFiles/AD_9122.dir/buttons.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/buttons.cpp
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o: CMakeFiles/AD_9122.dir/flags.make
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o: CMakeFiles/AD_9122.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o -MF CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o.d -o CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp
 
-CMakeFiles/AD_9122.dir/buttons.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AD_9122.dir/buttons.cpp.i"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/buttons.cpp > CMakeFiles/AD_9122.dir/buttons.cpp.i
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp > CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i
 
-CMakeFiles/AD_9122.dir/buttons.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AD_9122.dir/buttons.cpp.s"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/buttons.cpp -o CMakeFiles/AD_9122.dir/buttons.cpp.s
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp -o CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s
 
-CMakeFiles/AD_9122.dir/transform.cpp.o: CMakeFiles/AD_9122.dir/flags.make
-CMakeFiles/AD_9122.dir/transform.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/transform.cpp
-CMakeFiles/AD_9122.dir/transform.cpp.o: CMakeFiles/AD_9122.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AD_9122.dir/transform.cpp.o"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AD_9122.dir/transform.cpp.o -MF CMakeFiles/AD_9122.dir/transform.cpp.o.d -o CMakeFiles/AD_9122.dir/transform.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/transform.cpp
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o: CMakeFiles/AD_9122.dir/flags.make
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o: /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o: CMakeFiles/AD_9122.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o -MF CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o.d -o CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o -c /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp
 
-CMakeFiles/AD_9122.dir/transform.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AD_9122.dir/transform.cpp.i"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/transform.cpp > CMakeFiles/AD_9122.dir/transform.cpp.i
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp > CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i
 
-CMakeFiles/AD_9122.dir/transform.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AD_9122.dir/transform.cpp.s"
-	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/transform.cpp -o CMakeFiles/AD_9122.dir/transform.cpp.s
+CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s"
+	/usr/bin/clang++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp -o CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s
 
 # Object files for target AD_9122
 AD_9122_OBJECTS = \
@@ -188,9 +188,9 @@ AD_9122_OBJECTS = \
 "CMakeFiles/AD_9122.dir/mainwindow.cpp.o" \
 "CMakeFiles/AD_9122.dir/data.cpp.o" \
 "CMakeFiles/AD_9122.dir/AD9122-widget.cpp.o" \
-"CMakeFiles/AD_9122.dir/сreate.cpp.o" \
-"CMakeFiles/AD_9122.dir/buttons.cpp.o" \
-"CMakeFiles/AD_9122.dir/transform.cpp.o"
+"CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o" \
+"CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o" \
+"CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o"
 
 # External object files for target AD_9122
 AD_9122_EXTERNAL_OBJECTS =
@@ -200,9 +200,9 @@ AD_9122: CMakeFiles/AD_9122.dir/main.cpp.o
 AD_9122: CMakeFiles/AD_9122.dir/mainwindow.cpp.o
 AD_9122: CMakeFiles/AD_9122.dir/data.cpp.o
 AD_9122: CMakeFiles/AD_9122.dir/AD9122-widget.cpp.o
-AD_9122: CMakeFiles/AD_9122.dir/сreate.cpp.o
-AD_9122: CMakeFiles/AD_9122.dir/buttons.cpp.o
-AD_9122: CMakeFiles/AD_9122.dir/transform.cpp.o
+AD_9122: CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o
+AD_9122: CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o
+AD_9122: CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o
 AD_9122: CMakeFiles/AD_9122.dir/build.make
 AD_9122: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 AD_9122: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3

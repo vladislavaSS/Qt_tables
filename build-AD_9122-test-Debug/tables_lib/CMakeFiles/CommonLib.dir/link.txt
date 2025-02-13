@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar-14 qc libCommonLib.a CMakeFiles/CommonLib.dir/CommonLib_autogen/mocs_compilation.cpp.o CMakeFiles/CommonLib.dir/buttons.cpp.o CMakeFiles/CommonLib.dir/transform.cpp.o CMakeFiles/CommonLib.dir/сreate.cpp.o
+/usr/bin/llvm-ranlib-14 libCommonLib.a

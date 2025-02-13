@@ -1,0 +1,495 @@
+{
+	"fields": {
+		"registers": [
+			{
+				"name": "0x00",
+				"addresses": [
+        		{
+					"address": "Reset",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "31",
+							"name": "Reset",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_MUX [1:0]",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "18:17",
+							"name": "CLKout0_MUX [1:0]",
+							"default": "00",
+							"data":["00 - Bypassed",
+									"01 - Divided",	
+									"10 - Delayed",
+									"11 - Divided and Delayed"]
+						}
+					]
+				},
+				{
+					"address": "CLKout0_EN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "CLKout0_EN",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DIV [7:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:8",
+							"name": "CLKout0_DIV [7:0]",
+							"default": "2"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DLY [3:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "CLKout0_DLY [3:0]",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+			{
+				"name": "0x01",
+				"addresses": [
+				{
+					"address": "CLKout0_MUX [1:0]",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "18:17",
+							"name": "CLKout0_MUX [1:0]",
+							"default": "00",
+							"data":["00 - Bypassed",
+									"01 - Divided",	
+									"10 - Delayed",
+									"11 - Divided and Delayed"]
+						}
+					]
+				},
+				{
+					"address": "CLKout0_EN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "CLKout0_EN",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DIV [7:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:8",
+							"name": "CLKout0_DIV [7:0]",
+							"default": "2"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DLY [3:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "CLKout0_DLY [3:0]",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+            {
+				"name": "0x02",
+				"addresses": [
+				{
+					"address": "CLKout0_MUX [1:0]",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "18:17",
+							"name": "CLKout0_MUX [1:0]",
+							"default": "00",
+							"data":["00 - Bypassed",
+									"01 - Divided",	
+									"10 - Delayed",
+									"11 - Divided and Delayed"]
+						}
+					]
+				},
+				{
+					"address": "CLKout0_EN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "CLKout0_EN",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DIV [7:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:8",
+							"name": "CLKout0_DIV [7:0]",
+							"default": "2"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DLY [3:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "CLKout0_DLY [3:0]",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+            {
+				"name": "0x03",
+				"addresses": [
+				{
+					"address": "CLKout0_MUX [1:0]",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "18:17",
+							"name": "CLKout0_MUX [1:0]",
+							"default": "00",
+							"data":["00 - Bypassed",
+									"01 - Divided",	
+									"10 - Delayed",
+									"11 - Divided and Delayed"]
+						}
+					]
+				},
+				{
+					"address": "CLKout0_EN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "CLKout0_EN",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DIV [7:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:8",
+							"name": "CLKout0_DIV [7:0]",
+							"default": "2"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DLY [3:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "CLKout0_DLY [3:0]",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+            {
+				"name": "0x04",
+				"addresses": [
+				{
+					"address": "CLKout0_MUX [1:0]",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "18:17",
+							"name": "CLKout0_MUX [1:0]",
+							"default": "00",
+							"data":["00 - Bypassed",
+									"01 - Divided",	
+									"10 - Delayed",
+									"11 - Divided and Delayed"]
+						}
+					]
+				},
+				{
+					"address": "CLKout0_EN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "CLKout0_EN",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DIV [7:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:8",
+							"name": "CLKout0_DIV [7:0]",
+							"default": "2"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DLY [3:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "CLKout0_DLY [3:0]",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+            {
+				"name": "0x05",
+				"addresses": [
+				{
+					"address": "CLKout0_MUX [1:0]",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "18:17",
+							"name": "CLKout0_MUX [1:0]",
+							"default": "00",
+							"data":["00 - Bypassed",
+									"01 - Divided",	
+									"10 - Delayed",
+									"11 - Divided and Delayed"]
+						}
+					]
+				},
+				{
+					"address": "CLKout0_EN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "CLKout0_EN",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DIV [7:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:8",
+							"name": "CLKout0_DIV [7:0]",
+							"default": "2"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DLY [3:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "CLKout0_DLY [3:0]",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+            {
+				"name": "0x06",
+				"addresses": [
+				{
+					"address": "CLKout0_MUX [1:0]",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "18:17",
+							"name": "CLKout0_MUX [1:0]",
+							"default": "00",
+							"data":["00 - Bypassed",
+									"01 - Divided",	
+									"10 - Delayed",
+									"11 - Divided and Delayed"]
+						}
+					]
+				},
+				{
+					"address": "CLKout0_EN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "CLKout0_EN",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DIV [7:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:8",
+							"name": "CLKout0_DIV [7:0]",
+							"default": "2"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DLY [3:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "CLKout0_DLY [3:0]",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+            {
+				"name": "0x07",
+				"addresses": [
+				{
+					"address": "CLKout0_MUX [1:0]",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "18:17",
+							"name": "CLKout0_MUX [1:0]",
+							"default": "00",
+							"data":["00 - Bypassed",
+									"01 - Divided",	
+									"10 - Delayed",
+									"11 - Divided and Delayed"]
+						}
+					]
+				},
+				{
+					"address": "CLKout0_EN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "CLKout0_EN",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DIV [7:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:8",
+							"name": "CLKout0_DIV [7:0]",
+							"default": "2"
+						}
+					]
+				},
+				{
+					"address": "CLKout0_DLY [3:0]",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "CLKout0_DLY [3:0]",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+            {
+                "name": "0x09",
+				"addresses": [
+				{
+					"address": "Vboost",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "Vboost",
+							"default": "0"
+						}
+					]
+				}
+                ]
+            },
+            {
+                "name": "0x14",
+				"addresses": [
+				{
+					"address": "CLKin_SELECT",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "29",
+							"name": "CLKin_SELECT",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "EN_CLKout_Global",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "27",
+							"name": "EN_CLKout_Global",
+							"default": "1"
+						}
+					]
+				},
+				{
+					"address": "POWERDOWN",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "26",
+							"name": "POWERDOWN",
+							"default": "0"
+						}
+					]
+				}
+			]
+            }
+        ]
+    }
+}

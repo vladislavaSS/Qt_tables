@@ -1,0 +1,1343 @@
+{
+	"fields": {
+		"registers": [
+			{
+				"name": "Comm",
+				"address": "0x00",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "SDIO",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "6",
+						"name": "LSB_FIRST",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "Reset",
+						"default": "0"
+					}
+				]
+			},
+			{
+				"name": "Power Control",
+				"address": "0x01",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "Power down | DAC 1",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "6",
+						"name": "Power down Q DAC 1",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "Power down data receiver",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "4",
+						"name": "Power down auxiliary ADC",
+						"default": "1"
+					}
+				]
+			},
+			{
+				"name": "Data Format",
+				"address": "0x03",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "Binary data format",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "6",
+						"name": "Q data first",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "MSB swap",
+						"default": "0"
+					},
+					{
+						"method": "ComboBox",
+						"bit": "1:0",
+						"name": "Data Bus Width [1:0]",
+						"default": "00",
+						"data": ["00 = word mode; 16-bit interface bus width.",
+							      "01 = byte mode; 8-bit interface bus width.",
+							      "10 = nibble mode; 4-bit interface bus width.",
+							      "11 = invalid. "]
+					}
+				]
+			},
+			{
+				"name": "Interrupt Enable",
+				"address": "0x04",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "Enable PLL lock lost",
+						"default": "0",
+						"access": "RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "6",
+						"name": "Enable PLL locked",
+						"default": "0",
+						"access": "RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "Enable sync signal lost",
+						"default": "0",
+						"access": "RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "4",
+						"name": "Enable sync signal locked",
+						"default": "0",
+						"access": "RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "3",
+						"name": "Enable FIFO Warning 1",
+						"default": "0",
+						"access": "RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "2",
+						"name": "Enable FIFO Warning 2",
+						"default": "0",
+						"access": "RO"
+					}
+				]
+			},
+			{
+				"name": "Interrupt Enable",
+				"address": "0x05",
+				"bits": [
+					{
+						"method": "",
+						"bit": "7:5",
+						"name": "Set to 0",
+						"default": "000"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "4",
+						"name": "Enable AED compare pass",
+						"default": "0",
+						"access": "RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "3",
+						"name": "Enable AED compare fail",
+						"default": "0",
+						"access": "RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "2",
+						"name": "Enable SED compare fail",
+						"default": "0",
+						"access": "RO"
+					},
+					{
+						"method": "",
+						"bit": "1:0",
+						"name": "Set to 0",
+						"default": "00"
+					}
+				]
+			},
+			{
+				"name": "Event Flag",
+				"addresses": [
+        		{
+					"address": "0x06",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "PLL lock lost",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "PLL locked ",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Sync signal lost",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Sync signal locked",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "FIFO Warning 1",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "FIFO Warning 2",
+							"default": ""
+						}
+					]
+				},
+				{
+					"address": "0x07",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "AED compare pass 1",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "AED compare fail ",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "SED compare fail",
+							"default": ""
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "Clock Receiver Control",
+				"address": "0x08",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "DACCLK duty correction",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "6",
+						"name": "REFCLK duty correction",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "DACCLK cross-correction",
+						"default": "1"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "4",
+						"name": "REFCLK cross-correction",
+						"default": "1"
+					}
+				]
+			},
+			{
+				"name": "PLL Control",
+				"addresses": [
+					{
+						"address": "0x0A",
+						"bits": [
+							{
+								"method": "CheckBox",
+								"bit": "7",
+								"name": "PLL enable",
+								"default": "0"
+							},
+							{
+								"method": "CheckBox",
+								"bit": "6",
+								"name": "PLL manual enable",
+								"default": "1"
+							},
+							{
+								"method": "LineEdit",
+								"bit": "5:0",
+								"name": "Manual VCO Band[5:0]",
+								"default": "000000"
+							}
+						]
+					},
+					{
+						"address": "0x0C",
+						"bits": [
+							{
+								"method": "ComboBox",
+								"bit": "7:6",
+								"name": "PLL Loop Bandwidth[1:0] S",
+								"default": "11",
+								"data":["11 = narrowest bandwidth",	
+										"10",
+										"01",
+										"00 = widest bandwidth"]
+							},
+							{
+								"method": "LineEdit",
+								"bit": "4:0",
+								"name": "PLL Charge Pump Current[4:0]",
+								"default": "10001"
+							}
+						]
+					},
+					{
+						"address": "0x0D",
+						"bits": [
+							{
+								"method": "ComboBox",
+								"bit": "7:6",
+								"name": "N2[1:0]",
+								"default": "11",
+								"data":["11 = fDACCLK/fPC_CLK = 16",
+										"10 = fDACCLK/fPC_CLK = 8",	
+										"01 = fDACCLK/fPC_CLK = 4",
+										"00 = fDACCLK/fPC_CLK = 2"]			
+							},
+							{
+								"method": "CheckBox",
+								"bit": "4",
+								"name": "PLL cross-control enable",
+								"default": "1"
+							},
+							{
+								"method": "ComboBox",
+								"bit": "3:2",
+								"name": "N0[1:0]",
+								"default": "10",
+								"data":["10 = fVCO/fDACCLK = 4",
+										"11 = fVCO/fDACCLK = 4",	
+										"01 = fVCO/fDACCLK = 2",
+										"00 = fVCO/fDACCLK = 1"]
+							},
+							{
+								"method": "ComboBox",
+								"bit": "1:0",
+								"name": "N1[1:0]",
+								"default": "01",
+								"data":["01 = fDACCLK/fREFCLK = 4",
+										"00 = fDACCLK/fREFCLK = 2",	
+										"10 = fDACCLK/fREFCLK = 8",
+										"11 = fDACCLK/fREFCLK = 16"]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "PLL Status",
+				"addresses":[
+					{
+						"address": "0x0E",
+						"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "PLL locked",
+							"default": "",
+							"access":"RO"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "3:0",
+							"name": "VCO Control Voltage[3:0]",
+							"default": "",
+							"access":"RO"
+						}
+						]
+					}, 
+					{
+						"address": "0x0F",
+						"bits": [
+							{
+								"method": "LineEdit",
+								"bit": "5:0",
+								"name": "VCO Band Readback[5:0]",
+								"default": "",
+								"access":"RO"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Sync Control",
+				"addresses":[
+				{
+					"address": "0x10",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Sync enable",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Data/FIFO rate toggle",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "Rising edge sync",
+							"default": "1"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "2:0",
+							"name": "Sync Averaging[2:0]",
+							"default": "000"
+						}
+					]
+				},
+				{
+					"address": "0x11",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "5:0",
+							"name": "Sync Phase Request[5:0]",
+							"default": "000000"
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "Sync Status",
+				"addresses":[
+				{
+					"address": "0x12",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Sync lost",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Sync locked",
+							"default": ""
+						}
+					]
+				},
+				{
+					"address": "0x13",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:0",
+							"name": "Sync Phase Readback[7:0]",
+							"default": "",
+							"access":"RO"
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "Data Receiver Status",
+				"address": "0x15",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "LVDS FRAME level high",
+						"default": "",
+						"access":"RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "4",
+						"name": "LVDS FRAME level low",
+						"default": "",
+						"access":"RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "3",
+						"name": "LVDS DCI level high",
+						"default": "",
+						"access":"RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "2",
+						"name": "LVDS DCI level low",
+						"default": "",
+						"access":"RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "1",
+						"name": "LVDS data level high",
+						"default": "",
+						"access":"RO"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "0",
+						"name": "LVDS data level low",
+						"default": "",
+						"access":"RO"
+					}
+				]
+			},
+			{
+				"name": "DCI Delay ",
+				"address": "0x16",
+				"bits": [
+					{
+						"method": "ComboBox",
+						"bit": "1:0",
+						"name": "DCI Delay[1:0]",
+						"default": "00",
+						"data":["00 = 350 ps delay of DCI signal",
+								"01 = 590 ps delay of DCI signal",
+								"10 = 800 ps delay of DCI signal",
+								"11 = 925 ps delay of DCI signal"]
+					}
+				]
+			},
+			{
+				"name": "FIFO Control",
+				"address": "0x17",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "2:0",
+						"name": "FIFO Phase Offset[2:0] ",
+						"default": "100"
+					}
+				]
+			},
+			{
+				"name": "FIFO Status",
+				"addresses":[
+				{
+					"address": "0x18",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "FIFO Warning 1",
+							"default": "",
+							"access":"RO"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "FIFO Warning 2 ",
+							"default": "",
+							"access":"RO"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "FIFO soft align acknowledge ",
+							"default": "",
+							"access":"RO"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "FIFO soft align request ",
+							"default": "0",
+							"access":"RO"
+						}
+					]
+				}, 
+				{
+					"address": "0x19",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:0",
+							"name": "FIFO Level[7:0]",
+							"default": "",
+							"access":"RO"
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "Datapath Control",
+				"address": "0x1B",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "Bypass premod",
+						"default": "1"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "6",
+						"name": "Bypass sinc",
+						"default": "1"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": " Bypass NCO",
+						"default": "1"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "3",
+						"name": "NCO gain",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "2",
+						"name": "Bypass phase compensation and dc offset",
+						"default": "1"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "1",
+						"name": "Select sideband ",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "0",
+						"name": "Send I data to Q data",
+						"default": "0"
+					}
+				]
+			},
+			{
+				"name": "HB1 Control",
+				"address": "0x1C",
+				"bits": [
+					{
+						"method": "ComboBox",
+						"bit": "2:1",
+						"name": "HB1[1:0] ",
+						"default": "00",
+						"data":["00", 
+								"01", 
+								"10", 
+								"11"]
+					},
+					{
+						"method": "CheckBox",
+						"bit": "0",
+						"name": "Bypass HB1",
+						"default": "0"
+					}
+				]
+			},
+			{
+				"name": "HB2 Control",
+				"address": "0x1D",
+				"bits": [
+					{
+						"method": "ComboBox",
+						"bit": "6:1",
+						"name": "HB2[5:0]",
+						"default": "000000",
+						"data": ["0 - input signal not modulated",
+								 "9 - input signal not modulated",
+								 "18 - input signal not modulated",
+								 "27 - input signal not modulated",
+								 "36 - input signal modulated by fIN2",
+								 "45 - input signal modulated by fIN2",
+								 "54 - input signal modulated by fIN2",
+								 "63 - input signal modulated by fIN2"]
+
+					},
+					{
+						"method": "CheckBox",
+						"bit": "0",
+						"name": "Bypass HB2",
+						"default": "0"
+					}
+				]
+			},
+			{
+				"name": "HB3 Control",
+				"address": "0x1E",
+				"bits": [
+					{
+						"method": "ComboBox",
+						"bit": "6:1",
+						"name": "HB3[5:0]",
+						"default": "000000",
+						"data":["0 - input signal not modulated",
+								"9 - input signal not modulated",
+								"18 - input signal not modulated",
+								"27 - input signal not modulated",
+								"36 - input signal modulated by fIN3",
+								"45 - input signal modulated by fIN3",
+								"54 - input signal modulated by fIN3",
+								"63 - input signal modulated by fIN3"]
+					},
+					{
+						"method": "CheckBox",
+						"bit": "0",
+						"name": "Bypass HB3",
+						"default": "0"
+					}
+				]
+			},
+			{
+				"name": "Chip ID",
+				"address": "0x1F",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Chip ID[7:0]",
+						"default": "00001000",
+						"access":"RO"
+					}
+				]
+			},
+			{
+				"name": "FTW LSB",
+				"address": "0x30",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "FTW[7:0]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "FTW",
+				"address": "0x31",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "FTW[15:8] ",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "FTW",
+				"address": "0x32",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "FTW[23:16]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "FTW MSB",
+				"address": "0x33",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "FTW[31:24]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "NCO Phase Offset LSB ",
+				"address": "0x34",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "NCO Phase Offset[7:0]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "NCO Phase Offset MSB",
+				"address": "0x35",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "NCO Phase Offset[15:8]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "NCO FTW Update",
+				"address": "0x36",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "FRAME FTW acknowledge",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "4",
+						"name": "FRAME FTW request",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "1",
+						"name": "Update FTW acknowledge",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "0",
+						"name": "Update FTW request ",
+						"default": "0"
+					}
+				]
+			},
+			{
+				"name": "I Phase Adj LSB",
+				"address": "0x38",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "I Phase Adj[7:0]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "I Phase Adj MSB",
+				"address": "0x39",
+				"bits": [
+					{
+						"method": "ComboBox",
+						"bit": "1:0",
+						"name": "I Phase Adj[9:8]",
+						"default": "00",
+						"data":["00", "01", "10", "11"]
+					}
+				]
+			},
+			{
+				"name": "Q Phase Adj LSB",
+				"address": "0x3A",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Q Phase Adj[7:0]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "Q Phase Adj MSB",
+				"address": "0x3B",
+				"bits": [
+					{
+						"method": "ComboBox",
+						"bit": "1:0",
+						"name": "Q Phase Adj[9:8]",
+						"default": "00",
+						"data":["00", "01", "10", "11"]
+					}
+				]
+			},
+			{
+				"name": "I DAC Offset LSB",
+				"address": "0x3C",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "I DAC Offset[7:0]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "I DAC Offset MSB",
+				"address": "0x3D",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "I DAC Offset[15:8]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "Q DAC Offset LSB",
+				"address": "0x3E",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Q DAC Offset[7:0]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "Q DAC Offset MSB",
+				"address": "0x3F",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Q DAC Offset[15:8]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "I DAC FS Adjust",
+				"address": "0x40",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Q DAC Offset[15:8]",
+						"default": "11111001"
+					}
+				]
+			},
+			{
+				"name": "I DAC Control",
+				"address": "0x41",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "I DAC sleep",
+						"default": "0"
+					},
+					{
+						"method": "ComboBox",
+						"bit": "1:0",
+						"name": "I DAC FS Adj[9:8]",
+						"default": "01",
+						"data":["01", "00", "10", "11"]
+					}
+				]
+			},
+			{
+				"name": "I Aux DAC Data",
+				"address": "0x42",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "I Aux DAC[7:0]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "I Aux DAC Control",
+				"address": "0x43",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "I aux DAC sign",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "6",
+						"name": "I aux DAC current direction",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "I aux DAC sleep",
+						"default": "0"
+					},
+					{
+						"method": "ComboBox",
+						"bit": "1:0",
+						"name": "I Aux DAC[9:8] ",
+						"default": "00",
+						"data":["00", "01", "10", "11"]
+					}
+				]
+			},
+			{
+				"name": "Q DAC FS Adjust",
+				"address": "0x44",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Q DAC FS Adj[7:0]",
+						"default": "11111001"
+					}
+				]
+			},
+			{
+				"name": "Q DAC Control",
+				"address": "0x45",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "Q DAC sleep",
+						"default": "0"
+					},
+					{
+						"method": "ComboBox",
+						"bit": "1:0",
+						"name": "Q DAC FS Adj[9:8]",
+						"default": "01",
+						"data":["01", "00", "10", "11"]
+					}
+				]
+			},
+			{
+				"name": "Q Aux DAC Data",
+				"address": "0x46",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Q Aux DAC[7:0]",
+						"default": "00000000"
+					}
+				]
+			},
+			{
+				"name": "Q Aux DAC Control",
+				"address": "0x47",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "Q aux DAC sign ",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "6",
+						"name": "Q aux DAC current direction",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "Q aux DAC sleep",
+						"default": "0"
+					},
+					{
+						"method": "ComboBox",
+						"bit": "1:0",
+						"name": "Q Aux DAC[9:8]",
+						"default": "00",
+						"data":["00", "01", "10", "11"]
+					}
+				]
+			},
+			{
+				"name": "Die Temp Range Control",
+				"address": "0x48",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "6:4",
+						"name": "FS Current[2:0]",
+						"default": "000"
+					},
+					{
+						"method": "LineEdit",
+						"bit": "3:1",
+						"name": "Reference Current[2:0]",
+						"default": "001"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "0",
+						"name": "Capacitor value",
+						"default": "0"
+					}
+				]
+			},
+			{
+				"name": "Die Temp LSB",
+				"address": "0x49",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Die Temp[7:0]",
+						"default": "",
+						"access":"RO"
+					}
+				]
+			},
+			{
+				"name": "Die Temp MSB",
+				"address": "0x4A",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Die Temp[15:8]",
+						"default": "",
+						"access":"RO"
+					}
+				]
+			},
+			{
+				"name": "SED Contro",
+				"address": "0x67",
+				"bits": [
+					{
+						"method": "CheckBox",
+						"bit": "7",
+						"name": "SED compare enable",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "5",
+						"name": "Sample error detected",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "3",
+						"name": "Autoclear enable",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "1",
+						"name": "Compare fail",
+						"default": "0"
+					},
+					{
+						"method": "CheckBox",
+						"bit": "0",
+						"name": "Compare pass",
+						"default": "0"
+					}
+				]
+			},
+			{
+				"name": "Compare I0 LSBs",
+				"address": "0x68",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Compare Value I0[7:0]",
+						"default": "10110110"
+					}
+				]
+			},
+			{
+				"name": "Compare I0 MSBs",
+				"address": "0x69",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Compare Value I0[15:8]",
+						"default": "01111010"
+					}
+				]
+			},
+			{
+				"name": "Compare Q0 LSBs",
+				"address": "0x6A",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Compare Value Q0[7:0]",
+						"default": "01000101"
+					}
+				]
+			},
+			{
+				"name": "Compare Q0 MSBs",
+				"address": "0x6B",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Compare Value Q0[15:8]",
+						"default": "11101010"
+					}
+				]
+			},
+			{
+				"name": "Compare I1 LSBs",
+				"address": "0x6C",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Compare Value I1[7:0]",
+						"default": "00010110"
+					}
+				]
+			},
+			{
+				"name": "Compare I1 MSBs",
+				"address": "0x6D",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Compare Value I1[15:8]",
+						"default": "00011010"
+					}
+				]
+			},
+			{
+				"name": "Compare Q1 LSBs",
+				"address": "0x6E",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Compare Value Q1[7:0]",
+						"default": "11000110"
+					}
+				]
+			},
+			{
+				"name": "Compare Q1 MSBs",
+				"address": "0x6F",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Compare Value Q1[15:8]",
+						"default": "10101010"
+					}
+				]
+			},
+			{
+				"name": "SED I LSBs",
+				"address": "0x70",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Errors Detected I_BITS[7:0]",
+						"default": "00000000",
+						"access":"RO"
+					}
+				]
+			},
+			{
+				"name": "SED I MSBs",
+				"address": "0x71",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Errors Detected I_BITS[15:8]",
+						"default": "00000000",
+						"access":"RO"
+					}
+				]
+			},
+			{
+				"name": "SED Q LSBs",
+				"address": "0x72",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Errors Detected Q_BITS[7:0]",
+						"default": "00000000",
+						"access":"RO"
+					}
+				]
+			},
+			{
+				"name": "SED Q MSBs",
+				"address": "0x73",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "7:0",
+						"name": "Errors Detected Q_BITS[15:8]",
+						"default": "00000000",
+						"access":"RO"
+					}
+				]
+			},
+			{
+				"name": "Revision",
+				"address": "0x7F",
+				"bits": [
+					{
+						"method": "LineEdit",
+						"bit": "5:2",
+						"name": "Revision[3:0]",
+						"default": "",
+						"access":"RO"
+					}
+				]
+			}
+		]
+	}
+}
+		

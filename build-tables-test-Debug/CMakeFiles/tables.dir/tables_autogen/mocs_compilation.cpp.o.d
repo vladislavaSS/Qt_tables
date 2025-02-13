@@ -1,6 +1,6 @@
 CMakeFiles/tables.dir/tables_autogen/mocs_compilation.cpp.o: \
   /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/mocs_compilation.cpp \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/Y3GKFRJGYD/moc_AD9122-widget.cpp \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/EWIEGA46WW/moc_mainwindow.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/memory \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algobase.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -127,7 +127,7 @@ CMakeFiles/tables.dir/tables_autogen/mocs_compilation.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/atomic_base.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward/auto_ptr.h \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/Y3GKFRJGYD/../../../tables/AD_9122/AD9122-widget.h \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/EWIEGA46WW/../../../tables/mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -301,6 +301,8 @@ CMakeFiles/tables.dir/tables_autogen/mocs_compilation.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/tables/tables.h \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/tables/../tables_lib/functions.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
@@ -384,10 +386,7 @@ CMakeFiles/tables.dir/tables_autogen/mocs_compilation.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/fstream.tcc \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/tables/functions.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/tables/Headers/AD9122-widget.h \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/tables/Headers/LMK1000-widget.h \
   /usr/include/rapidjson/document.h /usr/include/rapidjson/reader.h \
   /usr/include/rapidjson/allocators.h /usr/include/rapidjson/rapidjson.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/cstring \
@@ -415,13 +414,20 @@ CMakeFiles/tables.dir/tables_autogen/mocs_compilation.cpp.o: \
   /usr/include/rapidjson/internal/itoa.h \
   /usr/include/rapidjson/stringbuffer.h \
   /usr/include/rapidjson/prettywriter.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/D2MWKIZDYH/moc_AD9122-widget.cpp \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/D2MWKIZDYH/../../../tables/Headers/AD9122-widget.h \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/D2MWKIZDYH/moc_LMK1000-widget.cpp \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/D2MWKIZDYH/../../../tables/Headers/LMK1000-widget.h \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/EWIEGA46WW/moc_functions.cpp \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/EWIEGA46WW/../../../tables/functions.h \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/EWIEGA46WW/moc_mainwindow.cpp \
-  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/EWIEGA46WW/../../../tables/mainwindow.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonArray \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborvalue.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/compare \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/EWIEGA46WW/moc_tables.cpp \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/EWIEGA46WW/../../../tables/tables.h \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/57NFGO2OXJ/moc_functions.cpp \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug/tables_autogen/57NFGO2OXJ/../../../tables_lib/functions.h

@@ -1,0 +1,1101 @@
+{
+    "fields": {
+		"registers": [
+			{
+				"name": "PLL Register Map",
+				"addresses": [
+        		{
+					"address": "0x00",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "23:0",
+							"name": "chip_ID",
+							"default": "000010100111100101110101",
+							"access": "RO"
+						}
+					]
+				},
+				{
+					"address": "0x00",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "23:6",
+							"name": "Not Defined",
+							"default": ""
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Soft Reset",
+							"default": ""
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "4:0",
+							"name": "Read Address",
+							"default": ""
+						}
+					]
+				},
+				{
+					"address": "0x01",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "9",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Reserved",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "0x02",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "13:0",
+							"name": "rdiv",
+							"default": "1"
+						}
+					]
+				},
+                {
+					"address": "0x03",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "18:0",
+							"name": "intg",
+							"default": "11001"
+						}
+					]
+				},
+                {
+					"address": "0x04",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "23:0",
+							"name": "frac",
+							"default": "0"
+						}
+					]
+				},
+                {
+					"address": "0x05",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "15:7",
+							"name": "VCO Subsystem data",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "6:3",
+							"name": "VCO Subsystem register address",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "2:0",
+							"name": "VCO Subsystem_ID",
+							"default": "0"
+						}
+					]
+				},
+                {
+					"address": "0x06",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "22",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "21",
+							"name": "Reserved",
+							"default": "1"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "20:19",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "18",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "18",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "17:16",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "15:14",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "13",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "12",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "11",
+							"name": "SD Enable",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "10",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "9",
+							"name": "Reserved",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "Reserved",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "frac_bypass",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "6:4",
+							"name": "Reserved",
+							"default": "100"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "3:2",
+							"name": "Reserved",
+							"default": "10"
+						},
+                        {
+							"method": "ComboBox",
+							"bit": "1:0",
+							"name": "seed",
+							"default": "10",
+                            "data":["10 - B29D08h seed",
+                                    "00 - 0 seed",
+                                    "01 - lsb seed",
+                                    "11 - 50F1CDh seed"]
+						}
+					]
+				},
+                {
+					"address": "0x07",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "13",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "12",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "ComboBox",
+							"bit": "11:10",
+							"name": "LD Digital Timer Frequency Control",
+							"default": "00",
+                            "data":["00","01","10","11"]
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "9:7",
+							"name": "LD Digital Window duration",
+							"default": "010"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Lock Detect Window type",
+							"default": "1"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "5:4",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "Enable Internal Lock Detect",
+							"default": "1"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "2:0",
+							"name": "lkd_wincnt_max",
+							"default": "101"
+						}
+					]
+				},
+                {
+					"address": "0x08",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "23",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "22",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "21",
+							"name": "High Frequency Reference",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "20",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "19",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "18",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "17:15",
+							"name": "Reserved",
+							"default": "011"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "14:12",
+							"name": "Reserved",
+							"default": "011"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "11",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "10",
+							"name": "VCO Buffer and Prescaler Bias Enable",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "9",
+							"name": "Prescaler Clock enable",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "gpo_pad_en",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Reserved",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Reserved",
+							"default": "1"
+						}
+					]
+				},
+                {
+					"address": "0x09",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "23",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "22",
+							"name": "Offset DN enable",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "21",
+							"name": "Offset UP enable",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "20:14",
+							"name": "Offset Magnitude",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "13:7",
+							"name": "CP UP Gain",
+							"default": "1100100"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "6:0",
+							"name": "CP DN Gain",
+							"default": "1100100"
+						}
+					]
+				},
+                {
+					"address": "0x0A",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "15",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "ComboBox",
+							"bit": "14:13",
+							"name": "FSM/VSPI Clock Select",
+							"default": "01",
+                            "data":["01","00","10","11"]
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "12",
+							"name": "No VSPI Trigger",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "11",
+							"name": "Bypass VCO Tuning",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "10",
+							"name": "Force Curve",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "9:8",
+							"name": "Reserved",
+							"default": "10"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "7:6",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "5:3",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "ComboBox",
+							"bit": "2:0",
+							"name": "Vtune Resolution",
+							"default": "101",
+                            "data":["101 - 64", 
+                                    "000 - 1", 
+                                    "001 - 2", 
+                                    "010 - 4", 
+                                    "011 - 8", 
+                                    "100   32 ", 
+                                    "110 - 128", 
+                                    "111 - 256"]
+						}
+					]
+				},
+                {
+					"address": "0x0B",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "23:22",
+							"name": "reserved",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "21:20",
+							"name": "reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "19",
+							"name": "reserved",
+							"default": "1"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "18:17",
+							"name": "Reserved",
+							"default": "11"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "16:15",
+							"name": "Reserved",
+							"default": "11"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "14:12",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "11",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "10",
+							"name": "Force CP DN",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "9",
+							"name": "Force CP UP",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "8:7",
+							"name": "CSP Mode",
+							"default": "00",
+                            "data":["00 - Disabled",
+                                    "01 - 5.4ns",
+                                    "10 - 14.4ns",
+                                    "11 - 24.1ns"]
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "PD_dn_en",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "PD_up_en",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "Reserved",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "2:0",
+							"name": "PD_del_sel",
+							"default": "001"
+						}
+					]
+				},
+                {
+					"address": "0x0C",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "13:0",
+							"name": "Number of Channels per Fpd",
+							"default": "0"
+						}
+					]
+				},
+                {
+					"address": "0x0F",
+					"bits": [
+                        {
+							"method": "CheckBox",
+							"bit": "9",
+							"name": "Disable NFET",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "Disable PFET",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "LDO Driver Always On",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Prevent Automux SDO",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "GPO Test Data",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "4:0",
+							"name": "gpo_select",
+							"default": "1"
+						}
+					]
+				},
+                {
+					"address": "0x10",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "VCO Switch Setting",
+							"default": "0",
+							"access": "RO"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "7:0",
+							"name": "AutoCal Busy",
+							"default": "0100000",
+							"access": "RO"
+						}
+					]
+				},
+                {
+					"address": "0x11",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "19",
+							"name": "SAR Error Sign",
+							"default": "0",
+							"access": "RO"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "18:0",
+							"name": "SAR Error Mag Counts",
+							"default": "1111111111111111111",
+							"access": "RO"
+						}
+					]
+				},
+                {
+					"address": "0x12",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Lock Detect",
+							"default": "0",
+							"access": "RO"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "GPO",
+							"default": "0",
+							"access": "RO"
+						}
+					]
+				},
+                {
+					"address": "0x13",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "16",
+							"name": "Reserved",
+							"default": "0",
+							"access": "RO"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "15:0",
+							"name": "Reserved",
+							"default": "1001001011001",
+							"access": "RO"
+						}
+					]
+				}
+			    ]
+			},
+            {
+                "name": "VCO Subsystem Register Map",
+				"addresses": [
+        		{
+					"address": "0x00",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "8:1",
+							"name": "Cal",
+							"default": "00010000"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "CAPS",
+							"default": "0"
+						}
+					]
+				},
+                {
+					"address": "0x01",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "don’t care",
+							"default": "1"
+						},
+                        {
+							"method": "ComboBox",
+							"bit": "7:6",
+							"name": "Reserved",
+							"default": "11",
+                            "data":["11"]
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Output Stage Enable",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Spare",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "IO Master Enable",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "PLL Buffer Enable",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "VCO Enable",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Master Enable VCO Subsystem",
+							"default": "1"
+						}
+					]
+				},
+                {
+					"address": "0x02",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "Don’t Care",
+							"default": "0"
+						},
+                        {
+							"method": "ComboBox",
+							"bit": "7:6",
+							"name": "Reserved",
+							"default": "00",
+                            "data": ["00"]
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "5:0",
+							"name": "RF Divide ratio",
+							"default": "000001"
+						}
+					]
+				},
+                {
+					"address": "0x03",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "8:7",
+							"name": "Mute Mode",
+							"default": "01",
+                            "data": ["01","00","10","11"]
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Increase Internal Output Resistance",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Internal Termination Enable",
+							"default": "1"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "RF_N output enable",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "RF_P output enable",
+							"default": "0"
+						},
+                        {
+							"method": "ComboBox",
+							"bit": "1:0",
+							"name": "Power- Performance Priroirty",
+							"default": "10",
+							"data":["10","00","01","11"]
+						}
+					]
+				},
+                {
+					"address": "0x04",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "8:7",
+							"name": "Reserved",
+							"default": "01"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "6:5",
+							"name": "Reserved",
+							"default": "10"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "4:3",
+							"name": "Reserved",
+							"default": "01"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Reserved",
+							"default": "1"
+						}
+					]
+				},
+                {
+					"address": "0x05",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "7:6",
+							"name": "Reserved",
+							"default": "10"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "5:4",
+							"name": "Reserved",
+							"default": "10"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "3:2",
+							"name": "Reserved",
+							"default": "10"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "1:0",
+							"name": "Reserved",
+							"default": "10"
+						}
+					]
+				},
+                {
+					"address": "0x06",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "7:6",
+							"name": "Reserved",
+							"default": "11"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "5:4",
+							"name": "Reserved",
+							"default": "11"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "3:2",
+							"name": "Reserved",
+							"default": "11"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "1:0",
+							"name": "Reserved",
+							"default": "11"
+						}
+					]
+				},
+                {
+					"address": "0x07",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "8",
+							"name": "Reserved",
+							"default": "0"
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Reserved",
+							"default": "1"
+						},
+                        {
+							"method": "ComboBox",
+							"bit": "6:5",
+							"name": "Reserved",
+							"default": "10",
+                            "data":["11", "10", "01", "00"]
+						},
+                        {
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Reserved",
+							"default": "1"
+						},
+                        {
+							"method": "LineEdit",
+							"bit": "3:0",
+							"name": "Output Stage Gain Control",
+							"default": "0001"
+						}
+					]
+				}
+                ]
+            }
+        ]
+    }
+}
+    
+
+
+    
+    
+

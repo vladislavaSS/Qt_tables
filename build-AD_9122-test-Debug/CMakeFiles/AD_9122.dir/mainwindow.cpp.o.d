@@ -301,6 +301,7 @@ CMakeFiles/AD_9122.dir/mainwindow.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/AD9122-widget.h \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/../tables_lib/functions.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
@@ -384,6 +385,7 @@ CMakeFiles/AD_9122.dir/mainwindow.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/fstream.tcc \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/rapidjson/document.h /usr/include/rapidjson/reader.h \
   /usr/include/rapidjson/allocators.h /usr/include/rapidjson/rapidjson.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/cstring \
@@ -411,8 +413,19 @@ CMakeFiles/AD_9122.dir/mainwindow.cpp.o: \
   /usr/include/rapidjson/internal/itoa.h \
   /usr/include/rapidjson/stringbuffer.h \
   /usr/include/rapidjson/prettywriter.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamWriter \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonArray \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborvalue.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/compare \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/build-AD_9122-test-Debug/AD_9122_autogen/include/./ui_mainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
@@ -428,5 +441,4 @@ CMakeFiles/AD_9122.dir/mainwindow.cpp.o: \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h

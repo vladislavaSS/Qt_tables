@@ -77,33 +77,21 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/AD_9122/AD9122-widget.h",
-			"MU",
-			"Y3GKFRJGYD/moc_AD9122-widget.cpp",
-			null
-		],
-		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/Headers/AD9122-widget.h",
-			"MU",
-			"D2MWKIZDYH/moc_AD9122-widget.cpp",
-			null
-		],
-		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/Headers/LMK1000-widget.h",
-			"MU",
-			"D2MWKIZDYH/moc_LMK1000-widget.cpp",
-			null
-		],
-		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/functions.h",
-			"MU",
-			"EWIEGA46WW/moc_functions.cpp",
-			null
-		],
-		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/tables.h",
+			"MU",
+			"EWIEGA46WW/moc_tables.cpp",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/functions.h",
+			"MU",
+			"57NFGO2OXJ/moc_functions.cpp",
 			null
 		]
 	],
@@ -122,7 +110,6 @@
 	[
 		"/home/vadislava/qtprojects/qt_git/Qt_tables/build-tables-test-Debug",
 		"/home/vadislava/qtprojects/qt_git/Qt_tables/tables",
-		"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/Headers",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -161,32 +148,32 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/AD_9122/AD9122-widget.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/AD_9122/data.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/LMK_1000/LMK1000-widget.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/functions.cpp",
-			"MU",
-			null
-		],
-		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/main.cpp",
 			"MU",
 			null
 		],
 		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables/tables.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp",
 			"MU",
 			null
 		]

@@ -87,6 +87,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/functions.h",
+			"MU",
+			"57NFGO2OXJ/moc_functions.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -147,16 +153,6 @@
 			null
 		],
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/buttons.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/create.cpp",
-			"MU",
-			null
-		],
-		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/main.cpp",
 			"MU",
 			null
@@ -167,7 +163,17 @@
 			null
 		],
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/transform.cpp",
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp",
 			"MU",
 			null
 		]

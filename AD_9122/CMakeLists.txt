@@ -22,9 +22,11 @@ set(PROJECT_SOURCES
         mainwindow.ui
         AD9122-widget.cpp
         AD9122-widget.h
-        сreate.cpp
-        buttons.cpp
-        transform.cpp
+        ../tables_lib/create.cpp
+        ../tables_lib/buttons.cpp
+        ../tables_lib/transform.cpp
+        ../tables_lib/functions.h
+        CustomLineEdit.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

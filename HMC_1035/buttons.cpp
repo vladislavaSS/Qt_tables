@@ -30,6 +30,8 @@ if (HMCflag) bitCount = 24;
     for (int j = 0; j < selectedItem->rowCount(); j++) {
         QStandardItem* child = selectedItem->child(j);
 
+//        qDebug() << "here" << HMCflag;
+
         if (child) {
 
             QModelIndex index = model->index(j, 1, selectedItem->index());
@@ -248,6 +250,8 @@ void HMC1035Widget::on_save_button_clicked()
     QStandardItem* rootItem = model->invisibleRootItem();
 
     rapidjson::Value jsonArray(rapidjson::kArrayType);
+
+    qDebug() << "here" << HMCflag;
 
     for (int i = 0; i < rootItem->rowCount(); ++i) {
         QStandardItem* item = rootItem->child(i);

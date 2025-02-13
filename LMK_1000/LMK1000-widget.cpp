@@ -1,16 +1,98 @@
 #include "LMK1000-widget.h"
 
-LMK1000Widget::LMK1000Widget(QWidget *parent)
-    : QWidget{parent}, treeView(new QTreeView(this)), model(new QStandardItemModel(this)), treeExpanded(false)
+LMK1000Widget::LMK1000Widget(Tables* tablesInstance, QWidget *parent)
+    : QWidget(parent),
+      tablesInstance(tablesInstance),
+      treeView(tablesInstance->treeView),
+      model(tablesInstance->model),
+      treeExpanded(tablesInstance->treeExpanded)
 {
     layout = new QVBoxLayout(this);
     setLayout(layout);
     viewTree();
     treeView->setColumnWidth(0, 200);
+
+    tablesInstance->LMKflag = 1;
+    tablesInstance->ADflag = 1;
+    tablesInstance->bitCount = 32;
+
 }
 
-void LMK1000Widget::viewTree()
-{
+void LMK1000Widget::setupWidgets(QStandardItem *itm, int rowIndex, QModelIndex lineEditIndex) {
+
+    if (rowIndex == 2) {
+        QWidget *widget = tables.createLineEditWithSaveButton(rowIndex, 510, 2,
+            "Clock Output Dividers (0-510)",
+            "значение делителя тактового выхода должно быть в диапазоне 0-510 и быть четным",
+            "2", 15, 8);
+        treeView->setIndexWidget(lineEditIndex, widget);
+
+        if (!widget) {
+               qDebug() << "Widget is nullptr!";
+               return;
+           }
+
+        if (!lineEditIndex.isValid()) {
+            qDebug() << "Invalid index!";
+        } else if (!widget) {
+            qDebug() << "Widget is nullptr!";
+        } else {
+            treeView->setIndexWidget(lineEditIndex, widget);
+        }
+
+    } else if (rowIndex == 3) {
+        QWidget *widget = tables.createLineEditWithSaveButton(rowIndex, 2250, 150,
+            "Clock Output Delays (0-2250)",
+            "значение задержки тактового выхода должно быть в диапазоне 0-2250 и быть кратным 150",
+            "0", 7, 4);
+        treeView->setIndexWidget(lineEditIndex, widget);
+
+        if (!widget) {
+               qDebug() << "Widget is nullptr!";
+               return;
+           }
+        if (!lineEditIndex.isValid()) {
+            qDebug() << "Invalid index!";
+        } else if (!widget) {
+            qDebug() << "Widget is nullptr!";
+        } else {
+            treeView->setIndexWidget(lineEditIndex, widget);
+        }
+    } else {
+        QWidget *container = new QWidget();
+        QComboBox *comboBox = new QComboBox(container);
+
+        comboBox->clear();
+        switch (rowIndex) {
+            case 0: {
+                comboBox->addItems({"00 - Bypassed (0 ps)", "01 - Divided (100 ps)", "10 - Delayed (400 ps)", "11 - Divided and Delayed (500 ps)"});
+                comboBox->setProperty("ComboBoxName", "CLKoutX_MUX[1:0]");
+                comboBox->setProperty("bitNumber", 18);
+                comboBox->setProperty("bitWidth", 2);
+                break;
+            } case 1: {
+                comboBox->addItems({"0 - Disabled", "1 - Enabled"});
+                comboBox->setProperty("ComboBoxName", "CLKoutX_EN");
+                comboBox->setProperty("bitNumber", 16);
+                comboBox->setProperty("bitWidth", 1);
+                break;
+            }
+        }
+
+        QVBoxLayout *layout = new QVBoxLayout(container);
+        layout->addWidget(comboBox);
+
+        treeView->setIndexWidget(lineEditIndex, container);
+    }
+
+    if (!lineEditIndex.isValid()) {
+           qDebug() << "Invalid index!";
+           return;
+       }
+}
+
+void LMK1000Widget::viewTree() {
+
     model->setColumnCount(2);
     model->setHorizontalHeaderLabels({"Register", "Bit Value"});
 
@@ -131,7 +213,7 @@ void LMK1000Widget::viewTree()
 
     treeView->setModel(model);
 
-    if (model) blockEditing(model);
+    if (model) tables.blockEditing(model);
 
     for (int i = 0; i < itm0->rowCount(); i++) {
         QModelIndex index = model->index(i, 1, itm0->index());
@@ -266,38 +348,37 @@ void LMK1000Widget::viewTree()
 
     layout->addWidget(treeView);
 
-    toggleButton = new QPushButton("Expand All");
-    layout->addWidget(toggleButton);
+    tablesInstance->toggleButton = new QPushButton("Expand All");
+    layout->addWidget(tablesInstance->toggleButton);
 
     QWidget *buttons = new QWidget();
     QHBoxLayout *layout_buttons = new QHBoxLayout(buttons);
 
-    saveButton = new QPushButton("Save", buttons);
-    layout_buttons->addWidget(saveButton);
+    tablesInstance->saveButton = new QPushButton("Save", buttons);
+    layout_buttons->addWidget(tablesInstance->saveButton);
 
-    loadButton = new QPushButton("Download", buttons);
-    layout_buttons->addWidget(loadButton);
+    tablesInstance->loadButton = new QPushButton("Download", buttons);
+    layout_buttons->addWidget(tablesInstance->loadButton);
 
     buttons->setLayout(layout_buttons);
     layout->addWidget(buttons);
 
     QWidget *buttons2 = new QWidget();
-//    QHBoxLayout *layout_buttons2 = new QHBoxLayout(buttons);
 
-    save_elem = new QPushButton("Save element", buttons);
-    layout_buttons->addWidget(save_elem);
+    tablesInstance->save_elem = new QPushButton("Save element", buttons);
+    layout_buttons->addWidget(tablesInstance->save_elem);
 
-    load_elem = new QPushButton("Download element", buttons);
-    layout_buttons->addWidget(load_elem);
+    tablesInstance->load_elem = new QPushButton("Download element", buttons);
+    layout_buttons->addWidget(tablesInstance->load_elem);
 
     buttons2->setLayout(layout_buttons);
     layout->addWidget(buttons2);
 
-    connect(toggleButton, &QPushButton::clicked, this, &LMK1000Widget::on_toggle_button_clicked);
-    connect(saveButton, &QPushButton::clicked, this, &LMK1000Widget::saveData);
-    connect(treeView, &QTreeView::clicked, this, &LMK1000Widget::onParentItemClicked);
-    connect(loadButton, &QPushButton::clicked, this, &LMK1000Widget::load_all);
-    connect(load_elem, &QPushButton::clicked, this, &LMK1000Widget::load_element);
+    connect(tablesInstance->toggleButton, &QPushButton::clicked, tablesInstance, &Tables::on_toggle_button_clicked);
+    connect(tablesInstance->saveButton, &QPushButton::clicked, tablesInstance, &Tables::saveData);
+    connect(tablesInstance->treeView, &QTreeView::clicked, tablesInstance, &Tables::onItemClicked);
+    connect(tablesInstance->loadButton, &QPushButton::clicked, tablesInstance, &Tables::loadAll);
+    connect(tablesInstance->load_elem, &QPushButton::clicked, tablesInstance, &Tables::loadElement);
 
     setLayout(layout);
 

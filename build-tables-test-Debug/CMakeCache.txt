@@ -204,6 +204,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/llvm-strip-14
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a file.
+QT3_QGLOBAL_H_FILE:FILEPATH=QT3_QGLOBAL_H_FILE-NOTFOUND
+
+//Path to a file.
+QT4_QGLOBAL_H_FILE:FILEPATH=QT4_QGLOBAL_H_FILE-NOTFOUND
+
 //Skip Qt Creator's package manager auto-setup
 QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP:BOOL=OFF
 
@@ -212,6 +218,9 @@ QT_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:STRING=/usr/lib/qt5/bin/qmake
+
+//Path to a program.
+QT_QMAKE_EXECUTABLE_FINDQT:FILEPATH=/usr/bin/qmake
 
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
@@ -366,4 +375,10 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT3_QGLOBAL_H_FILE
+QT3_QGLOBAL_H_FILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT4_QGLOBAL_H_FILE
+QT4_QGLOBAL_H_FILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QMAKE_EXECUTABLE_FINDQT
+QT_QMAKE_EXECUTABLE_FINDQT-ADVANCED:INTERNAL=1
 

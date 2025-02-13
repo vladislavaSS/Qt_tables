@@ -190,30 +190,6 @@ AD_9122_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/AD_9122_autogen/mocs_compilation.cpp.s
 .PHONY : AD_9122_autogen/mocs_compilation.cpp.s
 
-buttons.o: buttons.cpp.o
-.PHONY : buttons.o
-
-# target to build an object file
-buttons.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/buttons.cpp.o
-.PHONY : buttons.cpp.o
-
-buttons.i: buttons.cpp.i
-.PHONY : buttons.i
-
-# target to preprocess a source file
-buttons.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/buttons.cpp.i
-.PHONY : buttons.cpp.i
-
-buttons.s: buttons.cpp.s
-.PHONY : buttons.s
-
-# target to generate assembly for a file
-buttons.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/buttons.cpp.s
-.PHONY : buttons.cpp.s
-
 data.o: data.cpp.o
 .PHONY : data.o
 
@@ -237,6 +213,78 @@ data.s: data.cpp.s
 data.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/data.cpp.s
 .PHONY : data.cpp.s
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.o: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.o
+
+# target to build an object file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.i: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.i
+
+# target to preprocess a source file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.s: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.s
+
+# target to generate assembly for a file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.o: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.o
+
+# target to build an object file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.i: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.i
+
+# target to preprocess a source file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.s: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.s
+
+# target to generate assembly for a file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.o: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.o
+
+# target to build an object file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.i: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.i
+
+# target to preprocess a source file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i
+
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.s: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.s
+
+# target to generate assembly for a file
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -286,54 +334,6 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
-transform.o: transform.cpp.o
-.PHONY : transform.o
-
-# target to build an object file
-transform.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/transform.cpp.o
-.PHONY : transform.cpp.o
-
-transform.i: transform.cpp.i
-.PHONY : transform.i
-
-# target to preprocess a source file
-transform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/transform.cpp.i
-.PHONY : transform.cpp.i
-
-transform.s: transform.cpp.s
-.PHONY : transform.s
-
-# target to generate assembly for a file
-transform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/transform.cpp.s
-.PHONY : transform.cpp.s
-
-сreate.o: сreate.cpp.o
-.PHONY : сreate.o
-
-# target to build an object file
-сreate.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/сreate.cpp.o
-.PHONY : сreate.cpp.o
-
-сreate.i: сreate.cpp.i
-.PHONY : сreate.i
-
-# target to preprocess a source file
-сreate.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/сreate.cpp.i
-.PHONY : сreate.cpp.i
-
-сreate.s: сreate.cpp.s
-.PHONY : сreate.s
-
-# target to generate assembly for a file
-сreate.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AD_9122.dir/build.make CMakeFiles/AD_9122.dir/сreate.cpp.s
-.PHONY : сreate.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -350,24 +350,24 @@ help:
 	@echo "... AD_9122_autogen/mocs_compilation.o"
 	@echo "... AD_9122_autogen/mocs_compilation.i"
 	@echo "... AD_9122_autogen/mocs_compilation.s"
-	@echo "... buttons.o"
-	@echo "... buttons.i"
-	@echo "... buttons.s"
 	@echo "... data.o"
 	@echo "... data.i"
 	@echo "... data.s"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.o"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.i"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.s"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.o"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.i"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.s"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.o"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.i"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
-	@echo "... transform.o"
-	@echo "... transform.i"
-	@echo "... transform.s"
-	@echo "... сreate.o"
-	@echo "... сreate.i"
-	@echo "... сreate.s"
 .PHONY : help
 
 

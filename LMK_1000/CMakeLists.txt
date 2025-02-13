@@ -21,9 +21,10 @@ set(PROJECT_SOURCES
         mainwindow.ui
         LMK1000-widget.cpp
         LMK1000-widget.h
-        transform.cpp
-        buttons.cpp
-        create.cpp
+        ../tables_lib/create.cpp
+        ../tables_lib/buttons.cpp
+        ../tables_lib/transform.cpp
+        ../tables_lib/functions.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

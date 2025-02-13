@@ -8,31 +8,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    LMK1000Widget *lmkwidget = new LMK1000Widget(this);
+    Tables *tablesInstance = new Tables(this);
+
+    LMK1000Widget *lmkwidget = new LMK1000Widget(tablesInstance, this);
     setCentralWidget(lmkwidget);
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

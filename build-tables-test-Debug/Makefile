@@ -142,101 +142,77 @@ tables_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables_autogen.dir/build.make CMakeFiles/tables_autogen.dir/build
 .PHONY : tables_autogen/fast
 
-AD_9122/AD9122-widget.o: AD_9122/AD9122-widget.cpp.o
-.PHONY : AD_9122/AD9122-widget.o
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.o: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.o
 
 # target to build an object file
-AD_9122/AD9122-widget.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/AD_9122/AD9122-widget.cpp.o
-.PHONY : AD_9122/AD9122-widget.cpp.o
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.o
 
-AD_9122/AD9122-widget.i: AD_9122/AD9122-widget.cpp.i
-.PHONY : AD_9122/AD9122-widget.i
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.i: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.i
 
 # target to preprocess a source file
-AD_9122/AD9122-widget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/AD_9122/AD9122-widget.cpp.i
-.PHONY : AD_9122/AD9122-widget.cpp.i
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.i
 
-AD_9122/AD9122-widget.s: AD_9122/AD9122-widget.cpp.s
-.PHONY : AD_9122/AD9122-widget.s
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.s: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.s
 
 # target to generate assembly for a file
-AD_9122/AD9122-widget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/AD_9122/AD9122-widget.cpp.s
-.PHONY : AD_9122/AD9122-widget.cpp.s
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp.s
 
-AD_9122/data.o: AD_9122/data.cpp.o
-.PHONY : AD_9122/data.o
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.o: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.o
 
 # target to build an object file
-AD_9122/data.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/AD_9122/data.cpp.o
-.PHONY : AD_9122/data.cpp.o
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.o
 
-AD_9122/data.i: AD_9122/data.cpp.i
-.PHONY : AD_9122/data.i
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.i: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.i
 
 # target to preprocess a source file
-AD_9122/data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/AD_9122/data.cpp.i
-.PHONY : AD_9122/data.cpp.i
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.i
 
-AD_9122/data.s: AD_9122/data.cpp.s
-.PHONY : AD_9122/data.s
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.s: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.s
 
 # target to generate assembly for a file
-AD_9122/data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/AD_9122/data.cpp.s
-.PHONY : AD_9122/data.cpp.s
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp.s
 
-LMK_1000/LMK1000-widget.o: LMK_1000/LMK1000-widget.cpp.o
-.PHONY : LMK_1000/LMK1000-widget.o
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.o: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.o
 
 # target to build an object file
-LMK_1000/LMK1000-widget.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/LMK_1000/LMK1000-widget.cpp.o
-.PHONY : LMK_1000/LMK1000-widget.cpp.o
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.o
 
-LMK_1000/LMK1000-widget.i: LMK_1000/LMK1000-widget.cpp.i
-.PHONY : LMK_1000/LMK1000-widget.i
-
-# target to preprocess a source file
-LMK_1000/LMK1000-widget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/LMK_1000/LMK1000-widget.cpp.i
-.PHONY : LMK_1000/LMK1000-widget.cpp.i
-
-LMK_1000/LMK1000-widget.s: LMK_1000/LMK1000-widget.cpp.s
-.PHONY : LMK_1000/LMK1000-widget.s
-
-# target to generate assembly for a file
-LMK_1000/LMK1000-widget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/LMK_1000/LMK1000-widget.cpp.s
-.PHONY : LMK_1000/LMK1000-widget.cpp.s
-
-functions.o: functions.cpp.o
-.PHONY : functions.o
-
-# target to build an object file
-functions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/functions.cpp.o
-.PHONY : functions.cpp.o
-
-functions.i: functions.cpp.i
-.PHONY : functions.i
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.i: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.i
 
 # target to preprocess a source file
-functions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/functions.cpp.i
-.PHONY : functions.cpp.i
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.i
 
-functions.s: functions.cpp.s
-.PHONY : functions.s
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.s: home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.s
 
 # target to generate assembly for a file
-functions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/functions.cpp.s
-.PHONY : functions.cpp.s
+home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s
+.PHONY : home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -286,6 +262,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+tables.o: tables.cpp.o
+.PHONY : tables.o
+
+# target to build an object file
+tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/tables.cpp.o
+.PHONY : tables.cpp.o
+
+tables.i: tables.cpp.i
+.PHONY : tables.i
+
+# target to preprocess a source file
+tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/tables.cpp.i
+.PHONY : tables.cpp.i
+
+tables.s: tables.cpp.s
+.PHONY : tables.s
+
+# target to generate assembly for a file
+tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tables.dir/build.make CMakeFiles/tables.dir/tables.cpp.s
+.PHONY : tables.cpp.s
+
 tables_autogen/mocs_compilation.o: tables_autogen/mocs_compilation.cpp.o
 .PHONY : tables_autogen/mocs_compilation.o
 
@@ -320,24 +320,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... tables_autogen"
 	@echo "... tables"
-	@echo "... AD_9122/AD9122-widget.o"
-	@echo "... AD_9122/AD9122-widget.i"
-	@echo "... AD_9122/AD9122-widget.s"
-	@echo "... AD_9122/data.o"
-	@echo "... AD_9122/data.i"
-	@echo "... AD_9122/data.s"
-	@echo "... LMK_1000/LMK1000-widget.o"
-	@echo "... LMK_1000/LMK1000-widget.i"
-	@echo "... LMK_1000/LMK1000-widget.s"
-	@echo "... functions.o"
-	@echo "... functions.i"
-	@echo "... functions.s"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.o"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.i"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.s"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.o"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.i"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.s"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.o"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.i"
+	@echo "... home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... tables.o"
+	@echo "... tables.i"
+	@echo "... tables.s"
 	@echo "... tables_autogen/mocs_compilation.o"
 	@echo "... tables_autogen/mocs_compilation.i"
 	@echo "... tables_autogen/mocs_compilation.s"

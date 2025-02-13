@@ -83,9 +83,21 @@
 			null
 		],
 		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/CustomLineEdit.h",
+			"MU",
+			"EWIEGA46WW/moc_CustomLineEdit.cpp",
+			null
+		],
+		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/functions.h",
+			"MU",
+			"57NFGO2OXJ/moc_functions.cpp",
 			null
 		]
 	],
@@ -147,11 +159,6 @@
 			null
 		],
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/buttons.cpp",
-			"MU",
-			null
-		],
-		[
 			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/data.cpp",
 			"MU",
 			null
@@ -167,12 +174,17 @@
 			null
 		],
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/transform.cpp",
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/buttons.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/vadislava/qtprojects/qt_git/Qt_tables/AD_9122/\u0441reate.cpp",
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/create.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/transform.cpp",
 			"MU",
 			null
 		]

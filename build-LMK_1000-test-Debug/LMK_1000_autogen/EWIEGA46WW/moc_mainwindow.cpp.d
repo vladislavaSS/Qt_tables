@@ -1,6 +1,7 @@
 /home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/LMK_1000_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/mainwindow.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/build-LMK_1000-test-Debug/LMK_1000_autogen/moc_predefs.h \
   /home/vadislava/qtprojects/qt_git/Qt_tables/LMK_1000/LMK1000-widget.h \
+  /home/vadislava/qtprojects/qt_git/Qt_tables/tables_lib/functions.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
@@ -391,6 +392,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeView \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \

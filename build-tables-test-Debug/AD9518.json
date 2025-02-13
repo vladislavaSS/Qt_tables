@@ -1,0 +1,1027 @@
+{
+	"fields": {
+		"registers": [
+			{
+				"name": "Serial Port Configuration and Part ID",
+				"addresses": [
+        		{
+					"address": "0x000",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "SDO active",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "LSB first",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Soft reset",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Long instruction",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "Long instruction",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "Soft reset",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "LSB first",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "SDO active",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "0x003",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "7:0",
+							"name": "Part ID (read only)",
+							"default": "97",
+							"data":["97 = 0x61",
+									"33 = 0x21",	
+									"161 = 0xA1",
+									"99 = 0x63",
+									"227 = 0xE3"],
+							"access": "RO"
+						}
+					]
+				},
+				{
+					"address": "0x004",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Read back active registers",
+							"default": "0"
+						}
+					]
+				}
+			]
+			},
+			{
+				"name": "PLL",
+				"addresses": [
+				{
+					"address": "0x010",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "PFD polarity",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "6:4",
+							"name": "CP current",
+							"default": "111",
+							"data":["111",	
+									"110",
+									"101",
+									"100",
+									"011",
+									"010",
+									"001",
+									"000"]
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "CP mode",
+							"default": "11",
+							"data":["11",	
+									"10",
+									"01",
+									"00"]
+						},
+						{
+							"method": "ComboBox",
+							"bit": "1:0",
+							"name": "PLL power-down",
+							"default": "01",
+							"data":["01",
+									"00",	
+									"10",
+									"11"]
+						}
+					]
+				},
+				{
+					"address": "0x011",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:0",
+							"name": "14-bit R divider, Bits[7:0] (LSB)",
+							"default": "00000001"
+						}
+					]
+				},
+				{
+					"address": "0x012",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "5:0",
+							"name": "14-bit R divider, Bits[13:8] (MSB)",
+							"default": "000000"
+						}
+					]
+				},
+				{
+					"address": "0x013",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "5:0",
+							"name": "6-bit A counter",
+							"default": "000000"
+						}
+					]
+				},
+				{
+					"address": "0x014",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:0",
+							"name": "13-bit B counter, Bits[7:0] (LSB)",
+							"default": "00000011"
+						}
+					]
+				},
+				{
+					"address": "0x015",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "4:0",
+							"name": "13-bit B counter, Bits[12:8] (MSB)",
+							"default": "00000"
+						}
+					]
+				},
+				{
+					"address": "0x016",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Set CP pin to VCP/2",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Reset R counter",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Reset A, B counters",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Reset all counters",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "B counter bypass",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "2:0",
+							"name": "Prescaler P",
+							"default": "110",
+							"data":["110",
+									"000",	
+									"001",
+									"010",
+									"011",
+									"100",
+									"101",
+									"111"]
+						}
+					]
+				},
+				{
+					"address": "0x017",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:2",
+							"name": "STATUS pin control",
+							"default": "000000"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "1:0",
+							"name": "Antibacklash pulse width",
+							"default": "00",
+							"data":["00",	
+									"01",
+									"10",
+									"11"]
+						}
+					]
+				},
+				{
+					"address": "0x018",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "6:5",
+							"name": "Lock detect counter",
+							"default": "00",
+							"data":["00",	
+									"01",
+									"10",
+									"11"]
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Digital lock detect window",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "Disable digital lock detect",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "2:1",
+							"name": "VCO cal divider",
+							"default": "11",
+							"data":["11",	
+									"10",
+									"01",
+									"00"]
+						},
+						{
+							"method": "LineEdit",
+							"bit": "0",
+							"name": "VCO cal now",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "0x019",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "7:6",
+							"name": "R, A, B counters, SYNC pin reset",
+							"default": "00",
+							"data":["00",	
+									"01",
+									"10",
+									"11"]
+						},
+						{
+							"method": "LineEdit",
+							"bit": "5:3",
+							"name": "R, A, B counters, SYNC pin reset",
+							"default": "000"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "2:0",
+							"name": "R, A, B counters, SYNC pin reset",
+							"default": "000"
+						}
+					]
+				},
+				{
+					"address": "0x01A",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Reference frequency monitor threshold",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "5:0",
+							"name": "LD pin control",
+							"default": "000000"
+						}
+					]
+				},
+				{
+					"address": "0x01B",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "VCO frequency monitor",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "REF2 (REFIN) frequency monitor",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "REF1 (REFIN) frequency monitor",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "4:0",
+							"name": "REFMON pin control",
+							"default": "00000"
+						}
+					]
+				},
+				{
+					"address": "0x01C",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Disable switchover deglitch",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Select REF2",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Use REF_SEL pin",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "4:3",
+							"name": "Reserved",
+							"default": "00",
+							"data":["00",
+									"01",
+									"10",
+									"11"]
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "REF2 power-on",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "REF1 power-on",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Differential reference",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "0x01D",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "PLL status register disable",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "LD pin comparator enable",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "Holdover enable",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "External holdover control",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Holdover enable",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "0x01F",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "VCO cal finished",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Holdover active",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "REF2 selected",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "VCO frequency > threshold",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "REF2 frequency > threshold",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "REF1 frequency > threshold",
+							"default": ""
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Digital lock detect",
+							"default": ""
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "LVPECL Outputs",
+				"addresses": [
+        		{
+					"address": "0x0F0",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "OUT0 invert",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT0 LVPECL differential voltage",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT0 power-down",
+							"default": "00",
+							"data":["00",
+									"01",
+									"10",
+									"11"]
+						}
+					]
+				},
+				{
+					"address": "0x0F1",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "OUT1 invert",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT1 LVPECL differential voltage",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT1 power-down",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						}
+					]
+				},
+				{
+					"address": "0x0F2",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "OUT2 invert",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT2 LVPECL differential voltage",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						},
+						{
+							"method": "ComboBox",
+							"bit": "1:0",
+							"name": "OUT2 power-down",
+							"default": "00",
+							"data":["00",
+									"01",
+									"10",
+									"11"]
+						}
+					]
+				},
+				{
+					"address": "0x0F3",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "OUT3 invert",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT3 LVPECL differential voltage",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT3 power-down",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						}
+					]
+				},
+				{
+					"address": "0x0F4",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "OUT4 invert",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT4 LVPECL differential voltage",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT4 power-down",
+							"default": "00",
+							"data":["00",
+									"01",
+									"10",
+									"11"]
+						}
+					]
+				},
+				{
+					"address": "0x0F5",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "OUT5 invert",
+							"default": "0"
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT5 LVPECL differential voltage",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						},
+						{
+							"method": "ComboBox",
+							"bit": "3:2",
+							"name": "OUT5 power-down",
+							"default": "10",
+							"data":["10",
+									"00",
+									"01",
+									"11"]
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "LVPECL Channel Dividers",
+				"addresses": [
+        		{
+					"address": "0x190",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "Divider 0 low cycles",
+							"default": "0000"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "3:0",
+							"name": "Divider 0 high cycles",
+							"default": "0000"
+						}
+					]
+				},
+				{
+					"address": "0x191",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Divider 0 bypass",
+							"default": "1"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Divider 0 nosync",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Divider 0 force high",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Divider 0 start high",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "3:0",
+							"name": "Divider 0 phase offset",
+							"default": "0000"
+						}
+					]
+				},
+				{
+					"address": "0x192",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Divider 0 direct to output",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Divider 0 DCCOFF",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "0x193",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "Divider 1 low cycles",
+							"default": "1011"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "3:0",
+							"name": "Divider 1 high cycles",
+							"default": "1011"
+						}
+					]
+				},
+				{
+					"address": "0x194",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Divider 1 bypass",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Divider 1 nosync",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Divider 1 force high",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Divider 1 start high",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3:0",
+							"name": "Mirrored, Bits[3:0]",
+							"default": "0000"
+						}
+					]
+				},
+				{
+					"address": "0x195",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Divider 1 direct to output",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Divider 1 DCCOFF",
+							"default": "0"
+						}
+					]
+				},
+				{
+					"address": "0x196",
+					"bits": [
+						{
+							"method": "LineEdit",
+							"bit": "7:4",
+							"name": "Divider 2 low cycles",
+							"default": "0000"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "3:0",
+							"name": "Divider 2 high cycles",
+							"default": "0000"
+						}
+					]
+				},
+				{
+					"address": "0x197",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "7",
+							"name": "Divider 2 bypass",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "6",
+							"name": "Divider 2 nosync",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "5",
+							"name": "Divider 2 force high",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Divider 2 start high",
+							"default": "0"
+						},
+						{
+							"method": "LineEdit",
+							"bit": "3:0",
+							"name": "Divider 2 phase offset",
+							"default": "0000"
+						}
+					]
+				},
+				{
+					"address": "0x198",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Divider 2 direct to output",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Divider 2 DCCOFF",
+							"default": "0"
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "VCO Divider and CLK Input",
+				"addresses": [
+        		{
+					"address": "0x1E0",
+					"bits": [
+						{
+							"method": "ComboBox",
+							"bit": "2:0",
+							"name": "VCO divider",
+							"default": "010",
+							"data":["010",
+									"000",
+									"001",
+									"011",
+									"100",
+									"101",
+									"110",
+									"111"]
+						}
+					]
+				},
+				{
+					"address": "0x1E1",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "4",
+							"name": "Power down clock input section",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "3",
+							"name": "Power down VCO clock interface",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "Power down VCO and CLK",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Select VCO or CLK",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Bypass VCO divider",
+							"default": "0"
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "System",
+				"addresses": [
+        		{
+					"address": "0x230",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "2",
+							"name": "Power down SYNC",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "1",
+							"name": "Power down distribution reference",
+							"default": "0"
+						},
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Soft sync",
+							"default": "0"
+						}
+					]
+				}
+				]
+			},
+			{
+				"name": "Update All Registers",
+				"addresses": [
+        		{
+					"address": "0x232",
+					"bits": [
+						{
+							"method": "CheckBox",
+							"bit": "0",
+							"name": "Update all registers",
+							"default": "0"
+						}
+					]
+				}
+				]
+			}
+		]
+	}
+}
+
+
+
+
+
