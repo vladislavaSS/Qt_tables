@@ -1,0 +1,444 @@
+{
+	"fields": {
+		"registers": [
+			{
+				"name": "QPLL0_CFG0",
+				"address": "0008h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "COMMON_CFG0",
+				"address": "0009h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RSVD_ATTR0",
+				"address": "000Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_CFG1",
+				"address": "0010h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_CFG2",
+				"address": "0011h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_LOCK_CFG",
+				"address": "0012h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_INIT_CFG0",
+				"address": "0013h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_INIT_CFG1",
+				"address": "0014h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "15:8"
+			},
+			{
+				"name": "QPLL0_FBDIV",
+				"address": "0014h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "7:0",
+				"condition": "16 - 160, -2"
+			},
+			{
+				"name": "QPLL0_CFG3",
+				"address": "0015h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_INIQPLL0_CPT_CFG1",
+				"address": "0016h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "QPLL0_REFCLK_DIV",
+				"address": "0018h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "11:7",
+				"data":["2 - 0",
+						"3 - 1",
+						"4 - 2",
+						"5 - 3",
+						"6 - 5",
+						"8 - 6",
+						"10 - 7",
+						"12 - 13",
+						"16 - 14",
+						"20 - 15",
+						"1 - 16"]
+			},
+			{
+				"name": "QPLL0_LPF",
+				"address": "0019h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "QPLL0_CFG1_G3",
+				"address": "001Ah",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_CFG2_G3",
+				"address": "001Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_LPF_G3",
+				"address": "001Ch",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "QPLL0_LOCK_CFG_G3",
+				"address": "001Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RSVD_ATTR1",
+				"address": "001Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_FBDIV_G3",
+				"address": "001Fh",
+                "Attribute Bits": "7:0",
+                // "DRP Bits": "7:0"
+			},
+			{
+				"name": "RXRECCLKOUT0_SEL",
+				"address": "001Fh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "QPLL0_SDM_CFG0",
+				"address": "0020h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_SDM_CFG1",
+				"address": "0021h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "SDM0INITSEED0_0",
+				"address": "0022h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "SDM0INITSEED0_1",
+				"address": "0023h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "QPLL0_SDM_CFG2",
+				"address": "0024h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL0_CP_G3",
+				"address": "0025h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "SDM0DATA1_0",
+				"address": "0028h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "SDM0_WIDTH_PIN_SEL",
+				"address": "0029h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "SDM0_DATA_PIN_SEL",
+				"address": "0029h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "SDM0DATA1_1",
+				"address": "0029h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "QPLL0_CFG4",
+				"address": "0030h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "BIAS_CFG0",
+				"address": "0081h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "BIAS_CFG1",
+				"address": "0082h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "BIAS_CFG2",
+				"address": "0083h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "BIAS_CFG3",
+				"address": "0084h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "BIAS_CFG_RSVD",
+				"address": "0085h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "BIAS_CFG4",
+				"address": "0086h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_CFG0",
+				"address": "0088h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "COMMON_CFG1",
+				"address": "0089h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "POR_CFG",
+				"address": "008Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_CFG1",
+				"address": "0090h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_CFG2",
+				"address": "0091h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_LOCK_CFG",
+				"address": "0092h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_INIT_CFG0",
+				"address": "0093h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_INIT_CFG1",
+				"address": "0094h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "15:8"
+			},
+			{
+				"name": "QPLL1_FBDIV",
+				"address": "0094h",
+                "Attribute Bits": "7:0",
+                // "DRP Bits": "7:0"
+			},
+			{
+				"name": "QPLL1_CFG3",
+				"address": "0095h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "7:0"
+			},
+			{
+				"name": "QPLL1_CP",
+				"address": "0096h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "SARC_SEL",
+				"address": "0098h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "SARC_EN",
+				"address": "0098h",
+                "Attribute Bits": "13",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "QPLL1_REFCLK_DIV",
+				"address": "0098h",
+                "Attribute Bits": "11:7",
+                // "DRP Bits": "4:0"
+			},
+			{
+				"name": "QPLL1_LPF",
+				"address": "0099h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "QPLL1_CFG1_G3",
+				"address": "009Ah",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_CFG2_G3",
+				"address": "009Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_LPF_G3",
+				"address": "009Ch",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "QPLL1_LOCK_CFG_G3",
+				"address": "009Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RSVD_ATTR2",
+				"address": "009Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_FBDIV_G3",
+				"address": "009Fh",
+                "Attribute Bits": "7:0",
+                // "DRP Bits": "15:8"
+			},
+			{
+				"name": "RXRECCLKOUT1_SEL",
+				"address": "009Fh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "QPLL1_SDM_CFG0",
+				"address": "00A0h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_SDM_CFG1",
+				"address": "00A1h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "SDM1INITSEED0_0",
+				"address": "00A2h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "SDM1INITSEED0_1",
+				"address": "00A3h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "QPLL1_SDM_CFG2",
+				"address": "00A4h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_CP_G3",
+				"address": "00A5h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "SDM1DATA1_0",
+				"address": "00A8h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "SDM1_WIDTH_PIN_SEL",
+				"address": "00A9h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "SDM1_DATA_PIN_SEL",
+				"address": "00A9h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "SDM1DATA1_1",
+				"address": "00A9h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "RSVD_ATTR3",
+				"address": "00ADh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "QPLL1_CFG4",
+				"address": "00B0h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			}
+		]
+	}
+}

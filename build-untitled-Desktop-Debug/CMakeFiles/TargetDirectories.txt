@@ -1,0 +1,3 @@
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-untitled-Desktop-Debug/CMakeFiles/untitled.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-untitled-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-untitled-Desktop-Debug/CMakeFiles/rebuild_cache.dir

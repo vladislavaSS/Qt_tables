@@ -135,6 +135,13 @@ void Tables::hasChildren (QStandardItem *selectedItem, rapidjson::Document::Allo
             }
 
             if (Result.isEmpty()) Result = "N/A";
+
+            if (HMCflag && selectedItem->text() == "0x05") {
+                QString first = child->text().remove("0x0");
+                int ResultInt = first.toInt() + bin2dec(Result).toInt();
+                Result = dec2bin(QString::number(ResultInt), 24);
+            }
+
             if (!bin2hex(Result).isEmpty()) Result = "0x" + bin2hex(Result);
 
           } else if (LMKflag && reg_flag) {
@@ -150,15 +157,13 @@ void Tables::hasChildren (QStandardItem *selectedItem, rapidjson::Document::Allo
 
           rapidjson::Value resultValue(rapidjson::kObjectType);
 
-          if (HMCflag && selectedItem->text() == "0x05") Result = "0x05 " + Result;
-
-          if (!LMKflag) {
-
+          if (HMCflag && selectedItem->text() == "0x05") {
+              fileForm(resultValue, selectedItem->text(), Result, allocator);
+              document.PushBack(resultValue, allocator);
+          } else if (!LMKflag) {
             fileForm(resultValue, child->text(), Result, allocator);
             document.PushBack(resultValue, allocator);
-          }
-          if (LMKflag && (selectedItem->text() == "0x09" || (selectedItem->text() == "0x14" && j == 2)) && Result != "N/A") {
-
+          } if (LMKflag && (selectedItem->text() == "0x09" || (selectedItem->text() == "0x14" && j == 2)) && Result != "N/A") {
             fileForm(resultValue, selectedItem->text(), Result, allocator);
             document.PushBack(resultValue, allocator);
           }
@@ -208,7 +213,7 @@ void Tables::serialized(/*rapidjson::PrettyWriter<rapidjson::StringBuffer> &wr, 
   for (int i = 0; i < rootItem->rowCount(); ++i) {
     QStandardItem* item = rootItem->child(i);
 
-//    if (item->child(0)) hasChildren(item, allocator, document, model, treeView, read);
+    if (item->child(0)) hasChildren(item, allocator, document, model, treeView, read);
     if (item->child(0)->text() == "0x05" ) hasChildren(item->child(0), allocator, document, model, treeView, read);
   }
 
@@ -232,86 +237,87 @@ void Tables::serialized(/*rapidjson::PrettyWriter<rapidjson::StringBuffer> &wr, 
 void Tables::updateChildWidgets(QStandardItemModel* model, QString dataString, QStandardItem* item, QString readItem) {
 
     for (int i = 0; i < item->rowCount(); i++) {
+      if (item->text() == "ID Register") continue;
       for (int j = 0; j < item->columnCount(); j++) {
 
-     QStandardItem* item_sec;
-
-     if (!LMKflag) item_sec = item->child(i, j);
-     else item_sec = item;
-
-
-     if (item_sec && item_sec->text() == readItem) {
-       if (dataString.startsWith("0x05 ")) dataString = dataString.remove("0x05 ");
-
+       QStandardItem* item_sec;
+       if (!LMKflag) item_sec = item->child(i, j);
+       else item_sec = item;
        QString binaryData = hex2bin(dataString);
 
-       QModelIndex index = model->index(i, 1, item->index());
-       QWidget* widget = treeView->indexWidget(index);
+       if (item_sec && ((item_sec->text() == readItem) ||
+                        (item_sec->text() == readItem && !(HMCflag && item->text() == "0x05") ||
+                        (HMCflag && item_sec->text() == "0x0" + QString::number(cnt)) && j == 0 && item_sec->text() != "0x00"))) {
 
-       if (widget && index.isValid()) {
+         if (binaryData != "N/A") {
+         int data = bin2dec(binaryData).toInt() - cnt;
+         binaryData = dec2bin(QString::number(data), bitCount); }
 
-        for (QWidget* child : widget->findChildren<QWidget*>()) {
+         QModelIndex index = model->index(i, 1, item->index());
+         QWidget* widget = treeView->indexWidget(index);
 
-          if (!binaryData.isEmpty() && binaryData != "N/A") {
+         if (widget && index.isValid()) {
+           for (QWidget* child : widget->findChildren<QWidget*>()) {
+             if (!binaryData.isEmpty() && binaryData != "N/A") {
 
-            if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(child)) {
+               if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(child)) {
 
-              int bitNumber = lineEdit->property("bitNumber").toInt();
-              int bitWidth = lineEdit->property("bitWidth").toInt();
+                 int bitNumber = lineEdit->property("bitNumber").toInt();
+                 int bitWidth = lineEdit->property("bitWidth").toInt();
 
-              QString data = binaryData.mid(bitCount - bitNumber - 1, bitWidth);
-              if (readItem != "0x003") data = bin2dec(data);
-              setTextLine(lineEdit, data);
+                 QString data = binaryData.mid(bitCount - bitNumber - 1, bitWidth);
+                 if (readItem != "0x003") data = bin2dec(data);
+                 setTextLine(lineEdit, data);
 
-            } else if (QCheckBox* checkBox = qobject_cast<QCheckBox*>(child)) {
+               } else if (QCheckBox* checkBox = qobject_cast<QCheckBox*>(child)) {
 
-              int bitNumber = checkBox->property("bitNumber").toInt();
-              QString data = binaryData.mid(bitCount - bitNumber - 1, 1);
+                 int bitNumber = checkBox->property("bitNumber").toInt();
+                 QString data = binaryData.mid(bitCount - bitNumber - 1, 1);
 
-              if (data == "1") {
-                checkBox->setChecked(true);
-              } else if (data == "0") {
-                checkBox->setChecked(false);
-              }
+                 if (data == "1") {
+                   checkBox->setChecked(true);
+                 } else if (data == "0") {
+                   checkBox->setChecked(false);
+                 }
 
-            }
-            else if (QComboBox* comboBox = qobject_cast<QComboBox*>(child)) {
+               }
+                 else if (QComboBox* comboBox = qobject_cast<QComboBox*>(child)) {
 
-              int bitNumber = comboBox->property("bitNumber").toInt();
-              int bitWidth = comboBox->property("bitWidth").toInt();
-              QString value = binaryData.mid(bitCount - bitNumber - 1, bitWidth);
+                 int bitNumber = comboBox->property("bitNumber").toInt();
+                 int bitWidth = comboBox->property("bitWidth").toInt();
+                 QString value = binaryData.mid(bitCount - bitNumber - 1, bitWidth);
 
-              if (readItem == "0x003" || readItem == "0x1D" || readItem == "0x1E") value = bin2dec(value);
-              setTextCombo(comboBox, value);
-            }
+                 if (readItem == "0x003" || readItem == "0x1D" || readItem == "0x1E") value = bin2dec(value);
+                 setTextCombo(comboBox, value);
+               }
 
-          } else if (binaryData == "N/A") {
+             } else {
 
-            if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(child)) {
-              lineEdit->setText(bin2dec(lineEdit->property("default").toString()));
+               if (QLineEdit* lineEdit = qobject_cast<QLineEdit*>(child)) {
+                 lineEdit->setText(bin2dec(lineEdit->property("default").toString()));
 
-            } else if (QCheckBox* checkBox = qobject_cast<QCheckBox*>(child)) {
-              QString property = checkBox->property("default").toString();
+               } else if (QCheckBox* checkBox = qobject_cast<QCheckBox*>(child)) {
+                 QString property = checkBox->property("default").toString();
 
-              switch (property.toInt()) {
-                  case 0: { checkBox->setChecked(0); break;
-                } case 1: { checkBox->setChecked(1); break;
-                } case 2: {
-                    checkBox->setCheckState(Qt::PartiallyChecked);
-                    checkBox->setTristate(true);
-                    break;
-                }
-              }
-            }
-            else if (QComboBox* comboBox = qobject_cast<QComboBox*>(child))
-              comboBox->setCurrentText(comboBox->property("default").toString());
+                 switch (property.toInt()) {
+                     case 0: { checkBox->setChecked(0); break;
+                   } case 1: { checkBox->setChecked(1); break;
+                   } case 2: {
+                       checkBox->setCheckState(Qt::PartiallyChecked);
+                       checkBox->setTristate(true);
+                       break;
+                   }
+                 }
+               }
+                 else if (QComboBox* comboBox = qobject_cast<QComboBox*>(child))
+                 comboBox->setCurrentText(comboBox->property("default").toString());
 
-          } else continue;
-        }
-      }
-    }
-  }
-}
+             }
+           }
+         }
+       }
+     }
+   }
 
 
 }
@@ -347,47 +353,54 @@ void Tables::deserialized(/*const rapidjson::Value& jsonArray*/)
             QStringList childAddresses;
             QStringList childDatalist;
 
-            bool childflag = 0;
+            bool contains = 0;
 
             for (const auto& value : jsonArray) {
                 if (value.isObject()) {
                     QJsonObject obj = value.toObject();
-                    if (obj.contains("Data") && obj["Data"].isString()) {
-                        if (obj["Data"].toString().startsWith("0x05 ")) {
-                            childDatalist.append(obj["Data"].toString());
-                            childflag = 1; }
-                        else datalist.append(obj["Data"].toString());
-                    }
 
                     if (obj.contains("Addr") && obj["Addr"].isString()) {
-                        if (!childflag) addresses.append(obj["Addr"].toString());
-                        else childAddresses.append(obj["Addr"].toString());
-                        childflag = 0;
-                    }
+                        addresses.append(obj["Addr"].toString());
+                        contains = 1; }
+
+                    if (obj.contains("Data") && obj["Data"].isString())
+                        datalist.append(obj["Data"].toString());
+                    else if (contains == 1) datalist.append("N/A");
+
+                    contains = 0;
                 }
+            }
+
+            if(HMCflag) {
+            for (int i = 7; i <= 14; i++) {
+                childAddresses.append(addresses[i]);
+                childDatalist.append(datalist[i]);
+            }
+
+            for (int i = 7; i <= 14; i++) {
+                addresses.removeAt(7);
+                datalist.removeAt(7);
+            }
+
+            addresses.removeAt(0);
+            datalist.removeAt(0);
             }
 
             for (int index = 0; index < qMin(addresses.size(), datalist.size()); ++index) {
-                if ((item->text() == addresses[index] && LMKflag) || !LMKflag) {
+                if ((item->text() == addresses[index] && LMKflag) || !LMKflag)
                     updateChildWidgets(model, datalist[index], item, addresses[index]);
-                }
             }
 
-            if (item->hasChildren()) {
-
+            if (item->hasChildren() && HMCflag) {
               for (int j = 0; j < item->rowCount(); ++j) {
-                  if (item->child(j)->hasChildren())
-                    for (int k = 0; k < item->child(j)->rowCount(); ++k) {
-
-                        for (int index = 0; index < qMin(childAddresses.size(), childDatalist.size()); ++index) {
-                            if (item->child(j)->child(k)->text() == childAddresses[index]) {
-                                updateChildWidgets(model, childDatalist[index], item->child(j), childAddresses[index]);
-                            }
-                        }
-                    }
-               }
+                for (int index = 0; index < qMin(childAddresses.size(), childDatalist.size()); ++index) {
+                  if (item->child(j)->text() == childAddresses[index]) {
+                    updateChildWidgets(model, childDatalist[index], item->child(j), childAddresses[index]);
+                    cnt++;
+                  }
+                }
+              } cnt = 0;
             }
-
         }
     }
 

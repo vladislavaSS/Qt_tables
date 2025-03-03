@@ -1,0 +1,415 @@
+{
+	"fields": {
+		"registers": [
+			{
+				"name": "CDR_SWAP_MODE_EN",
+				"address": "0002h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXBUFRESET_TIME",
+				"address": "0003h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "EYE_SCAN_SWAP_EN",
+				"address": "0003h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "RX_DATA_WIDTH",
+				"address": "0003h",
+                // "Attribute Bits": "3:0",
+                "DRP Bits": "8:5"
+			},
+			{
+				"name": "RXCDRFREQRESET_TIME",
+				"address": "0003h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "4:0"
+			},
+			{
+				"name": "RXCDRPHRESET_TIME",
+				"address": "0004h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "PCI3_RX_ELECIDLE_H2L_DISABLE",
+				"address": "0004h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "10:8"
+			},
+			{
+				"name": "RXDFELPMRESET_TIME",
+				"address": "0004h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "7:1"
+			},
+			{
+				"name": "RX_FABINT_USRCLK_FLOP",
+				"address": "0004h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXPMARESET_TIME",
+				"address": "0005h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "PCI3_RX_ELECIDLE_LP4_DISABLE",
+				"address": "0005h",
+                "Attribute Bits": "10",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "PCI3_RX_ELECIDLE_EI2_ENABLE",
+				"address": "0005h",
+                "Attribute Bits": "9",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "PCI3_RX_FIFO_DISABLE",
+				"address": "0005h",
+                "Attribute Bits": "8",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXPCSRESET_TIME",
+				"address": "0005h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "7:3"
+			},
+			{
+				"name": "RXELECIDLE_CFG",
+				// "address": "0005h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "2:0"
+			},
+			{
+				"name": "RXDFE_HB_CFG1",
+				"address": "0006h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TXPMARESET_TIME",
+				"address": "0009h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "RX_PMA_POWER_SAVE",
+				"address": "0009h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "TX_PMA_POWER_SAVE",
+				"address": "0009h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "TXPCSRESET_TIME",
+				"address": "0009h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "7:3"
+			},
+			{
+				"name": "WB_MODE",
+				"address": "000Bh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "15:14"
+			},
+			{
+				"name": "RXPMACLK_SEL",
+				"address": "000Bh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "9:8"
+			},
+			{
+				"name": "TX_FABINT_USRCLK_FLOP",
+				"address": "000Bh",
+                "Attribute Bits": "0",
+                "DRP Bits": "4"
+			},
+			{
+				"name": "TX_PROGCLK_SEL",
+				"address": "000Ch",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "RXISCANRESET_TIME",
+				"address": "000Ch",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "11:10"
+			},
+			{
+				"name": "RXISCANRESET_TIME",
+				"address": "000Ch",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "9:5"
+			},
+			{
+				"name": "RXCDR_CFG0",
+				"address": "000Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG1",
+				"address": "000Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG2",
+				"address": "0010h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG3",
+				"address": "0011h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG4",
+				"address": "0012h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_LOCK_CFG0",
+				"address": "0013h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+            c 370
+			{
+				"name": "",
+				"address": "0014h",
+                // "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "",
+				"address": "",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			}
+		]
+	}
+}

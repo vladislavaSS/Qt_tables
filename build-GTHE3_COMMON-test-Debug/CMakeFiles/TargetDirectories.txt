@@ -1,0 +1,4 @@
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-GTHE3_COMMON-test-Debug/CMakeFiles/GTHE3_COMMON.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-GTHE3_COMMON-test-Debug/CMakeFiles/edit_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-GTHE3_COMMON-test-Debug/CMakeFiles/rebuild_cache.dir
+/home/vadislava/qtprojects/qt_git/Qt_tables/build-GTHE3_COMMON-test-Debug/CMakeFiles/GTHE3_COMMON_autogen.dir

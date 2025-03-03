@@ -169,7 +169,7 @@ void Tables::setTextCombo(QComboBox *comboBox, QString value) {
 
 }
 
-void Tables::fileForm(rapidjson::Value& resultValue, QString child, const QString& Result, rapidjson::Document::AllocatorType& allocator) {
+void Tables::fileForm(rapidjson::Value& resultValue, QString child, const QString& Result, rapidjson::Document::AllocatorType& allocator, bool read) {
 
     resultValue.AddMember(
     rapidjson::Value("Addr", allocator),
@@ -177,7 +177,7 @@ void Tables::fileForm(rapidjson::Value& resultValue, QString child, const QStrin
     allocator
   );
 
-  if (!read) {
+  if (!read && Result != "N/A") {
     resultValue.AddMember(
       rapidjson::Value("Data", allocator),
       rapidjson::Value(Result.toStdString().c_str(), allocator),

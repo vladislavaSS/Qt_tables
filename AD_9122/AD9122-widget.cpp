@@ -28,7 +28,7 @@ AD9122Widget::AD9122Widget(QWidget *parent)
 //    tablesInstance->LMKflag = 1;
 //    tablesInstance->bitCount = 32;
 
-    tablesInstance->HCMflag = 1;
+    tablesInstance->HMCflag = 1;
     tablesInstance->ADflag = 0;
     tablesInstance->LMKflag = 0;
     tablesInstance->bitCount = 24;
@@ -59,20 +59,20 @@ AD9122Widget::AD9122Widget(QWidget *parent)
 
     QWidget *buttons2 = new QWidget();
 
-    tablesInstance->save_elem = new QPushButton("Save element", buttons);
-    layout_buttons->addWidget(tablesInstance->save_elem);
+    tablesInstance->saveButton = new QPushButton("Save element", buttons);
+    layout_buttons->addWidget(tablesInstance->saveButton);
 
-    tablesInstance->load_elem = new QPushButton("Download element", buttons);
-    layout_buttons->addWidget(tablesInstance->load_elem);
+    tablesInstance->loadButton = new QPushButton("Download element", buttons);
+    layout_buttons->addWidget(tablesInstance->loadButton);
 
     buttons2->setLayout(layout_buttons);
     layout->addWidget(buttons2);
 
     connect(tablesInstance->toggleButton, &QPushButton::clicked, tablesInstance, &Tables::on_toggle_button_clicked);
-    connect(tablesInstance->saveButton, &QPushButton::clicked, tablesInstance, &Tables::saveData);
+    connect(tablesInstance->saveButton, &QPushButton::clicked, tablesInstance, &Tables::saveButton);
     connect(tablesInstance->treeView, &QTreeView::clicked, tablesInstance, &Tables::onItemClicked);
     connect(tablesInstance->loadButton, &QPushButton::clicked, tablesInstance, &Tables::loadAll);
-    connect(tablesInstance->load_elem, &QPushButton::clicked, tablesInstance, &Tables::loadElement);
+    connect(tablesInstance->loadButton, &QPushButton::clicked, tablesInstance, &Tables::loadElement);
 
     setLayout(layout);
 

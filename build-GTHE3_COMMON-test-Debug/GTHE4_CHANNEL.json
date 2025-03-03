@@ -1,0 +1,3296 @@
+{
+	"fields": {
+		"registers": [
+			{
+				"name": "CDR_SWAP_MODE_EN",
+				"address": "0002h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXBUFRESET_TIME",
+				"address": "0003h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "CFOK_PWRSVE_EN",
+				"address": "0003h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "EYE_SCAN_SWAP_EN",
+				"address": "0003h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "RX_DATA_WIDTH",
+				"address": "0003h",
+				"data": [ "128 - 8",
+						  "16 - 2",
+						  "160 - 9",
+						  "20 - 3",
+						  "32 - 4",
+						  "40 - 5",
+						  "64 - 6",
+						  "80 - 7"],
+                "Attribute Bits": "3:0",
+                "DRP Bits": "8:5"
+			},
+			{
+				"name": "RXCDRFREQRESET_TIME",
+				"address": "0003h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "4:0"
+			},
+			{
+				"name": "RXCDRPHRESET_TIME",
+				"address": "0004h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "10:8"
+			},
+			{
+				"name": "PCI3_RX_ELECIDLE_H2L_DISABLE",
+				"address": "0004h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "10:8",
+				"condition": "0 - 7"
+			},
+			{
+				"name": "RXDFELPMRESET_TIME",
+				"address": "0004h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "7:1"
+			},
+			{
+				"name": "RX_FABINT_USRCLK_FLOP",
+				"address": "0004h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXPMARESET_TIME",
+				"address": "0005h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "PCI3_RX_ELECIDLE_LP4_DISABLE",
+				"address": "0005h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "PCI3_RX_ELECIDLE_EI2_ENABLE",
+				"address": "0005h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "PCI3_RX_FIFO_DISABLE",
+				"address": "0005h",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "RXPCSRESET_TIME",
+				"address": "0005h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "7:3"
+			},
+			{
+				"name": "RXELECIDLE_CFG",
+				"address": "0005h",
+				"data": ["SIGCFG_1 - 0",
+						 "SIGCFG_12 - 6",
+						 "SIGCFG_16 - 7",
+						 "SIGCFG_2 - 1",
+						 "SIGCFG_3 - 2",
+						 "SIGCFG_4 - 3",
+						 "SIGCFG_6 - 4",
+						 "SIGCFG_8 - 5"],
+                "Attribute Bits": "2:0",
+                "DRP Bits": "2:0"
+			},
+			{
+				"name": "RXDFE_HB_CFG1",
+				"address": "0006h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TXPMARESET_TIME",
+				"address": "0009h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "RX_PMA_POWER_SAVE",
+				"address": "0009h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "TX_PMA_POWER_SAVE",
+				"address": "0009h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "SRSTMODE",
+				"address": "0009h",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "TXPCSRESET_TIME",
+				"address": "0009h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "7:3"
+			},
+			{
+				"name": "RXPMACLK_SEL",
+				"address": "000Bh",
+				"data":["CROSSING - 2",
+						"DATA - 0",
+						"EYESCAN - 1"],
+                "Attribute Bits": "1:0",
+                "DRP Bits": "9:8"
+			},
+			{
+				"name": "TX_FABINT_USRCLK_FLOP",
+				"address": "000Bh",
+                "Attribute Bits": "4",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "TX_PROGCLK_SEL",
+				"address": "000Ch",
+				"data":["CPLL - 2",
+						"POSTPI - 0",
+						"PREPI - 1"],
+                "Attribute Bits": "1:0",
+                "DRP Bits": "11:10"
+			},
+			{
+				"name": "RXISCANRESET_TIME",
+				"address": "000Ch",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "9:5"
+			},
+			{
+				"name": "RXCDR_CFG0",
+				"address": "000Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG1",
+				"address": "000Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG2",
+				"address": "0010h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG3",
+				"address": "0011h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG4",
+				"address": "0012h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_LOCK_CFG0",
+				"address": "0013h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CHAN_BOND_MAX_SKEW",
+				"address": "0014h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "15:12",
+				"condition": "1 - 14"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_LEN",
+				"address": "0014h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "11:10",
+				"condition": "-1"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_1_1",
+				"address": "0014h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "PCI3_RX_ELECIDLE_HI_COUNT",
+				"address": "0015h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "15:10"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_1_3",
+				"address": "0015h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "PCI3_RX_ELECIDLE_H2L_COUNT",
+				"address": "0016h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "15:10"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_1_4",
+				"address": "0016h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "RX_BUFFER_CFG",
+				"address": "0017h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "15:10"
+			},
+			{
+				"name": "RX_DEFER_RESET_BUF_EN",
+				"address": "0017h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "OOBDIVCTL",
+				"address": "0017h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "8:7"
+			},
+			{
+				"name": "PCI3_AUTO_REALIGN",
+				"address": "0017h",
+				"data":["FRST_SMPL - 0",
+						"OVR_1K_BLK - 3",
+						"OVR_64_BLK - 2",
+						"OVR_8_BLK  - 1"],
+                "Attribute Bits": "1:0",
+                "DRP Bits": "6:5"
+			},
+			{
+				"name": "PCI3_PIPE_RX_ELECIDLE",
+				"address": "0017h",
+                "Attribute Bits": "0",
+                "DRP Bits": "4"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_1_ENABLE",
+				"address": "0018h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "15:12"
+			},
+			{
+				"name": "PCI3_RX_ASYNC_EBUF_BYPASS",
+				"address": "0018h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "11:10"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_2_1",
+				"address": "0018h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_2_2",
+				"address": "0019h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_2_3",
+				"address": "0019h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_2_4",
+				"address": "001Bh",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_2_ENABLE",
+				"address": "001Ch",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "15:12"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_2_USE",
+				"address": "001Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "11"
+			},
+			{
+				"name": "CLK_COR_KEEP_IDLE",
+				"address": "001Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "6"
+			},
+			{
+				"name": "CLK_COR_MIN_LAT",
+				"address": "001Ch",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "5:0",
+				"condition": "3 - 63"
+			},
+			{
+				"name": "CLK_COR_MAX_LAT",
+				"address": "001Dh",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "15:10",
+				"condition": "3 - 60"
+			},
+			{
+				"name": "CLK_COR_PRECEDENCE",
+				"address": "001Dh",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "CLK_COR_REPEAT_WAIT",
+				"address": "001Dh",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "8:4"
+			},
+			{
+				"name": "CLK_COR_SEQ_LEN",
+				"address": "001Dh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "3:2",
+				"condition": "-1"
+			},
+			{
+				"name": "CHAN_BOND_KEEP_ALIGN",
+				"address": "001Dh",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "CLK_COR_SEQ_1_1",
+				"address": "001Eh",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CLK_COR_SEQ_1_2",
+				"address": "001Fh",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CLK_COR_SEQ_1_3",
+				"address": "0020h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CLK_COR_SEQ_1_4",
+				"address": "0021h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CLK_COR_SEQ_1_ENABLE",
+				"address": "0022h",
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "CLK_COR_SEQ_2_1",
+				"address": "0022h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CLK_COR_SEQ_2_2",
+				"address": "0023h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CLK_COR_SEQ_2_ENABLE",
+				"address": "0024h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "15:12"
+			},
+			{
+				"name": "CLK_COR_SEQ_2_USE",
+				"address": "0024h",
+                "Attribute Bits": "0",
+                "DRP Bits": "11"
+			},
+			{
+				"name": "CLK_CORRECT_USE",
+				"address": "0024h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "CLK_COR_SEQ_2_3",
+				"address": "0024h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CLK_COR_SEQ_2_4",
+				"address": "0025h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "RXDFE_HE_CFG0",
+				"address": "0026h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ALIGN_COMMA_WORD",
+				"address": "0027h",
+				"data":["1 - 1",
+						"2 - 2",
+						"4 - 4"],
+                "Attribute Bits": "2:0",
+                "DRP Bits": "15:13"
+			},
+			{
+				"name": "ALIGN_COMMA_DOUBLE",
+				"address": "0027h",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "SHOW_REALIGN_COMMA",
+				"address": "0027h",
+                "Attribute Bits": "0",
+                "DRP Bits": "11"
+			},
+			{
+				"name": "ALIGN_COMMA_ENABLE",
+				"address": "0027h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CPLL_FBDIV",
+				"address": "0028h",
+				"data": ["1 - 16",
+						 "10 - 7",
+						 "12 - 13",
+						 "16 - 14",
+						 "2 - 0",
+						 "20 - 15",
+						 "3 - 1",
+						 "4 - 2",
+						 "5 - 3",
+						 "6 - 5",
+						 "8 - 6"],
+                "Attribute Bits": "7:0",
+                "DRP Bits": "15:8"
+			},
+			{
+				"name": "CPLL_FBDIV_45",
+				"address": "0028h",
+				"data":["4 - 0",
+						"5 - 1"],	
+                "Attribute Bits": "0",
+                "DRP Bits": "7"
+			},
+			{
+				"name": "TXDRVBIAS_N",
+				"address": "0028h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "3:0"
+			},
+			{
+				"name": "CPLL_LOCK_CFG",
+				"address": "0029h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CPLL_REFCLK_DIV",
+				"address": "002Ah",
+				"data": ["1 - 16",
+						 "10 - 7",
+						 "12 - 13",
+						 "16 - 14",
+						 "2 - 0",
+						 "20 - 15",
+						 "3 - 1",
+						 "4 - 2",
+						 "5 - 3",
+						 "6 - 5",
+						 "8 - 6"],
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "SATA_CPLL_CFG",
+				"address": "002Ah",
+				"data":["VCO_1500MHZ - 1", 
+						"VCO_3000MHZ - 0", 
+						"VCO_6000MHZ - 3",
+						"VCO_750MHZ - 2"],	
+                "Attribute Bits": "1:0",
+                "DRP Bits": "6:5"
+			},
+			{
+				"name": "A_TXDIFFCTRL",
+				"address": "002Ah",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "4:0"
+			},
+			{
+				"name": "CPLL_INIT_CFG0",
+				"address": "002Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"condition": "0 - 7"
+			},
+			{
+				"name": "DEC_PCOMMA_DETECT",
+				"address": "002Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "15"
+			},
+			{
+				"name": "TX_DIVRESET_TIME",
+				"address": "002Ch",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "11:7"
+			},
+			{
+				"name": "RX_DIVRESET_TIME",
+				"address": "002Ch",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "6:2"
+			},
+			{
+				"name": "A_TXPROGDIVRESET",
+				"address": "002Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "1"
+			},
+			{
+				"name": "A_RXPROGDIVRESET",
+				"address": "002Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXCDR_LOCK_CFG1",
+				"address": "002Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCFOK_CFG1",
+				"address": "002Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H2_CFG0",
+				"address": "002Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H2_CFG1",
+				"address": "0030h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCFOK_CFG2",
+				"address": "0031h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXLPM_CFG",
+				"address": "0032h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXLPM_KH_CFG0",
+				"address": "0033h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXLPM_KH_CFG1",
+				"address": "0034h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFELPM_KL_CFG0",
+				"address": "0035h ",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFELPM_KL_CFG1",
+				"address": "0036h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXLPM_OS_CFG0",
+				"address": "0037h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXLPM_OS_CFG1",
+				"address": "0038h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXLPM_GC_CFG",
+				"address": "0039h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "DMONITOR_CFG1",
+				"address": "003Ah",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "15:8"
+			},
+			{
+				"name": "ES_CONTROL",
+				"address": "003Ch",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "15:10"
+			},
+			{
+				"name": "ES_ERRDET_EN",
+				"address": "003Ch",
+                "Attribute Bits": "9",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "ES_EYE_SCAN_EN",
+				"address": "003Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "ES_PRESCALE",
+				"address": "003Ch",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "4:0"
+			},
+			{
+				"name": "RXDFE_HC_CFG0",
+				"address": "003Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TX_PROGDIV_CFG",
+				"address": "003Eh",
+				"data":["0 - 32768",
+						"10 - 57440",
+						"100 - 57455",
+						"128 - 24654", 
+						"132 - 57862", 
+						"16 - 57410", 
+						"16.5 - 57880", 
+						"20 - 57442", 
+						"32 - 57414", 
+						"33 - 57856", 
+						"4 - 57432", 
+						"40 - 57415", 
+						"5 - 57464",
+						"64 - 57422", 
+						"66 - 57858", 
+						"8 - 57408", 
+						"80 - 57423"],
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER0",
+				"address": "003Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER1",
+				"address": "0040h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER2",
+				"address": "0041h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER3",
+				"address": "0042h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER4",
+				"address": "0043h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK0",
+				"address": "0044h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK1",
+				"address": "0045h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK2",
+				"address": "0046h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK3",
+				"address": "0047h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK4",
+				"address": "0048h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK0",
+				"address": "0049h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK1",
+				"address": "004Ah",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK2",
+				"address": "004Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK3",
+				"address": "004Ch",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK4",
+				"address": "004Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "FTS_LANE_DESKEW_EN",
+				"address": "004Eh",
+                "Attribute Bits": "0",
+                "DRP Bits": "4"
+			},
+			{
+				"name": "FTS_DESKEW_SEQ_ENABLE",
+				"address": "004Eh",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "3:0"
+			},
+			{
+				"name": "ES_HORZ_OFFSET",
+				"address": "004Fh",
+                "Attribute Bits": "11:0",
+                "DRP Bits": "15:4"
+			},
+			{
+				"name": "FTS_LANE_DESKEW_CFG",
+				"address": "004Fh",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "3:0"
+			},
+			{
+				"name": "RXDFE_HC_CFG1",
+				"address": "0050h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_EN_HI_LR",
+				"address": "0052h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "RX_DFE_AGC_CFG1",
+				"address": "0052h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "4:2",
+				"condition":"0 - 7"
+			},
+			{
+				"name": "RX_DFE_AGC_CFG0",
+				"address": "0052h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "RXDFE_CFG0",
+				"address": "0053h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_CFG1",
+				"address": "0054h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "LOCAL_MASTER",
+				"address": "0055h",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "PCS_PCIE_EN",
+				"address": "0055h",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{ 
+				"name": "ALIGN_MCOMMA_DET",
+				"address": "0055h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "ALIGN_MCOMMA_VALUE",
+				"address": "0055h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "ALIGN_PCOMMA_DET",
+				"address": "0056h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "ALIGN_PCOMMA_VALUE",
+				"address": "0056h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "TXDLY_LCFG",
+				"address": "0057h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_OS_CFG0",
+				"address": "0058h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXPHDLY_CFG",
+				"address": "0059h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_OS_CFG1",
+				"address": "005Ah",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDLY_CFG",
+				"address": "005Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDLY_LCFG",
+				"address": "005Ch",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_HF_CFG0",
+				"address": "005Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_HD_CFG0",
+				"address": "005Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_BIAS_CFG0",
+				"address": "005Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PCS_RSVD0",
+				"address": "0060h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXPH_MONITOR_SEL",
+				"address": "0061h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "RX_CM_BUF_PD",
+				"address": "0061h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "RX_CM_BUF_CFG",
+				"address": "0061h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "9:6"
+			},
+			{
+				"name": "RX_CM_TRIM",
+				"address": "0061h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "5:2",
+				"condition": "9 - 9"
+			},
+			{
+				"name": "RX_CM_SEL",
+				"address": "0061h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "RX_SUM_DFETAPREP_EN",
+				"address": "0062h",
+                "Attribute Bits": "0",
+                "DRP Bits": "14"
+			},
+			{
+				"name": "RX_SUM_VCM_OVWR",
+				"address": "0062h",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "RX_SUM_IREF_TUNE",
+				"address": "0062h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "12:9"
+			},
+			{
+				"name": "RX_SUM_VCMTUNE",
+				"address": "0062h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "6:3"
+			},
+			{
+				"name": "RX_SUM_VREF_TUNE",
+				"address": "0062h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "2:0"
+			},
+			{
+				"name": "CBCC_DATA_SOURCE_SEL",
+				"address": "0063h",
+				"data":["DECODED - 1",
+						"ENCODED - 0"],	
+                "Attribute Bits": "15",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "OOB_PWRUP",
+				"address": "0063h",
+                "Attribute Bits": "14",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXOOB_CFG",
+				"address": "0063h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "13:5"
+			},
+			{
+				"name": "RXOUT_DIV",
+				"address": "0063h",
+				"data":["1 - 0",
+						"16 - 4",
+						"2 - 1",
+						"4 - 2",
+						"8 - 3"],
+                "Attribute Bits": "2:0",
+                "DRP Bits": "2:0"
+			},
+			{
+				"name": "RX_SIG_VALID_DLY",
+				"address": "0064h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11",
+				"condition": "-1"
+			},
+			{
+				"name": "RXSLIDE_MODE",
+				"address": "0064h",
+				"data":["AUTO -  1",
+						"OFF - 0",
+						"PCS - 2",
+						"PMA - 3"],
+                "Attribute Bits": "1:0",
+                "DRP Bits": "10:9"
+			},
+			{
+				"name": "RXPRBS_ERR_LOOPBACK",
+				"address": "0064h",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "RXSLIDE_AUTO_WAIT",
+				"address": "0064h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "7:4"
+			},
+			{
+				"name": "RXBUF_EN",
+				"address": "0064h",
+                "Attribute Bits": "0",
+                "DRP Bits": "3"
+			},
+			{
+				"name": "RX_XCLK_SEL",
+				"address": "0064h",
+				"data":["RXDES - 0",
+						"RXPMA - 2",
+						"RXUSR - 1"],
+                "Attribute Bits": "1:0",
+                "DRP Bits": "2:1"
+			},
+			{
+				"name": "RXGEARBOX_EN",
+				"address": "0064h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXBUF_THRESH_OVFLW",
+				"address": "0064h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "15:10"
+			},
+			{
+				"name": "DMONITOR_CFG0",
+				"address": "0065h",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "RXBUF_THRESH_OVRD",
+				"address": "0065h",
+                "Attribute Bits": "0",
+                "DRP Bits": "15"
+			},
+			{
+				"name": "RXBUF_RESET_ON_COMMAALIGN",
+				"address": "0066h",
+                "Attribute Bits": "0",
+                "DRP Bits": "14"
+			},
+			{
+				"name": "RXBUF_RESET_ON_RATE_CHANGE",
+				"address": "0066h",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "RXBUF_RESET_ON_CB_CHANGE",
+				"address": "0066h",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "RXBUF_THRESH_UNDFLW",
+				"address": "0066h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "11:6"
+			},
+			{
+				"name": "RX_CLKMUX_EN",
+				"address": "0066h",
+                "Attribute Bits": "0",
+                "DRP Bits": "5"
+			},
+			{
+				"name": "RX_DISPERR_SEQ_MATCH",
+				"address": "0066h",
+                "Attribute Bits": "0",
+                "DRP Bits": "4"
+			},
+			{
+				"name": "RX_WIDEMODE_CDR",
+				"address": "0066h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "3:2"
+			},
+			{
+				"name": "RX_INT_DATAWIDTH",
+				"address": "0066h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0",
+				"condition": "0 - 2"
+			},
+			{
+				"name": "RXBUF_EIDLE_HI_CNT",
+				"address": "0067h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "15:12"
+			},
+			{
+				"name": "RXCDR_HOLD_DURING_EIDLE",
+				"address": "0067h",
+                "Attribute Bits": "0",
+                "DRP Bits": "11"
+			},
+			{
+				"name": "RX_DFE_LPM_HOLD_DURING_EIDLE",
+				"address": "0067h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "RX_WIDEMODE_CDR_GEN3",
+				"address": "0067h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "9:8"
+			},
+			{
+				"name": "RXBUF_RESET_ON_EIDLE",
+				"address": "0067h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "7:4"
+			},
+			{
+				"name": "RXBUF_RESET_ON_EIDLE",
+				"address": "0067h",
+                "Attribute Bits": "0",
+                "DRP Bits": "3"
+			},
+			{
+				"name": "RXCDR_FR_RESET_ON_EIDLE",
+				"address": "0067h",
+                "Attribute Bits": "0",
+                "DRP Bits": "2"
+			},
+			{
+				"name": "RXCDR_PH_RESET_ON_EIDLE",
+				"address": "0067h",
+                "Attribute Bits": "0",
+                "DRP Bits": "1"
+			},
+			{
+				"name": "RXBUF_ADDR_MODE",
+				"address": "0067h",
+				"data":["FAST - 1",
+						"FULL - 0"],	
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "SATA_BURST_VAL",
+				"address": "0068h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "15:13"
+			},
+			{
+				"name": "SAS_12G_MODE",
+				"address": "0068h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "USB_TXIDLE_TUNE_ENABLE",
+				"address": "0068h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "USB_RXIDLE_P0_CTRL",
+				"address": "0068h",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "SATA_BURST_SEQ_LEN",
+				"address": "0068h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "7:4"
+			},
+			{
+				"name": "SATA_EIDLE_VAL",
+				"address": "0068h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "2:0"
+			},
+			{
+				"name": "USB_POLL_SATA_MIN_BURST",
+				"address": "0069h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "15:9",
+				"condition": "0 - 61"
+			},
+			{
+				"name": "RX_WIDEMODE_CDR_GEN4",
+				"address": "0069h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "8:7"
+			},
+			{
+				"name": "USB_U2_SAS_MIN_COM",
+				"address": "0069h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "6:0",
+				"condition": "1 - 61"
+			},
+			{
+				"name": "USB_PING_SATA_MIN_INIT",
+				"address": "006Ah",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "15:9",
+				"condition": "1 - 63"
+			},
+			{
+				"name": "USB_U1_SATA_MIN_WAKE",
+				"address": "006Ah",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "6:0",
+				"condition": "1 - 63"
+			},
+			{
+				"name": "USB_POLL_SATA_MAX_BURST",
+				"address": "006Bh",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "15:9",
+				"condition": "1 - 63"
+			},
+			{
+				"name": "USB_U2_SAS_MAX_COM",
+				"address": "006Bh",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "6:0"
+			},
+			{
+				"name": "USB_PING_SATA_MAX_INIT",
+				"address": "006Ch",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "15:9",
+				"condition":"1 - 63"
+			},
+			{
+				"name": "USB_U1_SATA_MAX_WAKE",
+				"address": "006Ch",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "6:0",
+				"condition":"1 - 63"
+			},
+			{
+				"name": "RX_CLK25_DIV",
+				"address": "006Dh",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "7:3",
+				"condition":"1 - 32, -1"
+			},
+			{
+				"name": "TXPHDLY_CFG0",
+				"address": "006Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TXPHDLY_CFG1",
+				"address": "006Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TXDLY_CFG",
+				"address": "0070h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TXPH_MONITOR_SEL",
+				"address": "0071h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "6:2"
+			},
+			{
+				"name": "TAPDLY_SET_TX",
+				"address": "0071h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "RXCDR_LOCK_CFG2",
+				"address": "0072h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TXPH_CFG",
+				"address": "0073h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TERM_RCAL_CFG",
+				"address": "0074h",
+                "Attribute Bits": "14:0",
+                "DRP Bits": "14:0"
+			},
+			{
+				"name": "RXDFE_HF_CFG1",
+				"address": "0075h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PD_TRANS_TIME_FROM_P2",
+				"address": "0076h",
+                "Attribute Bits": "11:0",
+                "DRP Bits": "15:4"
+			},
+			{
+				"name": "TERM_RCAL_OVRD",
+				"address": "0076h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "3:1"
+			},
+			{
+				"name": "PD_TRANS_TIME_NONE_P2",
+				"address": "0077h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "15:8"
+			},
+			{
+				"name": "PD_TRANS_TIME_TO_P2",
+				"address": "0077h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "7:0"
+			},
+			{
+				"name": "TRANS_TIME_RATE",
+				"address": "0078h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "15:8"
+			},
+			{
+				"name": "TST_RSV0",
+				"address": "0079h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "15:8"
+			},
+			{
+				"name": "TST_RSV1",
+				"address": "0079h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "7:0"
+			},
+			{
+				"name": "TX_CLK25_DIV",
+				"address": "007Ah",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11",
+				"condition":"1 - 32, -1"
+			},
+			{
+				"name": "TX_XCLK_SEL",
+				"address": "007Ah",
+				"data":["TXOUT - 0",
+						"TXUSR - 1"],	
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "TX_DATA_WIDTH",
+				"address": "007Ah",
+				"data":["128 - 8",
+						"16 - 2",
+						"160 - 9",
+						"20 - 3",
+						"32 - 4",
+						"40 - 5",
+						"64 - 6",
+						"80 - 7"],
+                "Attribute Bits": "3:0",
+                "DRP Bits": "3:0"
+			},
+			{
+				"name": "TX_DEEMPH0",
+				"address": "007Bh",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "15:10"
+			},
+			{
+				"name": "TX_DEEMPH1",
+				"address": "007Bh",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "7:2"
+			},
+			{
+				"name": "TX_MAINCURSOR_SEL",
+				"address": "007Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "14"
+			},
+			{
+				"name": "TXGEARBOX_EN",
+				"address": "007Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "TXOUT_DIV",
+				"address": "007Ch",
+				"data":["1 - 0",
+						"16 - 4",
+						"2 - 1",
+						"4 - 2",
+						"8 - 3"],
+                "Attribute Bits": "2:0",
+                "DRP Bits": "10:8"
+			},
+			{
+				"name": "TXBUF_EN",
+				"address": "007Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "7"
+			},
+			{
+				"name": "TXBUF_RESET_ON_RATE_CHANGE",
+				"address": "007Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "6"
+			},
+			{
+				"name": "TX_RXDETECT_REF",
+				"address": "007Ch",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "5:3",
+				"condition":"1 - 7"
+			},
+			{
+				"name": "TX_RXDETECT_REF",
+				"address": "007Ch",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "5:3"
+			},
+			{
+				"name": "TXFIFO_ADDR_CFG",
+				"address": "007Ch",
+				"data":["HIGH - 1",
+						"LOW - 0"],	
+                "Attribute Bits": "0",
+                "DRP Bits": "2"
+			},
+			{
+				"name": "TX_SW_MEAS",
+				"address": "007Ch",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "TX_RXDETECT_CFG",
+				"address": "007Dh",
+                "Attribute Bits": "13:0",
+                "DRP Bits": "15:2"
+			},
+			{
+				"name": "TX_CLKMUX_EN",
+				"address": "007Eh",
+                "Attribute Bits": "0",
+                "DRP Bits": "15"
+			},
+			{
+				"name": "TX_LOOPBACK_DRIVE_HIZ",
+				"address": "007Eh",
+                "Attribute Bits": "0",
+                "DRP Bits": "14"
+			},
+			{
+				"name": "TX_DRIVE_MODE",
+				"address": "007Eh",
+				"data":["DIRECT - 0",
+						"PIPE - 1",
+						"PIPEGEN3 - 2"],
+                "Attribute Bits": "",
+                "DRP Bits": ""
+			},
+			{
+				"name": "TX_EIDLE_ASSERT_DELAY",
+				"address": "007Eh",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "12:8"
+			},
+			{
+				"name": "TX_EIDLE_DEASSERT_DELAY",
+				"address": "007Eh",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "7:5"
+			},
+			{
+				"name": "TX_MARGIN_FULL_0",
+				"address": "007Fh",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "4:2"
+			},
+			{
+				"name": "TX_MARGIN_FULL_1",
+				"address": "007Fh",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "7:1"
+			},
+			{
+				"name": "TX_MARGIN_FULL_2",
+				"address": "0080h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "15:9"
+			},
+			{
+				"name": "TX_MARGIN_FULL_3",
+				"address": "0080h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "7:1"
+			},
+			{
+				"name": "TX_MARGIN_FULL_4",
+				"address": "0081h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "15:9"
+			},
+			{
+				"name": "TX_MARGIN_LOW_0",
+				"address": "0081h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "7:1"
+			},
+			{
+				"name": "TX_MARGIN_LOW_1",
+				"address": "0082h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "15:9"
+			},
+			{
+				"name": "TX_MARGIN_LOW_2",
+				"address": "0082h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "7:1"
+			},
+			{
+				"name": "TX_MARGIN_LOW_3",
+				"address": "0083h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "15:9"
+			},
+			{
+				"name": "TX_MARGIN_LOW_4",
+				"address": "0083h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "7:1"
+			},
+			{
+				"name": "RXDFE_HD_CFG1",
+				"address": "0084h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TX_QPI_STATUS_EN",
+				"address": "0085h",
+                "Attribute Bits": "12",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "TX_INT_DATAWIDTH",
+				"address": "0085h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "11:10",
+				"condition":"0 - 2"
+			},
+			{
+				"name": "RXPRBS_LINKACQ_CNT",
+				"address": "0089h",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "7:0",
+				"condition":"16 - 255"
+			},
+			{
+				"name": "TX_PMADATA_OPT",
+				"address": "008Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "15"
+			},
+			{
+				"name": "RXSYNC_OVRD",
+				"address": "008Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "14"
+			},
+			{
+				"name": "TXSYNC_OVRD",
+				"address": "008Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "TX_IDLE_DATA_ZERO",
+				"address": "008Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "A_RXOSCALRESET",
+				"address": "008Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "11"
+			},
+			{
+				"name": "RXOOB_CLK_CFG",
+				"address": "008Ah",
+				"data":["FABRIC - 1",
+						"PMA - 0"],		
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "TXSYNC_SKIP_DA",
+				"address": "008Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "RXSYNC_SKIP_DA",
+				"address": "008Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "RXOSCALRESET_TIME",
+				"address": "008Ah",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "4:0"
+			},
+			{
+				"name": "TXSYNC_MULTILANE",
+				"address": "008Bh",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "RXSYNC_MULTILANE",
+				"address": "008Bh",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "RX_CTLE3_LPF",
+				"address": "008Bh",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "7:0"
+			},
+			{
+				"name": "ACJTAG_MODE",
+				"address": "008Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "15"
+			},
+			{
+				"name": "ACJTAG_DEBUG_MODE",
+				"address": "008Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "14"
+			},
+			{
+				"name": "ACJTAG_RESET",
+				"address": "008Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "RESET_POWERSAVE_DISABLE",
+				"address": "008Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "RX_TUNE_AFE_OS",
+				"address": "008Ch",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "11:10"
+			},
+			{
+				"name": "RX_DFE_KL_LPM_KL_CFG0",
+				"address": "008Ch",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "9:8"
+			},
+			{
+				"name": "RX_DFE_KL_LPM_KL_CFG1",
+				"address": "008Ch",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "7:5"
+			},
+			{
+				"name": "RXDFELPM_KL_CFG2",
+				"address": "008Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_VP_CFG0",
+				"address": "008Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_VP_CFG1",
+				"address": "008Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_UT_CFG1",
+				"address": "0090h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ADAPT_CFG0",
+				"address": "0091h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ADAPT_CFG1",
+				"address": "0092h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCFOK_CFG0",
+				"address": "0093h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_CLK_PHASE_SEL",
+				"address": "0094h",
+                "Attribute Bits": "0",
+                "DRP Bits": "11"
+			},
+			{
+				"name": "USE_PCS_CLK_PHASE_SEL",
+				"address": "0094h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "SAMPLE_CLK_PHASE",
+				"address": "0094h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "TX_PMA_RSV0",
+				"address": "0095h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_AFE_CM_EN",
+				"address": "0097h",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "RX_CAPFF_SARC_ENB",
+				"address": "0097h",
+                "Attribute Bits": "0",
+                "DRP Bits": "11"
+			},
+			{
+				"name": "RX_EYESCAN_VS_NEG_DIR",
+				"address": "0097h",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "RX_EYESCAN_VS_UT_SIGN",
+				"address": "0097h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "RX_EYESCAN_VS_CODE",
+				"address": "0097h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "8:2"
+			},
+			{
+				"name": "RX_EYESCAN_VS_RANGE",
+				"address": "0097h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "RXDFE_HE_CFG1",
+				"address": "0098h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "GEARBOX_MODE",
+				"address": "0099h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "TXPI_SYNFREQ_PPM",
+				"address": "0099h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "10:8"
+			},
+			{
+				"name": "TXPI_PPMCLK_SEL",
+				"address": "0099h",
+				"data":["TXUSRCLK - 0",
+						"TXUSRCLK2 - 1"],
+                "Attribute Bits": "0",
+                "DRP Bits": "7"
+			},
+			{
+				"name": "TXPI_INVSTROBE_SEL",
+				"address": "0099h",
+                "Attribute Bits": "0",
+                "DRP Bits": "6"
+			},
+			{
+				"name": "TXPI_GRAY_SEL",
+				"address": "0099h",
+                "Attribute Bits": "0",
+                "DRP Bits": "5"
+			},
+			{
+				"name": "TXPI_LPM",
+				"address": "0099h",
+                "Attribute Bits": "0",
+                "DRP Bits": "3"
+			},
+			{
+				"name": "TXPI_VREFSEL",
+				"address": "0099h",
+                "Attribute Bits": "0",
+                "DRP Bits": "2"
+			},
+			{
+				"name": "TXPI_PPM_CFG",
+				"address": "009Ah",
+                "Attribute Bits": "7:0",
+                "DRP Bits": "7:0"
+			},
+			{
+				"name": "RX_DFELPM_KLKH_AGC_STUP_EN",
+				"address": "009Bh",
+                "Attribute Bits": "0",
+                "DRP Bits": "15"
+			},
+			{
+				"name": "RX_DFELPM_CFG0",
+				"address": "009Bh",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "14:11"
+			},
+			{
+				"name": "RX_DFELPM_CFG1",
+				"address": "009Bh",
+                "Attribute Bits": "0",
+                "DRP Bits": "10"
+			},
+			{
+				"name": "RX_DFE_KL_LPM_KH_CFG0",
+				"address": "009Bh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "9:8"
+			},
+			{
+				"name": "RX_DFE_KL_LPM_KH_CFG1",
+				"address": "009Bh",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "7:5"
+			},
+			{
+				"name": "TXPI_CFG0",
+				"address": "009Ch",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "12:11"
+			},
+			{
+				"name": "TXPI_CFG1",
+				"address": "009Ch",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "10:9"
+			},
+			{
+				"name": "TXPI_CFG2",
+				"address": "009Ch",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "8:7"
+			},
+			{
+				"name": "TXPI_CFG3",
+				"address": "009Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "6"
+			},
+			{
+				"name": "TXPI_CFG4",
+				"address": "009Ch",
+                "Attribute Bits": "0",
+                "DRP Bits": "5"
+			},
+			{
+				"name": "TXPI_CFG5",
+				"address": "009Ch",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "4:2"
+			},
+			{
+				"name": "RXPI_CFG0",
+				"address": "009Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_UT_CFG0",
+				"address": "009Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_GC_CFG0",
+				"address": "009Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_GC_CFG1",
+				"address": "00A0h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_GC_CFG2",
+				"address": "00A1h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG0_GEN3",
+				"address": "00A2h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG1_GEN3",
+				"address": "00A3h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG2_GEN3",
+				"address": "00A4h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG3_GEN3",
+				"address": "00A5h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG4_GEN3",
+				"address": "00A6h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG5_GEN3",
+				"address": "00A7h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG5",
+				"address": "00A8h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PCIE_RXPMA_CFG",
+				"address": "00A9h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PCIE_TXPCS_CFG_GEN3",
+				"address": "00AAh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PCIE_TXPMA_CFG",
+				"address": "00ABh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_CLK_SLIP_OVRD",
+				"address": "00ACh",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "7:3"
+			},
+			{
+				"name": "TXPI_PPM",
+				"address": "00ACh",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "PCIE_PLL_SEL_MODE_GEN4",
+				"address": "00ADh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "14:13"
+			},
+			{
+				"name": "PCIE_PLL_SEL_MODE_GEN3",
+				"address": "00ADh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "12:11"
+			},
+			{
+				"name": "PCIE_PLL_SEL_MODE_GEN12",
+				"address": "00ADh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "10:9"
+			},
+			{
+				"name": "RATE_SW_USE_DRP",
+				"address": "00ADh",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "RXPI_LPM",
+				"address": "00ADh",
+                "Attribute Bits": "0",
+                "DRP Bits": "3"
+			},
+			{
+				"name": "RXPI_VREFSEL",
+				"address": "00ADh",
+                "Attribute Bits": "0",
+                "DRP Bits": "2"
+			},
+			{
+				"name": "RXPI_SEL_LC",
+				"address": "00ADh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "RXDFE_H3_CFG0",
+				"address": "00AEh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG2_GEN2",
+				"address": "00AFh",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "RXCDR_CFG3_GEN2",
+				"address": "00AFh",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "15:10"
+			},
+			{
+				"name": "RXDFE_H3_CFG1",
+				"address": "00B0h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H4_CFG0",
+				"address": "00B1h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H4_CFG1",
+				"address": "00B2h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H5_CFG0",
+				"address": "00B3h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PROCESS_PAR",
+				"address": "00B4h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "15:13"
+			},
+			{
+				"name": "TEMPERATURE_PAR",
+				"address": "00B4h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "11:8"
+			},
+			{
+				"name": "TX_SARC_LPBK_ENB",
+				"address": "00B4h",
+                "Attribute Bits": "0",
+                "DRP Bits": "4"
+			},
+			{
+				"name": "TX_FIFO_BYP_EN",
+				"address": "00B4h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXDFE_H5_CFG1",
+				"address": "00B5h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CPLL_CFG3",
+				"address": "00B6h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H6_CFG0",
+				"address": "00B7h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H6_CFG1",
+				"address": "00B8h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H7_CFG0",
+				"address": "00B9h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "DDI_REALIGN_WAIT",
+				"address": "00BAh",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "6:2",
+				"condition": "6 - 9"
+			},
+			{
+				"name": "DDI_CTRL",
+				"address": "00BAh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "TXGBOX_FIFO_INIT_RD_ADDR",
+				"address": "00BBh",
+				"data":["2 - 2",
+						"3 - 3",
+						"4 - 4",
+						"5 - 5",
+						"6 - 6"],
+                "Attribute Bits": "2:0",
+                "DRP Bits": "11:9"
+			},
+			{
+				"name": "TX_SAMPLE_PERIOD",
+				"address": "00BBh",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "8:6"
+			},
+			{
+				"name": "RXGBOX_FIFO_INIT_RD_ADDR",
+				"address": "00BBh",
+				"data":["2 - 2",
+						"3 - 3",
+						"4 - 4",
+						"5 - 5"],
+                "Attribute Bits": "2:0",
+                "DRP Bits": "5:3"
+			},
+			{
+				"name": "RX_SAMPLE_PERIOD",
+				"address": "00BBh",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "2:0"
+			},
+			{
+				"name": "CPLL_CFG2",
+				"address": "00BCh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXPHSAMP_CFG",
+				"address": "00BDh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXPHSLIP_CFG",
+				"address": "00BEh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXPHBEACON_CFG",
+				"address": "00BFh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H7_CFG1",
+				"address": "00C0h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H8_CFG0",
+				"address": "00C1h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H8_CFG1",
+				"address": "00C2h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PCIE_BUFG_DIV_CTRL",
+				"address": "00C3h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PCIE_RXPCS_CFG_GEN3",
+				"address": "00C4h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H9_CFG0",
+				"address": "00C5h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_PROGDIV_CFG",
+				"address": "00C6h",
+				"data":["0 - 32768",
+						"10 - 57440",
+						"100 - 57455",
+						"128 - 24654", 
+						"132 - 57862", 
+						"16 - 57410", 
+						"16.5 - 57880", 
+						"20 - 57442", 
+						"32 - 57414", 
+						"33 - 57856", 
+						"4 - 57432", 
+						"40 - 57415", 
+						"5 - 57464",
+						"64 - 57422", 
+						"66 - 57858", 
+						"8 - 57408", 
+						"80 - 57423"],
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_H9_CFG1",
+				"address": "00C7h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_HA_CFG0",
+				"address": "00C8h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CHAN_BOND_SEQ_1_2",
+				"address": "00CAh",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "CPLL_CFG0",
+				"address": "00CBh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CPLL_CFG1",
+				"address": "00CCh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_DDI_SEL",
+				"address": "00CDh",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "7:2"
+			},
+			{
+				"name": "DEC_VALID_COMMA_ONLY",
+				"address": "00CDh",
+                "Attribute Bits": "0",
+                "DRP Bits": "1"
+			},
+			{
+				"name": "DEC_MCOMMA_DETECT",
+				"address": "00CDh",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXDFE_HA_CFG1",
+				"address": "00CEh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_HB_CFG0",
+				"address": "00CFh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_SUM_RESLOAD_CTRL",
+				"address": "00D0h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "15:12"
+			},
+			{
+				"name": "RX_RESLOAD_OVRD",
+				"address": "00D0h",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "RX_DEGEN_CTRL",
+				"address": "00D0h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "6:4"
+			},
+			{
+				"name": "RX_RESLOAD_CTRL",
+				"address": "00D0h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "3:0"
+			},
+			{
+				"name": "RX_EN_CTLE_RCAL_B",
+				"address": "00D1h",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "RX_EXT_RL_CTRL",
+				"address": "00D1h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "11:3"
+			},
+			{
+				"name": "RXDFE_UT_CFG2",
+				"address": "00D2h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "LPBK_EN_RCAL_B",
+				"address": "00D3h",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "LPBK_IND_CTRL2",
+				"address": "00D3h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "7:5"
+			},
+			{
+				"name": "LPBK_BIAS_CTRL",
+				"address": "00D3h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "4:2"
+			},
+			{
+				"name": "RX_XMODE_SEL",
+				"address": "00D3h",
+                "Attribute Bits": "0",
+                "DRP Bits": "1"
+			},
+			{
+				"name": "ISCAN_CK_PH_SEL2",
+				"address": "00D3h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "LPBK_IND_CTRL1",
+				"address": "00D4h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "13:11"
+			},
+			{
+				"name": "LPBK_RG_CTRL",
+				"address": "00D4h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "10:7"
+			},
+			{
+				"name": "LPBK_IND_CTRL0",
+				"address": "00D4h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "2:0"
+			},
+			{
+				"name": "CKCAL1_CFG_0",
+				"address": "00D5h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL1_CFG_1",
+				"address": "00D6h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL2_CFG_0",
+				"address": "00D7h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL2_CFG_1",
+				"address": "00D8h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL2_CFG_2",
+				"address": "00D9h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ADAPT_CFG2",
+				"address": "00DAh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_LOCK_CFG3",
+				"address": "00DBh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RTX_BUF_TERM_CTRL",
+				"address": "00DDh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "4:3"
+			},
+			{
+				"name": "RTX_BUF_CML_CTRL",
+				"address": "00DDh",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "2:0"
+			},
+			{
+				"name": "TXPH_CFG2",
+				"address": "00DEh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_LOCK_CFG4",
+				"address": "00DFh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_PWR_SAVING",
+				"address": "00E0h",
+                "Attribute Bits": "0",
+                "DRP Bits": "9"
+			},
+			{
+				"name": "CTLE3_OCAP_EXT_CTRL",
+				"address": "00E0h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "8:6"
+			},
+			{
+				"name": "CTLE3_OCAP_EXT_EN",
+				"address": "00E0h",
+                "Attribute Bits": "0",
+                "DRP Bits": "5"
+			},
+			{
+				"name": "RXPI_STARTCODE",
+				"address": "00E0h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "1:0"
+			},
+			{
+				"name": "CAPBYPASS_FORCE",
+				"address": "00E1h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "TX_VREG_VREFSEL",
+				"address": "00E2h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "13:12"
+			},
+			{
+				"name": "TX_VREG_CTRL",
+				"address": "00E2h",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "11:9"
+			},
+			{
+				"name": "TX_VREG_PDB",
+				"address": "00E2h",
+                "Attribute Bits": "0",
+                "DRP Bits": "8"
+			},
+			{
+				"name": "TX_PREDRV_CTRL",
+				"address": "00E2h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "7:6"
+			},
+			{
+				"name": "TX_DRVMUX_CTRL",
+				"address": "00E2h",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "5:4"
+			},
+			{
+				"name": "ES_QUALIFIER5",
+				"address": "00E7h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER6",
+				"address": "00E8h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER7",
+				"address": "00E9h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER8",
+				"address": "00EAh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUALIFIER9",
+				"address": "00EBh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK5",
+				"address": "00ECh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK6",
+				"address": "00EDh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK7",
+				"address": "00EEh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK8",
+				"address": "00EFh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_QUAL_MASK9",
+				"address": "00F0h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK5",
+				"address": "00F1h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK6",
+				"address": "00F2h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK7",
+				"address": "00F3h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK8",
+				"address": "00F4h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "ES_SDATA_MASK9",
+				"address": "00F5h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL1_CFG_2",
+				"address": "00F6h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL1_CFG_3",
+				"address": "00F7h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL2_CFG_3",
+				"address": "00F8h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL2_CFG_4",
+				"address": "00F9h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_DIV2_MODE_B",
+				"address": "00FAh",
+                "Attribute Bits": "0",
+                "DRP Bits": "5"
+			},
+			{
+				"name": "RXPI_AUTO_BW_SEL_BYPASS",
+				"address": "00FAh",
+                "Attribute Bits": "0",
+                "DRP Bits": "4"
+			},
+			{
+				"name": "RX_VREG_CTRL",
+				"address": "00FAh",
+                "Attribute Bits": "2:0",
+                "DRP Bits": "3:1"
+			},
+			{
+				"name": "RX_VREG_PDB",
+				"address": "00FAh",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "TX_PI_IBIAS_MID",
+				"address": "00FBh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "11:10"
+			},
+			{
+				"name": "LPBK_EXT_RCAL",
+				"address": "00FBh",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "9:6"
+			},
+			{
+				"name": "PREIQ_FREQ_BST",
+				"address": "00FBh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "5:4"
+			},
+			{
+				"name": "TX_PI_BIASSET",
+				"address": "00FBh",
+                "Attribute Bits": "1:0",
+                "DRP Bits": "2:1"
+			},
+			{
+				"name": "TX_PHICAL_CFG0",
+				"address": "00FCh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TX_PHICAL_CFG1",
+				"address": "00FDh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TX_PHICAL_CFG2",
+				"address": "00FEh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TXPI_CFG",
+				"address": "00FFh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXPI_CFG1",
+				"address": "0100h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RX_PMA_RSV0",
+				"address": "0101h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "Y_ALL_MODE",
+				"address": "0102h",
+                "Attribute Bits": "0",
+                "DRP Bits": "2"
+			},
+			{
+				"name": "RCLK_SIPO_DLY_ENB",
+				"address": "0102h",
+                "Attribute Bits": "0",
+                "DRP Bits": "1"
+			},
+			{
+				"name": "RCLK_SIPO_INV_EN",
+				"address": "0102h",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RX_PROGDIV_RATE",
+				"address": "0103h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TX_PROGDIV_RATE",
+				"address": "0105h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "TX_DCC_LOOP_RST_CFG",
+				"address": "0106h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCKCAL1_Q_LOOP_RST_CFG",
+				"address": "0108h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCKCAL1_Q_LOOP_RST_CFG",
+				"address": "0109h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCKCAL1_IQ_LOOP_RST_CFG",
+				"address": "010Ah",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCKCAL2_D_LOOP_RST_CFG",
+				"address": "010Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCKCAL2_X_LOOP_RST_CFG",
+				"address": "010Ch",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCKCAL2_S_LOOP_RST_CFG",
+				"address": "010Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCKCAL2_DX_LOOP_RST_CFG",
+				"address": "010Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_KH_CFG0",
+				"address": "0110h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_KH_CFG1",
+				"address": "0111h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_KH_CFG2",
+				"address": "0112h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXDFE_KH_CFG3",
+				"address": "0113h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL_RSVD0",
+				"address": "0114h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CKCAL_RSVD1",
+				"address": "0115h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "CH_HSPMUX",
+				"address": "0116h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "PCIE3_CLK_COR_MIN_LAT",
+				"address": "0117h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "15:11"
+			},
+			{
+				"name": "PCIE3_CLK_COR_MAX_LAT",
+				"address": "0117h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "10:6"
+			},
+			{
+				"name": "PCIE3_CLK_COR_THRSH_TIMER",
+				"address": "0117h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "5:0"
+			},
+			{
+				"name": "USB_MODE",
+				"address": "0118h",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "USB_EXT_CNTL",
+				"address": "0118h",
+                "Attribute Bits": "0",
+                "DRP Bits": "14"
+			},
+			{
+				"name": "USB_CLK_COR_EQ_EN",
+				"address": "0118h",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "USB_PCIE_ERR_REP_DIS",
+				"address": "0118h",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "PCIE3_CLK_COR_FULL_THRSH",
+				"address": "0118h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "11:6"
+			},
+			{
+				"name": "PCIE3_CLK_COR_EMPTY_THRSH",
+				"address": "0118h",
+                "Attribute Bits": "4:0",
+                "DRP Bits": "4:0"
+			},
+			{
+				"name": "USB_RAW_ELEC",
+				"address": "0119h",
+                "Attribute Bits": "0",
+                "DRP Bits": "15"
+			},
+			{
+				"name": "DELAY_ELEC",
+				"address": "0119h",
+                "Attribute Bits": "0",
+                "DRP Bits": "14"
+			},
+			{
+				"name": "USB_BOTH_BURST_IDLE",
+				"address": "0119h",
+                "Attribute Bits": "0",
+                "DRP Bits": "13"
+			},
+			{
+				"name": "TXREFCLKDIV2_SEL",
+				"address": "0119h",
+                "Attribute Bits": "0",
+                "DRP Bits": "12"
+			},
+			{
+				"name": "TX_DEEMPH2",
+				"address": "0119h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "11:6"
+			},
+			{
+				"name": "TX_DEEMPH3",
+				"address": "0119h",
+                "Attribute Bits": "5:0",
+                "DRP Bits": "5:0"
+			},
+			{
+				"name": "RXREFCLKDIV2_SEL",
+				"address": "011Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "6"
+			},
+			{
+				"name": "A_RXTERMINATION",
+				"address": "011Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "5"
+			},
+			{
+				"name": "USB_LFPS_TPERIOD",
+				"address": "011Ah",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "4:1"
+			},
+			{
+				"name": "USB_LFPS_TPERIOD_ACCURATE",
+				"address": "011Ah",
+                "Attribute Bits": "0",
+                "DRP Bits": "0"
+			},
+			{
+				"name": "RXCDR_CFG2_GEN4",
+				"address": "011Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "RXCDR_CFG3_GEN4",
+				"address": "011Ch",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0"
+			},
+			{
+				"name": "USB_BURSTMIN_U3WAKE",
+				"address": "011Dh",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "14:8"
+			},
+			{
+				"name": "USB_BURSTMAX_U3WAKE",
+				"address": "011Dh",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "6:0"
+			},
+			{
+				"name": "USB_IDLEMIN_POLLING",
+				"address": "011Eh",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "USB_IDLEMAX_POLLING",
+				"address": "011Fh",
+                "Attribute Bits": "9:0",
+                "DRP Bits": "9:0"
+			},
+			{
+				"name": "USB_LFPSPOLLING_BURST",
+				"address": "0120h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "USB_LFPSPING_BURST",
+				"address": "0121h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "USB_LFPSU1EXIT_BURST",
+				"address": "0122h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "USB_LFPSU2LPEXIT_BURST_MS",
+				"address": "0123h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "USB_LFPSU3WAKE_BURST_MS",
+				"address": "0124h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "COMMA_ALIGN_LATENCY",
+				"address": "0125h",
+                "Attribute Bits": "8:0",
+                "DRP Bits": "8:0"
+			},
+			{
+				"name": "COMMA_ALIGN_LATENCY",
+				"address": "0250h",
+                "Attribute Bits": "6:0",
+                "DRP Bits": "6:0",
+				"access": "R"
+			},
+			{
+				"name": "es_error_count",
+				"address": "0251h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_sample_count",
+				"address": "0252h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_control_status",
+				"address": "0253h",
+                "Attribute Bits": "3:0",
+                "DRP Bits": "3:0",
+				"access": "R"
+			},
+			{
+				"name": "es_rdata_byte4",
+				"address": "0254h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_rdata_byte3",
+				"address": "0255h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_rdata_byte2",
+				"address": "0256h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_rdata_byte1",
+				"address": "0257h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_rdata_byte0",
+				"address": "0258h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_sdata_byte4",
+				"address": "0259h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_sdata_byte3",
+				"address": "025Ah",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_sdata_byte2",
+				"address": "025Bh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_sdata_byte1",
+				"address": "025Ch",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "es_sdata_byte0",
+				"address": "025Dh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "RX_PRBS_ERR_CNT",
+				"address": "025Eh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "RX_PRBS_ERR_CNT",
+				"address": "025Fh",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "TXGBOX_FIFO_LATENCY",
+				"address": "0263h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			},
+			{
+				"name": "RXGBOX_FIFO_LATENCY",
+				"address": "0269h",
+                "Attribute Bits": "15:0",
+                "DRP Bits": "15:0",
+				"access": "R"
+			}
+		]
+	}
+}

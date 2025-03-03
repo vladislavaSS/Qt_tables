@@ -9,7 +9,8 @@
 					"method": "LineEdit",
 					"bit": "23:0",
 					"name": "chip_ID",
-					"default": "000010100111100101110101"
+					"default": "000010100111100101110101",
+					"access": "RO"
 				}
 			]
 		},
@@ -153,13 +154,13 @@
 					"method": "LineEdit",
 					"bit": "6:3",
 					"name": "VCO Subsystem register address",
-					"default": "0"
+					"default": "0000"
 				},
                 {
 					"method": "LineEdit",
 					"bit": "2:0",
 					"name": "VCO Subsystem_ID",
-					"default": "0"
+					"default": "000"
 				}
 			],
 			"child": [
@@ -488,7 +489,7 @@
 					"method": "LineEdit",
 					"bit": "20:19",
 					"name": "Reserved",
-					"default": "0"
+					"default": "00"
 				},
                 {
 					"method": "CheckBox",
@@ -506,13 +507,13 @@
 					"method": "LineEdit",
 					"bit": "17:16",
 					"name": "Reserved",
-					"default": "0"
+					"default": "00"
 				},
                 {
 					"method": "LineEdit",
 					"bit": "15:14",
 					"name": "Reserved",
-					"default": "0"
+					"default": "00"
 				},
                 {
 					"method": "CheckBox",
@@ -619,7 +620,7 @@
 					"method": "LineEdit",
 					"bit": "5:4",
 					"name": "Reserved",
-					"default": "0"
+					"default": "00"
 				},
                 {
 					"method": "CheckBox",
@@ -854,13 +855,13 @@
 					"method": "LineEdit",
 					"bit": "7:6",
 					"name": "Reserved",
-					"default": "0"
+					"default": "00"
 				},
                 {
 					"method": "LineEdit",
 					"bit": "5:3",
 					"name": "Reserved",
-					"default": "0"
+					"default": "000"
 				},
                 {
 					"method": "ComboBox",
@@ -886,13 +887,13 @@
 					"method": "LineEdit",
 					"bit": "23:22",
 					"name": "reserved",
-					"default": "0"
+					"default": "00"
 				},
 				{
 					"method": "LineEdit",
 					"bit": "21:20",
 					"name": "reserved",
-					"default": "0"
+					"default": "00"
 				},
 				{
 					"method": "CheckBox",
@@ -1028,7 +1029,7 @@
 					"method": "LineEdit",
 					"bit": "4:0",
 					"name": "gpo_select",
-					"default": "1"
+					"default": "0001"
 				}
 			]
 		},

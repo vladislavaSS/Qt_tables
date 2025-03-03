@@ -50,6 +50,7 @@ public:
     int getTotalHeight(QTreeView *treeView, const QModelIndex &index);
     int total = 1050;
     int bitCount;
+    int cnt = 0;
 
     QString bin2hex(const QString& binaryStr);
     QString hex2Json(QString& Result, QString& text, int bitNumber, int bitCount);
@@ -71,7 +72,7 @@ public:
     void updateChildWidgets(QStandardItemModel* model, QString dataString, QStandardItem* parentItem, QString readItem);
     void setEditableFlags(QStandardItem *item, bool editable);
     void blockEditing(QStandardItemModel *model);
-    void fileForm(rapidjson::Value& resultValue, QString child, const QString& Result, rapidjson::Document::AllocatorType& allocator);
+    void fileForm(rapidjson::Value& resultValue, QString child, const QString& Result, rapidjson::Document::AllocatorType& allocator, bool read);
     void setTextLine(QLineEdit *lineEdit, QString data);
     void setTextCombo(QComboBox *comboBox, QString value);
 
